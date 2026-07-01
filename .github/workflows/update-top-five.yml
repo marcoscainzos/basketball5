@@ -23,10 +23,12 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install kaggle
-      - name: Download current box scores
+      - name: Configure Kaggle credentials
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: python -c 'import json,os,pathlib; p=pathlib.Path.home()/".kaggle"; p.mkdir(exist_ok=True); (p/"kaggle.json").write_text(json.dumps({"username":os.environ["KAGGLE_USERNAME"],"key":os.environ["KAGGLE_KEY"]})); (p/"kaggle.json").chmod(0o600)'
+      - name: Download current box scores
         run: kaggle datasets download -d eoinamoore/historical-nba-data-and-player-box-scores -f PlayerStatistics.csv -p data/raw --unzip
       - run: node scripts/buildLiveTopFiveStats.mjs
       - run: npm run data:top5
