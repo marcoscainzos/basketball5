@@ -311,7 +311,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 /* Focused refinements */
 .home-title h1 { font-family:Impact,"Arial Narrow",sans-serif; font-weight:400; letter-spacing:.015em; -webkit-text-stroke:0; text-shadow:5px 0 0 var(--broadcast-red); }
 .portrait img { transition:transform .28s cubic-bezier(.22,1,.36,1),filter .28s ease; }
-.season-card:hover:not(:disabled) { transform:none; filter:none; border-color:#ff3659; box-shadow:5px 5px 0 var(--nba-red),0 20px 38px #0007; }
+.season-card:hover:not(:disabled) { transform:none; filter:none; border-color:#ff3659; box-shadow:0 20px 38px #0007; }
 .season-card:hover:not(:disabled) .portrait img { transform:scale(1.035); filter:contrast(1.04); }
 .top5-board article.revealed { border-color:#ffffff4a; background:#111b2b; opacity:.72; }
 .top5-board article.revealed>div>span { color:#8e9bb0; }
@@ -320,4 +320,4 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .top5-search-footer>p.success { color:#6de39d; }
 .top5-surrender { margin-top:4px; padding:9px 12px; border:1px solid #ffffff42; background:transparent; color:#9facc1; font:900 8px Arial; letter-spacing:.14em; cursor:pointer; }
 .top5-surrender:hover { border-color:#ff3659; color:white; background:#c9082a; }
-@media(max-width:760px){.home-title h1{text-shadow:3px 0 0 var(--broadcast-red)}.season-card:hover:not(:disabled){box-shadow:3px 3px 0 var(--nba-red)}.top5-search-footer{align-items:center}.top5-search-footer>p{text-align:left}}
+@media(max-width:760px){.home-title h1{text-shadow:3px 0 0 var(--broadcast-red)}.season-card:hover:not(:disabled){box-shadow:0 14px 26px #0007}.top5-search-footer{align-items:center}.top5-search-footer>p{text-align:left}}
