@@ -12,6 +12,9 @@
     ,"data:images": "tsx scripts/downloadPlayerImages.ts"
     ,"data:current": "tsx scripts/buildCurrentSeason.ts"
     ,"data:visual": "tsx scripts/pruneToPlayersWithImages.ts"
+    ,"data:top5": "node scripts/buildTopFiveData.mjs"
+    ,"data:top5:live": "node scripts/buildLiveTopFiveStats.mjs"
+    ,"check:top5": "node scripts/checkTopFiveData.mjs"
   },
   "dependencies": {
     "@balldontlie/sdk": "^1.2.2",

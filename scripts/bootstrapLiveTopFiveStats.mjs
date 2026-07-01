@@ -1,0 +1,5 @@
+import fs from "node:fs";
+const teams={"76E":"PHI",BUC:"MIL",BUL:"CHI",CAV:"CLE",CEL:"BOS",CLI:"LAC",GRI:"MEM",HAW:"ATL",HEA:"MIA",HOR:"CHO",JAZ:"UTA",KIN:"SAC",KNI:"NYK",LAK:"LAL",MAG:"ORL",MAV:"DAL",NET:"BRK",NUG:"DEN",PAC:"IND",PEL:"NOP",PIS:"DET",RAP:"TOR",ROC:"HOU",SPU:"SAS",SUN:"PHO",THU:"OKC",TIM:"MIN",TRA:"POR",WAR:"GSW",WIZ:"WAS"};
+const files=["data/historical-2024-25.json","data/current-season-2025-26.json"];const entries=[];
+for(const file of files){for(const player of JSON.parse(fs.readFileSync(file,"utf8"))){const team=teams[player.team];if(!team)continue;entries.push({season:player.season,name:player.name,team,games:player.games,minutes:0,points:Number((player.pts*player.games).toFixed(1)),assists:Number((player.ast*player.games).toFixed(1))});}}
+const seasons=[...new Set(entries.map((entry)=>entry.season))].sort();fs.writeFileSync("data/live-top-five-stats.json",`${JSON.stringify({updatedAt:new Date().toISOString(),hasMinutes:false,seasons,entries},null,2)}\n`);console.log(`${entries.length} registros iniciales.`);
