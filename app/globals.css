@@ -68,7 +68,7 @@ a { color:inherit; text-decoration:none; } button { font:inherit; color:inherit;
 .vs-chip { position:relative; z-index:3; width:52px; height:52px; margin-left:-4px; display:grid; place-items:center; border-radius:50%; background:var(--red); border:5px solid #101214; font-size:12px; font-weight:900; }
 .season-card { --club:#333; position:relative; overflow:hidden; padding:0; border:1px solid #484c4f; background:#d9d5cc; color:#17191a; text-align:left; cursor:pointer; transition:transform .18s,filter .18s; }
 .season-card:hover:not(:disabled) { transform:none; filter:brightness(1.025); }
-.season-card.is-winner { outline:3px solid #49a66b; }
+.season-card.is-winner { outline:1px solid #62c984; outline-offset:2px; }
 .season-card.is-loser { filter:grayscale(1) brightness(.55); }
 .card-head { height:76px; padding:17px 20px; display:flex; justify-content:space-between; background:var(--club); color:white; }
 .card-head div { display:grid; }
@@ -311,7 +311,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 /* Focused refinements */
 .home-title h1 { font-family:Impact,"Arial Narrow",sans-serif; font-weight:400; letter-spacing:.015em; -webkit-text-stroke:0; text-shadow:5px 0 0 var(--broadcast-red); }
 .portrait img { transition:transform .28s cubic-bezier(.22,1,.36,1),filter .28s ease; }
-.season-card:hover:not(:disabled) { transform:none; filter:none; border-color:#ff3659; box-shadow:13px 13px 0 var(--nba-red),0 24px 45px #0008; }
+.season-card:hover:not(:disabled) { transform:none; filter:none; border-color:#ff3659; box-shadow:5px 5px 0 var(--nba-red),0 20px 38px #0007; }
 .season-card:hover:not(:disabled) .portrait img { transform:scale(1.035); filter:contrast(1.04); }
 .top5-board article.revealed { border-color:#ffffff4a; background:#111b2b; opacity:.72; }
 .top5-board article.revealed>div>span { color:#8e9bb0; }
@@ -320,4 +320,4 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .top5-search-footer>p.success { color:#6de39d; }
 .top5-surrender { margin-top:4px; padding:9px 12px; border:1px solid #ffffff42; background:transparent; color:#9facc1; font:900 8px Arial; letter-spacing:.14em; cursor:pointer; }
 .top5-surrender:hover { border-color:#ff3659; color:white; background:#c9082a; }
-@media(max-width:760px){.home-title h1{text-shadow:3px 0 0 var(--broadcast-red)}.season-card:hover:not(:disabled){box-shadow:7px 7px 0 var(--nba-red)}.top5-search-footer{align-items:center}.top5-search-footer>p{text-align:left}}
+@media(max-width:760px){.home-title h1{text-shadow:3px 0 0 var(--broadcast-red)}.season-card:hover:not(:disabled){box-shadow:3px 3px 0 var(--nba-red)}.top5-search-footer{align-items:center}.top5-search-footer>p{text-align:left}}
