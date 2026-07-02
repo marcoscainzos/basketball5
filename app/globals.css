@@ -352,17 +352,17 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .league-section-heading h2 { margin:6px 0 0; font:900 28px Arial; letter-spacing:-.045em; }
 .league-section-heading p { max-width:390px; margin:0; color:#94a5bc; text-align:right; font:400 11px/1.5 Arial; }
 .league-actions { max-width:1180px; margin:auto; padding-bottom:90px; display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
-.league-action { min-height:270px; padding:22px; border:1px solid #ffffff34; border-radius:18px; display:flex; flex-direction:column; background:#0a1931; box-shadow:0 25px 65px #0006; }
+.league-action { min-height:286px; padding:22px; border:1px solid #ffffff34; border-radius:18px; display:flex; flex-direction:column; background:#0a1931; box-shadow:0 25px 65px #0006; }
 .league-action small { color:#8ca0bd; font:900 8px Arial; letter-spacing:.17em; }
-.league-action>div { margin:12px 0 14px; display:flex; align-items:start; }
+.league-action>div { margin:18px 0 16px; display:flex; align-items:start; }
 .league-action>div>span { padding-top:8px; color:#ff385a; font:900 11px Arial; }
 .league-action h2 { margin:0; font:900 52px/.83 "Arial Black",Arial,sans-serif; letter-spacing:-.065em; }
-.league-action>p { max-width:380px; margin:0 0 16px; color:#98a8bf; font:400 12px/1.55 Arial; }
+.league-action>p { max-width:380px; margin:0 0 20px; color:#98a8bf; font:400 12px/1.55 Arial; }
 .league-action>button { margin-top:0; height:46px; padding:0 17px; border:0; border-radius:9px; display:flex; align-items:center; justify-content:space-between; background:#d20a2e; color:white; font:900 9px Arial; letter-spacing:.13em; cursor:pointer; }
 .join-league { background:linear-gradient(145deg,#12366e,#08172d); }
 .join-league form { margin-top:0; }
 .join-league label { display:block; margin-bottom:8px; color:#8fa1ba; font:900 8px Arial; letter-spacing:.14em; }
-.join-league form>div { height:50px; display:grid; grid-template-columns:1fr auto; border-radius:9px; overflow:hidden; background:white; }
+.join-league form>div { height:46px; display:grid; grid-template-columns:1fr auto; border-radius:9px; overflow:hidden; background:white; }
 .join-league input { min-width:0; padding:0 15px; border:0; outline:0; color:#071327; font:800 13px Arial; letter-spacing:.06em; }
 .join-league form button { padding:0 18px; border:0; background:#d20a2e; color:white; font:900 9px Arial; letter-spacing:.1em; cursor:pointer; }
 @media(max-width:1220px){.play-type-switch,.leagues-hero,.league-actions,.league-section-heading{margin-left:22px;margin-right:22px}}
