@@ -332,7 +332,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 
 /* Individual / leagues */
 .play-type-switch { max-width:1180px; margin:0 auto 30px; display:grid; grid-template-columns:repeat(2,1fr); border:1px solid #ffffff2d; border-radius:15px; overflow:hidden; background:#061124b8; box-shadow:0 18px 45px #0004; }
-.play-type-switch a { min-height:82px; padding:16px 20px; display:flex; align-items:center; justify-content:center; gap:12px; border-right:1px solid #ffffff20; color:#8798b1; transition:.2s ease; }
+.play-type-switch a { min-height:82px; padding:16px 20px; display:flex; align-items:center; justify-content:flex-start; gap:12px; border-right:1px solid #ffffff20; color:#8798b1; transition:.2s ease; }
 .play-type-switch a:last-child { border-right:0; }
 .play-type-switch a:hover { color:white; background:#ffffff0a; }
 .play-type-switch a.active { color:white; background:linear-gradient(110deg,#d20a2e,#8b061e); }
