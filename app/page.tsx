@@ -9,8 +9,8 @@ export default function Home() {
       </nav>
       <header className="home-title"><span>DAILY BASKETBALL GAMES</span><h1>COURT INSIDE</h1></header>
       <nav className="play-type-switch" aria-label="Modo de juego">
-        <Link className="active" href="/" scroll={false} aria-current="page"><span>01</span><b>INDIVIDUAL</b><i>JUEGOS DIARIOS</i></Link>
-        <Link href="/leagues" scroll={false}><span>02</span><b>LIGAS</b><i>COMPITE CON AMIGOS</i></Link>
+        <Link className="active" href="/" scroll={false} aria-current="page"><span>01</span><div><b>INDIVIDUAL</b><i>JUEGOS DIARIOS</i></div></Link>
+        <Link href="/leagues" scroll={false}><span>02</span><div><b>LIGAS</b><i>COMPITE CON AMIGOS</i></div></Link>
       </nav>
       <section className="game-picker" aria-label="Juegos">
         <Link href="/1vs1" className="compact-game red-game"><span>01</span><div className="compact-art one-v-one-logo"><b>1</b><i>VS</i><b>1</b></div><h2>1VS1</h2></Link>

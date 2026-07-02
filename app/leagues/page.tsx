@@ -10,8 +10,8 @@ export default function LeaguesPage() {
       <header className="home-title"><span>DAILY BASKETBALL GAMES</span><h1>COURT INSIDE</h1></header>
 
       <nav className="play-type-switch leagues-switch" aria-label="Modo de juego">
-        <Link href="/" scroll={false}><span>01</span><b>INDIVIDUAL</b><i>JUEGOS DIARIOS</i></Link>
-        <Link className="active" href="/leagues" scroll={false} aria-current="page"><span>02</span><b>LIGAS</b><i>COMPITE CON AMIGOS</i></Link>
+        <Link href="/" scroll={false}><span>01</span><div><b>INDIVIDUAL</b><i>JUEGOS DIARIOS</i></div></Link>
+        <Link className="active" href="/leagues" scroll={false} aria-current="page"><span>02</span><div><b>LIGAS</b><i>COMPITE CON AMIGOS</i></div></Link>
       </nav>
 
       <header className="league-section-heading">
