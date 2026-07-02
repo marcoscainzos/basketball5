@@ -340,12 +340,16 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .play-type-switch b { align-self:end; font:900 20px Arial; letter-spacing:-.035em; }
 .play-type-switch i { align-self:start; margin-top:4px; font:800 8px Arial; font-style:normal; letter-spacing:.13em; opacity:.62; }
 
-.leagues-shell { min-height:100vh; overflow:hidden; background:radial-gradient(circle at 80% 20%,#17396c 0,#081a38 34%,#030814 75%); }
+.leagues-shell { min-height:100vh; overflow:hidden; }
 .leagues-hero { max-width:1180px; margin:auto; padding:68px 0 52px; }
 .leagues-hero>span { color:#ff4262; font:900 9px Arial; letter-spacing:.22em; }
 .leagues-hero h1 { max-width:850px; margin:10px 0 16px; font:900 clamp(52px,8vw,104px)/.86 "Arial Black",Arial,sans-serif; letter-spacing:-.075em; }
 .leagues-hero p { max-width:570px; margin:0; color:#aebbd0; font:400 14px/1.6 Arial; }
 .leagues-switch { margin-bottom:28px; }
+.league-section-heading { max-width:1180px; margin:0 auto 20px; padding-top:24px; display:flex; align-items:end; justify-content:space-between; border-top:1px solid #ffffff24; }
+.league-section-heading span { color:#ff4262; font:900 8px Arial; letter-spacing:.2em; }
+.league-section-heading h2 { margin:6px 0 0; font:900 28px Arial; letter-spacing:-.045em; }
+.league-section-heading p { max-width:390px; margin:0; color:#94a5bc; text-align:right; font:400 11px/1.5 Arial; }
 .league-actions { max-width:1180px; margin:auto; padding-bottom:90px; display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
 .league-action { min-height:360px; padding:28px; border:1px solid #ffffff34; border-radius:18px; display:flex; flex-direction:column; background:#0a1931; box-shadow:0 25px 65px #0006; }
 .league-action small { color:#8ca0bd; font:900 8px Arial; letter-spacing:.17em; }
@@ -360,5 +364,5 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .join-league form>div { height:50px; display:grid; grid-template-columns:1fr auto; border-radius:9px; overflow:hidden; background:white; }
 .join-league input { min-width:0; padding:0 15px; border:0; outline:0; color:#071327; font:800 13px Arial; letter-spacing:.06em; }
 .join-league form button { padding:0 18px; border:0; background:#d20a2e; color:white; font:900 9px Arial; letter-spacing:.1em; cursor:pointer; }
-@media(max-width:1220px){.play-type-switch,.leagues-hero,.league-actions{margin-left:22px;margin-right:22px}}
-@media(max-width:760px){.play-type-switch a{min-height:70px;padding:12px;grid-template-columns:28px 1fr}.play-type-switch b{font-size:15px}.play-type-switch i{font-size:6px}.leagues-hero{padding:48px 0 38px}.leagues-hero h1{font-size:49px}.leagues-hero p{font-size:12px}.league-actions{grid-template-columns:1fr}.league-action{min-height:320px;padding:22px}.league-action>div{margin-top:36px}.league-action h2{font-size:43px}}
+@media(max-width:1220px){.play-type-switch,.leagues-hero,.league-actions,.league-section-heading{margin-left:22px;margin-right:22px}}
+@media(max-width:760px){.play-type-switch a{min-height:70px;padding:12px;grid-template-columns:28px 1fr}.play-type-switch b{font-size:15px}.play-type-switch i{font-size:6px}.leagues-hero{padding:48px 0 38px}.leagues-hero h1{font-size:49px}.leagues-hero p{font-size:12px}.league-section-heading{display:block}.league-section-heading p{margin-top:8px;text-align:left}.league-actions{grid-template-columns:1fr}.league-action{min-height:320px;padding:22px}.league-action>div{margin-top:36px}.league-action h2{font-size:43px}}

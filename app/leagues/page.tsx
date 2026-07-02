@@ -2,22 +2,22 @@ import Link from "next/link";
 
 export default function LeaguesPage() {
   return (
-    <main className="leagues-shell">
-      <nav className="site-nav">
+    <main className="home-shell leagues-shell">
+      <nav className="site-nav home-nav">
         <Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link>
-        <Link href="/" className="back-link">← INICIO</Link>
+        <span className="nav-note">DAILY HOOPS</span>
       </nav>
-
-      <header className="leagues-hero">
-        <span>COURT INSIDE LEAGUES</span>
-        <h1>UNA TEMPORADA.<br />UN CAMPEÓN.</h1>
-        <p>Tres retos diarios. La misma jornada para todos. Suma puntos con tus amigos hasta final de año.</p>
-      </header>
+      <header className="home-title"><span>DAILY BASKETBALL GAMES</span><h1>COURT INSIDE</h1></header>
 
       <nav className="play-type-switch leagues-switch" aria-label="Modo de juego">
         <Link href="/"><span>01</span><b>INDIVIDUAL</b><i>JUEGOS DIARIOS</i></Link>
         <Link className="active" href="/leagues" aria-current="page"><span>02</span><b>LIGAS</b><i>COMPITE CON AMIGOS</i></Link>
       </nav>
+
+      <header className="league-section-heading">
+        <div><span>COURT INSIDE LEAGUES</span><h2>Compite con tu grupo</h2></div>
+        <p>Tres retos diarios para todos. La clasificación dura hasta final de año.</p>
+      </header>
 
       <section className="league-actions">
         <article className="league-action create-league">
