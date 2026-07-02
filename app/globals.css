@@ -342,6 +342,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .play-type-switch i { margin-top:5px; font:800 8px/1 Arial; font-style:normal; letter-spacing:.13em; opacity:.62; }
 
 .leagues-shell { min-height:100vh; overflow:hidden; }
+.home-shell:not(.leagues-shell) { padding-bottom:102px; }
 .leagues-hero { max-width:1180px; margin:auto; padding:68px 0 52px; }
 .leagues-hero>span { color:#ff4262; font:900 9px Arial; letter-spacing:.22em; }
 .leagues-hero h1 { max-width:850px; margin:10px 0 16px; font:900 clamp(52px,8vw,104px)/.86 "Arial Black",Arial,sans-serif; letter-spacing:-.075em; }
