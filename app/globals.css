@@ -459,10 +459,10 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .match-head h1,
 .top5-head h1 {
   max-width:none;
-  font-size:clamp(18px,3.3vw,42px);
+  font-size:clamp(32px,5vw,58px);
   line-height:.95;
   white-space:nowrap;
 }
 @media(max-width:760px){
-  .mode-intro h1,.match-head h1,.top5-head h1{font-size:clamp(14px,4.2vw,24px);white-space:nowrap}
+  .mode-intro h1,.match-head h1,.top5-head h1{font-size:clamp(16px,4.8vw,20px);white-space:nowrap}
 }
