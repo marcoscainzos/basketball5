@@ -28,18 +28,11 @@ const OUTPUT = path.join(ROOT, "data/player-seasons.json");
 const CREDITS = path.join(ROOT, "data/image-credits.json");
 const stats: StatKey[] = ["pts", "reb", "ast", "stl", "blk"];
 const essentialPlayers = new Set([
-  "Kareem Abdul-Jabbar", "Ray Allen", "Carmelo Anthony", "Giannis Antetokounmpo", "Charles Barkley",
-  "Larry Bird", "Kobe Bryant", "Wilt Chamberlain", "Stephen Curry", "Anthony Davis", "Clyde Drexler",
-  "Tim Duncan", "Kevin Durant", "Julius Erving", "Patrick Ewing", "Walt Frazier", "Kevin Garnett",
-  "George Gervin", "Manu Ginobili", "Pau Gasol", "James Harden", "John Havlicek", "Elvin Hayes",
-  "Allen Iverson", "LeBron James", "Magic Johnson", "Michael Jordan", "Manu Ginóbili", "Jason Kidd", "Kawhi Leonard",
-  "Damian Lillard", "Jerry Lucas", "Karl Malone", "Moses Malone", "Pete Maravich", "Bob McAdoo",
-  "Kevin McHale", "George Mikan", "Reggie Miller", "Earl Monroe", "Steve Nash", "Dirk Nowitzki",
-  "Hakeem Olajuwon", "Shaquille O'Neal", "Robert Parish", "Chris Paul", "Gary Payton", "Scottie Pippen",
-  "Willis Reed", "Oscar Robertson", "David Robinson", "Bill Russell", "Dolph Schayes", "John Stockton",
-  "Isiah Thomas", "Klay Thompson", "Nate Thurmond", "Dwyane Wade", "Bill Walton", "Jerry West",
-  "Russell Westbrook", "Dominique Wilkins", "James Worthy", "Nikola Jokic"
+  "Bill Russell", "Wilt Chamberlain", "Oscar Robertson", "Jerry West", "Kareem Abdul-Jabbar", "Bob Cousy", "Elgin Baylor", "Bob Pettit", "Jerry Lucas", "Walt Frazier", "John Havlicek", "Elvin Hayes", "Bob Lanier", "Pete Maravich", "Julius Erving", "Dave Bing", "Nate Archibald", "Rick Barry", "Dave Cowens", "Bob McAdoo", "George McGinnis", "Spencer Haywood", "Artis Gilmore", "Dan Issel", "Moses Malone", "Maurice Cheeks", "Jack Sikma", "Marques Johnson", "Norm Nixon", "Adrian Dantley", "Alex English", "Bernard King", "World B. Free", "Magic Johnson", "Larry Bird", "Isiah Thomas", "Charles Barkley", "Karl Malone", "John Stockton", "Hakeem Olajuwon", "David Robinson", "Patrick Ewing", "Clyde Drexler", "Dennis Rodman", "Scottie Pippen", "Michael Jordan", "Mitch Richmond", "Penny Hardaway", "Grant Hill", "Alonzo Mourning", "Dikembe Mutombo", "Chris Webber", "Shawn Kemp", "Latrell Sprewell", "Vince Carter", "Reggie Miller", "Kevin Johnson", "Mark Price", "John Starks", "Horace Grant", "Toni Kukoc", "Detlef Schrempf", "Glen Rice", "Muggsy Bogues", "Spud Webb", "Shaquille O'Neal", "Kobe Bryant", "Tim Duncan", "Allen Iverson", "Dirk Nowitzki", "Steve Nash", "Kevin Garnett", "Paul Pierce", "Ray Allen", "Tracy McGrady", "Dwyane Wade", "LeBron James", "Carmelo Anthony", "Chris Paul", "Manu Ginobili", "Tony Parker", "Pau Gasol", "Yao Ming", "Peja Stojakovic", "Andrei Kirilenko", "Chauncey Billups", "Ben Wallace", "Elton Brand", "Baron Davis", "Gilbert Arenas", "Caron Butler", "Lamar Odom", "Mike Bibby", "Hedo Turkoglu", "Deron Williams", "Joe Johnson", "Antawn Jamison", "Amar'e Stoudemire", "Kyrie Irving", "Blake Griffin", "Derrick Rose", "Kevin Love", "Marc Gasol", "Joakim Noah", "Luol Deng", "Paul George", "Victor Oladipo", "DeMarcus Cousins", "Kemba Walker", "Andre Drummond", "Kevin Durant", "Russell Westbrook", "James Harden", "Stephen Curry", "Klay Thompson", "Kawhi Leonard", "Damian Lillard", "Anthony Davis", "Joel Embiid", "Giannis Antetokounmpo", "Nikola Jokic", "Luka Doncic", "Jimmy Butler", "Bradley Beal", "Zach LaVine", "Devin Booker", "Trae Young", "Jayson Tatum", "Jaylen Brown", "Bam Adebayo", "Karl-Anthony Towns", "Donovan Mitchell", "Khris Middleton", "Jrue Holiday", "DeMar DeRozan", "Eric Bledsoe", "Rudy Gobert", "Nicolas Batum", "Shai Gilgeous-Alexander", "Victor Wembanyama", "Anthony Edwards", "Ja Morant", "Tyrese Haliburton", "Evan Mobley", "Paolo Banchero", "Cade Cunningham", "Franz Wagner", "Scottie Barnes", "Jalen Brunson", "Vlade Divac", "Drazen Petrovic", "Sarunas Marciulionis", "Arvydas Sabonis", "Leandro Barbosa", "Luis Scola", "Jose Calderon", "Jamaal Magloire", "James Worthy"
 ]);
+function normalizedName(value: string) { return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[’‘]/g, "'").toLowerCase(); }
+const essentialNames = new Set([...essentialPlayers].map(normalizedName));
+function isEssential(name: string) { return essentialNames.has(normalizedName(name)); }
 const legendHeadshots: Record<string, string> = {
   "Michael Jordan": "893", "Pau Gasol": "2200", "Manu Ginóbili": "1938", "Dwyane Wade": "2548",
   "Allen Iverson": "947", "Magic Johnson": "77142", "Larry Bird": "1449", "Kobe Bryant": "977",
@@ -91,7 +84,7 @@ function main() {
   const grouped = new Map<string, RawRow[]>();
   for (const row of rows) {
     const year = numeric(row, "season");
-    if (year < 1975 || numeric(row, "g") < 20 || row.lg !== "NBA") continue;
+    if (year < 1950 || numeric(row, "g") < 20 || row.lg !== "NBA") continue;
     const key = `${year}|${cleanName(row.player)}`;
     grouped.set(key, [...(grouped.get(key) ?? []), row]);
   }
@@ -130,7 +123,7 @@ function main() {
   // mejores versiones para Draft y 1vs1.
   const impact = (card: Omit<Card, "id">) => card.pts + card.reb * 1.2 + card.ast * 1.5 + card.stl * 3 + card.blk * 3;
   for (const name of essentialPlayers) {
-    for (const card of allCards.filter((item) => item.name === name).sort((a, b) => impact(b) - impact(a)).slice(0, 3)) {
+    for (const card of allCards.filter((item) => normalizedName(item.name) === normalizedName(name)).sort((a, b) => impact(b) - impact(a)).slice(0, 3)) {
       selected.set(`${card.season}|${card.name}`, card);
     }
   }
@@ -145,9 +138,10 @@ function main() {
   }
 
   const credits = fs.existsSync(CREDITS) ? JSON.parse(fs.readFileSync(CREDITS, "utf8")) as Record<string, { imageUrl?: string }> : {};
-  const visualSelection = [...selected.values()].filter((card) => card.pool === "current" || Boolean(credits[card.name]?.imageUrl) || essentialPlayers.has(card.name));
+  const currentImages = new Map([...selected.values()].filter((card) => card.pool === "current" && card.imageUrl).map((card) => [normalizedName(card.name), card.imageUrl!]));
+  const visualSelection = [...selected.values()].filter((card) => card.pool === "current" || Boolean(credits[card.name]?.imageUrl) || isEssential(card.name));
   const output = visualSelection.sort((a, b) => a.season.localeCompare(b.season) || a.name.localeCompare(b.name)).map((card, index) => {
-    const imageUrl = credits[card.name]?.imageUrl ?? (legendHeadshots[card.name] ? `https://cdn.nba.com/headshots/nba/latest/1040x760/${legendHeadshots[card.name]}.png` : undefined);
+    const imageUrl = card.imageUrl ?? currentImages.get(normalizedName(card.name)) ?? credits[card.name]?.imageUrl ?? (legendHeadshots[card.name] ? `https://cdn.nba.com/headshots/nba/latest/1040x760/${legendHeadshots[card.name]}.png` : undefined);
     return { ...card, id: index + 1, ...(imageUrl ? { imageUrl } : {}) };
   });
   fs.writeFileSync(OUTPUT, `${JSON.stringify(output, null, 2)}\n`);

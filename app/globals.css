@@ -374,20 +374,21 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .draft-art b { color:#f2d18b; text-shadow:7px 7px 0 #161105; }
 .draft-art i { position:absolute; right:22%; bottom:24px; padding:7px 9px; background:#d20a2e; color:white; font:900 8px Arial; font-style:normal; letter-spacing:.14em; }
 .draft-shell { min-height:100vh; overflow-x:hidden; background:radial-gradient(circle at 50% 110%,#18396d 0,transparent 37%),linear-gradient(135deg,#030915,#091b38 54%,#030915); }
-.draft-mode-screen { width:min(1180px,calc(100% - 44px)); margin:auto; padding:66px 0 90px; }
-.draft-kicker { color:#ff4364; font:900 9px Arial; letter-spacing:.25em; }
-.draft-mode-screen>h1 { max-width:1000px; margin:8px 0 10px; font:900 clamp(60px,9vw,118px)/.85 "Arial Black",Arial,sans-serif; letter-spacing:-.075em; }
-.draft-mode-screen>p { max-width:565px; margin:0; color:#a8b6cb; font:400 14px/1.55 Arial; }
-.draft-mode-grid { margin-top:42px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-.draft-mode-grid button { position:relative; min-height:210px; padding:26px; border:1px solid #ffffff35; border-radius:18px; display:flex; align-items:flex-end; gap:18px; overflow:hidden; color:white; text-align:left; cursor:pointer; background:linear-gradient(140deg,#194b97,#07162f); box-shadow:0 25px 60px #0008,inset 0 1px #ffffff34; transition:.22s ease; }
+.draft-mode-screen { width:min(1180px,calc(100% - 44px)); margin:auto; padding:54px 0 90px; text-align:center; }
+.draft-modes-label { color:#ff4364; font:900 9px Arial; letter-spacing:.25em; }
+.draft-mode-screen>h1 { margin:7px 0 0; font:900 clamp(58px,8vw,104px)/.86 "Arial Black",Arial,sans-serif; letter-spacing:-.075em; }
+.draft-mode-screen>h2 { margin:13px 0 8px; font:400 clamp(28px,4vw,46px)/1 Impact,"Arial Narrow",sans-serif; letter-spacing:.04em; white-space:nowrap; }
+.draft-mode-screen>p { max-width:565px; margin:0 auto; color:#a8b6cb; font:400 14px/1.55 Arial; }
+.draft-mode-grid { margin-top:34px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.draft-mode-grid button { position:relative; min-height:190px; padding:26px; border:1px solid #ffffff35; border-radius:18px; display:flex; align-items:center; justify-content:center; overflow:hidden; color:white; text-align:center; cursor:pointer; background:linear-gradient(140deg,#194b97,#07162f); box-shadow:0 25px 60px #0008,inset 0 1px #ffffff34; transition:.22s ease; }
 .draft-mode-grid button:last-child { background:linear-gradient(140deg,#d00a2d,#700116); }
 .draft-mode-grid button::after { content:""; position:absolute; width:210px; height:210px; top:-110px; right:-45px; border:28px solid #ffffff0d; border-radius:50%; }
 .draft-mode-grid button:hover { transform:translateY(-7px); border-color:white; box-shadow:0 30px 65px #000a,0 0 0 2px white; }
-.draft-mode-grid button>span { color:#ffffff75; font:400 28px Impact,"Arial Narrow",sans-serif; }
-.draft-mode-grid button div { display:grid; gap:5px; }
+.draft-mode-grid button div { display:grid; gap:8px; }
 .draft-mode-grid button b { font:400 52px/.8 Impact,"Arial Narrow",sans-serif; letter-spacing:.02em; }
 .draft-mode-grid button small { color:#ffffff9d; font:900 8px Arial; letter-spacing:.16em; }
-.draft-mode-grid button>i { margin-left:auto; padding:8px 11px; border:1px solid #ffffff52; border-radius:20px; font:900 8px Arial; font-style:normal; letter-spacing:.14em; }
+.draft-mode-grid button>i { position:absolute; right:20px; top:20px; padding:8px 11px; border:1px solid #ffffff52; border-radius:20px; font:900 8px Arial; font-style:normal; letter-spacing:.14em; }
+.draft-nav-attempt { color:#ff4364; font:900 8px Arial; letter-spacing:.16em; }
 .draft-game { width:min(1180px,calc(100% - 44px)); margin:auto; padding:38px 0 80px; }
 .draft-head { display:grid; grid-template-columns:130px 1fr 315px; align-items:end; gap:28px; }
 .draft-head>button { align-self:start; padding:0; border:0; background:transparent; color:#8799b4; text-align:left; font:900 8px Arial; letter-spacing:.13em; cursor:pointer; }

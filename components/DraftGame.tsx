@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { DraftMode, DraftOption, RESTRICTIONS, canAdd, dailyRestriction, estimateWins, optionsFor } from "@/lib/draft";
 
@@ -8,6 +9,7 @@ const COURT_POSITIONS = ["PG", "SG", "SF", "PF", "C"] as const;
 
 export default function DraftGame() {
   const [mode, setMode] = useState<DraftMode | null>(null);
+  const [savedMode, setSavedMode] = useState<DraftMode | null>(null);
   const [lineup, setLineup] = useState<DraftOption[]>([]);
   const [query, setQuery] = useState("");
   const [message, setMessage] = useState("");
@@ -26,7 +28,7 @@ export default function DraftGame() {
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(storageKey) ?? "null") as { mode: DraftMode; lineup: DraftOption[] } | null;
-      if (saved?.mode) { setMode(saved.mode); setLineup(saved.lineup ?? []); }
+      if (saved?.mode) { setSavedMode(saved.mode); setLineup(saved.lineup ?? []); }
     } catch {}
     setReady(true);
   }, [storageKey]);
@@ -39,20 +41,24 @@ export default function DraftGame() {
     if (error) { setMessage(error); return; }
     setLineup([...lineup, player].sort((a, b) => COURT_POSITIONS.indexOf(a.position) - COURT_POSITIONS.indexOf(b.position))); setQuery(""); setMessage("");
   }
+  function openMode(nextMode: DraftMode) {
+    const chosenMode = savedMode && lineup.length > 0 ? savedMode : nextMode;
+    setSavedMode(chosenMode); setMode(chosenMode);
+  }
 
-  if (!ready) return <div className="top5-loading">PREPARANDO EL DRAFT…</div>;
-  if (!mode) return <section className="draft-mode-screen">
-    <div className="draft-kicker">NUEVO JUEGO</div><h1>BUILD YOUR FIVE</h1>
+  if (!ready) return <main className="draft-shell"><div className="top5-loading">PREPARANDO EL DRAFT…</div></main>;
+  if (!mode) return <main className="draft-shell"><nav className="site-nav"><Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link><Link href="/" className="back-link">← GAMES</Link></nav><section className="draft-mode-screen">
+    <div className="draft-modes-label">MODES</div><h1>COURT INSIDE</h1><h2>BUILD YOUR FIVE</h2>
     <p>Escoge cinco jugadores. Nosotros calculamos cuántos partidos ganaría tu equipo en una temporada de 82.</p>
     <div className="draft-mode-grid">
-      <button type="button" onClick={() => setMode("career")}><span>01</span><div><b>CARRERA</b><small>EL JUGADOR EN GENERAL</small></div><i>FÁCIL</i></button>
-      <button type="button" onClick={() => setMode("season")}><span>02</span><div><b>TEMPORADAS</b><small>VERSIONES CONCRETAS</small></div><i>DIFÍCIL</i></button>
+      <button type="button" onClick={() => openMode("career")}><div><b>CARRERA</b><small>EL JUGADOR EN GENERAL</small></div><i>FÁCIL</i></button>
+      <button type="button" onClick={() => openMode("season")}><div><b>TEMPORADAS</b><small>VERSIONES CONCRETAS</small></div><i>DIFÍCIL</i></button>
     </div>
-  </section>;
+  </section></main>;
 
-  return <section className="draft-game">
+  return <main className="draft-shell"><nav className="site-nav"><button type="button" className="back-button" onClick={() => setMode(null)}>← MODES</button><div className="wordmark"><span className="mark">CI</span><b>COURT INSIDE</b></div><span className="draft-nav-attempt">1 TRY</span></nav><section className="draft-game">
     <header className="draft-head">
-      {lineup.length === 0 ? <button type="button" onClick={() => { setMode(null); setQuery(""); }}>← CAMBIAR MODO</button> : <span className="draft-locked-note">1 INTENTO DIARIO</span>}
+      <span className="draft-locked-note">1 INTENTO DIARIO</span>
       <div><span>DRAFT DIARIO · {mode === "career" ? "CARRERA" : "TEMPORADAS"}</span><h1>BUILD YOUR FIVE</h1></div>
       <aside><small>RESTRICCIÓN DE HOY</small><b>{RESTRICTIONS[rule].title}</b><p>{RESTRICTIONS[rule].description}</p></aside>
     </header>
@@ -67,5 +73,5 @@ export default function DraftGame() {
         {suggestions.length > 0 && <div className="draft-suggestions">{suggestions.map((player) => <button type="button" key={`${player.id}-${player.label}`} onClick={() => choose(player)}><div className="suggestion-photo">{player.imageUrl && <img src={player.imageUrl} alt="" />}</div><span><b>{player.name}</b><small>{mode === "season" ? `${player.season} · ${player.team}` : `${player.position} · ${player.team}`}</small></span><i>＋</i></button>)}</div>}<p className="draft-message">{message}</p></> : <div className="wins-result"><span>VICTORIAS ESTIMADAS</span><b>{wins}</b><i>/ 82</i><p>Récord estimado: {wins}-{82 - wins}. Tu intento de hoy queda cerrado.</p><strong>VUELVE MAÑANA</strong></div>}
       </div>
     </div>
-  </section>;
+  </section></main>;
 }
