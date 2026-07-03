@@ -326,10 +326,10 @@ body { font-family:Arial,Helvetica,sans-serif; }
 /* Home refinements */
 .home-shell .home-title { display:flex; flex-direction:column; align-items:center; text-align:center!important; }
 .home-title h1 { font-family:"Arial Black",Arial,Helvetica,sans-serif; font-weight:900; letter-spacing:-.065em; }
-.compact-art.one-v-one-logo { transform:translateY(-9px) rotate(-3deg); }
+.compact-art.one-v-one-logo { width:100%; margin:0 auto; transform:rotate(-3deg); }
 .gold-game { background:linear-gradient(145deg,#725b2f,#292517); }
 .gold-game .compact-art { color:#d5bd82; }
-@media(max-width:760px){.compact-art.one-v-one-logo{transform:translateY(-5px) rotate(-3deg)}}
+@media(max-width:760px){.compact-art.one-v-one-logo{transform:rotate(-3deg)}}
 
 /* Individual / leagues */
 .play-type-switch { max-width:1180px; margin:0 auto 20px; display:grid; grid-template-columns:repeat(2,1fr); border:1px solid #ffffff2d; border-radius:13px; overflow:hidden; background:#061124b8; box-shadow:0 14px 35px #0004; }
