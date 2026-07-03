@@ -485,13 +485,14 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .who-game>header h1 { grid-column:1; margin:7px 0 0; font:400 clamp(44px,7vw,78px)/.85 Impact,"Arial Narrow",sans-serif; }
 .who-game>header>b { grid-column:2; grid-row:1/3; color:#8092ae; font:400 32px Impact,"Arial Narrow",sans-serif; }
 .who-clues { margin-top:26px; display:flex; align-items:stretch; gap:14px; overflow-x:auto; padding:4px 3px 10px; }
-.who-clues>div { position:relative; min-width:150px; height:198px; flex:1; border:1px solid #ffffff3d; border-radius:14px; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; overflow:hidden; background:linear-gradient(155deg,#173865,#08172d 72%); text-align:center; box-shadow:0 14px 30px #0006,inset 0 1px #ffffff22; }
-.who-clues>div strong { position:absolute; z-index:2; top:8px; left:9px; color:#7d91ae; font:400 16px Impact,"Arial Narrow",sans-serif; }
-.who-clues>div img { position:relative; z-index:1; width:calc(100% - 16px); height:145px; margin:8px 8px 0; object-fit:contain; object-position:center bottom; border-radius:9px 9px 0 0; background:radial-gradient(circle at 50% 42%,#eef3fa 0,#b9c8dc 62%,#788da9 100%); filter:drop-shadow(0 7px 7px #06102180); }
-.who-clues.journey>div img { width:calc(100% - 22px); height:140px; margin:11px 11px 0; padding:15px; object-fit:contain; object-position:center; border-radius:10px; background:#f5f7fa; filter:drop-shadow(0 5px 6px #0004); }
-.who-clues>div span { position:relative; z-index:2; width:100%; min-height:44px; margin-top:-5px; padding:14px 8px 10px; overflow:hidden; font:400 18px/1 Impact,"Arial Narrow",sans-serif; letter-spacing:.025em; text-overflow:ellipsis; white-space:nowrap; background:linear-gradient(transparent,#07162f 28%); }
+.who-clues>div { position:relative; min-width:150px; height:210px; flex:1; border:1px solid #ffffff4a; border-radius:14px; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; overflow:hidden; background:#0a1b34; text-align:center; box-shadow:0 16px 32px #0008,inset 0 1px #ffffff25; }
+.who-clues>div strong { position:absolute; z-index:4; top:9px; left:9px; width:27px; height:27px; border:1px solid #ffffff50; border-radius:50%; display:grid; place-items:center; color:white; background:#031020b8; font:400 14px Impact,"Arial Narrow",sans-serif; backdrop-filter:blur(7px); }
+.who-clues>div img { position:absolute; z-index:1; inset:0 0 45px; width:100%; height:165px; margin:0; object-fit:cover; object-position:center top; border:0; border-radius:0; background:linear-gradient(145deg,#dfe7f1,#8fa4bf); filter:none; }
+.who-clues.teammates>div img { object-position:center 12%; }
+.who-clues.journey>div img { inset:0 0 45px; width:100%; height:165px; margin:0; padding:17px; object-fit:contain; object-position:center; border-radius:0; background:linear-gradient(145deg,#ffffff,#dfe6ef); filter:none; }
+.who-clues>div span { position:absolute; z-index:3; left:0; right:0; bottom:0; width:100%; height:45px; margin:0; padding:13px 8px 10px; overflow:hidden; border-top:3px solid #d20a2e; font:400 18px/1 Impact,"Arial Narrow",sans-serif; letter-spacing:.025em; text-overflow:ellipsis; white-space:nowrap; background:#07162f; box-shadow:0 -8px 20px #02081466; }
 .who-clues>div.hidden { justify-content:center; opacity:.35; background:#050e1c; }
-.who-clues>div.hidden span { min-height:0; margin:0; padding:0; background:transparent; font-size:34px; }
+.who-clues>div.hidden span { position:static; height:auto; min-height:0; margin:0; padding:0; border:0; background:transparent; box-shadow:none; font-size:34px; }
 .who-clues>div.visible { border-color:#ffffff65; box-shadow:inset 4px 0 0 #d20a2e; }
 .who-search { position:relative; max-width:700px; margin:30px auto 0; }
 .who-search>label { display:block; margin-bottom:8px; color:#90a3c1; font:900 8px Arial; letter-spacing:.17em; }
