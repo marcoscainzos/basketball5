@@ -53,11 +53,26 @@
         }
       ],
       "teams": [
-        "ATL",
-        "BOS",
-        "PHI",
-        "OKC",
-        "BOS"
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        },
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -113,11 +128,26 @@
         }
       ],
       "teams": [
-        "DET",
-        "CLE",
-        "PHI",
-        "BRK",
-        "CHI"
+        {
+          "name": "DET",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        },
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -578,11 +608,26 @@
         }
       ],
       "teams": [
-        "NOK",
-        "LAC",
-        "HOU",
-        "PHO",
-        "GSW"
+        {
+          "name": "NOK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        },
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        },
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -692,11 +737,26 @@
         }
       ],
       "teams": [
-        "LAL",
-        "BRK",
-        "GSW",
-        "MIN",
-        "LAL"
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        },
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        },
+        {
+          "name": "MIN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -914,11 +974,26 @@
         }
       ],
       "teams": [
-        "ATL",
-        "LAL",
-        "HOU",
-        "LAL",
-        "BRK"
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        }
       ]
     },
     {
@@ -1460,11 +1535,26 @@
         }
       ],
       "teams": [
-        "OKC",
-        "HOU",
-        "BRK",
-        "PHI",
-        "LAC"
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        },
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -1601,11 +1691,26 @@
         }
       ],
       "teams": [
-        "PHI",
-        "OKC",
-        "DEN",
-        "DET",
-        "POR"
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
+          "name": "DEN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg"
+        },
+        {
+          "name": "DET",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        },
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -1985,11 +2090,26 @@
         }
       ],
       "teams": [
-        "WAS",
-        "PHO",
-        "GSW",
-        "CHO",
-        "PHI"
+        {
+          "name": "WAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
+        },
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        },
+        {
+          "name": "CHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -2018,11 +2138,26 @@
         }
       ],
       "teams": [
-        "SEA",
-        "OKC",
-        "GSW",
-        "BRK",
-        "PHO"
+        {
+          "name": "SEA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        },
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        }
       ]
     },
     {
@@ -2726,11 +2861,26 @@
         }
       ],
       "teams": [
-        "OKC",
-        "HOU",
-        "WAS",
-        "LAL",
-        "LAC"
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        },
+        {
+          "name": "WAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -2921,11 +3071,26 @@
         }
       ],
       "teams": [
-        "MIL",
-        "ORL",
-        "DET",
-        "LAC",
-        "PHI"
+        {
+          "name": "MIL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg"
+        },
+        {
+          "name": "ORL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg"
+        },
+        {
+          "name": "DET",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        },
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        },
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -3170,11 +3335,26 @@
         }
       ],
       "teams": [
-        "DEN",
-        "NYK",
-        "HOU",
-        "POR",
-        "LAL"
+        {
+          "name": "DEN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg"
+        },
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        },
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -3365,11 +3545,26 @@
         }
       ],
       "teams": [
-        "ORL",
-        "LAL",
-        "PHO",
-        "CLE",
-        "BOS"
+        {
+          "name": "ORL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -3506,11 +3701,26 @@
         }
       ],
       "teams": [
-        "PHI",
-        "WSB",
-        "MIL",
-        "PHI",
-        "SAS"
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "WSB",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
+        },
+        {
+          "name": "MIL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg"
+        },
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        }
       ]
     },
     {
@@ -3539,11 +3749,26 @@
         }
       ],
       "teams": [
-        "PHI",
-        "SAS",
-        "NYK",
-        "ATL",
-        "NJN"
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        },
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        },
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        },
+        {
+          "name": "NJN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg"
+        }
       ]
     },
     {
