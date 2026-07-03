@@ -1,0 +1,5410 @@
+{
+  "challenges": [
+    {
+      "name": "Aaron Gordon",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203932.png",
+      "teammates": [
+        "DeMarcus Cousins",
+        "Jamal Murray",
+        "Michael Porter Jr.",
+        "Terrence Ross",
+        "Nikola Jokić",
+        "Evan Fournier",
+        "Nikola Vučević"
+      ],
+      "teams": [
+        "ORL",
+        "DEN"
+      ]
+    },
+    {
+      "name": "Al Horford",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201143.png",
+      "teammates": [
+        "Mike Bibby",
+        "Joel Embiid",
+        "Josh Smith",
+        "Jeff Teague",
+        "Joe Johnson",
+        "Jayson Tatum",
+        "Jaylen Brown"
+      ],
+      "teams": [
+        "ATL",
+        "BOS",
+        "PHI",
+        "OKC",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Alperen Sengun",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630578.png",
+      "teammates": [
+        "Reggie Bullock",
+        "Cam Whitmore",
+        "Jabari Smith Jr.",
+        "Jeff Green",
+        "Dillon Brooks",
+        "Fred VanVleet",
+        "Jalen Green"
+      ],
+      "teams": [
+        "HOU"
+      ]
+    },
+    {
+      "name": "Andre Drummond",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203083.png",
+      "teammates": [
+        "DeMar DeRozan",
+        "Kevin Durant",
+        "Tobias Harris",
+        "Joel Embiid",
+        "Blake Griffin",
+        "Reggie Jackson",
+        "James Harden"
+      ],
+      "teams": [
+        "DET",
+        "CLE",
+        "LAL",
+        "PHI",
+        "BRK",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Andrew Wiggins",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203952.png",
+      "teammates": [
+        "Draymond Green",
+        "Gorgui Dieng",
+        "Klay Thompson",
+        "Jordan Poole",
+        "Zach LaVine",
+        "Karl-Anthony Towns",
+        "Stephen Curry"
+      ],
+      "teams": [
+        "MIN",
+        "GSW"
+      ]
+    },
+    {
+      "name": "Anfernee Simons",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629014.png",
+      "teammates": [
+        "Norman Powell",
+        "Jerami Grant",
+        "Gary Trent Jr.",
+        "Carmelo Anthony",
+        "Jusuf Nurkić",
+        "CJ McCollum",
+        "Damian Lillard"
+      ],
+      "teams": [
+        "POR"
+      ]
+    },
+    {
+      "name": "Anthony Davis",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203076.png",
+      "teammates": [
+        "DeMarcus Cousins",
+        "Ryan Anderson",
+        "Tyreke Evans",
+        "Eric Gordon",
+        "Russell Westbrook",
+        "Jrue Holiday",
+        "LeBron James"
+      ],
+      "teams": [
+        "NOH",
+        "NOP",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Anthony Edwards",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630162.png",
+      "teammates": [
+        "Rudy Gobert",
+        "Jaden McDaniels",
+        "Malik Beasley",
+        "Mike Conley",
+        "Naz Reid",
+        "D'Angelo Russell",
+        "Karl-Anthony Towns"
+      ],
+      "teams": [
+        "MIN"
+      ]
+    },
+    {
+      "name": "Austin Reaves",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630559.png",
+      "teammates": [
+        "Christian Wood",
+        "Dwight Howard",
+        "D'Angelo Russell",
+        "Carmelo Anthony",
+        "Russell Westbrook",
+        "Anthony Davis",
+        "LeBron James"
+      ],
+      "teams": [
+        "LAL"
+      ]
+    },
+    {
+      "name": "Bam Adebayo",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628389.png",
+      "teammates": [
+        "Kyle Lowry",
+        "Kelly Olynyk",
+        "Goran Dragić",
+        "Duncan Robinson",
+        "Dwyane Wade",
+        "Tyler Herro",
+        "Jimmy Butler"
+      ],
+      "teams": [
+        "MIA"
+      ]
+    },
+    {
+      "name": "Bennedict Mathurin",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1631097.png",
+      "teammates": [
+        "George Hill",
+        "Jordan Nwora",
+        "Jalen Smith",
+        "Myles Turner",
+        "Pascal Siakam",
+        "Tyrese Haliburton",
+        "Buddy Hield"
+      ],
+      "teams": [
+        "IND"
+      ]
+    },
+    {
+      "name": "Bradley Beal",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bradley_Beal_2020.jpg/960px-Bradley_Beal_2020.jpg",
+      "teammates": [
+        "Marcin Gortat",
+        "Russell Westbrook",
+        "Kevin Durant",
+        "Kelly Oubre Jr.",
+        "Isaiah Thomas",
+        "Otto Porter Jr.",
+        "John Wall"
+      ],
+      "teams": [
+        "WAS",
+        "PHO"
+      ]
+    },
+    {
+      "name": "Brandon Ingram",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627742.png",
+      "teammates": [
+        "Jonas Valančiūnas",
+        "Isaiah Thomas",
+        "Julius Randle",
+        "LeBron James",
+        "CJ McCollum",
+        "Josh Hart",
+        "Zion Williamson"
+      ],
+      "teams": [
+        "LAL",
+        "NOP"
+      ]
+    },
+    {
+      "name": "Brandon Miller",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1641706.png",
+      "teammates": [
+        "Seth Curry",
+        "Dāvis Bertāns",
+        "P.J. Washington",
+        "Miles Bridges",
+        "Gordon Hayward",
+        "Terry Rozier",
+        "LaMelo Ball"
+      ],
+      "teams": [
+        "CHO"
+      ]
+    },
+    {
+      "name": "Brook Lopez",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201572.png",
+      "teammates": [
+        "Jerry Stackhouse",
+        "Pat Connaughton",
+        "Damian Lillard",
+        "Joe Johnson",
+        "Deron Williams",
+        "Khris Middleton",
+        "Giannis Antetokounmpo"
+      ],
+      "teams": [
+        "NJN",
+        "BRK",
+        "LAL",
+        "MIL"
+      ]
+    },
+    {
+      "name": "CJ McCollum",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203468.png",
+      "teammates": [
+        "Meyers Leonard",
+        "Zion Williamson",
+        "Brandon Ingram",
+        "Carmelo Anthony",
+        "Anfernee Simons",
+        "Jusuf Nurkić",
+        "Damian Lillard"
+      ],
+      "teams": [
+        "POR",
+        "NOP"
+      ]
+    },
+    {
+      "name": "Cade Cunningham",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630595.png",
+      "teammates": [
+        "Danilo Gallinari",
+        "Alec Burks",
+        "Saddiq Bey",
+        "Jaden Ivey",
+        "Jerami Grant",
+        "Marvin Bagley III",
+        "Bojan Bogdanović"
+      ],
+      "teams": [
+        "DET"
+      ]
+    },
+    {
+      "name": "Cam Thomas",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630560.png",
+      "teammates": [
+        "LaMarcus Aldridge",
+        "Blake Griffin",
+        "Spencer Dinwiddie",
+        "Mikal Bridges",
+        "Kyrie Irving",
+        "Kevin Durant",
+        "James Harden"
+      ],
+      "teams": [
+        "BRK"
+      ]
+    },
+    {
+      "name": "Cameron Johnson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629661.png",
+      "teammates": [
+        "Cam Thomas",
+        "Kyrie Irving",
+        "Deandre Ayton",
+        "Chris Paul",
+        "Kevin Durant",
+        "Devin Booker",
+        "Mikal Bridges"
+      ],
+      "teams": [
+        "PHO",
+        "BRK"
+      ]
+    },
+    {
+      "name": "Caris LeVert",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627747.png",
+      "teammates": [
+        "Joe Harris",
+        "Kyrie Irving",
+        "Kevin Durant",
+        "Donovan Mitchell",
+        "Spencer Dinwiddie",
+        "James Harden",
+        "Jarrett Allen"
+      ],
+      "teams": [
+        "BRK",
+        "IND",
+        "CLE"
+      ]
+    },
+    {
+      "name": "Chet Holmgren",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1631096.png",
+      "teammates": [
+        "Tre Mann",
+        "Dāvis Bertāns",
+        "Josh Giddey",
+        "Luguentz Dort",
+        "Jalen Williams",
+        "Gordon Hayward",
+        "Shai Gilgeous-Alexander"
+      ],
+      "teams": [
+        "OKC"
+      ]
+    },
+    {
+      "name": "Chris Paul",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Chris_Paul_%282022_All-Star_Weekend%29_%28cropped%29.jpg/960px-Chris_Paul_%282022_All-Star_Weekend%29_%28cropped%29.jpg",
+      "teammates": [
+        "Mikal Bridges",
+        "Devin Booker",
+        "Jamal Crawford",
+        "James Harden",
+        "Peja Stojaković",
+        "David West",
+        "Blake Griffin"
+      ],
+      "teams": [
+        "NOK",
+        "NOH",
+        "LAC",
+        "HOU",
+        "OKC",
+        "PHO",
+        "GSW"
+      ]
+    },
+    {
+      "name": "Clint Capela",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Clint_Capela_%2848999310386%29_%28cropped%29.jpg/960px-Clint_Capela_%2848999310386%29_%28cropped%29.jpg",
+      "teammates": [
+        "Carmelo Anthony",
+        "John Collins",
+        "Lou Williams",
+        "Russell Westbrook",
+        "Eric Gordon",
+        "Trae Young",
+        "James Harden"
+      ],
+      "teams": [
+        "HOU",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Coby White",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629632.png",
+      "teammates": [
+        "Thaddeus Young",
+        "Patrick Williams",
+        "Javonte Green",
+        "Lauri Markkanen",
+        "DeMar DeRozan",
+        "Nikola Vučević",
+        "Zach LaVine"
+      ],
+      "teams": [
+        "CHI"
+      ]
+    },
+    {
+      "name": "Collin Sexton",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629012.png",
+      "teammates": [
+        "Kelly Olynyk",
+        "Brandon Knight",
+        "Cedi Osman",
+        "Darius Garland",
+        "Jordan Clarkson",
+        "Lauri Markkanen",
+        "Kevin Love"
+      ],
+      "teams": [
+        "CLE",
+        "UTA"
+      ]
+    },
+    {
+      "name": "D'Angelo Russell",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/D%27Angelo_Russell_%2851733686752%29_%28cropped%29_%28cropped%29.jpg/960px-D%27Angelo_Russell_%2851733686752%29_%28cropped%29_%28cropped%29.jpg",
+      "teammates": [
+        "Stephen Curry",
+        "Anthony Davis",
+        "Malik Beasley",
+        "Anthony Edwards",
+        "LeBron James",
+        "Kobe Bryant",
+        "Karl-Anthony Towns"
+      ],
+      "teams": [
+        "LAL",
+        "BRK",
+        "GSW",
+        "MIN",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Damian Lillard",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Damian_Lillard_%282021%29_%28cropped%29.jpg/960px-Damian_Lillard_%282021%29_%28cropped%29.jpg",
+      "teammates": [
+        "Giannis Antetokounmpo",
+        "LaMarcus Aldridge",
+        "Meyers Leonard",
+        "Carmelo Anthony",
+        "Anfernee Simons",
+        "Jusuf Nurkić",
+        "CJ McCollum"
+      ],
+      "teams": [
+        "POR",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Darius Garland",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629636.png",
+      "teammates": [
+        "Cedi Osman",
+        "Lauri Markkanen",
+        "Jarrett Allen",
+        "Caris LeVert",
+        "Donovan Mitchell",
+        "Collin Sexton",
+        "Kevin Love"
+      ],
+      "teams": [
+        "CLE"
+      ]
+    },
+    {
+      "name": "De'Aaron Fox",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628368.png",
+      "teammates": [
+        "Bogdan Bogdanović",
+        "Richaun Holmes",
+        "Marvin Bagley III",
+        "Vince Carter",
+        "Domantas Sabonis",
+        "Buddy Hield",
+        "Harrison Barnes"
+      ],
+      "teams": [
+        "SAC"
+      ]
+    },
+    {
+      "name": "De'Andre Hunter",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629631.png",
+      "teammates": [
+        "Dejounte Murray",
+        "Lou Williams",
+        "Vince Carter",
+        "Clint Capela",
+        "Bogdan Bogdanović",
+        "John Collins",
+        "Trae Young"
+      ],
+      "teams": [
+        "ATL"
+      ]
+    },
+    {
+      "name": "DeMar DeRozan",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201942.png",
+      "teammates": [
+        "Terrence Ross",
+        "Nikola Vučević",
+        "Andrea Bargnani",
+        "Zach LaVine",
+        "Rudy Gay",
+        "Jonas Valančiūnas",
+        "Kyle Lowry"
+      ],
+      "teams": [
+        "TOR",
+        "SAS",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Deandre Ayton",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629028.png",
+      "teammates": [
+        "T.J. Warren",
+        "Kelly Oubre Jr.",
+        "Cameron Johnson",
+        "Chris Paul",
+        "Kevin Durant",
+        "Mikal Bridges",
+        "Devin Booker"
+      ],
+      "teams": [
+        "PHO",
+        "POR"
+      ]
+    },
+    {
+      "name": "Dejounte Murray",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627749.png",
+      "teammates": [
+        "Patty Mills",
+        "Rudy Gay",
+        "Keldon Johnson",
+        "Kawhi Leonard",
+        "DeMar DeRozan",
+        "Trae Young",
+        "LaMarcus Aldridge"
+      ],
+      "teams": [
+        "SAS",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Dennis Schröder",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203471.png",
+      "teammates": [
+        "Jayson Tatum",
+        "Paul Millsap",
+        "Al Horford",
+        "Shai Gilgeous-Alexander",
+        "Anthony Davis",
+        "LeBron James",
+        "Russell Westbrook"
+      ],
+      "teams": [
+        "ATL",
+        "OKC",
+        "LAL",
+        "BOS",
+        "HOU",
+        "LAL",
+        "TOR",
+        "BRK"
+      ]
+    },
+    {
+      "name": "Derrick White",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628401.png",
+      "teammates": [
+        "Keldon Johnson",
+        "Rudy Gay",
+        "Dejounte Murray",
+        "Jaylen Brown",
+        "LaMarcus Aldridge",
+        "DeMar DeRozan",
+        "Jayson Tatum"
+      ],
+      "teams": [
+        "SAS",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Desmond Bane",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630217.png",
+      "teammates": [
+        "Jonas Valančiūnas",
+        "Tyus Jones",
+        "Brandon Clarke",
+        "Derrick Rose",
+        "Dillon Brooks",
+        "Jaren Jackson Jr.",
+        "Ja Morant"
+      ],
+      "teams": [
+        "MEM"
+      ]
+    },
+    {
+      "name": "Devin Booker",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626164.png",
+      "teammates": [
+        "Isaiah Thomas",
+        "Chris Paul",
+        "Bradley Beal",
+        "Deandre Ayton",
+        "T.J. Warren",
+        "Kevin Durant",
+        "Mikal Bridges"
+      ],
+      "teams": [
+        "PHO"
+      ]
+    },
+    {
+      "name": "Devin Vassell",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630170.png",
+      "teammates": [
+        "Doug McDermott",
+        "Devonte' Graham",
+        "LaMarcus Aldridge",
+        "Tre Jones",
+        "Dejounte Murray",
+        "DeMar DeRozan",
+        "Keldon Johnson"
+      ],
+      "teams": [
+        "SAS"
+      ]
+    },
+    {
+      "name": "Dillon Brooks",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628415.png",
+      "teammates": [
+        "MarShon Brooks",
+        "Kyle Anderson",
+        "Mike Conley",
+        "Jonas Valančiūnas",
+        "Desmond Bane",
+        "Jaren Jackson Jr.",
+        "Ja Morant"
+      ],
+      "teams": [
+        "MEM",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Domantas Sabonis",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627734.png",
+      "teammates": [
+        "Harrison Barnes",
+        "Jeremy Lamb",
+        "Malcolm Brogdon",
+        "Russell Westbrook",
+        "Myles Turner",
+        "De'Aaron Fox",
+        "Victor Oladipo"
+      ],
+      "teams": [
+        "OKC",
+        "IND",
+        "SAC"
+      ]
+    },
+    {
+      "name": "Donovan Mitchell",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628378.png",
+      "teammates": [
+        "Darius Garland",
+        "Kevin Love",
+        "Joe Ingles",
+        "Jordan Clarkson",
+        "Mike Conley",
+        "Bojan Bogdanović",
+        "Rudy Gobert"
+      ],
+      "teams": [
+        "UTA",
+        "CLE"
+      ]
+    },
+    {
+      "name": "Donte DiVincenzo",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628978.png",
+      "teammates": [
+        "De'Aaron Fox",
+        "DeMarcus Cousins",
+        "Jalen Brunson",
+        "Stephen Curry",
+        "Brook Lopez",
+        "Khris Middleton",
+        "Giannis Antetokounmpo"
+      ],
+      "teams": [
+        "MIL",
+        "SAC",
+        "GSW",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Evan Mobley",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630596.png",
+      "teammates": [
+        "Collin Sexton",
+        "Jarrett Allen",
+        "Lauri Markkanen",
+        "Caris LeVert",
+        "Darius Garland",
+        "Kevin Love",
+        "Donovan Mitchell"
+      ],
+      "teams": [
+        "CLE"
+      ]
+    },
+    {
+      "name": "Franz Wagner",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630532.png",
+      "teammates": [
+        "Terrence Ross",
+        "Jalen Suggs",
+        "Markelle Fultz",
+        "Wendell Carter Jr.",
+        "Cole Anthony",
+        "Gary Harris",
+        "Paolo Banchero"
+      ],
+      "teams": [
+        "ORL"
+      ]
+    },
+    {
+      "name": "Giannis Antetokounmpo",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png",
+      "teammates": [
+        "Malcolm Brogdon",
+        "Pat Connaughton",
+        "John Henson",
+        "Jabari Parker",
+        "Damian Lillard",
+        "Brook Lopez",
+        "Khris Middleton"
+      ],
+      "teams": [
+        "MIL"
+      ]
+    },
+    {
+      "name": "Harrison Barnes",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203084.png",
+      "teammates": [
+        "Andrew Bogut",
+        "Buddy Hield",
+        "Luka Dončić",
+        "Klay Thompson",
+        "Dirk Nowitzki",
+        "Stephen Curry",
+        "De'Aaron Fox"
+      ],
+      "teams": [
+        "GSW",
+        "DAL",
+        "SAC"
+      ]
+    },
+    {
+      "name": "Immanuel Quickley",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630193.png",
+      "teammates": [
+        "Alec Burks",
+        "Pascal Siakam",
+        "Kemba Walker",
+        "Jalen Brunson",
+        "Derrick Rose",
+        "Julius Randle",
+        "RJ Barrett"
+      ],
+      "teams": [
+        "NYK",
+        "TOR"
+      ]
+    },
+    {
+      "name": "Ja Morant",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629630.png",
+      "teammates": [
+        "Jonas Valančiūnas",
+        "Tyus Jones",
+        "Derrick Rose",
+        "Brandon Clarke",
+        "Dillon Brooks",
+        "Desmond Bane",
+        "Jaren Jackson Jr."
+      ],
+      "teams": [
+        "MEM"
+      ]
+    },
+    {
+      "name": "Jaden Ivey",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1631093.png",
+      "teammates": [
+        "Jalen Duren",
+        "Marvin Bagley III",
+        "Evan Fournier",
+        "Danilo Gallinari",
+        "Alec Burks",
+        "Bojan Bogdanović",
+        "Cade Cunningham"
+      ],
+      "teams": [
+        "DET"
+      ]
+    },
+    {
+      "name": "Jalen Brunson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628973.png",
+      "teammates": [
+        "Derrick Rose",
+        "RJ Barrett",
+        "Dirk Nowitzki",
+        "Julius Randle",
+        "Tim Hardaway Jr.",
+        "Kristaps Porziņģis",
+        "Luka Dončić"
+      ],
+      "teams": [
+        "DAL",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Jalen Green",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630224.png",
+      "teammates": [
+        "Dennis Schröder",
+        "Jae'Sean Tate",
+        "Fred VanVleet",
+        "Christian Wood",
+        "Alperen Sengun",
+        "Kevin Porter Jr.",
+        "Eric Gordon"
+      ],
+      "teams": [
+        "HOU"
+      ]
+    },
+    {
+      "name": "Jalen Johnson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630552.png",
+      "teammates": [
+        "Lou Williams",
+        "De'Andre Hunter",
+        "Clint Capela",
+        "Bogdan Bogdanović",
+        "John Collins",
+        "Dejounte Murray",
+        "Trae Young"
+      ],
+      "teams": [
+        "ATL"
+      ]
+    },
+    {
+      "name": "Jalen Williams",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1631114.png",
+      "teammates": [
+        "Dāvis Bertāns",
+        "Tre Mann",
+        "Chet Holmgren",
+        "Josh Giddey",
+        "Luguentz Dort",
+        "Gordon Hayward",
+        "Shai Gilgeous-Alexander"
+      ],
+      "teams": [
+        "OKC"
+      ]
+    },
+    {
+      "name": "Jamal Murray",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627750.png",
+      "teammates": [
+        "Isaiah Thomas",
+        "Paul Millsap",
+        "Michael Porter Jr.",
+        "Will Barton",
+        "Malik Beasley",
+        "Gary Harris",
+        "Nikola Jokić"
+      ],
+      "teams": [
+        "DEN"
+      ]
+    },
+    {
+      "name": "James Harden",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201935.png",
+      "teammates": [
+        "Dwight Howard",
+        "Kyrie Irving",
+        "Clint Capela",
+        "Eric Gordon",
+        "Joel Embiid",
+        "Russell Westbrook",
+        "Kevin Durant"
+      ],
+      "teams": [
+        "OKC",
+        "HOU",
+        "BRK",
+        "PHI",
+        "LAC"
+      ]
+    },
+    {
+      "name": "Jaren Jackson Jr.",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628991.png",
+      "teammates": [
+        "Kyle Anderson",
+        "Derrick Rose",
+        "Jonas Valančiūnas",
+        "Brandon Clarke",
+        "Dillon Brooks",
+        "Desmond Bane",
+        "Ja Morant"
+      ],
+      "teams": [
+        "MEM"
+      ]
+    },
+    {
+      "name": "Jarrett Allen",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628386.png",
+      "teammates": [
+        "Kyrie Irving",
+        "Kevin Durant",
+        "Donovan Mitchell",
+        "Darius Garland",
+        "Kevin Love",
+        "James Harden",
+        "Caris LeVert"
+      ],
+      "teams": [
+        "BRK",
+        "CLE"
+      ]
+    },
+    {
+      "name": "Jaylen Brown",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627759.png",
+      "teammates": [
+        "Isaiah Thomas",
+        "Kemba Walker",
+        "Terry Rozier",
+        "Kyrie Irving",
+        "Marcus Smart",
+        "Al Horford",
+        "Jayson Tatum"
+      ],
+      "teams": [
+        "BOS"
+      ]
+    },
+    {
+      "name": "Jayson Tatum",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png",
+      "teammates": [
+        "Daniel Theis",
+        "Terry Rozier",
+        "Kemba Walker",
+        "Kyrie Irving",
+        "Marcus Smart",
+        "Al Horford",
+        "Jaylen Brown"
+      ],
+      "teams": [
+        "BOS"
+      ]
+    },
+    {
+      "name": "Jerami Grant",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203924.png",
+      "teammates": [
+        "Derrick Rose",
+        "Anfernee Simons",
+        "Nikola Jokić",
+        "Carmelo Anthony",
+        "Paul George",
+        "Damian Lillard",
+        "Russell Westbrook"
+      ],
+      "teams": [
+        "PHI",
+        "OKC",
+        "DEN",
+        "DET",
+        "POR"
+      ]
+    },
+    {
+      "name": "Joel Embiid",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203954.png",
+      "teammates": [
+        "Robert Covington",
+        "Ben Simmons",
+        "Shake Milton",
+        "Furkan Korkmaz",
+        "Tyrese Maxey",
+        "James Harden",
+        "Tobias Harris"
+      ],
+      "teams": [
+        "PHI"
+      ]
+    },
+    {
+      "name": "John Collins",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628381.png",
+      "teammates": [
+        "Bogdan Bogdanović",
+        "Lauri Markkanen",
+        "Lou Williams",
+        "Kevin Huerter",
+        "De'Andre Hunter",
+        "Vince Carter",
+        "Trae Young"
+      ],
+      "teams": [
+        "ATL",
+        "UTA"
+      ]
+    },
+    {
+      "name": "Jonas Valančiūnas",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202685.png",
+      "teammates": [
+        "Terrence Ross",
+        "Pascal Siakam",
+        "CJ McCollum",
+        "Brandon Ingram",
+        "Norman Powell",
+        "Kyle Lowry",
+        "DeMar DeRozan"
+      ],
+      "teams": [
+        "TOR",
+        "MEM",
+        "NOP"
+      ]
+    },
+    {
+      "name": "Jonathan Kuminga",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630228.png",
+      "teammates": [
+        "Draymond Green",
+        "Chris Paul",
+        "Andre Iguodala",
+        "Jordan Poole",
+        "Klay Thompson",
+        "Andrew Wiggins",
+        "Stephen Curry"
+      ],
+      "teams": [
+        "GSW"
+      ]
+    },
+    {
+      "name": "Josh Giddey",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630581.png",
+      "teammates": [
+        "Mike Muscala",
+        "Darius Bazley",
+        "Tre Mann",
+        "Gordon Hayward",
+        "Jalen Williams",
+        "Luguentz Dort",
+        "Shai Gilgeous-Alexander"
+      ],
+      "teams": [
+        "OKC"
+      ]
+    },
+    {
+      "name": "Josh Hart",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628404.png",
+      "teammates": [
+        "Isaiah Thomas",
+        "Zion Williamson",
+        "LeBron James",
+        "Jalen Brunson",
+        "Julius Randle",
+        "Damian Lillard",
+        "Brandon Ingram"
+      ],
+      "teams": [
+        "LAL",
+        "NOP",
+        "POR",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Jrue Holiday",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201950.png",
+      "teammates": [
+        "Lou Williams",
+        "Tyreke Evans",
+        "Elton Brand",
+        "Allen Iverson",
+        "DeMarcus Cousins",
+        "Giannis Antetokounmpo",
+        "Anthony Davis"
+      ],
+      "teams": [
+        "PHI",
+        "NOP",
+        "MIL",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Julius Randle",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203944.png",
+      "teammates": [
+        "Jordan Clarkson",
+        "Isaiah Thomas",
+        "Immanuel Quickley",
+        "Jalen Brunson",
+        "Derrick Rose",
+        "Kobe Bryant",
+        "RJ Barrett"
+      ],
+      "teams": [
+        "LAL",
+        "NOP",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Jusuf Nurkić",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203994.png",
+      "teammates": [
+        "Nikola Jokić",
+        "Bradley Beal",
+        "Kevin Durant",
+        "Carmelo Anthony",
+        "Anfernee Simons",
+        "CJ McCollum",
+        "Damian Lillard"
+      ],
+      "teams": [
+        "DEN",
+        "POR",
+        "PHO"
+      ]
+    },
+    {
+      "name": "Karl-Anthony Towns",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626157.png",
+      "teammates": [
+        "Malik Beasley",
+        "Derrick Rose",
+        "Naz Reid",
+        "Zach LaVine",
+        "D'Angelo Russell",
+        "Anthony Edwards",
+        "Andrew Wiggins"
+      ],
+      "teams": [
+        "MIN"
+      ]
+    },
+    {
+      "name": "Kawhi Leonard",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202695.png",
+      "teammates": [
+        "Patty Mills",
+        "James Harden",
+        "Danny Green",
+        "Paul George",
+        "Tim Duncan",
+        "Manu Ginóbili",
+        "Tony Parker"
+      ],
+      "teams": [
+        "SAS",
+        "TOR",
+        "LAC"
+      ]
+    },
+    {
+      "name": "Keegan Murray",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1631099.png",
+      "teammates": [
+        "Alex Len",
+        "Davion Mitchell",
+        "Kevin Huerter",
+        "Malik Monk",
+        "Harrison Barnes",
+        "Domantas Sabonis",
+        "De'Aaron Fox"
+      ],
+      "teams": [
+        "SAC"
+      ]
+    },
+    {
+      "name": "Keldon Johnson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629640.png",
+      "teammates": [
+        "Tre Jones",
+        "Rudy Gay",
+        "Jakob Poeltl",
+        "LaMarcus Aldridge",
+        "Dejounte Murray",
+        "Devin Vassell",
+        "DeMar DeRozan"
+      ],
+      "teams": [
+        "SAS"
+      ]
+    },
+    {
+      "name": "Kelly Oubre Jr.",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626162.png",
+      "teammates": [
+        "Otto Porter Jr.",
+        "Mikal Bridges",
+        "Devin Booker",
+        "Stephen Curry",
+        "Joel Embiid",
+        "John Wall",
+        "Bradley Beal"
+      ],
+      "teams": [
+        "WAS",
+        "PHO",
+        "GSW",
+        "CHO",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Kevin Durant",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png",
+      "teammates": [
+        "Jeff Green",
+        "Kyrie Irving",
+        "Serge Ibaka",
+        "Stephen Curry",
+        "Nick Collison",
+        "James Harden",
+        "Russell Westbrook"
+      ],
+      "teams": [
+        "SEA",
+        "OKC",
+        "GSW",
+        "BRK",
+        "PHO"
+      ]
+    },
+    {
+      "name": "Kevin Huerter",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628989.png",
+      "teammates": [
+        "Danilo Gallinari",
+        "Domantas Sabonis",
+        "Lou Williams",
+        "De'Aaron Fox",
+        "Vince Carter",
+        "John Collins",
+        "Trae Young"
+      ],
+      "teams": [
+        "ATL",
+        "SAC"
+      ]
+    },
+    {
+      "name": "Khris Middleton",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203114.png",
+      "teammates": [
+        "Pat Connaughton",
+        "John Henson",
+        "Greg Monroe",
+        "Jabari Parker",
+        "Damian Lillard",
+        "Brook Lopez",
+        "Giannis Antetokounmpo"
+      ],
+      "teams": [
+        "DET",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Klay Thompson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202691.png",
+      "teammates": [
+        "Andrew Wiggins",
+        "Andrew Bogut",
+        "David Lee",
+        "Kevin Durant",
+        "Andre Iguodala",
+        "Draymond Green",
+        "Stephen Curry"
+      ],
+      "teams": [
+        "GSW"
+      ]
+    },
+    {
+      "name": "Kristaps Porziņģis",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/204001.png",
+      "teammates": [
+        "Jaylen Brown",
+        "Jayson Tatum",
+        "Tim Hardaway Jr.",
+        "Carmelo Anthony",
+        "Bradley Beal",
+        "Jalen Brunson",
+        "Luka Dončić"
+      ],
+      "teams": [
+        "NYK",
+        "DAL",
+        "WAS",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Kyle Kuzma",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628398.png",
+      "teammates": [
+        "Kristaps Porziņģis",
+        "Brandon Ingram",
+        "Isaiah Thomas",
+        "Kentavious Caldwell-Pope",
+        "Anthony Davis",
+        "Bradley Beal",
+        "LeBron James"
+      ],
+      "teams": [
+        "LAL",
+        "WAS"
+      ]
+    },
+    {
+      "name": "LaMelo Ball",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630163.png",
+      "teammates": [
+        "Nick Richards",
+        "Kelly Oubre Jr.",
+        "P.J. Washington",
+        "Isaiah Thomas",
+        "Miles Bridges",
+        "Gordon Hayward",
+        "Terry Rozier"
+      ],
+      "teams": [
+        "CHO"
+      ]
+    },
+    {
+      "name": "Lauri Markkanen",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628374.png",
+      "teammates": [
+        "Nikola Vučević",
+        "Jordan Clarkson",
+        "Otto Porter Jr.",
+        "Kevin Love",
+        "Kris Dunn",
+        "Collin Sexton",
+        "Zach LaVine"
+      ],
+      "teams": [
+        "CHI",
+        "CLE",
+        "UTA"
+      ]
+    },
+    {
+      "name": "LeBron James",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+      "teammates": [
+        "Russell Westbrook",
+        "Chris Bosh",
+        "Kevin Love",
+        "Anderson Varejão",
+        "Anthony Davis",
+        "Zydrunas Ilgauskas",
+        "Dwyane Wade"
+      ],
+      "teams": [
+        "CLE",
+        "MIA",
+        "CLE",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Luguentz Dort",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629652.png",
+      "teammates": [
+        "Gordon Hayward",
+        "Chris Paul",
+        "Jalen Williams",
+        "Josh Giddey",
+        "Mike Muscala",
+        "Darius Bazley",
+        "Shai Gilgeous-Alexander"
+      ],
+      "teams": [
+        "OKC"
+      ]
+    },
+    {
+      "name": "Luka Dončić",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png",
+      "teammates": [
+        "Dorian Finney-Smith",
+        "Maxi Kleber",
+        "Dwight Powell",
+        "Kristaps Porziņģis",
+        "Kyrie Irving",
+        "Tim Hardaway Jr.",
+        "Jalen Brunson"
+      ],
+      "teams": [
+        "DAL"
+      ]
+    },
+    {
+      "name": "Luke Kennard",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628379.png",
+      "teammates": [
+        "Derrick Rose",
+        "Kawhi Leonard",
+        "Ja Morant",
+        "Russell Westbrook",
+        "Blake Griffin",
+        "Paul George",
+        "Reggie Jackson"
+      ],
+      "teams": [
+        "DET",
+        "LAC",
+        "MEM"
+      ]
+    },
+    {
+      "name": "Malik Monk",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628370.png",
+      "teammates": [
+        "Anthony Davis",
+        "Carmelo Anthony",
+        "Miles Bridges",
+        "Kemba Walker",
+        "De'Aaron Fox",
+        "LeBron James",
+        "Russell Westbrook"
+      ],
+      "teams": [
+        "CHO",
+        "LAL",
+        "SAC"
+      ]
+    },
+    {
+      "name": "Michael Porter Jr.",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629008.png",
+      "teammates": [
+        "Jerami Grant",
+        "Reggie Jackson",
+        "Will Barton",
+        "DeMarcus Cousins",
+        "Aaron Gordon",
+        "Jamal Murray",
+        "Nikola Jokić"
+      ],
+      "teams": [
+        "DEN"
+      ]
+    },
+    {
+      "name": "Mikal Bridges",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628969.png",
+      "teammates": [
+        "Kyrie Irving",
+        "T.J. Warren",
+        "Chris Paul",
+        "Deandre Ayton",
+        "Kevin Durant",
+        "Cameron Johnson",
+        "Devin Booker"
+      ],
+      "teams": [
+        "PHO",
+        "BRK"
+      ]
+    },
+    {
+      "name": "Miles Bridges",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628970.png",
+      "teammates": [
+        "Kemba Walker",
+        "Devonte' Graham",
+        "P.J. Washington",
+        "Isaiah Thomas",
+        "Gordon Hayward",
+        "LaMelo Ball",
+        "Terry Rozier"
+      ],
+      "teams": [
+        "CHO"
+      ]
+    },
+    {
+      "name": "Myles Turner",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626167.png",
+      "teammates": [
+        "Tyrese Haliburton",
+        "Buddy Hield",
+        "Malcolm Brogdon",
+        "Monta Ellis",
+        "Paul George",
+        "Victor Oladipo",
+        "Domantas Sabonis"
+      ],
+      "teams": [
+        "IND"
+      ]
+    },
+    {
+      "name": "Nikola Jokić",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png",
+      "teammates": [
+        "Aaron Gordon",
+        "Paul Millsap",
+        "Malik Beasley",
+        "Michael Porter Jr.",
+        "Gary Harris",
+        "Will Barton",
+        "Jamal Murray"
+      ],
+      "teams": [
+        "DEN"
+      ]
+    },
+    {
+      "name": "Nikola Vučević",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202696.png",
+      "teammates": [
+        "Victor Oladipo",
+        "Terrence Ross",
+        "Tobias Harris",
+        "DeMar DeRozan",
+        "Zach LaVine",
+        "Aaron Gordon",
+        "Evan Fournier"
+      ],
+      "teams": [
+        "PHI",
+        "ORL",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Norman Powell",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626181.png",
+      "teammates": [
+        "DeMar DeRozan",
+        "Paul George",
+        "James Harden",
+        "Damian Lillard",
+        "Fred VanVleet",
+        "Pascal Siakam",
+        "Kyle Lowry"
+      ],
+      "teams": [
+        "TOR",
+        "POR",
+        "LAC"
+      ]
+    },
+    {
+      "name": "OG Anunoby",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628384.png",
+      "teammates": [
+        "Jalen Brunson",
+        "Gary Trent Jr.",
+        "Norman Powell",
+        "Chris Boucher",
+        "Kyle Lowry",
+        "Fred VanVleet",
+        "Pascal Siakam"
+      ],
+      "teams": [
+        "TOR",
+        "NYK"
+      ]
+    },
+    {
+      "name": "P.J. Washington",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629023.png",
+      "teammates": [
+        "Kyrie Irving",
+        "Isaiah Thomas",
+        "Miles Bridges",
+        "Luka Dončić",
+        "Gordon Hayward",
+        "LaMelo Ball",
+        "Terry Rozier"
+      ],
+      "teams": [
+        "CHO",
+        "DAL"
+      ]
+    },
+    {
+      "name": "Paolo Banchero",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1631094.png",
+      "teammates": [
+        "Jonathan Isaac",
+        "Jalen Suggs",
+        "Markelle Fultz",
+        "Wendell Carter Jr.",
+        "Cole Anthony",
+        "Gary Harris",
+        "Franz Wagner"
+      ],
+      "teams": [
+        "ORL"
+      ]
+    },
+    {
+      "name": "Pascal Siakam",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627783.png",
+      "teammates": [
+        "Gary Trent Jr.",
+        "DeMar DeRozan",
+        "Chris Boucher",
+        "Norman Powell",
+        "Kyle Lowry",
+        "OG Anunoby",
+        "Fred VanVleet"
+      ],
+      "teams": [
+        "TOR",
+        "IND"
+      ]
+    },
+    {
+      "name": "Paul George",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202331.png",
+      "teammates": [
+        "Marcus Morris",
+        "George Hill",
+        "David West",
+        "James Harden",
+        "Danny Granger",
+        "Kawhi Leonard",
+        "Russell Westbrook"
+      ],
+      "teams": [
+        "IND",
+        "OKC",
+        "LAC"
+      ]
+    },
+    {
+      "name": "RJ Barrett",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629628.png",
+      "teammates": [
+        "Taj Gibson",
+        "Kemba Walker",
+        "Mitchell Robinson",
+        "Jalen Brunson",
+        "Derrick Rose",
+        "Immanuel Quickley",
+        "Julius Randle"
+      ],
+      "teams": [
+        "NYK",
+        "TOR"
+      ]
+    },
+    {
+      "name": "Rudy Gobert",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203497.png",
+      "teammates": [
+        "Karl-Anthony Towns",
+        "Gordon Hayward",
+        "Alec Burks",
+        "Mike Conley",
+        "Joe Ingles",
+        "Derrick Favors",
+        "Donovan Mitchell"
+      ],
+      "teams": [
+        "UTA",
+        "MIN"
+      ]
+    },
+    {
+      "name": "Russell Westbrook",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201566.png",
+      "teammates": [
+        "Reggie Jackson",
+        "LeBron James",
+        "Serge Ibaka",
+        "Paul George",
+        "Nick Collison",
+        "James Harden",
+        "Kevin Durant"
+      ],
+      "teams": [
+        "OKC",
+        "HOU",
+        "WAS",
+        "LAL",
+        "LAC"
+      ]
+    },
+    {
+      "name": "Saddiq Bey",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630180.png",
+      "teammates": [
+        "Bojan Bogdanović",
+        "Blake Griffin",
+        "Derrick Rose",
+        "Jerami Grant",
+        "Dejounte Murray",
+        "Cade Cunningham",
+        "Trae Young"
+      ],
+      "teams": [
+        "DET",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Scottie Barnes",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630567.png",
+      "teammates": [
+        "Chris Boucher",
+        "RJ Barrett",
+        "Fred VanVleet",
+        "OG Anunoby",
+        "Thaddeus Young",
+        "Gary Trent Jr.",
+        "Pascal Siakam"
+      ],
+      "teams": [
+        "TOR"
+      ]
+    },
+    {
+      "name": "Shaedon Sharpe",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1631101.png",
+      "teammates": [
+        "Deandre Ayton",
+        "Skylar Mays",
+        "Josh Hart",
+        "Malcolm Brogdon",
+        "Jerami Grant",
+        "Anfernee Simons",
+        "Damian Lillard"
+      ],
+      "teams": [
+        "POR"
+      ]
+    },
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628983.png",
+      "teammates": [
+        "Chris Paul",
+        "Jalen Williams",
+        "Danilo Gallinari",
+        "Josh Giddey",
+        "Mike Muscala",
+        "Darius Bazley",
+        "Luguentz Dort"
+      ],
+      "teams": [
+        "LAC",
+        "OKC"
+      ]
+    },
+    {
+      "name": "Stephen Curry",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png",
+      "teammates": [
+        "Monta Ellis",
+        "David Lee",
+        "Andrew Wiggins",
+        "Kevin Durant",
+        "Andre Iguodala",
+        "Draymond Green",
+        "Klay Thompson"
+      ],
+      "teams": [
+        "GSW"
+      ]
+    },
+    {
+      "name": "Tim Hardaway Jr.",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203501.png",
+      "teammates": [
+        "Dwight Powell",
+        "Kyrie Irving",
+        "Trey Burke",
+        "Carmelo Anthony",
+        "Kristaps Porziņģis",
+        "Jalen Brunson",
+        "Luka Dončić"
+      ],
+      "teams": [
+        "NYK",
+        "ATL",
+        "NYK",
+        "DAL"
+      ]
+    },
+    {
+      "name": "Tobias Harris",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202699.png",
+      "teammates": [
+        "Victor Oladipo",
+        "Brandon Jennings",
+        "Shai Gilgeous-Alexander",
+        "Nikola Vučević",
+        "Tyrese Maxey",
+        "James Harden",
+        "Joel Embiid"
+      ],
+      "teams": [
+        "MIL",
+        "ORL",
+        "DET",
+        "LAC",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Trae Young",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629027.png",
+      "teammates": [
+        "Lou Williams",
+        "Kevin Huerter",
+        "Clint Capela",
+        "Bogdan Bogdanović",
+        "De'Andre Hunter",
+        "Vince Carter",
+        "John Collins"
+      ],
+      "teams": [
+        "ATL"
+      ]
+    },
+    {
+      "name": "Tyler Herro",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629639.png",
+      "teammates": [
+        "Goran Dragić",
+        "Victor Oladipo",
+        "Duncan Robinson",
+        "Kevin Love",
+        "Kyle Lowry",
+        "Bam Adebayo",
+        "Jimmy Butler"
+      ],
+      "teams": [
+        "MIA"
+      ]
+    },
+    {
+      "name": "Tyrese Maxey",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630178.png",
+      "teammates": [
+        "Shake Milton",
+        "Furkan Korkmaz",
+        "Kyle Lowry",
+        "Dwight Howard",
+        "Tobias Harris",
+        "James Harden",
+        "Joel Embiid"
+      ],
+      "teams": [
+        "PHI"
+      ]
+    },
+    {
+      "name": "Victor Wembanyama",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1641705.png",
+      "teammates": [
+        "Jeremy Sochan",
+        "Tre Jones",
+        "Cedi Osman",
+        "Doug McDermott",
+        "Devonte' Graham",
+        "Devin Vassell",
+        "Keldon Johnson"
+      ],
+      "teams": [
+        "SAS"
+      ]
+    },
+    {
+      "name": "Wendell Carter Jr.",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628976.png",
+      "teammates": [
+        "Paolo Banchero",
+        "Franz Wagner",
+        "Cole Anthony",
+        "Nikola Vučević",
+        "Gary Harris",
+        "Lauri Markkanen",
+        "Zach LaVine"
+      ],
+      "teams": [
+        "CHI",
+        "ORL"
+      ]
+    },
+    {
+      "name": "Zach LaVine",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203897.png",
+      "teammates": [
+        "Kevin Martin",
+        "Karl-Anthony Towns",
+        "Andrew Wiggins",
+        "Coby White",
+        "DeMar DeRozan",
+        "Nikola Vučević",
+        "Lauri Markkanen"
+      ],
+      "teams": [
+        "MIN",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Zion Williamson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629627.png",
+      "teammates": [
+        "Eric Bledsoe",
+        "Jrue Holiday",
+        "J.J. Redick",
+        "Jonas Valančiūnas",
+        "Josh Hart",
+        "CJ McCollum",
+        "Brandon Ingram"
+      ],
+      "teams": [
+        "NOP"
+      ]
+    },
+    {
+      "name": "Kevin Porter Jr.",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629645.png",
+      "teammates": [
+        "Collin Sexton",
+        "Christian Wood",
+        "Jalen Green",
+        "Kevin Love",
+        "DeMarcus Cousins",
+        "Eric Gordon",
+        "James Harden"
+      ],
+      "teams": [
+        "CLE",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Carmelo Anthony",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2546.png",
+      "teammates": [
+        "James Harden",
+        "Damian Lillard",
+        "Allen Iverson",
+        "Amar'e Stoudemire",
+        "Nenê",
+        "Kenyon Martin",
+        "J.R. Smith"
+      ],
+      "teams": [
+        "DEN",
+        "NYK",
+        "OKC",
+        "HOU",
+        "POR",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Dirk Nowitzki",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1717.png",
+      "teammates": [
+        "Steve Nash",
+        "Josh Howard",
+        "Jerry Stackhouse",
+        "Michael Finley",
+        "J.J. Barea",
+        "Jason Terry",
+        "Devin Harris"
+      ],
+      "teams": [
+        "DAL"
+      ]
+    },
+    {
+      "name": "Dwyane Wade",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2548.png",
+      "teammates": [
+        "Dorell Wright",
+        "Alonzo Mourning",
+        "Mario Chalmers",
+        "Shaquille O'Neal",
+        "Chris Bosh",
+        "LeBron James",
+        "Udonis Haslem"
+      ],
+      "teams": [
+        "MIA",
+        "CHI",
+        "CLE",
+        "MIA"
+      ]
+    },
+    {
+      "name": "Pau Gasol",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2200.png",
+      "teammates": [
+        "LaMarcus Aldridge",
+        "Stromile Swift",
+        "Rudy Gay",
+        "Andrew Bynum",
+        "Metta World Peace",
+        "Mike Miller",
+        "Kobe Bryant"
+      ],
+      "teams": [
+        "MEM",
+        "LAL",
+        "CHI",
+        "SAS"
+      ]
+    },
+    {
+      "name": "Manu Ginóbili",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1938.png",
+      "teammates": [
+        "Patty Mills",
+        "Michael Finley",
+        "Danny Green",
+        "Matt Bonner",
+        "Kawhi Leonard",
+        "Tim Duncan",
+        "Tony Parker"
+      ],
+      "teams": [
+        "SAS"
+      ]
+    },
+    {
+      "name": "Kevin Garnett",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/708.png",
+      "teammates": [
+        "Rajon Rondo",
+        "Anthony Peeler",
+        "Stephon Marbury",
+        "Sam Mitchell",
+        "Ray Allen",
+        "Wally Szczerbiak",
+        "Paul Pierce"
+      ],
+      "teams": [
+        "MIN",
+        "BOS",
+        "BRK",
+        "MIN"
+      ]
+    },
+    {
+      "name": "Kobe Bryant",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/977.png",
+      "teammates": [
+        "Metta World Peace",
+        "Lamar Odom",
+        "Andrew Bynum",
+        "Luke Walton",
+        "Pau Gasol",
+        "Shaquille O'Neal",
+        "Derek Fisher"
+      ],
+      "teams": [
+        "LAL"
+      ]
+    },
+    {
+      "name": "Tim Duncan",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1495.png",
+      "teammates": [
+        "Malik Rose",
+        "Michael Finley",
+        "Kawhi Leonard",
+        "Matt Bonner",
+        "David Robinson",
+        "Manu Ginóbili",
+        "Tony Parker"
+      ],
+      "teams": [
+        "SAS"
+      ]
+    },
+    {
+      "name": "Steve Nash",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/959.png",
+      "teammates": [
+        "Shawn Bradley",
+        "Leandro Barbosa",
+        "Kobe Bryant",
+        "Grant Hill",
+        "Amar'e Stoudemire",
+        "Dirk Nowitzki",
+        "Michael Finley"
+      ],
+      "teams": [
+        "PHO",
+        "DAL",
+        "PHO",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Shaquille O'Neal",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/406.png",
+      "teammates": [
+        "Alonzo Mourning",
+        "Robert Horry",
+        "Eddie Jones",
+        "Rick Fox",
+        "Derek Fisher",
+        "Dwyane Wade",
+        "Kobe Bryant"
+      ],
+      "teams": [
+        "ORL",
+        "LAL",
+        "MIA",
+        "PHO",
+        "CLE",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Allen Iverson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/947.png",
+      "teammates": [
+        "John Salmons",
+        "Carmelo Anthony",
+        "Jerry Stackhouse",
+        "Chris Webber",
+        "Derrick Coleman",
+        "Eric Snow",
+        "Aaron McKie"
+      ],
+      "teams": [
+        "PHI",
+        "DEN",
+        "DET",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Karl Malone",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/252.png",
+      "teammates": [
+        "Jeff Malone",
+        "Mark Eaton",
+        "Darrell Griffith",
+        "Jeff Hornacek",
+        "Thurl Bailey",
+        "Bryon Russell",
+        "John Stockton"
+      ],
+      "teams": [
+        "UTA",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Scottie Pippen",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/937.png",
+      "teammates": [
+        "Ron Harper",
+        "John Paxson",
+        "Toni Kukoč",
+        "Will Perdue",
+        "Horace Grant",
+        "Bill Cartwright",
+        "Michael Jordan"
+      ],
+      "teams": [
+        "CHI",
+        "HOU",
+        "POR",
+        "CHI"
+      ]
+    },
+    {
+      "name": "David Robinson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/764.png",
+      "teammates": [
+        "Dale Ellis",
+        "Vinny Del Negro",
+        "Willie Anderson",
+        "Terry Cummings",
+        "Tim Duncan",
+        "Avery Johnson",
+        "Sean Elliott"
+      ],
+      "teams": [
+        "SAS"
+      ]
+    },
+    {
+      "name": "John Stockton",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/304.png",
+      "teammates": [
+        "Jeff Malone",
+        "Mark Eaton",
+        "Darrell Griffith",
+        "Jeff Hornacek",
+        "Bryon Russell",
+        "Thurl Bailey",
+        "Karl Malone"
+      ],
+      "teams": [
+        "UTA"
+      ]
+    },
+    {
+      "name": "Michael Jordan",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/893.png",
+      "teammates": [
+        "Toni Kukoč",
+        "George Gervin",
+        "Ron Harper",
+        "Horace Grant",
+        "Bill Cartwright",
+        "John Paxson",
+        "Scottie Pippen"
+      ],
+      "teams": [
+        "CHI",
+        "WAS"
+      ]
+    },
+    {
+      "name": "Hakeem Olajuwon",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/165.png",
+      "teammates": [
+        "Buck Johnson",
+        "Vernon Maxwell",
+        "Kenny Smith",
+        "Clyde Drexler",
+        "Charles Barkley",
+        "Sleepy Floyd",
+        "Otis Thorpe"
+      ],
+      "teams": [
+        "HOU",
+        "TOR"
+      ]
+    },
+    {
+      "name": "Charles Barkley",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/787.png",
+      "teammates": [
+        "Andrew Toney",
+        "Hersey Hawkins",
+        "Kevin Johnson",
+        "Bob McAdoo",
+        "Julius Erving",
+        "Moses Malone",
+        "Hakeem Olajuwon"
+      ],
+      "teams": [
+        "PHI",
+        "PHO",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Robert Parish",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Robert_Parish.jpg",
+      "teammates": [
+        "Rick Barry",
+        "Reggie Lewis",
+        "Tiny Archibald",
+        "Dennis Johnson",
+        "Danny Ainge",
+        "Larry Bird",
+        "Kevin McHale"
+      ],
+      "teams": [
+        "GSW",
+        "BOS",
+        "CHH",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Magic Johnson",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/77142.png",
+      "teammates": [
+        "Mychal Thompson",
+        "Jamaal Wilkes",
+        "Bob McAdoo",
+        "Byron Scott",
+        "Michael Cooper",
+        "James Worthy",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "LAL"
+      ]
+    },
+    {
+      "name": "Moses Malone",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Moses_Malone_cropped_portrait.jpg",
+      "teammates": [
+        "Bob McAdoo",
+        "Mike Dunleavy",
+        "Dominique Wilkins",
+        "Julius Erving",
+        "Rick Barry",
+        "Rudy Tomjanovich",
+        "Calvin Murphy"
+      ],
+      "teams": [
+        "HOU",
+        "PHI",
+        "WSB",
+        "ATL",
+        "MIL",
+        "PHI",
+        "SAS"
+      ]
+    },
+    {
+      "name": "Bernard King",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Bernard_King.jpg/960px-Bernard_King.jpg",
+      "teammates": [
+        "Moses Malone",
+        "Pete Maravich",
+        "Purvis Short",
+        "Jeff Malone",
+        "Darrell Walker",
+        "John Williamson",
+        "World B. Free"
+      ],
+      "teams": [
+        "NJN",
+        "UTA",
+        "GSW",
+        "NYK",
+        "WSB",
+        "NJN"
+      ]
+    },
+    {
+      "name": "Maurice Cheeks",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Maurice_Cheeks.jpg",
+      "teammates": [
+        "Kiki Vandeweghe",
+        "Bob McAdoo",
+        "Moses Malone",
+        "Bobby Jones",
+        "Charles Barkley",
+        "Andrew Toney",
+        "Julius Erving"
+      ],
+      "teams": [
+        "PHI",
+        "SAS",
+        "NYK",
+        "ATL",
+        "NJN"
+      ]
+    },
+    {
+      "name": "Larry Bird",
+      "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1449.png",
+      "teammates": [
+        "M.L. Carr",
+        "Cedric Maxwell",
+        "Dennis Johnson",
+        "Tiny Archibald",
+        "Danny Ainge",
+        "Robert Parish",
+        "Kevin McHale"
+      ],
+      "teams": [
+        "BOS"
+      ]
+    },
+    {
+      "name": "Adrian Dantley",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Adrian_Dantley_%2838259978012%29_%28cropped%29.jpg/960px-Adrian_Dantley_%2838259978012%29_%28cropped%29.jpg",
+      "teammates": [
+        "John Drew",
+        "Bernard King",
+        "Mark Aguirre",
+        "Bob McAdoo",
+        "Rickey Green",
+        "Darrell Griffith",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "BUF",
+        "IND",
+        "LAL",
+        "UTA",
+        "DET",
+        "DAL",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Alex English",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Alex_English.jpg/960px-Alex_English.jpg",
+      "teammates": [
+        "Calvin Natt",
+        "Fat Lever",
+        "T.R. Dunn",
+        "Bill Hanzlik",
+        "Kiki Vandeweghe",
+        "Danny Schayes",
+        "Dan Issel"
+      ],
+      "teams": [
+        "MIL",
+        "IND",
+        "DEN",
+        "DAL"
+      ]
+    },
+    {
+      "name": "Jack Sikma",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Jack_Sikma_IWU.jpg",
+      "teammates": [
+        "David Thompson",
+        "Terry Cummings",
+        "John Johnson",
+        "Tom Chambers",
+        "Ricky Pierce",
+        "Gus Williams",
+        "Fred Brown"
+      ],
+      "teams": [
+        "SEA",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Mychal Thompson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Mychal_Thompson.jpg",
+      "teammates": [
+        "Clyde Drexler",
+        "Calvin Natt",
+        "James Worthy",
+        "Byron Scott",
+        "Magic Johnson",
+        "Jim Paxson",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "POR",
+        "SAS",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Dennis Johnson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Dennis_Johnson_Lipofsky.jpg",
+      "teammates": [
+        "Gus Williams",
+        "Walter Davis",
+        "Fred Brown",
+        "Danny Ainge",
+        "Robert Parish",
+        "Kevin McHale",
+        "Larry Bird"
+      ],
+      "teams": [
+        "SEA",
+        "PHO",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Marques Johnson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Marques_johnson_ucla.JPG",
+      "teammates": [
+        "Quinn Buckner",
+        "Alex English",
+        "Tiny Archibald",
+        "Sidney Moncrief",
+        "Brian Winters",
+        "Bob Lanier",
+        "Junior Bridgeman"
+      ],
+      "teams": [
+        "MIL",
+        "LAC",
+        "GSW"
+      ]
+    },
+    {
+      "name": "Darryl Dawkins",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/NBA_Nation_%40_CityWalk_037_%28cropped%29.JPG/960px-NBA_Nation_%40_CityWalk_037_%28cropped%29.JPG",
+      "teammates": [
+        "Mike Gminski",
+        "Buck Williams",
+        "World B. Free",
+        "Steve Mix",
+        "Otis Birdsong",
+        "Doug Collins",
+        "Julius Erving"
+      ],
+      "teams": [
+        "PHI",
+        "NJN",
+        "DET"
+      ]
+    },
+    {
+      "name": "Kareem Abdul-Jabbar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kareem_Abdul-Jabbar_May_2014.jpg/960px-Kareem_Abdul-Jabbar_May_2014.jpg",
+      "teammates": [
+        "Oscar Robertson",
+        "Lucius Allen",
+        "James Worthy",
+        "Bob McAdoo",
+        "Michael Cooper",
+        "Jamaal Wilkes",
+        "Magic Johnson"
+      ],
+      "teams": [
+        "MIL",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Norm Nixon",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Norm_Nixon_%28Crop%29.jpg/960px-Norm_Nixon_%28Crop%29.jpg",
+      "teammates": [
+        "Lou Hudson",
+        "Derek Smith",
+        "Adrian Dantley",
+        "Magic Johnson",
+        "Bob McAdoo",
+        "Jamaal Wilkes",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "LAL",
+        "SDC",
+        "LAC"
+      ]
+    },
+    {
+      "name": "Otis Birdsong",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Otis_Birdsong_1978.JPG",
+      "teammates": [
+        "Sam Lacey",
+        "Scott Wedman",
+        "Micheal Ray Richardson",
+        "Darryl Dawkins",
+        "Albert King",
+        "Mike Gminski",
+        "Buck Williams"
+      ],
+      "teams": [
+        "KCK",
+        "NJN",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Alvan Adams",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Alvan_Adams_-_Phoenix_Suns.jpg",
+      "teammates": [
+        "Kyle Macy",
+        "Gar Heard",
+        "Truck Robinson",
+        "James Edwards",
+        "Paul Westphal",
+        "Larry Nance",
+        "Walter Davis"
+      ],
+      "teams": [
+        "PHO"
+      ]
+    },
+    {
+      "name": "Artis Gilmore",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Artis_Gilmore.jpg/960px-Artis_Gilmore.jpg",
+      "teammates": [
+        "Larry Bird",
+        "Scott May",
+        "Dave Greenwood",
+        "Reggie Theus",
+        "Michael Jordan",
+        "Mike Mitchell",
+        "George Gervin"
+      ],
+      "teams": [
+        "CHI",
+        "SAS",
+        "CHI",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Cedric Maxwell",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Cedric_Maxwell_2022.png",
+      "teammates": [
+        "Danny Ainge",
+        "Bob McAdoo",
+        "Robert Parish",
+        "M.L. Carr",
+        "Kevin McHale",
+        "Larry Bird",
+        "Tiny Archibald"
+      ],
+      "teams": [
+        "BOS",
+        "LAC",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Maurice Lucas",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Maurice_Lucas.jpg",
+      "teammates": [
+        "Kiki Vandeweghe",
+        "Mike Newlin",
+        "John Williamson",
+        "Larry Nance",
+        "Walter Davis",
+        "Bob McAdoo",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "POR",
+        "NJN",
+        "NYK",
+        "PHO",
+        "LAL",
+        "SEA",
+        "POR"
+      ]
+    },
+    {
+      "name": "World B. Free",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/World_B_Free.jpg/960px-World_B_Free.jpg",
+      "teammates": [
+        "Doug Collins",
+        "George McGinnis",
+        "Roy Hinson",
+        "Julius Erving",
+        "Joe Barry Carroll",
+        "Bernard King",
+        "Purvis Short"
+      ],
+      "teams": [
+        "PHI",
+        "SDC",
+        "GSW",
+        "CLE",
+        "PHI",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Bill Walton",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bill_walton_blazers_photo.jpg/960px-Bill_walton_blazers_photo.jpg",
+      "teammates": [
+        "Terry Cummings",
+        "Lionel Hollins",
+        "Geoff Petrie",
+        "Kevin McHale",
+        "World B. Free",
+        "Sidney Wicks",
+        "Larry Bird"
+      ],
+      "teams": [
+        "POR",
+        "SDC",
+        "LAC",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Dan Roundfield",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Dan_Roundfield_CMU.jpg",
+      "teammates": [
+        "Tom McMillen",
+        "Adrian Dantley",
+        "Moses Malone",
+        "John Williamson",
+        "Dominique Wilkins",
+        "John Drew",
+        "Eddie Johnson"
+      ],
+      "teams": [
+        "IND",
+        "ATL",
+        "DET",
+        "WSB"
+      ]
+    },
+    {
+      "name": "Julius Erving",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Julius_Erving_2016.jpg",
+      "teammates": [
+        "Doug Collins",
+        "Darryl Dawkins",
+        "World B. Free",
+        "Moses Malone",
+        "Bobby Jones",
+        "Andrew Toney",
+        "Maurice Cheeks"
+      ],
+      "teams": [
+        "PHI"
+      ]
+    },
+    {
+      "name": "Bob McAdoo",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Mcadoo_1973.jpg",
+      "teammates": [
+        "Tiny Archibald",
+        "Jamaal Wilkes",
+        "Jim McMillian",
+        "Magic Johnson",
+        "Spencer Haywood",
+        "Randy Smith",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "BUF",
+        "NYK",
+        "BOS",
+        "DET",
+        "NJN",
+        "LAL",
+        "PHI"
+      ]
+    },
+    {
+      "name": "George Gervin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/George_Gervin_ABA.jpeg",
+      "teammates": [
+        "Artis Gilmore",
+        "Billy Paultz",
+        "James Silas",
+        "Mark Olberding",
+        "Larry Kenon",
+        "Mike Mitchell",
+        "Michael Jordan"
+      ],
+      "teams": [
+        "SAS",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Jamaal Wilkes",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Jamaal_wilkes_ucla_team.jpg",
+      "teammates": [
+        "Michael Cooper",
+        "Adrian Dantley",
+        "Norm Nixon",
+        "Rick Barry",
+        "Magic Johnson",
+        "Bob McAdoo",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "GSW",
+        "LAL",
+        "LAC"
+      ]
+    },
+    {
+      "name": "Micheal Ray Richardson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Micheal_Ray_Richardson.jpg",
+      "teammates": [
+        "Bill Cartwright",
+        "Earl Monroe",
+        "World B. Free",
+        "Buck Williams",
+        "Ray Williams",
+        "Bob McAdoo",
+        "Otis Birdsong"
+      ],
+      "teams": [
+        "NYK",
+        "GSW",
+        "NJN"
+      ]
+    },
+    {
+      "name": "Mickey Johnson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mickey_Johnson_2015_%28cropped%29.jpg/960px-Mickey_Johnson_2015_%28cropped%29.jpg",
+      "teammates": [
+        "Sidney Moncrief",
+        "Artis Gilmore",
+        "Sleepy Floyd",
+        "Marques Johnson",
+        "Bob Lanier",
+        "Bob Love",
+        "Purvis Short"
+      ],
+      "teams": [
+        "CHI",
+        "IND",
+        "MIL",
+        "NJN",
+        "GSW",
+        "NJN"
+      ]
+    },
+    {
+      "name": "Billy Knight",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/BKnightPitt74NCAA_Owlp165.jpg",
+      "teammates": [
+        "Johnny Davis",
+        "Mike Bantom",
+        "George McGinnis",
+        "George Gervin",
+        "Alex English",
+        "Tiny Archibald",
+        "Bob McAdoo"
+      ],
+      "teams": [
+        "IND",
+        "BUF",
+        "BOS",
+        "IND",
+        "KCK",
+        "SAS"
+      ]
+    },
+    {
+      "name": "Dan Issel",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Dan_Issel_%281%29.jpeg/960px-Dan_Issel_%281%29.jpeg",
+      "teammates": [
+        "Jim Price",
+        "George McGinnis",
+        "Dave Robisch",
+        "Charlie Scott",
+        "Kiki Vandeweghe",
+        "David Thompson",
+        "Alex English"
+      ],
+      "teams": [
+        "DEN"
+      ]
+    },
+    {
+      "name": "Lionel Hollins",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Lionel-hollins.jpg",
+      "teammates": [
+        "Tom Owens",
+        "Tom Chambers",
+        "Hakeem Olajuwon",
+        "Bill Walton",
+        "Maurice Lucas",
+        "Bob Gross",
+        "Julius Erving"
+      ],
+      "teams": [
+        "POR",
+        "PHI",
+        "SDC",
+        "DET",
+        "HOU"
+      ]
+    },
+    {
+      "name": "M.L. Carr",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/M.L.Carr.jpg",
+      "teammates": [
+        "Danny Ainge",
+        "Bob Lanier",
+        "Robert Parish",
+        "Cedric Maxwell",
+        "Kevin McHale",
+        "Tiny Archibald",
+        "Larry Bird"
+      ],
+      "teams": [
+        "DET",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Bob Lanier",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/BobLanier.jpg",
+      "teammates": [
+        "Tiny Archibald",
+        "Bob McAdoo",
+        "Eric Money",
+        "Chris Ford",
+        "Sidney Moncrief",
+        "Marques Johnson",
+        "Dave Bing"
+      ],
+      "teams": [
+        "DET",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Elvin Hayes",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Elvin_Hayes_1975.jpeg",
+      "teammates": [
+        "John Williamson",
+        "Bob Dandridge",
+        "Mike Riordan",
+        "Kevin Grevey",
+        "Calvin Murphy",
+        "Wes Unseld",
+        "Phil Chenier"
+      ],
+      "teams": [
+        "SDR",
+        "HOU",
+        "BAL",
+        "CAP",
+        "WSB",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Paul Westphal",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Paul_Westphal_1975_press_photo.jpg",
+      "teammates": [
+        "Jo Jo White",
+        "Gar Heard",
+        "Truck Robinson",
+        "Bernard King",
+        "Walter Davis",
+        "John Havlicek",
+        "Alvan Adams"
+      ],
+      "teams": [
+        "BOS",
+        "PHO",
+        "SEA",
+        "NYK",
+        "PHO"
+      ]
+    },
+    {
+      "name": "Swen Nater",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Swen_Nater_with_UCLA_shooting.png",
+      "teammates": [
+        "Tom Chambers",
+        "Freeman Williams",
+        "Sidney Wicks",
+        "Randy Smith",
+        "World B. Free",
+        "Bob McAdoo",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "MIL",
+        "BUF",
+        "SDC",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Tiny Archibald",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Nate_Archibald_1974.jpeg/960px-Nate_Archibald_1974.jpeg",
+      "teammates": [
+        "Tom Van Arsdale",
+        "Pete Maravich",
+        "Kevin McHale",
+        "Sam Lacey",
+        "Bob McAdoo",
+        "Cedric Maxwell",
+        "Larry Bird"
+      ],
+      "teams": [
+        "CIN",
+        "KCO",
+        "KCK",
+        "NYN",
+        "BOS",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Truck Robinson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Truck_Robinson.jpeg",
+      "teammates": [
+        "Dave Bing",
+        "Rich Kelley",
+        "Paul Westphal",
+        "Pete Maravich",
+        "Walter Davis",
+        "Elvin Hayes",
+        "Bernard King"
+      ],
+      "teams": [
+        "WSB",
+        "ATL",
+        "NOJ",
+        "PHO",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Calvin Murphy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Calvin_Murphy_1.jpg",
+      "teammates": [
+        "Robert Reid",
+        "Mike Dunleavy",
+        "Rick Barry",
+        "Elvin Hayes",
+        "Mike Newlin",
+        "Moses Malone",
+        "Rudy Tomjanovich"
+      ],
+      "teams": [
+        "SDR",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Dave Cowens",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Dave_Cowens_-_2005_NBA_Legends_Tour_-_1-21-05.jpg",
+      "teammates": [
+        "Charlie Scott",
+        "Bob McAdoo",
+        "Don Nelson",
+        "Tiny Archibald",
+        "Don Chaney",
+        "Jo Jo White",
+        "John Havlicek"
+      ],
+      "teams": [
+        "BOS",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Spencer Haywood",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Spencer_Haywood_at_Nellis_%28cropped%29.jpg",
+      "teammates": [
+        "Pete Maravich",
+        "Butch Beard",
+        "Dick Snyder",
+        "Kareem Abdul-Jabbar",
+        "Fred Brown",
+        "Earl Monroe",
+        "Bob McAdoo"
+      ],
+      "teams": [
+        "SEA",
+        "NYK",
+        "NOJ",
+        "LAL",
+        "WSB"
+      ]
+    },
+    {
+      "name": "Steve Mix",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Steve_Mix_1979.JPG",
+      "teammates": [
+        "Bob Lanier",
+        "Fred Carter",
+        "Dave Bing",
+        "World B. Free",
+        "Darryl Dawkins",
+        "Julius Erving",
+        "Doug Collins"
+      ],
+      "teams": [
+        "DET",
+        "PHI",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Campy Russell",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Campy_Russell.png",
+      "teammates": [
+        "Mike Mitchell",
+        "Randy Smith",
+        "Foots Walker",
+        "Dick Snyder",
+        "Jim Chones",
+        "Bingo Smith",
+        "Austin Carr"
+      ],
+      "teams": [
+        "CLE",
+        "NYK"
+      ]
+    },
+    {
+      "name": "George McGinnis",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/George_McGinnis.png",
+      "teammates": [
+        "Doug Collins",
+        "Charlie Scott",
+        "Julius Erving",
+        "David Thompson",
+        "Alex English",
+        "Billy Knight",
+        "World B. Free"
+      ],
+      "teams": [
+        "PHI",
+        "DEN",
+        "IND"
+      ]
+    },
+    {
+      "name": "Jim Chones",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Jim_Chones.jpg",
+      "teammates": [
+        "Dick Snyder",
+        "Jim Brewer",
+        "Bingo Smith",
+        "Spencer Haywood",
+        "Campy Russell",
+        "Austin Carr",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "CLE",
+        "LAL",
+        "WSB"
+      ]
+    },
+    {
+      "name": "Mike Newlin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Mike_Newlin.jpg",
+      "teammates": [
+        "Kevin Kunnert",
+        "John Williamson",
+        "Bob McAdoo",
+        "Rick Barry",
+        "Moses Malone",
+        "Rudy Tomjanovich",
+        "Calvin Murphy"
+      ],
+      "teams": [
+        "HOU",
+        "NJN",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Austin Carr",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Austin_Carr_%2828061481448%29_c.jpg/960px-Austin_Carr_%2828061481448%29_c.jpg",
+      "teammates": [
+        "John Williamson",
+        "Foots Walker",
+        "Dick Snyder",
+        "Jim Brewer",
+        "Jim Chones",
+        "Campy Russell",
+        "Bingo Smith"
+      ],
+      "teams": [
+        "CLE",
+        "DAL",
+        "WSB"
+      ]
+    },
+    {
+      "name": "Jo Jo White",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Jojo_white_press_photo.jpg",
+      "teammates": [
+        "Charlie Scott",
+        "Tiny Archibald",
+        "Bob McAdoo",
+        "Don Nelson",
+        "Don Chaney",
+        "Dave Cowens",
+        "John Havlicek"
+      ],
+      "teams": [
+        "BOS",
+        "GSW",
+        "KCK"
+      ]
+    },
+    {
+      "name": "John Shumate",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/John_Shumate.png",
+      "teammates": [
+        "Bob Lanier",
+        "Adrian Dantley",
+        "Moses Malone",
+        "Randy Smith",
+        "Rick Barry",
+        "George Gervin",
+        "Bob McAdoo"
+      ],
+      "teams": [
+        "PHO",
+        "BUF",
+        "DET",
+        "HOU",
+        "SAS"
+      ]
+    },
+    {
+      "name": "Phil Chenier",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Phil_Chenier.jpg/960px-Phil_Chenier.jpg",
+      "teammates": [
+        "Truck Robinson",
+        "Bernard King",
+        "Archie Clark",
+        "Kevin Grevey",
+        "Mike Riordan",
+        "Wes Unseld",
+        "Elvin Hayes"
+      ],
+      "teams": [
+        "BAL",
+        "CAP",
+        "WSB",
+        "IND",
+        "GSW"
+      ]
+    },
+    {
+      "name": "Ron Boone",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Ron_Boone.jpg",
+      "teammates": [
+        "Jamaal Wilkes",
+        "Lou Hudson",
+        "Spencer Haywood",
+        "Pete Maravich",
+        "Bernard King",
+        "Adrian Dantley",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "KCK",
+        "LAL",
+        "UTA"
+      ]
+    },
+    {
+      "name": "Rudy Tomjanovich",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Rudy_T_Space_and_Missile_Center_Feb_26%2C_2009.jpg",
+      "teammates": [
+        "Kevin Kunnert",
+        "Mike Dunleavy",
+        "Elvin Hayes",
+        "Rick Barry",
+        "Moses Malone",
+        "Mike Newlin",
+        "Calvin Murphy"
+      ],
+      "teams": [
+        "SDR",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Sidney Wicks",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Sidney_Wicks_%E2%80%93_Trail_Blazers_%281%29.jpg/960px-Sidney_Wicks_%E2%80%93_Trail_Blazers_%281%29.jpg",
+      "teammates": [
+        "Jo Jo White",
+        "Freeman Williams",
+        "Lloyd Neal",
+        "Charlie Scott",
+        "John Havlicek",
+        "World B. Free",
+        "Geoff Petrie"
+      ],
+      "teams": [
+        "POR",
+        "BOS",
+        "SDC"
+      ]
+    },
+    {
+      "name": "Tom Burleson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Tommy_Burleson.jpg",
+      "teammates": [
+        "John Drew",
+        "Archie Clark",
+        "Bob Love",
+        "Scott Wedman",
+        "Spencer Haywood",
+        "Fred Brown",
+        "Otis Birdsong"
+      ],
+      "teams": [
+        "SEA",
+        "KCK",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Wes Unseld",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Wes_Unseld_1975.jpeg",
+      "teammates": [
+        "Bob Dandridge",
+        "Earl Monroe",
+        "Jack Marin",
+        "Kevin Grevey",
+        "Mike Riordan",
+        "Phil Chenier",
+        "Elvin Hayes"
+      ],
+      "teams": [
+        "BAL",
+        "CAP",
+        "WSB"
+      ]
+    },
+    {
+      "name": "Earl Monroe",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Earl_Monroe_WSSU.jpg",
+      "teammates": [
+        "Jack Marin",
+        "Kevin Loughery",
+        "Phil Jackson",
+        "Bill Bradley",
+        "Spencer Haywood",
+        "Bob McAdoo",
+        "Walt Frazier"
+      ],
+      "teams": [
+        "BAL",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Paul Silas",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Paul_Silas_1977_press_photo_by_Seattle_SuperSonics.jpg",
+      "teammates": [
+        "Bill Bridges",
+        "Lenny Wilkens",
+        "Jo Jo White",
+        "Lou Hudson",
+        "Zelmo Beaty",
+        "John Havlicek",
+        "Richie Guerin"
+      ],
+      "teams": [
+        "STL",
+        "ATL",
+        "PHO",
+        "BOS",
+        "DEN",
+        "SEA"
+      ]
+    },
+    {
+      "name": "Pete Maravich",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Pete_Maravich_1977.jpeg/960px-Pete_Maravich_1977.jpeg",
+      "teammates": [
+        "Larry Bird",
+        "Adrian Dantley",
+        "Bernard King",
+        "Gail Goodrich",
+        "Tiny Archibald",
+        "Lou Hudson",
+        "Walt Bellamy"
+      ],
+      "teams": [
+        "ATL",
+        "NOJ",
+        "UTA",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Rick Barry",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Rick_Barry.jpg/960px-Rick_Barry.jpg",
+      "teammates": [
+        "Calvin Murphy",
+        "Jamaal Wilkes",
+        "Charles Johnson",
+        "Phil Smith",
+        "Nate Thurmond",
+        "Moses Malone",
+        "Jeff Mullins"
+      ],
+      "teams": [
+        "SFW",
+        "GSW",
+        "HOU"
+      ]
+    },
+    {
+      "name": "Elmore Smith",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Elmore_Smith_WBEN_1971%28cropped%29.jpg",
+      "teammates": [
+        "Alex English",
+        "Campy Russell",
+        "Austin Carr",
+        "Gail Goodrich",
+        "Jerry West",
+        "Jim Price",
+        "Bob McAdoo"
+      ],
+      "teams": [
+        "BUF",
+        "LAL",
+        "MIL",
+        "CLE"
+      ]
+    },
+    {
+      "name": "Gail Goodrich",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/GailGoodrich-cropped.JPEG",
+      "teammates": [
+        "Connie Hawkins",
+        "Kareem Abdul-Jabbar",
+        "Happy Hairston",
+        "Pete Maravich",
+        "Elgin Baylor",
+        "Jerry West",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "LAL",
+        "PHO",
+        "LAL",
+        "NOJ"
+      ]
+    },
+    {
+      "name": "Lucius Allen",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Walt_Frazier_and_Lucius_Allen.jpeg/960px-Walt_Frazier_and_Lucius_Allen.jpeg",
+      "teammates": [
+        "Otis Birdsong",
+        "Cazzie Russell",
+        "Gail Goodrich",
+        "Jon McGlocklin",
+        "Bob Dandridge",
+        "Oscar Robertson",
+        "Kareem Abdul-Jabbar"
+      ],
+      "teams": [
+        "SEA",
+        "MIL",
+        "LAL",
+        "KCK"
+      ]
+    },
+    {
+      "name": "Norm Van Lier",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Norm_Van_Lier_1971.JPG/960px-Norm_Van_Lier_1971.JPG",
+      "teammates": [
+        "Mickey Johnson",
+        "Oscar Robertson",
+        "Chet Walker",
+        "Jerry Sloan",
+        "Tom Boerwinkle",
+        "Tiny Archibald",
+        "Bob Love"
+      ],
+      "teams": [
+        "CIN",
+        "CHI",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Walt Frazier",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Walt_Frazier_%28cropped%29.jpg/960px-Walt_Frazier_%28cropped%29.jpg",
+      "teammates": [
+        "Walt Bellamy",
+        "Dave DeBusschere",
+        "Phil Jackson",
+        "Willis Reed",
+        "Earl Monroe",
+        "Dick Barnett",
+        "Bill Bradley"
+      ],
+      "teams": [
+        "NYK",
+        "CLE"
+      ]
+    },
+    {
+      "name": "Cazzie Russell",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Cazzie_Russell_MVP_%28cropped%29.png",
+      "teammates": [
+        "Jeff Mullins",
+        "Walt Frazier",
+        "Willis Reed",
+        "Kareem Abdul-Jabbar",
+        "Dick Barnett",
+        "Rick Barry",
+        "Walt Bellamy"
+      ],
+      "teams": [
+        "NYK",
+        "GSW",
+        "LAL",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Dave Bing",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/David_Bing_3928ded5aacd10b21cded561668a0444_%281%29.jpg",
+      "teammates": [
+        "Eddie Miles",
+        "Curtis Rowe",
+        "Elvin Hayes",
+        "Walt Bellamy",
+        "Jimmy Walker",
+        "Terry Dischinger",
+        "Bob Lanier"
+      ],
+      "teams": [
+        "DET",
+        "WSB",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Ernie DiGregorio",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Digregorio_braves.jpg",
+      "teammates": [
+        "John Havlicek",
+        "Charlie Scott",
+        "Jack Marin",
+        "Adrian Dantley",
+        "Kareem Abdul-Jabbar",
+        "Randy Smith",
+        "Bob McAdoo"
+      ],
+      "teams": [
+        "BUF",
+        "LAL",
+        "BOS"
+      ]
+    },
+    {
+      "name": "John Havlicek",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/John_Havliceck%2C_Boston_Celtics%2C_1960s.jpg",
+      "teammates": [
+        "Don Chaney",
+        "Bill Russell",
+        "Dave Cowens",
+        "Sam Jones",
+        "Tom Sanders",
+        "Jo Jo White",
+        "Don Nelson"
+      ],
+      "teams": [
+        "BOS"
+      ]
+    },
+    {
+      "name": "Lloyd Neal",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Lloyd_Neal_2.jpg/960px-Lloyd_Neal_2.jpg",
+      "teammates": [
+        "Maurice Lucas",
+        "John Johnson",
+        "Terry Dischinger",
+        "Larry Steele",
+        "Bill Walton",
+        "Sidney Wicks",
+        "Geoff Petrie"
+      ],
+      "teams": [
+        "POR"
+      ]
+    },
+    {
+      "name": "Bob Love",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/BobLove10.jpg",
+      "teammates": [
+        "Tiny Archibald",
+        "Oscar Robertson",
+        "Bob Weiss",
+        "Norm Van Lier",
+        "Chet Walker",
+        "Tom Boerwinkle",
+        "Jerry Sloan"
+      ],
+      "teams": [
+        "CIN",
+        "MIL",
+        "CHI",
+        "NYN",
+        "SEA"
+      ]
+    },
+    {
+      "name": "Dick Van Arsdale",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Dick_Van_Arsdale_%284x5_cropped%29.jpg",
+      "teammates": [
+        "Gail Goodrich",
+        "Dick Barnett",
+        "Clem Haskins",
+        "Neal Walk",
+        "Charlie Scott",
+        "Walt Bellamy",
+        "Connie Hawkins"
+      ],
+      "teams": [
+        "NYK",
+        "PHO"
+      ]
+    },
+    {
+      "name": "Fred Carter",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Fred_Carter_1969.JPG/960px-Fred_Carter_1969.JPG",
+      "teammates": [
+        "Earl Monroe",
+        "Tom Van Arsdale",
+        "Leroy Ellis",
+        "Doug Collins",
+        "Billy Cunningham",
+        "World B. Free",
+        "Kevin Loughery"
+      ],
+      "teams": [
+        "BAL",
+        "PHI",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Jack Marin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Jack_Marin_portrait%2C_Chanticleer_1965.jpg",
+      "teammates": [
+        "Bob Love",
+        "Ray Scott",
+        "Randy Smith",
+        "Earl Monroe",
+        "Kevin Loughery",
+        "Gus Johnson",
+        "Bob McAdoo"
+      ],
+      "teams": [
+        "BAL",
+        "HOU",
+        "BUF",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Nate Thurmond",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Nate_Thurmond_1969.jpeg/960px-Nate_Thurmond_1969.jpeg",
+      "teammates": [
+        "Ron Williams",
+        "Al Attles",
+        "Clyde Lee",
+        "Joe Ellis",
+        "Rick Barry",
+        "Jeff Mullins",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "SFW",
+        "GSW",
+        "CHI",
+        "CLE"
+      ]
+    },
+    {
+      "name": "Neal Walk",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Neal_Walk_1969.jpg",
+      "teammates": [
+        "Clem Haskins",
+        "Spencer Haywood",
+        "Charlie Scott",
+        "Earl Monroe",
+        "Bob McAdoo",
+        "Dick Van Arsdale",
+        "Connie Hawkins"
+      ],
+      "teams": [
+        "PHO",
+        "NOJ",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Tom Van Arsdale",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tom_Van_Arsdale.jpeg",
+      "teammates": [
+        "John Tresvant",
+        "Fred Carter",
+        "Johnny Green",
+        "Lou Hudson",
+        "Dave Bing",
+        "Oscar Robertson",
+        "Tiny Archibald"
+      ],
+      "teams": [
+        "DET",
+        "CIN",
+        "KCO",
+        "PHI",
+        "ATL",
+        "PHO"
+      ]
+    },
+    {
+      "name": "Billy Cunningham",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Billy_Cunningham_65-72.JPG",
+      "teammates": [
+        "World B. Free",
+        "Archie Clark",
+        "Chet Walker",
+        "Wali Jones",
+        "Luke Jackson",
+        "Hal Greer",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "PHI"
+      ]
+    },
+    {
+      "name": "Clem Haskins",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Clem_Haskins.jpg",
+      "teammates": [
+        "Truck Robinson",
+        "Bob Love",
+        "Neal Walk",
+        "Elvin Hayes",
+        "Charlie Scott",
+        "Dick Van Arsdale",
+        "Connie Hawkins"
+      ],
+      "teams": [
+        "CHI",
+        "PHO",
+        "WSB"
+      ]
+    },
+    {
+      "name": "Connie Hawkins",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Connie_Hawkins_ABA_MVP.jpeg/960px-Connie_Hawkins_ABA_MVP.jpeg",
+      "teammates": [
+        "Lou Hudson",
+        "Jerry West",
+        "Clem Haskins",
+        "Charlie Scott",
+        "Gail Goodrich",
+        "Neal Walk",
+        "Dick Van Arsdale"
+      ],
+      "teams": [
+        "PHO",
+        "LAL",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Geoff Petrie",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Geoff_Petrie_1971_Texaco_front_%28cropped%29.jpg",
+      "teammates": [
+        "Lenny Wilkens",
+        "Bill Walton",
+        "John Johnson",
+        "Terry Dischinger",
+        "Larry Steele",
+        "Lloyd Neal",
+        "Sidney Wicks"
+      ],
+      "teams": [
+        "POR"
+      ]
+    },
+    {
+      "name": "Jerry Sloan",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Jerry_Sloan_at_Energy_Solutions_Arena_%28cropped%29.jpg",
+      "teammates": [
+        "Bob Boozer",
+        "Bob Weiss",
+        "Walt Bellamy",
+        "Norm Van Lier",
+        "Tom Boerwinkle",
+        "Chet Walker",
+        "Bob Love"
+      ],
+      "teams": [
+        "BAL",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Jimmy Walker",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Mayor_J._Walker_Edit.jpg/960px-Mayor_J._Walker_Edit.jpg",
+      "teammates": [
+        "Happy Hairston",
+        "Bob Lanier",
+        "Howard Komives",
+        "Walt Bellamy",
+        "Terry Dischinger",
+        "Tiny Archibald",
+        "Dave Bing"
+      ],
+      "teams": [
+        "DET",
+        "HOU",
+        "KCO",
+        "KCK"
+      ]
+    },
+    {
+      "name": "Leroy Ellis",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/LeRoy_Ellis%2C_1972.jpg",
+      "teammates": [
+        "Gail Goodrich",
+        "Jack Marin",
+        "Fred Carter",
+        "Kevin Loughery",
+        "Jerry West",
+        "Elgin Baylor",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "LAL",
+        "BAL",
+        "POR",
+        "LAL",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Bob Kauffman",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Bob_Kauffman_1969.JPG/960px-Bob_Kauffman_1969.JPG",
+      "teammates": [
+        "John Drew",
+        "Bob Rule",
+        "Bob Love",
+        "Lou Hudson",
+        "Walt Hazzard",
+        "Randy Smith",
+        "Bob McAdoo"
+      ],
+      "teams": [
+        "SEA",
+        "CHI",
+        "BUF",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Chet Walker",
+      "imageUrl": "/players/chet-walker.jpg",
+      "teammates": [
+        "Dave Gambee",
+        "Bob Weiss",
+        "Billy Cunningham",
+        "Jerry Sloan",
+        "Bob Love",
+        "Hal Greer",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "SYR",
+        "PHI",
+        "CHI"
+      ]
+    },
+    {
+      "name": "Don Kojis",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Don_Kojis.jpg",
+      "teammates": [
+        "Rod Thorn",
+        "Terry Dischinger",
+        "Walt Bellamy",
+        "Elvin Hayes",
+        "Spencer Haywood",
+        "John Block",
+        "Tiny Archibald"
+      ],
+      "teams": [
+        "BAL",
+        "DET",
+        "CHI",
+        "SDR",
+        "SEA",
+        "KCO"
+      ]
+    },
+    {
+      "name": "Happy Hairston",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Happy_Hairston_1974.jpg",
+      "teammates": [
+        "Jack Twyman",
+        "Walt Bellamy",
+        "Gail Goodrich",
+        "Elgin Baylor",
+        "Oscar Robertson",
+        "Jerry West",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "CIN",
+        "DET",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Lenny Wilkens",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Lenny_Wilkens_1968_%28cropped%29.jpeg/960px-Lenny_Wilkens_1968_%28cropped%29.jpeg",
+      "teammates": [
+        "Dick Snyder",
+        "Bill Bridges",
+        "Bob Rule",
+        "Richie Guerin",
+        "Zelmo Beaty",
+        "Cliff Hagan",
+        "Bob Pettit"
+      ],
+      "teams": [
+        "STL",
+        "SEA",
+        "CLE",
+        "POR"
+      ]
+    },
+    {
+      "name": "Zelmo Beaty",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Zelmo_Beaty_1966.JPG",
+      "teammates": [
+        "Paul Silas",
+        "Lou Hudson",
+        "Cliff Hagan",
+        "Bob Pettit",
+        "Lenny Wilkens",
+        "Bill Bridges",
+        "Richie Guerin"
+      ],
+      "teams": [
+        "STL",
+        "ATL",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Dave DeBusschere",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Dave_DeBusschere.jpeg",
+      "teammates": [
+        "Dave Bing",
+        "Walt Bellamy",
+        "Bill Bradley",
+        "Willis Reed",
+        "Dick Barnett",
+        "Walt Frazier",
+        "Eddie Miles"
+      ],
+      "teams": [
+        "DET",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Dick Barnett",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Dick_Barnett.jpeg",
+      "teammates": [
+        "Dave DeBusschere",
+        "Jerry West",
+        "Bill Bradley",
+        "Walt Bellamy",
+        "Elgin Baylor",
+        "Walt Frazier",
+        "Willis Reed"
+      ],
+      "teams": [
+        "SYR",
+        "LAL",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Jerry Lucas",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Jerry_Lucas_1961.jpeg/960px-Jerry_Lucas_1961.jpeg",
+      "teammates": [
+        "Dick Barnett",
+        "Walt Frazier",
+        "Happy Hairston",
+        "Earl Monroe",
+        "Jack Twyman",
+        "Adrian Smith",
+        "Oscar Robertson"
+      ],
+      "teams": [
+        "CIN",
+        "SFW",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Jerry West",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Jerry_West_1972.jpeg/960px-Jerry_West_1972.jpeg",
+      "teammates": [
+        "Frank Selvy",
+        "Leroy Ellis",
+        "Happy Hairston",
+        "Rudy LaRusso",
+        "Gail Goodrich",
+        "Wilt Chamberlain",
+        "Elgin Baylor"
+      ],
+      "teams": [
+        "LAL"
+      ]
+    },
+    {
+      "name": "Oscar Robertson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Oscar_Robertson_2024.jpg/960px-Oscar_Robertson_2024.jpg",
+      "teammates": [
+        "Bob Boozer",
+        "Jon McGlocklin",
+        "Wayne Embry",
+        "Jerry Lucas",
+        "Kareem Abdul-Jabbar",
+        "Adrian Smith",
+        "Jack Twyman"
+      ],
+      "teams": [
+        "CIN",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Walt Bellamy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Walt_Bellamy_1972.JPG",
+      "teammates": [
+        "Dave Bing",
+        "Willis Reed",
+        "Dick Barnett",
+        "Howard Komives",
+        "Terry Dischinger",
+        "Pete Maravich",
+        "Lou Hudson"
+      ],
+      "teams": [
+        "CHP",
+        "CHZ",
+        "BAL",
+        "NYK",
+        "DET",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Walt Hazzard",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Walt_Hazzard_%28UCLA%29.jpg",
+      "teammates": [
+        "Richie Guerin",
+        "Bob McAdoo",
+        "Lou Hudson",
+        "Rick Barry",
+        "Walt Bellamy",
+        "Jerry West",
+        "Elgin Baylor"
+      ],
+      "teams": [
+        "LAL",
+        "SEA",
+        "ATL",
+        "BUF",
+        "GSW",
+        "SEA"
+      ]
+    },
+    {
+      "name": "Willis Reed",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Willis_Reed_1972_publicity_photo.jpg/960px-Willis_Reed_1972_publicity_photo.jpg",
+      "teammates": [
+        "Earl Monroe",
+        "Cazzie Russell",
+        "Dave DeBusschere",
+        "Bill Bradley",
+        "Walt Bellamy",
+        "Walt Frazier",
+        "Dick Barnett"
+      ],
+      "teams": [
+        "NYK"
+      ]
+    },
+    {
+      "name": "Hal Greer",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Hal_Greer_1969.jpeg/960px-Hal_Greer_1969.jpeg",
+      "teammates": [
+        "Red Kerr",
+        "Luke Jackson",
+        "Dolph Schayes",
+        "Chet Walker",
+        "Larry Costello",
+        "Billy Cunningham",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "SYR",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Terry Dischinger",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Terry_Dischinger_Purdue.jpg",
+      "teammates": [
+        "Howard Komives",
+        "Happy Hairston",
+        "Bob Lanier",
+        "Eddie Miles",
+        "Jimmy Walker",
+        "Dave Bing",
+        "Walt Bellamy"
+      ],
+      "teams": [
+        "CHZ",
+        "BAL",
+        "DET",
+        "POR"
+      ]
+    },
+    {
+      "name": "Wilt Chamberlain",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Wilt_Chamberlain_1960_%28cropped%29_%28cropped%29.jpg/960px-Wilt_Chamberlain_1960_%28cropped%29_%28cropped%29.jpg",
+      "teammates": [
+        "Chet Walker",
+        "Billy Cunningham",
+        "Paul Arizin",
+        "Hal Greer",
+        "Guy Rodgers",
+        "Elgin Baylor",
+        "Jerry West"
+      ],
+      "teams": [
+        "PHW",
+        "SFW",
+        "PHI",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Eddie Miles",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Eddie_Miles_basketball.jpeg/960px-Eddie_Miles_basketball.jpeg",
+      "teammates": [
+        "Earl Monroe",
+        "Tom Van Arsdale",
+        "Ray Scott",
+        "Walt Bellamy",
+        "Terry Dischinger",
+        "Dave Bing",
+        "Dave DeBusschere"
+      ],
+      "teams": [
+        "DET",
+        "BAL",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Elgin Baylor",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Elgin_Baylor_Night_program-%28cropped%29.jpg/960px-Elgin_Baylor_Night_program-%28cropped%29.jpg",
+      "teammates": [
+        "Leroy Ellis",
+        "Walt Hazzard",
+        "Gail Goodrich",
+        "Frank Selvy",
+        "Rudy LaRusso",
+        "Wilt Chamberlain",
+        "Jerry West"
+      ],
+      "teams": [
+        "MNL",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Bob Boozer",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Bob_Boozer.jpg",
+      "teammates": [
+        "Bucky Bockhorn",
+        "Jerry West",
+        "Wayne Embry",
+        "Kareem Abdul-Jabbar",
+        "Elgin Baylor",
+        "Jack Twyman",
+        "Oscar Robertson"
+      ],
+      "teams": [
+        "CIN",
+        "NYK",
+        "LAL",
+        "CHI",
+        "SEA",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Len Chappell",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Len_Chappell.jpg",
+      "teammates": [
+        "Flynn Robinson",
+        "Guy Rodgers",
+        "Pete Maravich",
+        "Bob Love",
+        "Kareem Abdul-Jabbar",
+        "Oscar Robertson",
+        "Walt Bellamy"
+      ],
+      "teams": [
+        "SYR",
+        "NYK",
+        "CHI",
+        "CIN",
+        "DET",
+        "MIL",
+        "CLE",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Rod Thorn",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Rod_Thorn.jpg",
+      "teammates": [
+        "Terry Dischinger",
+        "Walt Bellamy",
+        "Bob Rule",
+        "Joe Caldwell",
+        "Richie Guerin",
+        "Don Kojis",
+        "Lenny Wilkens"
+      ],
+      "teams": [
+        "BAL",
+        "DET",
+        "STL",
+        "SEA"
+      ]
+    },
+    {
+      "name": "Tom Meschery",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Tom_Meschery_1965.jpg",
+      "teammates": [
+        "Lenny Wilkens",
+        "Al Attles",
+        "Bob Rule",
+        "Nate Thurmond",
+        "Guy Rodgers",
+        "Rick Barry",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "PHW",
+        "SFW",
+        "SEA"
+      ]
+    },
+    {
+      "name": "Don Ohl",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/1961%E2%80%9362_Fleer_-_Don_Ohl_%28cropped%29.png",
+      "teammates": [
+        "Johnny Egan",
+        "Ray Scott",
+        "Lou Hudson",
+        "Kevin Loughery",
+        "Walt Bellamy",
+        "Bob Ferry",
+        "Bailey Howell"
+      ],
+      "teams": [
+        "DET",
+        "BAL",
+        "STL",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Guy Rodgers",
+      "imageUrl": "/players/guy-rodgers.jpg",
+      "teammates": [
+        "Al Attles",
+        "Oscar Robertson",
+        "Tom Meschery",
+        "Kareem Abdul-Jabbar",
+        "Rick Barry",
+        "Paul Arizin",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "PHW",
+        "SFW",
+        "CHI",
+        "CIN",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Richie Guerin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Richie_Guerin_February_2014.JPG",
+      "teammates": [
+        "Lenny Wilkens",
+        "Lou Hudson",
+        "Bob Pettit",
+        "Bill Bridges",
+        "Zelmo Beaty",
+        "Kenny Sears",
+        "Willie Naulls"
+      ],
+      "teams": [
+        "NYK",
+        "STL",
+        "ATL"
+      ]
+    },
+    {
+      "name": "Rudy LaRusso",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Rudy_LaRusso.png",
+      "teammates": [
+        "Gail Goodrich",
+        "Dick Barnett",
+        "Walt Hazzard",
+        "Jim King",
+        "Frank Selvy",
+        "Jerry West",
+        "Elgin Baylor"
+      ],
+      "teams": [
+        "MNL",
+        "LAL",
+        "SFW"
+      ]
+    },
+    {
+      "name": "Wayne Embry",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Wayne_Embry.jpeg",
+      "teammates": [
+        "Sam Jones",
+        "John Havlicek",
+        "Bob Boozer",
+        "Adrian Smith",
+        "Bucky Bockhorn",
+        "Oscar Robertson",
+        "Jack Twyman"
+      ],
+      "teams": [
+        "CIN",
+        "BOS",
+        "MIL"
+      ]
+    },
+    {
+      "name": "Larry Costello",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/1961%E2%80%9362_Fleer_-_Larry_Costello_%28cropped%29.jpg",
+      "teammates": [
+        "Dave Gambee",
+        "Chet Walker",
+        "Al Bianchi",
+        "Red Kerr",
+        "Dolph Schayes",
+        "Hal Greer",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "PHW",
+        "SYR",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Art Heyman",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Art_Heyman_basketball_portrait_%28Chanticleer_1962%29.jpg",
+      "teammates": [
+        "Johnny Green",
+        "Hal Greer",
+        "Bob Boozer",
+        "Billy Cunningham",
+        "Jack Twyman",
+        "Oscar Robertson",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "NYK",
+        "CIN",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Cliff Hagan",
+      "imageUrl": "/players/cliff-hagan.jpg",
+      "teammates": [
+        "Ed Macauley",
+        "Bill Bridges",
+        "Zelmo Beaty",
+        "Clyde Lovellette",
+        "Richie Guerin",
+        "Lenny Wilkens",
+        "Bob Pettit"
+      ],
+      "teams": [
+        "STL"
+      ]
+    },
+    {
+      "name": "Jack Twyman",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Jack_Twyman.jpg",
+      "teammates": [
+        "Dave Piontek",
+        "Jerry Lucas",
+        "Bob Boozer",
+        "Adrian Smith",
+        "Bucky Bockhorn",
+        "Wayne Embry",
+        "Oscar Robertson"
+      ],
+      "teams": [
+        "ROC",
+        "CIN"
+      ]
+    },
+    {
+      "name": "Red Kerr",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/John_Kerr_in_Chicago_Bulls_1974-75_Media_Guide.jpg",
+      "teammates": [
+        "George Yardley",
+        "Dave Gambee",
+        "Al Bianchi",
+        "Larry Costello",
+        "Hal Greer",
+        "Wilt Chamberlain",
+        "Dolph Schayes"
+      ],
+      "teams": [
+        "SYR",
+        "PHI",
+        "BAL"
+      ]
+    },
+    {
+      "name": "Tom Gola",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Tom_Gola_1953.JPG",
+      "teammates": [
+        "Johnny Green",
+        "Joe Graboski",
+        "Walt Bellamy",
+        "Neil Johnston",
+        "Guy Rodgers",
+        "Paul Arizin",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "PHW",
+        "SFW",
+        "NYK"
+      ]
+    },
+    {
+      "name": "Willie Naulls",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Willie_Naulls.jpg",
+      "teammates": [
+        "Bob Pettit",
+        "Carl Braun",
+        "Sam Jones",
+        "John Havlicek",
+        "Kenny Sears",
+        "Wilt Chamberlain",
+        "Richie Guerin"
+      ],
+      "teams": [
+        "STL",
+        "NYK",
+        "SFW",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Woody Sauldsberry",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Woody_Sauldsberry.jpeg",
+      "teammates": [
+        "Si Green",
+        "Lenny Wilkens",
+        "Cliff Hagan",
+        "Paul Arizin",
+        "Walt Bellamy",
+        "Bob Pettit",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "PHW",
+        "STL",
+        "CHP",
+        "CHZ",
+        "STL",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Bob Pettit",
+      "imageUrl": "/players/bob-pettit.jpg",
+      "teammates": [
+        "Zelmo Beaty",
+        "Frank Selvy",
+        "Richie Guerin",
+        "Chuck Share",
+        "Clyde Lovellette",
+        "Lenny Wilkens",
+        "Cliff Hagan"
+      ],
+      "teams": [
+        "MLH",
+        "STL"
+      ]
+    },
+    {
+      "name": "Bucky Bockhorn",
+      "imageUrl": "/players/bucky-bockhorn.jpg",
+      "teammates": [
+        "Hub Reed",
+        "Jerry Lucas",
+        "Adrian Smith",
+        "Bob Boozer",
+        "Wayne Embry",
+        "Oscar Robertson",
+        "Jack Twyman"
+      ],
+      "teams": [
+        "CIN"
+      ]
+    },
+    {
+      "name": "Tom Heinsohn",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tom_heinsohn_press_photo_1970.jpg",
+      "teammates": [
+        "John Havlicek",
+        "Bill Sharman",
+        "Jim Loscutoff",
+        "Frank Ramsey",
+        "Bob Cousy",
+        "Bill Russell",
+        "Sam Jones"
+      ],
+      "teams": [
+        "BOS"
+      ]
+    },
+    {
+      "name": "Clyde Lovellette",
+      "imageUrl": "/players/clyde-lovellette.jpg",
+      "teammates": [
+        "Sam Jones",
+        "Vern Mikkelsen",
+        "Jack Twyman",
+        "George Mikan",
+        "John Havlicek",
+        "Cliff Hagan",
+        "Bob Pettit"
+      ],
+      "teams": [
+        "MNL",
+        "CIN",
+        "STL",
+        "BOS"
+      ]
+    },
+    {
+      "name": "Dolph Schayes",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Dolph_Schayes_1955_%282%29.jpeg/960px-Dolph_Schayes_1955_%282%29.jpeg",
+      "teammates": [
+        "Earl Lloyd",
+        "George Yardley",
+        "Al Bianchi",
+        "Larry Costello",
+        "Hal Greer",
+        "Paul Seymour",
+        "Red Kerr"
+      ],
+      "teams": [
+        "SYR",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Frank Selvy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Frank_Selvy_Furman.jpg",
+      "teammates": [
+        "Ray Felix",
+        "Jim Krebs",
+        "Dick Barnett",
+        "Rudy LaRusso",
+        "Bob Pettit",
+        "Jerry West",
+        "Elgin Baylor"
+      ],
+      "teams": [
+        "BLB",
+        "MLH",
+        "STL",
+        "MNL",
+        "NYK",
+        "SYR",
+        "MNL",
+        "LAL"
+      ]
+    },
+    {
+      "name": "Gene Shue",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Gene_Shue.jpg/960px-Gene_Shue.jpg",
+      "teammates": [
+        "Paul Arizin",
+        "Richie Guerin",
+        "Chuck Noble",
+        "Walt Bellamy",
+        "Bailey Howell",
+        "Walter Dukes",
+        "George Yardley"
+      ],
+      "teams": [
+        "PHW",
+        "NYK",
+        "FTW",
+        "DET",
+        "NYK",
+        "BAL"
+      ]
+    },
+    {
+      "name": "Kenny Sears",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ken_Sears.jpeg/960px-Ken_Sears.jpeg",
+      "teammates": [
+        "Johnny Green",
+        "Gene Shue",
+        "Ray Felix",
+        "Carl Braun",
+        "Willie Naulls",
+        "Richie Guerin",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "NYK",
+        "SFW"
+      ]
+    },
+    {
+      "name": "Lee Shaffer",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Lee_Shaffer_1960.jpeg/960px-Lee_Shaffer_1960.jpeg",
+      "teammates": [
+        "Paul Neumann",
+        "Larry Costello",
+        "Dave Gambee",
+        "Red Kerr",
+        "Chet Walker",
+        "Hal Greer",
+        "Dolph Schayes"
+      ],
+      "teams": [
+        "SYR",
+        "PHI"
+      ]
+    },
+    {
+      "name": "Slick Leonard",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Bobby_Leonard.jpeg",
+      "teammates": [
+        "Rudy LaRusso",
+        "Vern Mikkelsen",
+        "Dick Garmaker",
+        "Frank Selvy",
+        "Jerry West",
+        "Walt Bellamy",
+        "Elgin Baylor"
+      ],
+      "teams": [
+        "MNL",
+        "LAL",
+        "CHP",
+        "CHZ"
+      ]
+    },
+    {
+      "name": "Walter Dukes",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Walter_Dukes%2C_1954.jpg/960px-Walter_Dukes%2C_1954.jpg",
+      "teammates": [
+        "Clyde Lovellette",
+        "Shellie McMillon",
+        "Chuck Noble",
+        "Don Ohl",
+        "George Yardley",
+        "Bailey Howell",
+        "Gene Shue"
+      ],
+      "teams": [
+        "NYK",
+        "MNL",
+        "DET"
+      ]
+    },
+    {
+      "name": "Ed Conlin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Ed_Conlin_1958.jpeg",
+      "teammates": [
+        "Paul Seymour",
+        "Gene Shue",
+        "Red Kerr",
+        "Paul Arizin",
+        "George Yardley",
+        "Dolph Schayes",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "SYR",
+        "DET",
+        "PHW"
+      ]
+    },
+    {
+      "name": "Larry Foust",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Larry_Foust_1961.jpg",
+      "teammates": [
+        "Fred Schaus",
+        "Clyde Lovellette",
+        "Cliff Hagan",
+        "Frankie Brian",
+        "Bob Pettit",
+        "George Yardley",
+        "Elgin Baylor"
+      ],
+      "teams": [
+        "FTW",
+        "MNL",
+        "STL"
+      ]
+    },
+    {
+      "name": "Paul Arizin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Paul_Arizin_50-62.JPG",
+      "teammates": [
+        "Ernie Beck",
+        "Jack George",
+        "Guy Rodgers",
+        "Tom Gola",
+        "Joe Graboski",
+        "Neil Johnston",
+        "Wilt Chamberlain"
+      ],
+      "teams": [
+        "PHW"
+      ]
+    },
+    {
+      "name": "Dick Garmaker",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Dick_Garmaker.jpeg",
+      "teammates": [
+        "Clyde Lovellette",
+        "Slick Leonard",
+        "George Mikan",
+        "Willie Naulls",
+        "Vern Mikkelsen",
+        "Richie Guerin",
+        "Elgin Baylor"
+      ],
+      "teams": [
+        "MNL",
+        "NYK"
+      ]
+    },
+    {
+      "name": "George Yardley",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/George_Yardley_1958.jpeg/960px-George_Yardley_1958.jpeg",
+      "teammates": [
+        "Mel Hutchins",
+        "Max Zaslofsky",
+        "Frankie Brian",
+        "Hal Greer",
+        "Dolph Schayes",
+        "Larry Foust",
+        "Gene Shue"
+      ],
+      "teams": [
+        "FTW",
+        "DET",
+        "SYR"
+      ]
+    }
+  ],
+  "names": [
+    "Aaron Gordon",
+    "Aaron Nesmith",
+    "Aaron Wiggins",
+    "Ace Bailey",
+    "Adama Bal",
+    "Adrian Dantley",
+    "AJ Green",
+    "Ajay Mitchell",
+    "Al Attles",
+    "Al Horford",
+    "Alex Caruso",
+    "Alex English",
+    "Alex Sarr",
+    "Allen Iverson",
+    "Alonzo Mourning",
+    "Alperen Sengun",
+    "Alvan Adams",
+    "Amar'e Stoudemire",
+    "Amen Thompson",
+    "Andersson Garcia",
+    "Andre Drummond",
+    "Andrei Kirilenko",
+    "Andrew Nembhard",
+    "Andrew Wiggins",
+    "Anfernee Simons",
+    "Antawn Jamison",
+    "Anthony Black",
+    "Anthony Davis",
+    "Anthony Edwards",
+    "Art Heyman",
+    "Artis Gilmore",
+    "Arvydas Sabonis",
+    "Ausar Thompson",
+    "Austin Carr",
+    "Austin Reaves",
+    "Ayo Dosunmu",
+    "Bam Adebayo",
+    "Baron Davis",
+    "Ben Saraf",
+    "Ben Wallace",
+    "Bennedict Mathurin",
+    "Bernard King",
+    "Bez Mbeng",
+    "Bilal Coulibaly",
+    "Bill Russell",
+    "Bill Walton",
+    "Billy Cunningham",
+    "Billy Knight",
+    "Bismack Biyombo",
+    "Blake Griffin",
+    "Bob Boozer",
+    "Bob Cousy",
+    "Bob Kauffman",
+    "Bob Lanier",
+    "Bob Love",
+    "Bob McAdoo",
+    "Bob Pettit",
+    "Bob Weiss",
+    "Bob Wilkerson",
+    "Bobby Portis",
+    "Bones Hyland",
+    "Bradley Beal",
+    "Brandin Podziemski",
+    "Brandon Ingram",
+    "Brandon Miller",
+    "Brandon Williams",
+    "Brice Sensabaugh",
+    "Brook Lopez",
+    "Bruce Brown",
+    "Bub Carrington",
+    "Bucky Bockhorn",
+    "Cade Cunningham",
+    "Caldwell Jones",
+    "Caleb Love",
+    "Calvin Murphy",
+    "Cam Spencer",
+    "Cam Thomas",
+    "Cameron Johnson",
+    "Cameron Payne",
+    "Campy Russell",
+    "Caris LeVert",
+    "Carmelo Anthony",
+    "Caron Butler",
+    "Cason Wallace",
+    "Cazzie Russell",
+    "Cedric Coward",
+    "Cedric Maxwell",
+    "Chaney Johnson",
+    "Charles Barkley",
+    "Charlie Hardnett",
+    "Chauncey Billups",
+    "Chet Holmgren",
+    "Chet Walker",
+    "Chris Paul",
+    "Chris Webber",
+    "Christian Braun",
+    "Chuck Share",
+    "CJ McCollum",
+    "Clem Haskins",
+    "Cliff Hagan",
+    "Clifford Ray",
+    "Clint Capela",
+    "Clyde Drexler",
+    "Clyde Lee",
+    "Clyde Lovellette",
+    "Coby White",
+    "Cody Williams",
+    "Collin Gillespie",
+    "Collin Murray-Boyles",
+    "Collin Sexton",
+    "Connie Hawkins",
+    "Cooper Flagg",
+    "Cormac Ryan",
+    "Craig Porter Jr.",
+    "D'Angelo Russell",
+    "Daeqwon Plowden",
+    "Damian Lillard",
+    "Dan Issel",
+    "Dan Roundfield",
+    "Daniel Gafford",
+    "Daniss Jenkins",
+    "Danny Wolf",
+    "Dariq Whitehead",
+    "Darius Garland",
+    "Darryl Dawkins",
+    "Dave Bing",
+    "Dave Cowens",
+    "Dave DeBusschere",
+    "Dave Twardzik",
+    "David Robinson",
+    "Davion Mitchell",
+    "Day'Ron Sharpe",
+    "De'Aaron Fox",
+    "De'Andre Hunter",
+    "De'Anthony Melton",
+    "Dean Wade",
+    "Deandre Ayton",
+    "DeJon Jarreau",
+    "Dejounte Murray",
+    "DeMar DeRozan",
+    "DeMarcus Cousins",
+    "Deni Avdija",
+    "Dennis Johnson",
+    "Dennis Rodman",
+    "Dennis Schroder",
+    "Dereck Lively II",
+    "Derik Queen",
+    "Deron Williams",
+    "Derrick Jones Jr.",
+    "Derrick Rose",
+    "Derrick White",
+    "Desmond Bane",
+    "Detlef Schrempf",
+    "Devin Booker",
+    "Devin Vassell",
+    "Dick Barnett",
+    "Dick Garmaker",
+    "Dick Van Arsdale",
+    "Dikembe Mutombo",
+    "Dillon Brooks",
+    "Dirk Nowitzki",
+    "Dolph Schayes",
+    "Domantas Sabonis",
+    "Dominick Barlow",
+    "Don Buse",
+    "Don Chaney",
+    "Don Kojis",
+    "Don Ohl",
+    "Donovan Clingan",
+    "Donovan Mitchell",
+    "Donte DiVincenzo",
+    "Draymond Green",
+    "Dražen Petrović",
+    "Dru Smith",
+    "Duncan Robinson",
+    "Dwyane Wade",
+    "Dylan Cardwell",
+    "Dylan Harper",
+    "Dyson Daniels",
+    "Earl Lloyd",
+    "Earl Monroe",
+    "Ed Conlin",
+    "Eddie Jordan",
+    "Eddie Miles",
+    "Egor Demin",
+    "Elgin Baylor",
+    "Elmore Smith",
+    "Elton Brand",
+    "Elvin Hayes",
+    "Em Bryant",
+    "Eric Bledsoe",
+    "Ernie DiGregorio",
+    "Evan Mobley",
+    "Fatty Taylor",
+    "Frank Selvy",
+    "Franz Wagner",
+    "Fred Carter",
+    "Gail Goodrich",
+    "Gary Payton II",
+    "Gene Shue",
+    "Geoff Petrie",
+    "George Gervin",
+    "George McGinnis",
+    "George Yardley",
+    "GG Jackson",
+    "Giannis Antetokounmpo",
+    "Gilbert Arenas",
+    "Glen Rice",
+    "Goga Bitadze",
+    "Grant Hill",
+    "Grayson Allen",
+    "Gui Santos",
+    "Guy Rodgers",
+    "Hakeem Olajuwon",
+    "Hal Greer",
+    "Happy Hairston",
+    "Harrison Barnes",
+    "Hedo Türkoğlu",
+    "Henry Bibby",
+    "Herbert Jones",
+    "Horace Grant",
+    "Hot Rod Hundley",
+    "Hub Reed",
+    "Immanuel Quickley",
+    "Isaac Okoro",
+    "Isaiah Collier",
+    "Isaiah Hartenstein",
+    "Isaiah Jackson",
+    "Isaiah Joe",
+    "Isaiah Stewart",
+    "Isiah Thomas",
+    "Ivica Zubac",
+    "Ja Morant",
+    "Ja'Kobe Walter",
+    "Jabari Smith Jr.",
+    "Jack Marin",
+    "Jack Sikma",
+    "Jack Twyman",
+    "Jaden Ivey",
+    "Jaden McDaniels",
+    "Jaime Jaquez Jr.",
+    "Jake LaRavia",
+    "Jakob Poeltl",
+    "Jalen Brunson",
+    "Jalen Duren",
+    "Jalen Green",
+    "Jalen Johnson",
+    "Jalen Slawson",
+    "Jalen Smith",
+    "Jalen Suggs",
+    "Jalen Williams",
+    "Jamaal Magloire",
+    "Jamaal Wilkes",
+    "Jamal Murray",
+    "Jamal Shead",
+    "James Harden",
+    "James Worthy",
+    "Jamir Watkins",
+    "Jarace Walker",
+    "Jaren Jackson Jr.",
+    "Jarrett Allen",
+    "Javon Small",
+    "Javonte Green",
+    "Jaxson Hayes",
+    "Jay Huff",
+    "Jaylen Brown",
+    "Jaylen Wells",
+    "Jaylin Williams",
+    "Jaylon Tyson",
+    "Jayson Tatum",
+    "Jerami Grant",
+    "Jeremiah Fears",
+    "Jerry Lucas",
+    "Jerry Sloan",
+    "Jerry West",
+    "Jim Chones",
+    "Jim Cleamons",
+    "Jimmy Butler",
+    "Jimmy Butler III",
+    "Jimmy Walker",
+    "Jo Jo White",
+    "Joakim Noah",
+    "Jock Landale",
+    "Joe Graboski",
+    "Joe Johnson",
+    "Joel Embiid",
+    "John Collins",
+    "John Gianelli",
+    "John Havlicek",
+    "John Konchar",
+    "John Shumate",
+    "John Starks",
+    "John Stockton",
+    "Johnny McCarthy",
+    "Jonas Valanciunas",
+    "Jonathan Kuminga",
+    "Jordan Goodwin",
+    "Jordan Miller",
+    "Jose Alvarado",
+    "José Calderón",
+    "Josh Giddey",
+    "Josh Hart",
+    "Jrue Holiday",
+    "Julian Champagnie",
+    "Julian Reese",
+    "Julius Erving",
+    "Julius Randle",
+    "Justin Champagnie",
+    "Jusuf Nurkic",
+    "K.C. Jones",
+    "Kareem Abdul-Jabbar",
+    "Karl Malone",
+    "Karl-Anthony Towns",
+    "Kawhi Leonard",
+    "Keegan Murray",
+    "Kel'el Ware",
+    "Keldon Johnson",
+    "Kelly Oubre Jr.",
+    "Kemba Walker",
+    "Kennedy Chandler",
+    "Kenny Sears",
+    "Kentavious Caldwell-Pope",
+    "Kermit Washington",
+    "Kevin Durant",
+    "Kevin Garnett",
+    "Kevin Huerter",
+    "Kevin Johnson",
+    "Kevin Kunnert",
+    "Kevin Love",
+    "Kevin Porter Jr.",
+    "Keyonte George",
+    "Khris Middleton",
+    "Killian Hayes",
+    "Kim Hughes",
+    "Klay Thompson",
+    "Kobe Bryant",
+    "Kon Knueppel",
+    "Kris Dunn",
+    "Kristaps Porzingis",
+    "Kyle Filipowski",
+    "Kyle Kuzma",
+    "Kyrie Irving",
+    "Kyshawn George",
+    "Lamar Odom",
+    "LaMelo Ball",
+    "Landry Shamet",
+    "Larry Bird",
+    "Larry Costello",
+    "Larry Foust",
+    "Larry Steele",
+    "Latrell Sprewell",
+    "Lauri Markkanen",
+    "Leaky Black",
+    "Leandro Barbosa",
+    "LeBron James",
+    "Lee Shaffer",
+    "Len Chappell",
+    "Lenny Wilkens",
+    "Leroy Ellis",
+    "Lionel Hollins",
+    "Lloyd Neal",
+    "Lonnie Shelton",
+    "Lucas Williamson",
+    "Lucius Allen",
+    "Luguentz Dort",
+    "Luis Scola",
+    "Luka Doncic",
+    "Luka Dončić",
+    "Luke Kennard",
+    "Luke Kornet",
+    "Luol Deng",
+    "M.L. Carr",
+    "Magic Johnson",
+    "Malachi Smith",
+    "Malik Monk",
+    "Manu Ginóbili",
+    "Marc Gasol",
+    "Marcus Smart",
+    "Mark Price",
+    "Mark Williams",
+    "Marques Johnson",
+    "Marvin Bagley III",
+    "Matas Buzelis",
+    "Matt Guokas",
+    "Maurice Cheeks",
+    "Maurice Lucas",
+    "Max Christie",
+    "Max Strus",
+    "Maxime Raynaud",
+    "Micah Potter",
+    "Michael Jordan",
+    "Michael Porter Jr.",
+    "Micheal Ray Richardson",
+    "Mickey Johnson",
+    "Mikal Bridges",
+    "Mike Bibby",
+    "Mike Newlin",
+    "Miles Bridges",
+    "Miles McBride",
+    "Mitch Richmond",
+    "Mitchell Robinson",
+    "Moses Malone",
+    "Moses Moody",
+    "Moussa Diabate",
+    "Muggsy Bogues",
+    "Mychal Thompson",
+    "Myles Turner",
+    "Naji Marshall",
+    "Nate Thurmond",
+    "Naz Reid",
+    "Neal Walk",
+    "Neemias Queta",
+    "Nic Claxton",
+    "Nickeil Alexander-Walker",
+    "Nicolas Batum",
+    "Nikola Jokic",
+    "Nikola Jokić",
+    "Nikola Vucevic",
+    "Nique Clifford",
+    "Noah Clowney",
+    "Nolan Traore",
+    "Norm Nixon",
+    "Norm Van Lier",
+    "Norman Powell",
+    "Obi Toppin",
+    "OG Anunoby",
+    "Olivier-Maxence Prosper",
+    "Onyeka Okongwu",
+    "Oscar Robertson",
+    "Oso Ighodaro",
+    "Otis Birdsong",
+    "P.J. Washington",
+    "Paolo Banchero",
+    "Pascal Siakam",
+    "Patrick Ewing",
+    "Patrick Williams",
+    "Pau Gasol",
+    "Paul Arizin",
+    "Paul George",
+    "Paul Pierce",
+    "Paul Reed",
+    "Paul Silas",
+    "Paul Westphal",
+    "Payton Pritchard",
+    "Peja Stojaković",
+    "Pelle Larsson",
+    "Pete Maravich",
+    "Peyton Watson",
+    "Phil Chenier",
+    "Phil Jordon",
+    "Precious Achiuwa",
+    "Quentin Grimes",
+    "Quenton Jackson",
+    "Quinn Buckner",
+    "Quinten Post",
+    "Ray Allen",
+    "Red Kerr",
+    "Reed Sheppard",
+    "Reggie Miller",
+    "Richie Guerin",
+    "Rick Adelman",
+    "Rick Barry",
+    "Rick Roberson",
+    "RJ Barrett",
+    "Robert Parish",
+    "Robert Williams III",
+    "Rod Thorn",
+    "Ron Boone",
+    "Ron Lee",
+    "Ron Williams",
+    "Ronald Holland II",
+    "Royce O'Neale",
+    "Rudy Gobert",
+    "Rudy LaRusso",
+    "Rudy Tomjanovich",
+    "Rui Hachimura",
+    "Russell Westbrook",
+    "Ryan Dunn",
+    "Ryan Kalkbrenner",
+    "Ryan Nembhard",
+    "Ryan Rollins",
+    "Saddiq Bey",
+    "Sam Hauser",
+    "Sam Lacey",
+    "Sam Merrill",
+    "Sandro Mamukelashvili",
+    "Santi Aldama",
+    "Šarūnas Marčiulionis",
+    "Scottie Barnes",
+    "Scottie Pippen",
+    "Shaedon Sharpe",
+    "Shai Gilgeous-Alexander",
+    "Shaquille O'Neal",
+    "Shawn Kemp",
+    "Si Green",
+    "Sidney Wicks",
+    "Sion James",
+    "Slater Martin",
+    "Slick Leonard",
+    "Slick Watts",
+    "Spencer Haywood",
+    "Spud Webb",
+    "Stephen Curry",
+    "Stephon Castle",
+    "Steve Mix",
+    "Steve Nash",
+    "Steven Adams",
+    "Swen Nater",
+    "T.J. McConnell",
+    "Tari Eason",
+    "Taurean Prince",
+    "Terance Mann",
+    "Terry Dischinger",
+    "Tim Duncan",
+    "Tim Hardaway Jr.",
+    "Tiny Archibald",
+    "Tobias Harris",
+    "Toby Kimball",
+    "Toby Okani",
+    "Tom Boerwinkle",
+    "Tom Burleson",
+    "Tom Gola",
+    "Tom Heinsohn",
+    "Tom Meschery",
+    "Tom Van Arsdale",
+    "Toni Kukoč",
+    "Tony Parker",
+    "Toumani Camara",
+    "Tracy McGrady",
+    "Trae Young",
+    "Tre Johnson",
+    "Tre Jones",
+    "Tree Rollins",
+    "Trevon Scott",
+    "Trey Murphy III",
+    "Tristan da Silva",
+    "Truck Robinson",
+    "Ty Jerome",
+    "Tyler Burton",
+    "Tyler Herro",
+    "Tyrese Haliburton",
+    "Tyrese Maxey",
+    "Victor Oladipo",
+    "Victor Wembanyama",
+    "Vince Carter",
+    "Vince Williams Jr.",
+    "VJ Edgecombe",
+    "Vlade Divac",
+    "Walker Kessler",
+    "Walt Bellamy",
+    "Walt Frazier",
+    "Walt Hazzard",
+    "Walter Clayton Jr.",
+    "Walter Dukes",
+    "Wayne Embry",
+    "Wendell Carter Jr.",
+    "Wes Unseld",
+    "Will Riley",
+    "Willie Naulls",
+    "Willis Reed",
+    "Wilt Chamberlain",
+    "Woody Sauldsberry",
+    "World B. Free",
+    "Yao Ming",
+    "Yves Missi",
+    "Zaccharie Risacher",
+    "Zach Edey",
+    "Zach LaVine",
+    "Zaid Abdul-Aziz",
+    "Zelmo Beaty",
+    "Ziaire Williams",
+    "Zion Williamson"
+  ]
+}

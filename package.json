@@ -14,6 +14,7 @@
     ,"data:visual": "tsx scripts/pruneToPlayersWithImages.ts"
     ,"data:top5": "node scripts/buildTopFiveData.mjs"
     ,"data:top5:live": "node scripts/buildLiveTopFiveStats.mjs"
+    ,"data:who": "node scripts/buildWhoAmIData.mjs"
     ,"check:top5": "node scripts/checkTopFiveData.mjs"
   },
   "dependencies": {

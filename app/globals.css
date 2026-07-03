@@ -466,3 +466,47 @@ body { font-family:Arial,Helvetica,sans-serif; }
 @media(max-width:760px){
   .mode-intro h1,.match-head h1,.top5-head h1{font-size:clamp(16px,4.8vw,20px);white-space:nowrap}
 }
+
+/* Who am I */
+.who-art b { color:#e9eff9; text-shadow:7px 7px 0 #07101f; }
+.who-shell { min-height:100vh; overflow-x:hidden; background:radial-gradient(circle at 80% 15%,#283d65 0,#0a172d 38%,#030814 75%); }
+.who-intro { width:min(1080px,calc(100% - 44px)); margin:auto; padding:72px 0 90px; }
+.who-intro h1 { margin:0; font:400 clamp(58px,9vw,112px)/.86 Impact,"Arial Narrow",sans-serif; letter-spacing:.025em; }
+.who-intro>p { max-width:520px; margin:13px 0 0; color:#a9b7cb; font:400 14px/1.55 Arial; }
+.who-modes { margin-top:42px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.who-modes button { min-height:190px; padding:25px; border:1px solid #ffffff38; border-radius:18px; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end; color:white; text-align:left; cursor:pointer; background:linear-gradient(145deg,#174d93,#091a35); box-shadow:0 24px 60px #0007,inset 0 1px #ffffff2b; transition:.2s; }
+.who-modes button:last-child { background:linear-gradient(145deg,#d20a2e,#690117); }
+.who-modes button:hover { transform:translateY(-6px); border-color:white; }
+.who-modes b { font:400 clamp(36px,5vw,58px)/.9 Impact,"Arial Narrow",sans-serif; }
+.who-modes span { margin-top:9px; color:#ffffffa0; font:900 8px Arial; letter-spacing:.14em; }
+.who-game { width:min(980px,calc(100% - 44px)); margin:auto; padding:46px 0 90px; }
+.who-game>header { display:grid; grid-template-columns:1fr auto; align-items:end; padding-bottom:22px; border-bottom:1px solid #ffffff2e; }
+.who-game>header>span { grid-column:1; color:#ff4364; font:900 8px Arial; letter-spacing:.2em; }
+.who-game>header h1 { grid-column:1; margin:7px 0 0; font:400 clamp(44px,7vw,78px)/.85 Impact,"Arial Narrow",sans-serif; }
+.who-game>header>b { grid-column:2; grid-row:1/3; color:#8092ae; font:400 32px Impact,"Arial Narrow",sans-serif; }
+.who-clues { margin-top:26px; display:grid; gap:9px; }
+.who-clues.journey { display:flex; align-items:stretch; overflow-x:auto; padding-bottom:5px; }
+.who-clues>div { min-height:66px; border:1px solid #ffffff31; border-radius:10px; display:grid; grid-template-columns:55px 1fr; align-items:center; overflow:hidden; background:#0a1b34; }
+.who-clues.journey>div { min-width:130px; flex:1; grid-template-columns:1fr; grid-template-rows:24px 1fr; text-align:center; }
+.who-clues>div strong { height:100%; display:grid; place-items:center; border-right:1px solid #ffffff24; color:#657a99; font:400 18px Impact,"Arial Narrow",sans-serif; }
+.who-clues.journey>div strong { border-right:0; border-bottom:1px solid #ffffff1e; }
+.who-clues>div span { padding:0 16px; font:400 22px Impact,"Arial Narrow",sans-serif; letter-spacing:.025em; }
+.who-clues>div.hidden { opacity:.35; background:#050e1c; }
+.who-clues>div.visible { border-color:#ffffff65; box-shadow:inset 4px 0 0 #d20a2e; }
+.who-search { position:relative; max-width:700px; margin:30px auto 0; }
+.who-search>label { display:block; margin-bottom:8px; color:#90a3c1; font:900 8px Arial; letter-spacing:.17em; }
+.who-search>div { height:55px; padding:5px; border:2px solid #ffffff56; border-radius:11px; display:grid; grid-template-columns:1fr auto; background:white; }
+.who-search input { min-width:0; padding:0 13px; border:0; outline:0; color:#071327; font:700 14px Arial; }
+.who-search>div>button { padding:0 18px; border:0; border-radius:7px; background:#d20a2e; color:white; font:900 8px Arial; letter-spacing:.13em; cursor:pointer; }
+.who-search>div>button:disabled { opacity:.35; }
+.who-search>aside { position:absolute; z-index:10; top:82px; left:0; right:0; max-height:285px; overflow-y:auto; border:1px solid #ffffff35; border-radius:9px; background:#07152bf7; box-shadow:0 24px 50px #000b; }
+.who-search>aside button { width:100%; padding:12px 15px; border:0; border-bottom:1px solid #ffffff17; display:flex; justify-content:space-between; color:white; background:transparent; text-align:left; cursor:pointer; }
+.who-search>aside button:hover { background:#1a4079; }.who-search>aside span { color:#ff4262; }
+.who-search footer { min-height:42px; display:flex; align-items:center; justify-content:flex-end; gap:15px; }
+.who-search footer p { flex:1; margin:0; color:#ff718a; text-align:right; font:900 9px Arial; letter-spacing:.1em; }
+.who-search footer button { padding:9px 12px; border:1px solid #ffffff40; background:transparent; color:#9cabc0; font:900 8px Arial; letter-spacing:.13em; cursor:pointer; }
+.who-answer { max-width:700px; min-height:180px; margin:30px auto 0; border:1px solid #ffffff42; border-radius:15px; display:flex; align-items:center; overflow:hidden; background:#0b2143; }
+.who-answer img { width:220px; height:180px; object-fit:cover; object-position:top; background:#e8edf4; }
+.who-answer>div { padding:25px; }.who-answer span { color:#ff4262; font:900 8px Arial; letter-spacing:.18em; }
+.who-answer h2 { margin:6px 0 5px; font:400 42px/.9 Impact,"Arial Narrow",sans-serif; }.who-answer p { margin:0; color:#91a3bd; font:800 9px Arial; }
+@media(max-width:680px){.who-intro{padding-top:48px}.who-modes{grid-template-columns:1fr}.who-modes button{min-height:135px}.who-game{padding-top:30px}.who-clues>div{min-height:58px}.who-answer img{width:135px}.who-answer h2{font-size:30px}}

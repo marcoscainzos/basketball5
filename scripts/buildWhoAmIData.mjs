@@ -1,0 +1,36 @@
+import fs from "node:fs";
+import path from "node:path";
+
+const root = process.cwd();
+const source = path.join(root, "data/raw/nba-player-per-game-1947-2024.csv");
+const visualPlayers = JSON.parse(fs.readFileSync(path.join(root, "data/player-seasons.json"), "utf8"));
+
+function parseCsv(input) {
+  const rows=[]; let row=[]; let value=""; let quoted=false;
+  for (let i=0;i<input.length;i+=1) { const char=input[i];
+    if(char==='"'){ if(quoted&&input[i+1]==='"'){value+='"';i+=1;}else quoted=!quoted; }
+    else if(char===","&&!quoted){row.push(value);value="";}
+    else if((char==="\n"||char==="\r")&&!quoted){if(char==="\r"&&input[i+1]==="\n")i+=1;row.push(value);value="";if(row.some(Boolean))rows.push(row);row=[];}
+    else value+=char;
+  }
+  const headers=rows.shift(); return rows.map(values=>Object.fromEntries(headers.map((header,index)=>[header,values[index]??""])));
+}
+const clean=name=>name.replace(/\*/g,"").trim();
+const normalized=value=>value.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const rows=parseCsv(fs.readFileSync(source,"utf8")).filter(row=>row.lg==="NBA"&&Number(row.g)>=5&&row.tm!=="TOT");
+const byPlayer=new Map(); const rosters=new Map(); const peak=new Map();
+for(const row of rows){const name=clean(row.player);const season=Number(row.season);const key=`${season}|${row.tm}`;byPlayer.set(name,[...(byPlayer.get(name)??[]),{season,team:row.tm,games:Number(row.g)}]);rosters.set(key,[...(rosters.get(key)??[]),name]);peak.set(name,Math.max(peak.get(name)??0,Number(row.pts_per_game)||0));}
+const visualByName=new Map();
+for(const player of visualPlayers){if(player.imageUrl&&!visualByName.has(normalized(player.name)))visualByName.set(normalized(player.name),player);}
+const challenges=[];
+for(const [name,seasons] of byPlayer){const visual=visualByName.get(normalized(name));if(!visual||(peak.get(name)??0)<15)continue;
+  const ordered=[...seasons].sort((a,b)=>a.season-b.season);const teams=[];
+  for(const item of ordered){if(teams.at(-1)!==item.team)teams.push(item.team);}
+  const shared=new Map();
+  for(const item of ordered){for(const mate of rosters.get(`${item.season}|${item.team}`)??[]){if(mate!==name)shared.set(mate,(shared.get(mate)??0)+1);}}
+  const teammates=[...shared].filter(([mate])=>(peak.get(mate)??0)>=8).sort((a,b)=>((b[1]*4)+(peak.get(b[0])??0))-((a[1]*4)+(peak.get(a[0])??0))).slice(0,7).reverse().map(([mate])=>mate);
+  if(teammates.length>=5)challenges.push({name,imageUrl:visual.imageUrl,teammates,teams});
+}
+const names=[...new Set(visualPlayers.map(player=>player.name))].sort((a,b)=>a.localeCompare(b));
+fs.writeFileSync(path.join(root,"data/who-am-i.json"),`${JSON.stringify({challenges,names},null,2)}\n`);
+console.log(`Who Am I: ${challenges.length} jugadores, ${names.length} nombres buscables.`);
