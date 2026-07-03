@@ -47,8 +47,8 @@ export default function DraftGame() {
   }
 
   if (!ready) return <main className="draft-shell"><div className="top5-loading">PREPARANDO EL DRAFT…</div></main>;
-  if (!mode) return <main className="draft-shell"><nav className="site-nav"><Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link><Link href="/" className="back-link">← GAMES</Link></nav><section className="draft-mode-screen">
-    <div className="draft-modes-label">MODES</div><h1>COURT INSIDE</h1><h2>BUILD YOUR FIVE</h2>
+  if (!mode) return <main className="draft-shell"><nav className="site-nav draft-top-nav"><Link href="/" className="back-link">← GAMES</Link><div className="wordmark"><span className="mark">CI</span><b>COURT INSIDE</b></div><span /></nav><section className="draft-mode-screen">
+    <h1>BUILD YOUR FIVE</h1>
     <p>Escoge cinco jugadores. Nosotros calculamos cuántos partidos ganaría tu equipo en una temporada de 82.</p>
     <div className="draft-mode-grid">
       <button type="button" onClick={() => openMode("career")}><div><b>CARRERA</b><small>EL JUGADOR EN GENERAL</small></div><i>FÁCIL</i></button>
@@ -56,21 +56,17 @@ export default function DraftGame() {
     </div>
   </section></main>;
 
-  return <main className="draft-shell"><nav className="site-nav"><button type="button" className="back-button" onClick={() => setMode(null)}>← MODES</button><div className="wordmark"><span className="mark">CI</span><b>COURT INSIDE</b></div><span className="draft-nav-attempt">1 TRY</span></nav><section className="draft-game">
-    <header className="draft-head">
-      <span className="draft-locked-note">1 INTENTO DIARIO</span>
-      <div><span>DRAFT DIARIO · {mode === "career" ? "CARRERA" : "TEMPORADAS"}</span><h1>BUILD YOUR FIVE</h1></div>
-      <aside><small>RESTRICCIÓN DE HOY</small><b>{RESTRICTIONS[rule].title}</b><p>{RESTRICTIONS[rule].description}</p></aside>
-    </header>
+  return <main className="draft-shell"><nav className="site-nav draft-top-nav"><button type="button" className="back-button" onClick={() => setMode(null)}>← MODES</button><div className="wordmark"><span className="mark">CI</span><b>COURT INSIDE</b></div><span className="draft-nav-attempt">1 TRY</span></nav><section className="draft-game">
     <div className="draft-court">
       <div className="draft-lineup">
+        <div className="court-hoop" aria-hidden="true"><i /><span /></div>
         {COURT_POSITIONS.map((position, index) => { const player = lineup.find((item) => item.position === position); return <article className={`court-${position.toLowerCase()} ${player ? "filled" : ""}`} key={position}>
           <strong>{position}</strong>{player ? <><div className="draft-photo">{player.imageUrl ? <img src={player.imageUrl} alt="" /> : <span>{player.name.charAt(0)}</span>}</div><h2>{player.name}</h2><p>{mode === "season" ? `${player.season} · ${player.team}` : player.position}</p></> : <><div className="empty-player">+</div><h2>{position}</h2><p>{["BASE", "ESCOLTA", "ALERO", "ALA-PÍVOT", "PÍVOT"][index]}</p></>}
         </article>; })}
       </div>
       <div className={`draft-panel ${wins !== null ? "draft-completed" : ""}`}>
-        {wins === null ? <><label htmlFor="draft-search">AÑADE TU {lineup.length + 1}.º JUGADOR</label><div className="draft-search"><input id="draft-search" value={query} disabled={lineup.length === 5} onChange={(event) => { setQuery(event.target.value); setMessage(""); }} placeholder={mode === "season" ? "Jugador o temporada…" : "Escribe un jugador…"}/><span>{lineup.length}/5</span></div>
-        {suggestions.length > 0 && <div className="draft-suggestions">{suggestions.map((player) => <button type="button" key={`${player.id}-${player.label}`} onClick={() => choose(player)}><div className="suggestion-photo">{player.imageUrl && <img src={player.imageUrl} alt="" />}</div><span><b>{player.name}</b><small>{mode === "season" ? `${player.season} · ${player.team}` : `${player.position} · ${player.team}`}</small></span><i>＋</i></button>)}</div>}<p className="draft-message">{message}</p></> : <div className="wins-result"><span>VICTORIAS ESTIMADAS</span><b>{wins}</b><i>/ 82</i><p>Récord estimado: {wins}-{82 - wins}. Tu intento de hoy queda cerrado.</p><strong>VUELVE MAÑANA</strong></div>}
+        {wins === null ? <div className="draft-control-row"><div className="draft-search-side"><label htmlFor="draft-search">AÑADE TU {lineup.length + 1}.º JUGADOR</label><div className="draft-search"><input id="draft-search" value={query} disabled={lineup.length === 5} onChange={(event) => { setQuery(event.target.value); setMessage(""); }} placeholder={mode === "season" ? "Jugador o temporada…" : "Escribe un jugador…"}/><span>{lineup.length}/5</span></div>
+        {suggestions.length > 0 && <div className="draft-suggestions">{suggestions.map((player) => <button type="button" key={`${player.id}-${player.label}`} onClick={() => choose(player)}><div className="suggestion-photo">{player.imageUrl && <img src={player.imageUrl} alt="" />}</div><span><b>{player.name}</b><small>{mode === "season" ? `${player.season} · ${player.team}` : `${player.position} · ${player.team}`}</small></span><i>＋</i></button>)}</div>}<p className="draft-message">{message}</p></div><aside className="draft-rule-inline"><small>RESTRICCIÓN DE HOY</small><b>{RESTRICTIONS[rule].title}</b><p>{RESTRICTIONS[rule].description}</p></aside></div> : <div className="wins-result"><span>VICTORIAS ESTIMADAS</span><b>{wins}</b><i>/ 82</i><p>Récord estimado: {wins}-{82 - wins}. Tu intento de hoy queda cerrado.</p><strong>VUELVE MAÑANA</strong></div>}
       </div>
     </div>
   </section></main>;
