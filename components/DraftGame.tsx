@@ -50,7 +50,7 @@ export default function DraftGame() {
   }
 
   if (!ready) return <main className="draft-shell"><div className="top5-loading">PREPARANDO EL DRAFT…</div></main>;
-  if (!mode) return <main className="draft-shell"><nav className="site-nav"><Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link><Link href="/" className="back-link">← GAMES</Link></nav><section className="mode-intro draft-mode-intro"><div className="mode-copy"><span>GAME 04</span><h1>BUILD YOUR FIVE</h1><p>Escoge cinco jugadores. Nosotros calculamos cuántos partidos ganaría tu equipo en una temporada de 82.</p></div><div className="reset-inline"><small>RESET</small><b>{countdown}</b></div></section><section className="draft-mode-screen">
+  if (!mode) return <main className="draft-shell"><nav className="site-nav"><Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link><Link href="/" className="back-link">← GAMES</Link></nav><section className="mode-intro draft-mode-intro"><div className="mode-copy"><h1>BUILD YOUR FIVE</h1><p>Escoge cinco jugadores. Nosotros calculamos cuántos partidos ganaría tu equipo en una temporada de 82.</p></div><div className="reset-inline"><small>RESET</small><b>{countdown}</b></div></section><section className="draft-mode-screen">
     <div className="draft-mode-grid">
       <button type="button" onClick={() => openMode("career")}><div><b>CARRERA</b><small>EL JUGADOR EN GENERAL</small></div><i>FÁCIL</i></button>
       <button type="button" onClick={() => openMode("season")}><div><b>TEMPORADAS</b><small>VERSIONES CONCRETAS</small></div><i>DIFÍCIL</i></button>
@@ -61,7 +61,6 @@ export default function DraftGame() {
     <div className="draft-court">
       <div className="draft-lineup">
         <div className="three-point-arc" aria-hidden="true" />
-        <div className="court-hoop" aria-hidden="true"><i /><span /></div>
         {COURT_POSITIONS.map((position, index) => { const player = lineup.find((item) => item.position === position); return <article className={`court-${position.toLowerCase()} ${player ? "filled" : ""}`} key={position}>
           <strong>{position}</strong>{player ? <><div className="draft-photo">{player.imageUrl ? <img src={player.imageUrl} alt="" /> : <span>{player.name.charAt(0)}</span>}</div><h2>{player.name}</h2><p>{mode === "season" ? `${player.season} · ${player.team}` : player.position}</p></> : <><div className="empty-player">+</div><h2>{position}</h2><p>{["BASE", "ESCOLTA", "ALERO", "ALA-PÍVOT", "PÍVOT"][index]}</p></>}
         </article>; })}

@@ -48,7 +48,7 @@ export default function OneVsOneGame() {
   if (!saved) return <main className="game-loading">OPENING THE GYM…</main>;
   if (!active || !modeSave || !game || !current || !challenger) return <main className="mode-shell">
     <nav className="site-nav"><Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link><Link href="/" className="back-link">← GAMES</Link></nav>
-    {!showCurrent && <section className="mode-intro"><div className="mode-copy"><span>GAME 01</span><h1>1VS1</h1><p>1vs1 enfrenta a dos jugadores en una estadística desconocida. Tú decides quién gana entre historia NBA y temporada actual.</p></div><div className="reset-inline"><small>RESET</small><b>{countdown}</b></div></section>}
+    {!showCurrent && <section className="mode-intro"><div className="mode-copy"><h1>1VS1</h1><p>1vs1 enfrenta a dos jugadores en una estadística desconocida. Tú decides quién gana entre historia NBA y temporada actual.</p></div><div className="reset-inline"><small>RESET</small><b>{countdown}</b></div></section>}
     {!showCurrent ? <section className="mode-select mode-select-two">
       <button className={`mode-card mode-historical ${saved.historical.attemptsUsed >= 2 ? "locked" : ""}`} disabled={saved.historical.attemptsUsed >= 2} onClick={() => openChallenge("historical")}><h2>HISTÓRICO</h2></button>
       <button className="mode-card mode-current" onClick={() => setShowCurrent(true)}><h2>ACTUAL</h2></button>
