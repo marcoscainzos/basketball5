@@ -8,12 +8,14 @@ type CommonsImage = { descriptionurl?: string; extmetadata?: Record<string, { va
 
 const ROOT = process.cwd();
 const cards = JSON.parse(fs.readFileSync(path.join(ROOT, "data/player-seasons.json"), "utf8")) as Card[];
+const priorityNames = ["Michael Jordan", "Magic Johnson", "Larry Bird", "Kobe Bryant", "Pau Gasol", "Manu Ginóbili", "Dwyane Wade", "Allen Iverson", "LeBron James", "Tim Duncan", "Shaquille O'Neal", "Hakeem Olajuwon", "Kevin Garnett", "Dirk Nowitzki", "Steve Nash", "Jason Kidd", "Charles Barkley", "David Robinson", "Scottie Pippen", "John Stockton", "Karl Malone"];
 const creditsPath = path.join(ROOT, "data/image-credits.json");
 const credits = fs.existsSync(creditsPath) ? JSON.parse(fs.readFileSync(creditsPath, "utf8")) as Record<string, Credit> : {};
 const limitArg = process.argv.find((argument) => argument.startsWith("--limit="));
 const limit = limitArg ? Number(limitArg.split("=")[1]) : 200;
 const orderedCards = [...cards].sort((a, b) => Number(b.pool === "current") - Number(a.pool === "current"));
-const names = [...new Set(orderedCards.map((card) => card.name))].filter((name) => !credits[name]).slice(0, limit);
+const allNames = [...new Set(orderedCards.map((card) => card.name))].filter((name) => !credits[name]);
+const names = [...priorityNames.filter((name) => allNames.includes(name)), ...allNames.filter((name) => !priorityNames.includes(name))].slice(0, limit);
 
 function plain(value?: string) { return (value ?? "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&quot;/g, '"'); }
 function chunks<T>(values: T[], size: number) { return Array.from({ length: Math.ceil(values.length / size) }, (_, index) => values.slice(index * size, (index + 1) * size)); }

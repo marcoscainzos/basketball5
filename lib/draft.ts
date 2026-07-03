@@ -56,10 +56,8 @@ export function optionsFor(mode: DraftMode): DraftOption[] {
 
 export function canAdd(player: DraftOption, lineup: DraftOption[], rule: DraftRestriction) {
   if (lineup.some((item) => item.name === player.name)) return "Ese jugador ya está en tu quinteto.";
+  if (lineup.some((item) => item.position === player.position)) return `Ya tienes cubierta la posición ${player.position}.`;
   if (rule === "noThirty" && player.pts >= 30) return "No cumple la restricción de hoy.";
-  const samePosition = lineup.filter((item) => item.position === player.position).length;
-  if (rule === "positions" && samePosition >= 1) return `Ya tienes cubierta la posición ${player.position}.`;
-  if (rule === "balanced" && samePosition >= 2) return `Ya tienes dos jugadores en ${player.position}.`;
   return null;
 }
 
