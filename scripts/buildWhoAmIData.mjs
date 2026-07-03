@@ -17,7 +17,7 @@ function parseCsv(input) {
 }
 const clean=name=>name.replace(/\*/g,"").trim();
 const normalized=value=>value.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
-const rows=parseCsv(fs.readFileSync(source,"utf8")).filter(row=>row.lg==="NBA"&&Number(row.g)>=5&&row.tm!=="TOT");
+const rows=parseCsv(fs.readFileSync(source,"utf8")).filter(row=>row.lg==="NBA"&&Number(row.season)>=1985&&Number(row.g)>=5&&row.tm!=="TOT");
 const byPlayer=new Map(); const rosters=new Map(); const peak=new Map();
 for(const row of rows){const name=clean(row.player);const season=Number(row.season);const key=`${season}|${row.tm}`;byPlayer.set(name,[...(byPlayer.get(name)??[]),{season,team:row.tm,games:Number(row.g)}]);rosters.set(key,[...(rosters.get(key)??[]),name]);peak.set(name,Math.max(peak.get(name)??0,Number(row.pts_per_game)||0));}
 const visualByName=new Map();
@@ -28,8 +28,8 @@ for(const [name,seasons] of byPlayer){const visual=visualByName.get(normalized(n
   for(const item of ordered){if(teams.at(-1)!==item.team)teams.push(item.team);}
   const shared=new Map();
   for(const item of ordered){for(const mate of rosters.get(`${item.season}|${item.team}`)??[]){if(mate!==name)shared.set(mate,(shared.get(mate)??0)+1);}}
-  const teammates=[...shared].filter(([mate])=>(peak.get(mate)??0)>=8).sort((a,b)=>((b[1]*4)+(peak.get(b[0])??0))-((a[1]*4)+(peak.get(a[0])??0))).slice(0,7).reverse().map(([mate])=>mate);
-  if(teammates.length>=5)challenges.push({name,imageUrl:visual.imageUrl,teammates,teams});
+  const teammates=[...shared].filter(([mate])=>(peak.get(mate)??0)>=8&&visualByName.get(normalized(mate))?.imageUrl).sort((a,b)=>((b[1]*4)+(peak.get(b[0])??0))-((a[1]*4)+(peak.get(a[0])??0))).slice(0,5).reverse().map(([mate])=>({name:mate,imageUrl:visualByName.get(normalized(mate)).imageUrl}));
+  if(teammates.length===5){const journey=teams.length>=5?Array.from({length:5},(_,index)=>teams[Math.round(index*(teams.length-1)/4)]):[];challenges.push({name,imageUrl:visual.imageUrl,teammates,teams:journey});}
 }
 const names=[...new Set(visualPlayers.map(player=>player.name))].sort((a,b)=>a.localeCompare(b));
 fs.writeFileSync(path.join(root,"data/who-am-i.json"),`${JSON.stringify({challenges,names},null,2)}\n`);
