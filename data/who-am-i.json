@@ -25,7 +25,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202696.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "ORL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg"
+        },
+        {
+          "name": "DEN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Al Horford",
@@ -100,7 +109,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630224.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Andre Drummond",
@@ -135,6 +149,10 @@
         {
           "name": "CLE",
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
         },
         {
           "name": "PHI",
@@ -175,7 +193,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        },
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Anfernee Simons",
@@ -202,7 +229,12 @@
           "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Damian_Lillard_%282021%29_%28cropped%29.jpg/960px-Damian_Lillard_%282021%29_%28cropped%29.jpg"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Anthony Davis",
@@ -229,7 +261,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "NOH",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        },
+        {
+          "name": "NOP",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Anthony Edwards",
@@ -256,7 +301,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626157.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Austin Reaves",
@@ -283,7 +333,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Bam Adebayo",
@@ -310,7 +365,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629639.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Bennedict Mathurin",
@@ -337,7 +397,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627783.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "IND",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Bradley Beal",
@@ -364,7 +429,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626162.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "WAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
+        },
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        }
+      ]
     },
     {
       "name": "Brandon Ingram",
@@ -391,7 +465,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629627.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "NOP",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Brook Lopez",
@@ -418,7 +501,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "NJN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg"
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "MIL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "CJ McCollum",
@@ -445,7 +545,16 @@
           "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Damian_Lillard_%282021%29_%28cropped%29.jpg/960px-Damian_Lillard_%282021%29_%28cropped%29.jpg"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        },
+        {
+          "name": "NOP",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Cade Cunningham",
@@ -472,7 +581,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628963.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DET",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Cam Thomas",
@@ -499,7 +613,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201935.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        }
+      ]
     },
     {
       "name": "Cameron Johnson",
@@ -526,7 +645,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628969.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        }
+      ]
     },
     {
       "name": "Caris LeVert",
@@ -553,7 +681,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628386.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        },
+        {
+          "name": "IND",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg"
+        },
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Chet Holmgren",
@@ -580,7 +721,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628983.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Chris Paul",
@@ -613,12 +759,20 @@
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
         },
         {
+          "name": "NOH",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        },
+        {
           "name": "LAC",
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
         },
         {
           "name": "HOU",
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        },
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
         },
         {
           "name": "PHO",
@@ -655,7 +809,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201935.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        },
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Coby White",
@@ -682,7 +845,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203897.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Collin Sexton",
@@ -709,7 +877,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628374.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "UTA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "D'Angelo Russell",
@@ -784,7 +961,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203468.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        },
+        {
+          "name": "MIL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Darius Garland",
@@ -811,7 +997,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629012.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "De'Aaron Fox",
@@ -838,7 +1029,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203084.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "De'Andre Hunter",
@@ -865,7 +1061,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629027.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "DeMar DeRozan",
@@ -892,7 +1093,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202685.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        },
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Deandre Ayton",
@@ -919,7 +1133,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626164.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Dejounte Murray",
@@ -946,7 +1169,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629027.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        },
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Dennis Schröder",
@@ -979,8 +1211,16 @@
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
         },
         {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
           "name": "LAL",
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
         },
         {
           "name": "HOU",
@@ -989,6 +1229,10 @@
         {
           "name": "LAL",
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
         },
         {
           "name": "BRK",
@@ -1021,7 +1265,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Desmond Bane",
@@ -1048,7 +1301,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629630.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MEM",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Devin Booker",
@@ -1075,7 +1333,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628969.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        }
+      ]
     },
     {
       "name": "Devin Vassell",
@@ -1102,7 +1365,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629640.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Dillon Brooks",
@@ -1129,7 +1397,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629630.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MEM",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Domantas Sabonis",
@@ -1156,7 +1433,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628368.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
+          "name": "IND",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg"
+        },
+        {
+          "name": "SAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Donovan Mitchell",
@@ -1183,7 +1473,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203497.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "UTA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg"
+        },
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Donte DiVincenzo",
@@ -1210,7 +1509,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg"
+        },
+        {
+          "name": "SAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+        },
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        },
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Evan Mobley",
@@ -1237,7 +1553,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628378.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Giannis Antetokounmpo",
@@ -1264,7 +1585,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203114.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Harrison Barnes",
@@ -1291,7 +1617,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628368.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        },
+        {
+          "name": "DAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
+        },
+        {
+          "name": "SAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Immanuel Quickley",
@@ -1318,7 +1657,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629628.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        },
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Ja Morant",
@@ -1345,7 +1693,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628991.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MEM",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jaden Ivey",
@@ -1372,7 +1725,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630595.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DET",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jalen Brunson",
@@ -1399,7 +1757,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
+        },
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jalen Green",
@@ -1426,7 +1793,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629645.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jalen Johnson",
@@ -1453,7 +1825,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629027.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jalen Williams",
@@ -1480,7 +1857,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628983.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jamal Murray",
@@ -1507,7 +1889,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DEN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "James Harden",
@@ -1582,7 +1969,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629630.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MEM",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jarrett Allen",
@@ -1609,7 +2001,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627747.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        },
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jaylen Brown",
@@ -1636,7 +2037,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jayson Tatum",
@@ -1663,7 +2069,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627759.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jerami Grant",
@@ -1738,7 +2149,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202699.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "John Collins",
@@ -1765,7 +2181,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629027.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        },
+        {
+          "name": "UTA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jonas Valančiūnas",
@@ -1792,7 +2217,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201942.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        },
+        {
+          "name": "MEM",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
+        },
+        {
+          "name": "NOP",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jonathan Kuminga",
@@ -1819,7 +2257,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Josh Giddey",
@@ -1846,7 +2289,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628983.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Josh Hart",
@@ -1873,7 +2321,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627742.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "NOP",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        },
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        },
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jrue Holiday",
@@ -1900,7 +2365,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203076.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "NOP",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        },
+        {
+          "name": "MIL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Julius Randle",
@@ -1927,7 +2409,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629628.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "NOP",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        },
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Jusuf Nurkić",
@@ -1954,7 +2449,20 @@
           "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Damian_Lillard_%282021%29_%28cropped%29.jpg/960px-Damian_Lillard_%282021%29_%28cropped%29.jpg"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DEN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg"
+        },
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        },
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        }
+      ]
     },
     {
       "name": "Karl-Anthony Towns",
@@ -1981,7 +2489,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203952.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Kawhi Leonard",
@@ -2008,7 +2521,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1938.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        },
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        },
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Keegan Murray",
@@ -2035,7 +2561,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628368.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Keldon Johnson",
@@ -2062,7 +2593,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201942.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Kelly Oubre Jr.",
@@ -2185,7 +2721,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629027.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        },
+        {
+          "name": "SAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Khris Middleton",
@@ -2212,7 +2757,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DET",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        },
+        {
+          "name": "MIL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Klay Thompson",
@@ -2239,7 +2793,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Kristaps Porziņģis",
@@ -2266,7 +2825,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        },
+        {
+          "name": "DAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
+        },
+        {
+          "name": "WAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Kyle Kuzma",
@@ -2293,7 +2869,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "WAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "LaMelo Ball",
@@ -2320,7 +2905,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628970.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CHO",
+          "imageUrl": ""
+        }
+      ]
     },
     {
       "name": "Lauri Markkanen",
@@ -2347,7 +2937,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203897.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        },
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "UTA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "LeBron James",
@@ -2374,7 +2977,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2548.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "MIA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
+        },
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Luguentz Dort",
@@ -2401,7 +3021,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628983.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Luka Dončić",
@@ -2428,7 +3053,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628973.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Luke Kennard",
@@ -2455,7 +3085,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202331.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DET",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        },
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        },
+        {
+          "name": "MEM",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Malik Monk",
@@ -2482,7 +3125,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201566.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "SAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Michael Porter Jr.",
@@ -2509,7 +3165,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DEN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Mikal Bridges",
@@ -2536,7 +3197,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1626164.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        }
+      ]
     },
     {
       "name": "Miles Bridges",
@@ -2563,7 +3233,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630163.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CHO",
+          "imageUrl": ""
+        }
+      ]
     },
     {
       "name": "Myles Turner",
@@ -2590,7 +3265,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627734.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "IND",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Nikola Jokić",
@@ -2617,7 +3297,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627750.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DEN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Nikola Vučević",
@@ -2644,7 +3329,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203932.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "ORL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg"
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Norman Powell",
@@ -2671,7 +3369,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627783.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        },
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        },
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "OG Anunoby",
@@ -2698,7 +3409,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627783.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        },
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "P.J. Washington",
@@ -2725,7 +3445,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630163.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "DAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Pascal Siakam",
@@ -2752,7 +3481,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628384.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        },
+        {
+          "name": "IND",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Paul George",
@@ -2779,7 +3517,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201566.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "IND",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg"
+        },
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        },
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "RJ Barrett",
@@ -2806,7 +3557,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203944.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        },
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Rudy Gobert",
@@ -2833,7 +3593,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628378.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "UTA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg"
+        },
+        {
+          "name": "MIN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Russell Westbrook",
@@ -2908,7 +3677,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629027.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DET",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        },
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Scottie Barnes",
@@ -2935,7 +3713,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627783.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "TOR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Shaedon Sharpe",
@@ -2962,7 +3745,12 @@
           "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Damian_Lillard_%282021%29_%28cropped%29.jpg/960px-Damian_Lillard_%282021%29_%28cropped%29.jpg"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Shai Gilgeous-Alexander",
@@ -2989,7 +3777,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629652.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+        },
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Stephen Curry",
@@ -3016,7 +3813,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/202691.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "GSW",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Tim Hardaway Jr.",
@@ -3043,7 +3845,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        },
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        },
+        {
+          "name": "NYK",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        },
+        {
+          "name": "DAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Tobias Harris",
@@ -3118,7 +3937,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628381.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Tyler Herro",
@@ -3145,7 +3969,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628389.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Tyrese Maxey",
@@ -3172,7 +4001,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203954.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Victor Wembanyama",
@@ -3199,7 +4033,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629640.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Wendell Carter Jr.",
@@ -3226,7 +4065,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203897.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        },
+        {
+          "name": "ORL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Zach LaVine",
@@ -3253,7 +4101,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628374.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Zion Williamson",
@@ -3280,7 +4137,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627742.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "NOP",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Kevin Porter Jr.",
@@ -3307,7 +4169,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201935.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Carmelo Anthony",
@@ -3342,6 +4213,10 @@
         {
           "name": "NYK",
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg"
+        },
+        {
+          "name": "OKC",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg"
         },
         {
           "name": "HOU",
@@ -3382,7 +4257,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/959.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "DAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Dwyane Wade",
@@ -3409,7 +4289,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        },
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "MIA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Pau Gasol",
@@ -3436,7 +4333,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/977.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MEM",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
+        },
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        },
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Manu Ginóbili",
@@ -3463,7 +4377,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1495.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Kevin Garnett",
@@ -3490,7 +4409,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203897.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "MIN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        },
+        {
+          "name": "BRK",
+          "imageUrl": ""
+        },
+        {
+          "name": "MIN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Kobe Bryant",
@@ -3517,7 +4453,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/406.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Shaquille O'Neal",
@@ -3552,6 +4493,10 @@
         {
           "name": "LAL",
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        },
+        {
+          "name": "MIA",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
         },
         {
           "name": "PHO",
@@ -3592,7 +4537,24 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/893.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        },
+        {
+          "name": "POR",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg"
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Charles Barkley",
@@ -3619,7 +4581,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/165.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "PHO",
+          "imageUrl": ""
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Robert Parish",
@@ -3646,7 +4621,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1449.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        },
+        {
+          "name": "CHH",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612766/primary/L/logo.svg"
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Magic Johnson",
@@ -3673,7 +4661,12 @@
           "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kareem_Abdul-Jabbar_May_2014.jpg/960px-Kareem_Abdul-Jabbar_May_2014.jpg"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Moses Malone",
@@ -3708,6 +4701,10 @@
         {
           "name": "WSB",
           "imageUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
+        },
+        {
+          "name": "ATL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
         },
         {
           "name": "MIL",
@@ -3796,7 +4793,12 @@
           "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Robert_Parish.jpg"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Dennis Johnson",
@@ -3823,7 +4825,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1449.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Kareem Abdul-Jabbar",
@@ -3850,7 +4857,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/77142.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "LAL",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Otis Birdsong",
@@ -3877,7 +4889,16 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1449.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "NJN",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Artis Gilmore",
@@ -3904,7 +4925,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/893.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "SAS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg"
+        },
+        {
+          "name": "CHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        },
+        {
+          "name": "BOS",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "World B. Free",
@@ -3931,7 +4965,20 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/787.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "CLE",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg"
+        },
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        },
+        {
+          "name": "HOU",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+        }
+      ]
     },
     {
       "name": "Julius Erving",
@@ -3958,7 +5005,12 @@
           "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/787.png"
         }
       ],
-      "teams": []
+      "teams": [
+        {
+          "name": "PHI",
+          "imageUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        }
+      ]
     }
   ],
   "names": [

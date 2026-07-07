@@ -31,7 +31,7 @@ for(const [name,seasons] of byPlayer){const visual=visualByName.get(normalized(n
   const shared=new Map();
   for(const item of ordered){for(const mate of rosters.get(`${item.season}|${item.team}`)??[]){if(mate!==name)shared.set(mate,(shared.get(mate)??0)+1);}}
   const teammates=[...shared].filter(([mate])=>(peak.get(mate)??0)>=8&&visualByName.get(normalized(mate))?.imageUrl).sort((a,b)=>((b[1]*4)+(peak.get(b[0])??0))-((a[1]*4)+(peak.get(a[0])??0))).slice(0,5).reverse().map(([mate])=>({name:mate,imageUrl:visualByName.get(normalized(mate)).imageUrl}));
-  if(teammates.length===5){const journey=teams.length>=5?Array.from({length:5},(_,index)=>teamClue(teams[Math.round(index*(teams.length-1)/4)])):[];challenges.push({name,imageUrl:visual.imageUrl,teammates,teams:journey});}
+  if(teammates.length===5){challenges.push({name,imageUrl:visual.imageUrl,teammates,teams:teams.map(teamClue)});}
 }
 const names=[...new Set(visualPlayers.map(player=>player.name))].sort((a,b)=>a.localeCompare(b));
 fs.writeFileSync(path.join(root,"data/who-am-i.json"),`${JSON.stringify({challenges,names},null,2)}\n`);
