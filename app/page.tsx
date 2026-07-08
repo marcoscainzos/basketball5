@@ -17,6 +17,7 @@ export default function Home() {
         <Link href="/top5" className="compact-game blue-game"><span>02</span><div className="compact-art top-five-art"><b>5</b><i>TOP</i></div><h2>TOP 5</h2></Link>
         <Link href="/who-am-i" className="compact-game dark-game"><span>03</span><div className="compact-art who-art"><b>?</b></div><h2>WHO AM I?</h2></Link>
         <Link href="/draft" className="compact-game gold-game"><span>04</span><div className="compact-art draft-art"><b>5</b><i>TEAM</i></div><h2>DRAFT</h2></Link>
+        <Link href="/tres-en-raya" className="compact-game tic-home-card"><span>05</span><div className="compact-art tic-art"><b>3</b><i>RAYA</i></div><h2>3 EN RAYA</h2></Link>
       </section>
       <Link className="credits-link" href="/credits">CRÉDITOS DE IMÁGENES ↗</Link>
     </main>
