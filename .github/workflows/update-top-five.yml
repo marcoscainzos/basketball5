@@ -1,9 +1,12 @@
-name: Update Top 5 data
+name: Update Court Inside data
 
 on:
   push:
     branches: [main]
-    paths: [.github/workflows/update-top-five.yml]
+    paths:
+      - .github/workflows/update-top-five.yml
+      - scripts/**
+      - package.json
   schedule:
     - cron: "25 10 * * *"
   workflow_dispatch:
@@ -14,6 +17,8 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      CURRENT_SEASON: "2025-26"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,7 +27,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install kagglehub==0.3.13
+      - run: npm ci
+      - run: pip install kagglehub==0.3.13 nba_api==1.10.2 pandas==2.3.1
       - name: Configure Kaggle credentials
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
@@ -30,14 +36,28 @@ jobs:
         run: python -c 'import json,os,pathlib; p=pathlib.Path.home()/".kaggle"; p.mkdir(exist_ok=True); (p/"kaggle.json").write_text(json.dumps({"username":os.environ["KAGGLE_USERNAME"],"key":os.environ["KAGGLE_KEY"]})); (p/"kaggle.json").chmod(0o600)'
       - name: Download current box scores
         run: python -c 'import kagglehub,pathlib,shutil; target=pathlib.Path("data/raw"); target.mkdir(parents=True,exist_ok=True); source=kagglehub.dataset_download("eoinamoore/historical-nba-data-and-player-box-scores",path="PlayerStatistics.csv"); shutil.copy2(source,target/"PlayerStatistics.csv")'
-      - run: node scripts/buildLiveTopFiveStats.mjs
-      - run: npm run data:top5
+      - name: Update current season from NBA Stats
+        id: nba_current
+        continue-on-error: true
+        run: python scripts/updateCurrentSeasonFromNbaApi.py --season "$CURRENT_SEASON" --output data/current-season-2025-26.json
+      - name: Fallback current season from Kaggle box scores
+        if: steps.nba_current.outcome != 'success'
+        run: npm run data:current -- --season="$CURRENT_SEASON" --output=data/current-season-2025-26.json
+      - name: Rebuild all game datasets
+        run: |
+          npm run data:build
+          npm run data:grid
+          npm run data:who
+          npm run data:top5:live
+          npm run data:top5
       - name: Validate generated rankings
         run: npm run check:top5
+      - name: Validate production build
+        run: npm run build
       - name: Commit changes
         run: |
           git config user.name "court-inside-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/live-top-five-stats.json data/top-five.json
-          git diff --cached --quiet || git commit -m "data: update daily Top 5 rankings"
+          git add data/current-season-2025-26.json data/player-seasons.json data/nba-grid-careers.json data/who-am-i.json data/live-top-five-stats.json data/top-five.json
+          git diff --cached --quiet || git commit -m "data: update daily Court Inside datasets"
           git push
