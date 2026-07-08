@@ -153,8 +153,8 @@ export default function TicTacToeGame() {
   const [selectedCell, setSelectedCell] = useState(0);
   const [query, setQuery] = useState("");
   const [message, setMessage] = useState("");
+  const [surrendered, setSurrendered] = useState(false);
   const result = winner(versusBoard);
-  const filledSolo = soloBoard.filter(Boolean).length;
   const fullVersus = versusBoard.every(Boolean);
   const currentRow = grid.rows[Math.floor(selectedCell / 3)];
   const currentColumn = grid.columns[selectedCell % 3];
@@ -166,7 +166,7 @@ export default function TicTacToeGame() {
   }, [players, query, soloBoard]);
 
   function chooseSolo(name: string) {
-    if (soloBoard[selectedCell]) return;
+    if (soloBoard[selectedCell] || surrendered) return;
     const isCorrect = currentAnswers.some((player) => clean(player.name) === clean(name));
     if (!isCorrect) {
       setMessage(`${name} no jugó en ${currentRow.name} y ${currentColumn.name}.`);
@@ -188,6 +188,14 @@ export default function TicTacToeGame() {
     setTurn(turn === "blue" ? "red" : "blue");
   }
 
+  function surrenderSolo() {
+    const solved = grid.rows.flatMap((row) => grid.columns.map((column) => answersForPair(players, row, column)[0]?.name ?? ""));
+    setSoloBoard(solved);
+    setSurrendered(true);
+    setQuery("");
+    setMessage("");
+  }
+
   function resetBoard() {
     setSoloBoard(Array(9).fill(null));
     setVersusBoard(Array(9).fill(null));
@@ -195,6 +203,7 @@ export default function TicTacToeGame() {
     setSelectedCell(0);
     setQuery("");
     setMessage("");
+    setSurrendered(false);
   }
 
   if (!mode) {
@@ -226,11 +235,11 @@ export default function TicTacToeGame() {
         <button type="button" className="tic-reset" onClick={resetBoard}>RESET</button>
       </nav>
       <section className="tic-game">
-        <header className="tic-head">
-          <span>{mode === "solo" ? "ESCUDOS NBA" : "ROJO VS AZUL"}</span>
+        {mode === "versus" && <header className="tic-head">
+          <span>ROJO VS AZUL</span>
           <h1>3 EN RAYA</h1>
-          <p>{mode === "solo" ? `${filledSolo}/9 CASILLAS` : result ? `${result.mark === "blue" ? "AZUL" : "ROJO"} GANA` : fullVersus ? "EMPATE" : `TURNO ${turn === "blue" ? "AZUL" : "ROJO"}`}</p>
-        </header>
+          <p>{result ? `${result.mark === "blue" ? "AZUL" : "ROJO"} GANA` : fullVersus ? "EMPATE" : `TURNO ${turn === "blue" ? "AZUL" : "ROJO"}`}</p>
+        </header>}
         {mode === "solo" ? <><div className="tic-grid">
           <div className="tic-corner" />
           {grid.columns.map((team) => <div className="tic-team-head" key={team.code}><img src={logo(team)} alt="" /><span>{team.name}</span></div>)}
@@ -239,10 +248,10 @@ export default function TicTacToeGame() {
             {grid.columns.map((column, columnIndex) => {
               const index = rowIndex * 3 + columnIndex;
               const name = soloBoard[index];
-              return <button type="button" key={`${row.code}-${column.code}`} className={`${selectedCell === index ? "selected" : ""} ${name ? "filled" : ""}`} onClick={() => { setSelectedCell(index); setMessage(""); }}><span>{name ?? ""}</span></button>;
+              return <button type="button" key={`${row.code}-${column.code}`} className={`${selectedCell === index ? "selected" : ""} ${name ? "filled" : ""} ${surrendered ? "surrendered" : ""}`} onClick={() => { setSelectedCell(index); setMessage(""); }}><span>{name ?? ""}</span></button>;
             })}
           </div>)}
-        </div><div className="tic-search"><label>{currentRow.name} + {currentColumn.name}</label><div><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Escribe un jugador…" onKeyDown={(event) => { if (event.key === "Enter" && suggestions[0]) chooseSolo(suggestions[0].name); }} /><button disabled={!suggestions[0] || Boolean(soloBoard[selectedCell])} onClick={() => suggestions[0] && chooseSolo(suggestions[0].name)}>PROBAR</button></div>{message && <p>{message}</p>}{suggestions.length > 0 && <aside>{suggestions.map((player) => <button type="button" key={player.name} onClick={() => chooseSolo(player.name)}><span>{player.name}</span><small>{[...player.teams].join(" · ")}</small></button>)}</aside>}</div></> : <div className={`tic-board ${mode}`}>
+        </div><div className="tic-search"><label>{currentRow.name} + {currentColumn.name}</label><div><input value={query} disabled={surrendered} onChange={(event) => setQuery(event.target.value)} placeholder="Escribe un jugador…" onKeyDown={(event) => { if (event.key === "Enter" && suggestions[0]) chooseSolo(suggestions[0].name); }} /><button disabled={!suggestions[0] || Boolean(soloBoard[selectedCell]) || surrendered} onClick={() => suggestions[0] && chooseSolo(suggestions[0].name)}>PROBAR</button><button type="button" className="tic-flag" aria-label="Rendirse" title="Rendirse" onClick={surrenderSolo}>⚑</button></div>{message && <p>{message}</p>}{suggestions.length > 0 && !surrendered && <aside>{suggestions.map((player) => <button type="button" key={player.name} onClick={() => chooseSolo(player.name)}><span>{player.name}</span><small>{[...player.teams].join(" · ")}</small></button>)}</aside>}</div></> : <div className={`tic-board ${mode}`}>
           {Array.from({ length: 9 }).map((_, index) => {
             const mark = versusBoard[index];
             const won = result?.line.includes(index) ?? false;
