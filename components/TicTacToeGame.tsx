@@ -2,42 +2,44 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import seasons from "@/data/player-seasons.json";
 
 type Mode = "solo" | "versus";
 type Mark = "blue" | "red";
-type Team = { name: string; city: string; id: string };
+type Team = { code: string; name: string; city: string; id: string; aliases: string[] };
+type Season = { name: string; team: string; pts: number; reb: number; ast: number; imageUrl?: string };
 
 const teams: Team[] = [
-  { name: "Hawks", city: "Atlanta", id: "1610612737" },
-  { name: "Celtics", city: "Boston", id: "1610612738" },
-  { name: "Nets", city: "Brooklyn", id: "1610612751" },
-  { name: "Hornets", city: "Charlotte", id: "1610612766" },
-  { name: "Bulls", city: "Chicago", id: "1610612741" },
-  { name: "Cavaliers", city: "Cleveland", id: "1610612739" },
-  { name: "Mavericks", city: "Dallas", id: "1610612742" },
-  { name: "Nuggets", city: "Denver", id: "1610612743" },
-  { name: "Pistons", city: "Detroit", id: "1610612765" },
-  { name: "Warriors", city: "Golden State", id: "1610612744" },
-  { name: "Rockets", city: "Houston", id: "1610612745" },
-  { name: "Pacers", city: "Indiana", id: "1610612754" },
-  { name: "Clippers", city: "LA", id: "1610612746" },
-  { name: "Lakers", city: "Los Angeles", id: "1610612747" },
-  { name: "Grizzlies", city: "Memphis", id: "1610612763" },
-  { name: "Heat", city: "Miami", id: "1610612748" },
-  { name: "Bucks", city: "Milwaukee", id: "1610612749" },
-  { name: "Timberwolves", city: "Minnesota", id: "1610612750" },
-  { name: "Pelicans", city: "New Orleans", id: "1610612740" },
-  { name: "Knicks", city: "New York", id: "1610612752" },
-  { name: "Thunder", city: "Oklahoma City", id: "1610612760" },
-  { name: "Magic", city: "Orlando", id: "1610612753" },
-  { name: "76ers", city: "Philadelphia", id: "1610612755" },
-  { name: "Suns", city: "Phoenix", id: "1610612756" },
-  { name: "Trail Blazers", city: "Portland", id: "1610612757" },
-  { name: "Kings", city: "Sacramento", id: "1610612758" },
-  { name: "Spurs", city: "San Antonio", id: "1610612759" },
-  { name: "Raptors", city: "Toronto", id: "1610612761" },
-  { name: "Jazz", city: "Utah", id: "1610612762" },
-  { name: "Wizards", city: "Washington", id: "1610612764" },
+  { code: "ATL", name: "Hawks", city: "Atlanta", id: "1610612737", aliases: ["ATL", "HAW"] },
+  { code: "BOS", name: "Celtics", city: "Boston", id: "1610612738", aliases: ["BOS", "CEL"] },
+  { code: "BRK", name: "Nets", city: "Brooklyn", id: "1610612751", aliases: ["BRK", "NJN", "NET", "NYN"] },
+  { code: "CHA", name: "Hornets", city: "Charlotte", id: "1610612766", aliases: ["CHA", "CHO", "CHH", "HOR"] },
+  { code: "CHI", name: "Bulls", city: "Chicago", id: "1610612741", aliases: ["CHI", "BUL"] },
+  { code: "CLE", name: "Cavaliers", city: "Cleveland", id: "1610612739", aliases: ["CLE", "CAV"] },
+  { code: "DAL", name: "Mavericks", city: "Dallas", id: "1610612742", aliases: ["DAL", "MAV"] },
+  { code: "DEN", name: "Nuggets", city: "Denver", id: "1610612743", aliases: ["DEN", "NUG"] },
+  { code: "DET", name: "Pistons", city: "Detroit", id: "1610612765", aliases: ["DET", "PIS"] },
+  { code: "GSW", name: "Warriors", city: "Golden State", id: "1610612744", aliases: ["GSW", "SFW", "WAR"] },
+  { code: "HOU", name: "Rockets", city: "Houston", id: "1610612745", aliases: ["HOU", "ROC"] },
+  { code: "IND", name: "Pacers", city: "Indiana", id: "1610612754", aliases: ["IND", "PAC"] },
+  { code: "LAC", name: "Clippers", city: "LA", id: "1610612746", aliases: ["LAC", "SDC", "CLI"] },
+  { code: "LAL", name: "Lakers", city: "Los Angeles", id: "1610612747", aliases: ["LAL", "LAK", "MNL"] },
+  { code: "MEM", name: "Grizzlies", city: "Memphis", id: "1610612763", aliases: ["MEM", "VAN", "GRI"] },
+  { code: "MIA", name: "Heat", city: "Miami", id: "1610612748", aliases: ["MIA", "HEA"] },
+  { code: "MIL", name: "Bucks", city: "Milwaukee", id: "1610612749", aliases: ["MIL", "BUC"] },
+  { code: "MIN", name: "Timberwolves", city: "Minnesota", id: "1610612750", aliases: ["MIN", "TIM"] },
+  { code: "NOP", name: "Pelicans", city: "New Orleans", id: "1610612740", aliases: ["NOP", "NOH", "NOK", "NOJ", "PEL"] },
+  { code: "NYK", name: "Knicks", city: "New York", id: "1610612752", aliases: ["NYK", "KNI"] },
+  { code: "OKC", name: "Thunder", city: "Oklahoma City", id: "1610612760", aliases: ["OKC", "SEA", "THU"] },
+  { code: "ORL", name: "Magic", city: "Orlando", id: "1610612753", aliases: ["ORL", "MAG"] },
+  { code: "PHI", name: "76ers", city: "Philadelphia", id: "1610612755", aliases: ["PHI", "76E", "SYR"] },
+  { code: "PHO", name: "Suns", city: "Phoenix", id: "1610612756", aliases: ["PHO", "SUN"] },
+  { code: "POR", name: "Trail Blazers", city: "Portland", id: "1610612757", aliases: ["POR", "TRA"] },
+  { code: "SAC", name: "Kings", city: "Sacramento", id: "1610612758", aliases: ["SAC", "KCK", "CIN", "ROC", "KIN"] },
+  { code: "SAS", name: "Spurs", city: "San Antonio", id: "1610612759", aliases: ["SAS", "SPU"] },
+  { code: "TOR", name: "Raptors", city: "Toronto", id: "1610612761", aliases: ["TOR", "RAP"] },
+  { code: "UTA", name: "Jazz", city: "Utah", id: "1610612762", aliases: ["UTA", "JAZ", "NOJ"] },
+  { code: "WAS", name: "Wizards", city: "Washington", id: "1610612764", aliases: ["WAS", "WSB", "WIZ", "BAL", "CAP"] },
 ];
 
 const lines = [
@@ -69,12 +71,37 @@ function logo(team: Team) {
   return `https://cdn.nba.com/logos/nba/${team.id}/primary/L/logo.svg`;
 }
 
-function dailyTeams() {
-  return [...teams]
-    .map((team) => ({ team, score: hash(`${dayKey()}-${team.id}-tic`) }))
-    .sort((a, b) => a.score - b.score)
-    .slice(0, 9)
-    .map(({ team }) => team);
+function clean(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
+function playerTeams() {
+  const byPlayer = new Map<string, { name: string; teams: Set<string>; peak: number; imageUrl?: string }>();
+  const aliasToCode = new Map(teams.flatMap((team) => team.aliases.map((alias) => [alias, team.code] as const)));
+  for (const row of seasons as Season[]) {
+    const code = aliasToCode.get(row.team);
+    if (!code) continue;
+    const item = byPlayer.get(row.name) ?? { name: row.name, teams: new Set<string>(), peak: 0, imageUrl: row.imageUrl };
+    item.teams.add(code);
+    item.peak = Math.max(item.peak, row.pts + row.reb + row.ast);
+    item.imageUrl ||= row.imageUrl;
+    byPlayer.set(row.name, item);
+  }
+  return [...byPlayer.values()].sort((a, b) => b.peak - a.peak);
+}
+
+function answersForPair(players: ReturnType<typeof playerTeams>, a: Team, b: Team) {
+  return players.filter((player) => player.teams.has(a.code) && player.teams.has(b.code));
+}
+
+function dailyGrid(players: ReturnType<typeof playerTeams>) {
+  const sorted = [...teams].sort((a, b) => hash(`${dayKey()}-${a.code}-grid`) - hash(`${dayKey()}-${b.code}-grid`));
+  for (let start = 0; start < sorted.length; start++) {
+    const rows = sorted.slice(start, start + 3);
+    const columns = sorted.filter((team) => !rows.includes(team)).slice(0, 3);
+    if (rows.length === 3 && columns.every((column) => rows.every((row) => answersForPair(players, row, column).length > 0))) return { rows, columns };
+  }
+  return { rows: [teams[13], teams[19], teams[23]], columns: [teams[4], teams[9], teams[15]] };
 }
 
 function winner(board: (Mark | null)[]) {
@@ -84,19 +111,39 @@ function winner(board: (Mark | null)[]) {
 
 export default function TicTacToeGame() {
   const [mode, setMode] = useState<Mode | null>(null);
-  const [soloBoard, setSoloBoard] = useState<(Team | null)[]>(Array(9).fill(null));
+  const players = useMemo(() => playerTeams(), []);
+  const grid = useMemo(() => dailyGrid(players), [players]);
+  const [soloBoard, setSoloBoard] = useState<(string | null)[]>(Array(9).fill(null));
   const [versusBoard, setVersusBoard] = useState<(Mark | null)[]>(Array(9).fill(null));
   const [turn, setTurn] = useState<Mark>("blue");
-  const dayTeams = useMemo(() => dailyTeams(), []);
+  const [selectedCell, setSelectedCell] = useState(0);
+  const [query, setQuery] = useState("");
+  const [message, setMessage] = useState("");
   const result = winner(versusBoard);
   const filledSolo = soloBoard.filter(Boolean).length;
   const fullVersus = versusBoard.every(Boolean);
+  const currentRow = grid.rows[Math.floor(selectedCell / 3)];
+  const currentColumn = grid.columns[selectedCell % 3];
+  const currentAnswers = useMemo(() => answersForPair(players, currentRow, currentColumn), [players, currentRow, currentColumn]);
+  const suggestions = useMemo(() => {
+    const value = clean(query);
+    if (!value) return [];
+    return players.filter((player) => clean(player.name).includes(value) && !soloBoard.includes(player.name)).slice(0, 9);
+  }, [players, query, soloBoard]);
 
-  function playSolo(index: number) {
-    if (soloBoard[index] || filledSolo >= 9) return;
+  function chooseSolo(name: string) {
+    if (soloBoard[selectedCell]) return;
+    const isCorrect = currentAnswers.some((player) => clean(player.name) === clean(name));
+    if (!isCorrect) {
+      setMessage(`${name} no jugó en ${currentRow.name} y ${currentColumn.name}.`);
+      return;
+    }
     const next = [...soloBoard];
-    next[index] = dayTeams[filledSolo];
+    next[selectedCell] = name;
     setSoloBoard(next);
+    setSelectedCell(Math.min(8, next.findIndex((item) => !item) === -1 ? selectedCell : next.findIndex((item) => !item)));
+    setQuery("");
+    setMessage("");
   }
 
   function playVersus(index: number) {
@@ -111,6 +158,9 @@ export default function TicTacToeGame() {
     setSoloBoard(Array(9).fill(null));
     setVersusBoard(Array(9).fill(null));
     setTurn("blue");
+    setSelectedCell(0);
+    setQuery("");
+    setMessage("");
   }
 
   if (!mode) {
@@ -123,7 +173,7 @@ export default function TicTacToeGame() {
         <section className="mode-intro tic-mode-intro">
           <div className="mode-copy">
             <h1>3 EN RAYA</h1>
-            <p>Un tablero rápido: rellena con escudos NBA en individual o juega el tres en raya clásico con turnos rojo y azul.</p>
+            <p>Te damos equipos NBA y tú tienes que encontrar jugadores que hayan pasado por los dos equipos de cada casilla.</p>
           </div>
         </section>
         <section className="mode-select mode-select-two">
@@ -147,26 +197,35 @@ export default function TicTacToeGame() {
           <h1>3 EN RAYA</h1>
           <p>{mode === "solo" ? `${filledSolo}/9 CASILLAS` : result ? `${result.mark === "blue" ? "AZUL" : "ROJO"} GANA` : fullVersus ? "EMPATE" : `TURNO ${turn === "blue" ? "AZUL" : "ROJO"}`}</p>
         </header>
-        <div className={`tic-board ${mode}`}>
+        {mode === "solo" ? <><div className="tic-grid">
+          <div className="tic-corner" />
+          {grid.columns.map((team) => <div className="tic-team-head" key={team.code}><img src={logo(team)} alt="" /><span>{team.name}</span></div>)}
+          {grid.rows.map((row, rowIndex) => <div className="tic-grid-row" key={row.code}>
+            <div className="tic-team-head row-head"><img src={logo(row)} alt="" /><span>{row.name}</span></div>
+            {grid.columns.map((column, columnIndex) => {
+              const index = rowIndex * 3 + columnIndex;
+              const name = soloBoard[index];
+              return <button type="button" key={`${row.code}-${column.code}`} className={`${selectedCell === index ? "selected" : ""} ${name ? "filled" : ""}`} onClick={() => { setSelectedCell(index); setMessage(""); }}><span>{name ?? "＋"}</span></button>;
+            })}
+          </div>)}
+        </div><div className="tic-search"><label>{currentRow.name} + {currentColumn.name}</label><div><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Escribe un jugador…" onKeyDown={(event) => { if (event.key === "Enter" && suggestions[0]) chooseSolo(suggestions[0].name); }} /><button disabled={!suggestions[0] || Boolean(soloBoard[selectedCell])} onClick={() => suggestions[0] && chooseSolo(suggestions[0].name)}>PROBAR</button></div>{message && <p>{message}</p>}{suggestions.length > 0 && <aside>{suggestions.map((player) => <button type="button" key={player.name} onClick={() => chooseSolo(player.name)}><span>{player.name}</span><small>{[...player.teams].join(" · ")}</small></button>)}</aside>}</div></> : <div className={`tic-board ${mode}`}>
           {Array.from({ length: 9 }).map((_, index) => {
-            const soloTeam = soloBoard[index];
             const mark = versusBoard[index];
             const won = result?.line.includes(index) ?? false;
             return (
               <button
                 type="button"
                 key={index}
-                className={`${soloTeam || mark ? "filled" : ""} ${mark ?? ""} ${won ? "won" : ""}`}
-                onClick={() => mode === "solo" ? playSolo(index) : playVersus(index)}
-                disabled={mode === "solo" ? Boolean(soloTeam) || filledSolo >= 9 : Boolean(mark) || Boolean(result)}
+                className={`${mark ? "filled" : ""} ${mark ?? ""} ${won ? "won" : ""}`}
+                onClick={() => playVersus(index)}
+                disabled={Boolean(mark) || Boolean(result)}
                 aria-label={`Casilla ${index + 1}`}
               >
-                {mode === "solo" && soloTeam ? <><img src={logo(soloTeam)} alt="" /><small>{soloTeam.city}</small></> : null}
                 {mode === "versus" && mark ? <i /> : null}
               </button>
             );
           })}
-        </div>
+        </div>}
       </section>
     </main>
   );

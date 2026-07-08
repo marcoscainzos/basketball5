@@ -160,7 +160,7 @@ body { background:var(--court); color:white; font-family:"Arial Narrow",Impact,H
 .home-title { max-width:1180px; margin:auto; padding:62px 0 38px; }
 .home-title span { color:#65a8ff; font:700 11px Arial; letter-spacing:.25em; }
 .home-title h1 { margin:8px 0 0; font-size:clamp(50px,8vw,105px); line-height:.92; letter-spacing:-.035em; font-style:normal; font-weight:900; white-space:nowrap; }
-.game-picker { max-width:1180px; margin:auto; padding:42px 0 90px; display:grid; grid-template-columns:repeat(5,1fr); gap:16px; border-top:1px solid #ffffff30; }
+.game-picker { max-width:1180px; margin:auto; padding:42px 0 90px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; border-top:1px solid #ffffff30; }
 .compact-game { position:relative; height:245px; padding:18px; overflow:hidden; border:2px solid #ffffff50; color:white; transition:.18s ease; }
 .compact-game:hover:not(.unavailable) { transform:translateY(-7px); border-color:white; box-shadow:0 12px 0 #0007; }
 .red-game { background:var(--nba-red); }
@@ -537,4 +537,27 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .tic-board.versus button.blue { color:#5aa4ff; background:radial-gradient(circle,#174f9b55,transparent 65%),#07162d; }
 .tic-board.versus button.red { color:#ff3559; background:radial-gradient(circle,#d20a2e55,transparent 65%),#07162d; }
 .tic-board.versus button.won { border-color:white; box-shadow:inset 0 0 0 4px #ffffff22,0 0 35px currentColor; }
+.tic-grid { margin:31px auto 0; display:grid; grid-template-columns:118px repeat(3,1fr); gap:10px; }
+.tic-grid-row { display:contents; }
+.tic-corner { min-height:108px; border:1px solid #ffffff1e; border-radius:18px; background:linear-gradient(145deg,#07162f,#030814); }
+.tic-team-head { min-height:108px; padding:12px 10px; border:1px solid #ffffff33; border-radius:18px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; background:linear-gradient(145deg,#102b55,#071326); box-shadow:inset 0 1px #ffffff22; }
+.tic-team-head img { width:60px; height:60px; object-fit:contain; filter:drop-shadow(0 10px 14px #0008); }
+.tic-team-head span { max-width:100%; overflow:hidden; color:#dce8f8; font:900 8px Arial; letter-spacing:.12em; text-overflow:ellipsis; text-transform:uppercase; white-space:nowrap; }
+.tic-team-head.row-head { background:linear-gradient(145deg,#811126,#071326); }
+.tic-grid>button { min-height:108px; padding:10px; border:1px solid #ffffff28; border-radius:18px; background:#08162c; color:white; cursor:pointer; transition:.18s ease; }
+.tic-grid>button:hover { transform:translateY(-4px); border-color:white; background:#102b55; box-shadow:0 16px 30px #0008; }
+.tic-grid>button.selected { border-color:white; box-shadow:0 0 0 2px #d20a2e,0 18px 34px #0009; }
+.tic-grid>button.filled { border-color:#6de39d; background:linear-gradient(145deg,#113b2a,#071326); }
+.tic-grid>button span { display:block; overflow:hidden; font:400 clamp(18px,2.1vw,28px)/.95 Impact,"Arial Narrow",sans-serif; letter-spacing:.02em; text-overflow:ellipsis; text-transform:uppercase; }
+.tic-search { position:relative; max-width:700px; margin:26px auto 0; }
+.tic-search label { display:block; margin-bottom:8px; color:#90a3c1; font:900 8px Arial; letter-spacing:.17em; text-transform:uppercase; }
+.tic-search>div { height:55px; padding:5px; border:2px solid #ffffff56; border-radius:11px; display:grid; grid-template-columns:1fr auto; gap:5px; background:white; }
+.tic-search input { min-width:0; padding:0 13px; border:0; outline:0; color:#071327; font:700 14px Arial; }
+.tic-search>div>button { padding:0 18px; border:0; border-radius:7px; background:#d20a2e; color:white; font:900 8px Arial; letter-spacing:.13em; cursor:pointer; }
+.tic-search>div>button:disabled { opacity:.35; cursor:not-allowed; }
+.tic-search>p { min-height:14px; margin:8px 0 0; color:#ff7890; font:800 10px Arial; }
+.tic-search>aside { position:absolute; z-index:10; top:82px; left:0; right:0; max-height:285px; overflow-y:auto; border:1px solid #ffffff35; border-radius:9px; background:#07152bf7; box-shadow:0 24px 50px #000b; }
+.tic-search>aside button { width:100%; padding:12px 15px; border:0; border-bottom:1px solid #ffffff17; display:flex; align-items:center; justify-content:space-between; gap:15px; color:white; background:transparent; text-align:left; cursor:pointer; }
+.tic-search>aside button:hover { background:#1a4079; }
+.tic-search>aside span { font:900 13px Arial; }.tic-search>aside small { color:#8fa2bd; font:800 7px Arial; letter-spacing:.12em; }
 @media(max-width:760px){.tic-game{padding-top:30px}.tic-head{grid-template-columns:1fr}.tic-head p{grid-column:1;grid-row:auto;justify-self:start;min-width:0;box-shadow:4px 4px 0 #d20a2e}.tic-board{gap:8px;padding:9px;border-radius:18px}.tic-board::before{inset:9px}.tic-board button{border-radius:12px}.tic-board.versus button i{border-width:8px}}
