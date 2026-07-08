@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import currentSeason from "@/data/current-season-2025-26.json";
+import lastSeason from "@/data/historical-2024-25.json";
 import seasons from "@/data/player-seasons.json";
 
 type Mode = "solo" | "versus";
 type Mark = "blue" | "red";
 type Team = { code: string; name: string; city: string; id: string; aliases: string[] };
 type Season = { name: string; team: string; pts: number; reb: number; ast: number; imageUrl?: string };
+type CareerExtra = { name: string; teams: string[]; imageUrl?: string; peak?: number };
 
 const teams: Team[] = [
   { code: "ATL", name: "Hawks", city: "Atlanta", id: "1610612737", aliases: ["ATL", "HAW"] },
@@ -53,6 +56,29 @@ const lines = [
   [2, 4, 6],
 ];
 
+const extraCareers: CareerExtra[] = [
+  { name: "Lonzo Ball", teams: ["LAL", "NOP", "CHI", "CLE"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/1628366.png", peak: 29 },
+  { name: "Jrue Holiday", teams: ["PHI", "NOP", "MIL", "BOS"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/201950.png", peak: 35 },
+  { name: "Anthony Davis", teams: ["NOP", "LAL", "DAL"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/203076.png", peak: 45 },
+  { name: "LeBron James", teams: ["CLE", "MIA", "LAL"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png", peak: 55 },
+  { name: "Russell Westbrook", teams: ["OKC", "HOU", "WAS", "LAL", "LAC", "DEN", "SAC"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/201566.png", peak: 50 },
+  { name: "Chris Paul", teams: ["NOP", "LAC", "HOU", "OKC", "PHO", "GSW", "SAS"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/101108.png", peak: 43 },
+  { name: "James Harden", teams: ["OKC", "HOU", "BRK", "PHI", "LAC"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/201935.png", peak: 54 },
+  { name: "Kevin Durant", teams: ["OKC", "GSW", "BRK", "PHO", "HOU"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png", peak: 50 },
+  { name: "Kyrie Irving", teams: ["CLE", "BOS", "BRK", "DAL"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/202681.png", peak: 39 },
+  { name: "Jimmy Butler", teams: ["CHI", "MIN", "PHI", "MIA", "GSW"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/202710.png", peak: 39 },
+  { name: "DeMar DeRozan", teams: ["TOR", "SAS", "CHI", "SAC"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/201942.png", peak: 39 },
+  { name: "Zach LaVine", teams: ["MIN", "CHI", "SAC"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/203897.png", peak: 35 },
+  { name: "Brandon Ingram", teams: ["LAL", "NOP", "TOR"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/1627742.png", peak: 35 },
+  { name: "Alex Caruso", teams: ["LAL", "CHI", "OKC"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/1627936.png", peak: 18 },
+  { name: "Kyle Lowry", teams: ["MEM", "HOU", "TOR", "MIA", "PHI"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/200768.png", peak: 34 },
+  { name: "Kemba Walker", teams: ["CHA", "BOS", "NYK", "DAL"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/202689.png", peak: 35 },
+  { name: "Blake Griffin", teams: ["LAC", "DET", "BRK", "BOS"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/201933.png", peak: 43 },
+  { name: "Carmelo Anthony", teams: ["DEN", "NYK", "OKC", "HOU", "POR", "LAL"], imageUrl: "https://cdn.nba.com/headshots/nba/latest/1040x760/2546.png", peak: 42 },
+  { name: "Shaquille O'Neal", teams: ["ORL", "LAL", "MIA", "PHO", "CLE", "BOS"], peak: 52 },
+  { name: "Pau Gasol", teams: ["MEM", "LAL", "CHI", "SAS", "MIL"], peak: 38 },
+];
+
 function dayKey() {
   const date = new Date();
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -78,7 +104,8 @@ function clean(value: string) {
 function playerTeams() {
   const byPlayer = new Map<string, { name: string; teams: Set<string>; peak: number; imageUrl?: string }>();
   const aliasToCode = new Map(teams.flatMap((team) => team.aliases.map((alias) => [alias, team.code] as const)));
-  for (const row of seasons as Season[]) {
+  const allRows = [...(seasons as Season[]), ...(lastSeason as Season[]), ...(currentSeason as Season[])];
+  for (const row of allRows) {
     const code = aliasToCode.get(row.team);
     if (!code) continue;
     const item = byPlayer.get(row.name) ?? { name: row.name, teams: new Set<string>(), peak: 0, imageUrl: row.imageUrl };
@@ -86,6 +113,13 @@ function playerTeams() {
     item.peak = Math.max(item.peak, row.pts + row.reb + row.ast);
     item.imageUrl ||= row.imageUrl;
     byPlayer.set(row.name, item);
+  }
+  for (const extra of extraCareers) {
+    const item = byPlayer.get(extra.name) ?? { name: extra.name, teams: new Set<string>(), peak: 0, imageUrl: extra.imageUrl };
+    extra.teams.forEach((team) => item.teams.add(team));
+    item.peak = Math.max(item.peak, extra.peak ?? 20);
+    item.imageUrl ||= extra.imageUrl;
+    byPlayer.set(extra.name, item);
   }
   return [...byPlayer.values()].sort((a, b) => b.peak - a.peak);
 }
@@ -205,7 +239,7 @@ export default function TicTacToeGame() {
             {grid.columns.map((column, columnIndex) => {
               const index = rowIndex * 3 + columnIndex;
               const name = soloBoard[index];
-              return <button type="button" key={`${row.code}-${column.code}`} className={`${selectedCell === index ? "selected" : ""} ${name ? "filled" : ""}`} onClick={() => { setSelectedCell(index); setMessage(""); }}><span>{name ?? "＋"}</span></button>;
+              return <button type="button" key={`${row.code}-${column.code}`} className={`${selectedCell === index ? "selected" : ""} ${name ? "filled" : ""}`} onClick={() => { setSelectedCell(index); setMessage(""); }}><span>{name ?? ""}</span></button>;
             })}
           </div>)}
         </div><div className="tic-search"><label>{currentRow.name} + {currentColumn.name}</label><div><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Escribe un jugador…" onKeyDown={(event) => { if (event.key === "Enter" && suggestions[0]) chooseSolo(suggestions[0].name); }} /><button disabled={!suggestions[0] || Boolean(soloBoard[selectedCell])} onClick={() => suggestions[0] && chooseSolo(suggestions[0].name)}>PROBAR</button></div>{message && <p>{message}</p>}{suggestions.length > 0 && <aside>{suggestions.map((player) => <button type="button" key={player.name} onClick={() => chooseSolo(player.name)}><span>{player.name}</span><small>{[...player.teams].join(" · ")}</small></button>)}</aside>}</div></> : <div className={`tic-board ${mode}`}>
