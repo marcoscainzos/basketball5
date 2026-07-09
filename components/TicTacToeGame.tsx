@@ -93,8 +93,8 @@ function answersForPair(players: ReturnType<typeof playerTeams>, a: Team, b: Tea
   return players.filter((player) => player.teams.has(a.code) && player.teams.has(b.code));
 }
 
-function dailyGrid(players: ReturnType<typeof playerTeams>) {
-  const sorted = [...teams].sort((a, b) => hash(`${dayKey()}-${a.code}-grid`) - hash(`${dayKey()}-${b.code}-grid`));
+function dailyGrid(players: ReturnType<typeof playerTeams>, mode: Mode) {
+  const sorted = [...teams].sort((a, b) => hash(`${dayKey()}-${mode}-${a.code}-grid`) - hash(`${dayKey()}-${mode}-${b.code}-grid`));
   for (let start = 0; start < sorted.length; start++) {
     const rows = sorted.slice(start, start + 3);
     const columns = sorted.filter((team) => !rows.includes(team)).slice(0, 3);
@@ -111,7 +111,9 @@ function winner(board: (Cell | null)[]) {
 export default function TicTacToeGame() {
   const [mode, setMode] = useState<Mode | null>(null);
   const players = useMemo(() => playerTeams(), []);
-  const grid = useMemo(() => dailyGrid(players), [players]);
+  const soloGrid = useMemo(() => dailyGrid(players, "solo"), [players]);
+  const versusGrid = useMemo(() => dailyGrid(players, "versus"), [players]);
+  const grid = mode === "versus" ? versusGrid : soloGrid;
   const [board, setBoard] = useState<(Cell | null)[]>(Array(9).fill(null));
   const [turn, setTurn] = useState<Mark>("blue");
   const [selectedCell, setSelectedCell] = useState(0);
