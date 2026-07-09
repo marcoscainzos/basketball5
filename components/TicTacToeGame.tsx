@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import careers from "@/data/nba-grid-careers.json";
 
 type Mode = "solo" | "versus";
@@ -77,6 +77,13 @@ function logo(team: Team) {
 function clean(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 }
+function timeLeft() {
+  const now = new Date();
+  const end = new Date(now);
+  end.setHours(24, 0, 0, 0);
+  const ms = end.getTime() - now.getTime();
+  return `${String(Math.floor(ms / 3600000)).padStart(2, "0")}:${String(Math.floor(ms % 3600000 / 60000)).padStart(2, "0")}:${String(Math.floor(ms % 60000 / 1000)).padStart(2, "0")}`;
+}
 
 function playerTeams() {
   return (careers as Career[]).map((player) => ({ ...player, teams: new Set(player.teams) }));
@@ -112,6 +119,7 @@ export default function TicTacToeGame() {
   const [query, setQuery] = useState("");
   const [message, setMessage] = useState("");
   const [surrendered, setSurrendered] = useState(false);
+  const [countdown, setCountdown] = useState("--:--:--");
   const result = mode === "versus" ? winner(board) : null;
   const fullVersus = mode === "versus" && board.every(Boolean);
   const currentRow = grid.rows[Math.floor(selectedCell / 3)];
@@ -122,6 +130,12 @@ export default function TicTacToeGame() {
     const used = new Set(board.map((cell) => cell?.name).filter(Boolean));
     return players.filter((player) => clean(player.name).includes(value) && !used.has(player.name)).slice(0, 9);
   }, [players, query, board]);
+  useEffect(() => {
+    const update = () => setCountdown(timeLeft());
+    update();
+    const timer = setInterval(update, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   function cellsFor(player: PlayerCareer) {
     return grid.rows.flatMap((row, rowIndex) => grid.columns.map((column, columnIndex) => ({ row, column, index: rowIndex * 3 + columnIndex })))
@@ -215,7 +229,7 @@ export default function TicTacToeGame() {
       <nav className="site-nav draft-top-nav">
         <button type="button" className="back-button" onClick={() => { setMode(null); resetBoard(); }}>← MODES</button>
         <div className="wordmark"><span className="mark">CI</span><b>COURT INSIDE</b></div>
-        <button type="button" className="tic-reset" onClick={resetBoard}>RESET</button>
+        <span className="live-reset">RESET {countdown}</span>
       </nav>
       <section className="tic-game">
         <div className="tic-grid">
