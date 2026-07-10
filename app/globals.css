@@ -329,7 +329,15 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .compact-art.one-v-one-logo { width:100%; margin:0 auto; transform:rotate(-3deg); }
 .gold-game { background:linear-gradient(145deg,#725b2f,#292517); }
 .gold-game .compact-art { color:#d5bd82; }
-@media(max-width:760px){.compact-art.one-v-one-logo{transform:rotate(-3deg)}}
+@media(max-width:760px){
+  .game-picker{gap:14px}
+  .compact-game{height:220px;padding:16px}
+  .compact-art{height:138px}
+  .compact-game h2{bottom:15px}
+  .who-art{transform:translateY(4px)}
+  .tic-art{transform:translateY(4px) rotate(-2deg)}
+  .compact-art.one-v-one-logo{height:138px;transform:rotate(-3deg)}
+}
 
 /* Individual / leagues */
 .play-type-switch { max-width:1180px; margin:0 auto 20px; display:grid; grid-template-columns:repeat(2,1fr); border:1px solid #ffffff2d; border-radius:13px; overflow:hidden; background:#061124b8; box-shadow:0 14px 35px #0004; }
@@ -468,7 +476,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 }
 
 /* Who am I */
-.who-art { position:relative; width:116px; height:112px; margin:0 auto; display:grid; place-items:center; transform:translateY(-7px); }
+.who-art { position:relative; width:116px; height:112px; margin:0 auto; display:grid; place-items:center; transform:translateY(10px); }
 .who-art::before { content:""; position:absolute; left:50%; top:8px; width:48px; height:48px; border:4px solid #f3f6fb; border-radius:50%; background:linear-gradient(145deg,#12315f,#07162f); box-shadow:0 8px 0 #07101f; transform:translateX(-50%); }
 .who-art::after { content:""; position:absolute; left:50%; bottom:2px; width:94px; height:54px; border:4px solid #f3f6fb; border-bottom-width:7px; border-radius:43px 43px 13px 13px; background:linear-gradient(145deg,#0d254a,#061226); box-shadow:0 8px 0 #07101f; transform:translateX(-50%); }
 .who-art b { position:absolute; z-index:2; left:50%; top:49%; display:grid; place-items:center; width:35px; height:35px; border:3px solid #f3f6fb; border-radius:50%; background:#d20a2e; color:white; font:900 29px/1 Arial,sans-serif; text-shadow:0 2px 0 #7c0019; transform:translate(-50%,-50%) rotate(-2deg); }
@@ -514,7 +522,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 @media(max-width:680px){.who-game{padding-top:30px}.who-clues>div{min-width:125px;height:165px}.who-clues>div img{height:120px}.who-answer img{width:135px}.who-answer h2{font-size:30px}}
 
 .tic-home-card { background:radial-gradient(circle at 70% 18%,#ffffff24 0 18%,transparent 19%),linear-gradient(145deg,#102d59,#060d1c 56%,#bd0929); }
-.tic-art { position:relative; width:116px; height:112px; margin:0 auto; display:grid; place-items:center; transform:translateY(-7px) rotate(-2deg); }
+.tic-art { position:relative; width:116px; height:112px; margin:0 auto; display:grid; place-items:center; transform:translateY(10px) rotate(-2deg); }
 .tic-art::before { content:""; position:absolute; left:50%; top:50%; width:92px; height:92px; border:4px solid #f3f6fb; border-radius:15px; background:
   linear-gradient(90deg,transparent 31%,#f3f6fb 31% 35%,transparent 35% 65%,#f3f6fb 65% 69%,transparent 69%),
   linear-gradient(0deg,transparent 31%,#f3f6fb 31% 35%,transparent 35% 65%,#f3f6fb 65% 69%,transparent 69%),
