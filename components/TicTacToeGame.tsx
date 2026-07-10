@@ -124,13 +124,11 @@ export default function TicTacToeGame() {
   const [countdown, setCountdown] = useState("--:--:--");
   const result = mode === "versus" ? winner(board) : null;
   const fullVersus = mode === "versus" && board.every(Boolean);
-  const currentRow = grid.rows[Math.floor(selectedCell / 3)];
-  const currentColumn = grid.columns[selectedCell % 3];
   const suggestions = useMemo(() => {
     const value = clean(query);
     if (!value) return [];
     const used = new Set(board.map((cell) => cell?.name).filter(Boolean));
-    return players.filter((player) => clean(player.name).includes(value) && !used.has(player.name)).slice(0, 9);
+    return players.filter((player) => clean(player.name).includes(value) && !used.has(player.name)).slice(0, 45);
   }, [players, query, board]);
   useEffect(() => {
     const update = () => setCountdown(timeLeft());
@@ -166,14 +164,16 @@ export default function TicTacToeGame() {
   function submitPlayer(name: string) {
     if (surrendered || result) return;
     const player = findPlayer(name);
+    setQuery("");
     if (!player) {
-      setMessage("No lo tengo en la base todavía.");
+      setPending(null);
+      setMessage("No está en el tablero.");
       return;
     }
     const cells = cellsFor(player);
     if (cells.length === 0) {
-      setMessage(`${player.name} no encaja en ninguna casilla libre.`);
       setPending(null);
+      setMessage("No está en el tablero.");
       return;
     }
     if (cells.length === 1) {
@@ -248,7 +248,7 @@ export default function TicTacToeGame() {
             })}
           </div>)}
         </div>
-        <div className="tic-search"><label>{result ? `${result.mark === "blue" ? "AZUL" : "ROJO"} GANA` : fullVersus ? "EMPATE" : pending ? "ELIGE UNA CASILLA MARCADA" : mode === "versus" ? `TURNO ${turn === "blue" ? "AZUL" : "ROJO"}` : `${currentRow.name} + ${currentColumn.name}`}</label><div><input value={query} disabled={surrendered || Boolean(result)} onChange={(event) => { setQuery(event.target.value); setPending(null); }} placeholder="Escribe un jugador…" onKeyDown={(event) => { if (event.key === "Enter") submitPlayer(query || suggestions[0]?.name || ""); }} /><button disabled={(!query.trim() && !suggestions[0]) || surrendered || Boolean(result)} onClick={() => submitPlayer(query || suggestions[0]?.name || "")}>PROBAR</button><button type="button" className="tic-flag" aria-label="Rendirse" title="Rendirse" onClick={surrenderSolo}>⚑</button></div>{message && <p>{message}</p>}{suggestions.length > 0 && !surrendered && !result && <aside>{suggestions.map((player) => <button type="button" key={player.name} onClick={() => submitPlayer(player.name)}><span>{player.name}</span></button>)}</aside>}</div>
+        <div className="tic-search"><label>{result ? `${result.mark === "blue" ? "AZUL" : "ROJO"} GANA` : fullVersus ? "EMPATE" : pending ? "ELIGE UNA CASILLA MARCADA" : mode === "versus" ? `TURNO ${turn === "blue" ? "AZUL" : "ROJO"}` : "BUSCA UN JUGADOR"}</label><div><input value={query} disabled={surrendered || Boolean(result)} onChange={(event) => { setQuery(event.target.value); setPending(null); setMessage(""); }} placeholder="Escribe un jugador…" onKeyDown={(event) => { if (event.key === "Enter") submitPlayer(query || suggestions[0]?.name || ""); }} /><button disabled={(!query.trim() && !suggestions[0]) || surrendered || Boolean(result)} onClick={() => submitPlayer(query || suggestions[0]?.name || "")}>PROBAR</button><button type="button" className="tic-flag" aria-label="Rendirse" title="Rendirse" onClick={surrenderSolo}>⚑</button></div>{message && <p>{message}</p>}{suggestions.length > 0 && !surrendered && !result && <aside>{suggestions.map((player) => <button type="button" key={player.name} onClick={() => submitPlayer(player.name)}><span>{player.name}</span></button>)}</aside>}</div>
       </section>
     </main>
   );
