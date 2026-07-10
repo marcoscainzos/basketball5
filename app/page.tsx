@@ -1,16 +1,21 @@
+"use client";
+
 import Link from "next/link";
+import { SiteBrand } from "@/components/SiteBrand";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Home() {
+  const { t } = useLanguage();
   return (
     <main className="home-shell">
       <nav className="site-nav home-nav">
-        <Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link>
-        <span className="nav-note">DAILY HOOPS</span>
+        <SiteBrand />
+        <span className="nav-note">{t("dailyHoops")}</span>
       </nav>
-      <header className="home-title"><span>DAILY BASKETBALL GAMES</span><h1>COURT INSIDE</h1></header>
+      <header className="home-title"><span>{t("dailyBasketballGames")}</span><h1>COURT INSIDE</h1></header>
       <nav className="play-type-switch" aria-label="Modo de juego">
-        <Link className="active" href="/" scroll={false} aria-current="page"><span>01</span><div><b>INDIVIDUAL</b><i>JUEGOS DIARIOS</i></div></Link>
-        <Link href="/leagues" scroll={false}><span>02</span><div><b>LIGAS</b><i>COMPITE CON AMIGOS</i></div></Link>
+        <Link className="active" href="/" scroll={false} aria-current="page"><span>01</span><div><b>{t("individual")}</b><i>{t("dailyGames")}</i></div></Link>
+        <Link href="/leagues" scroll={false}><span>02</span><div><b>{t("leagues")}</b><i>{t("competeFriends")}</i></div></Link>
       </nav>
       <section className="game-picker" aria-label="Juegos">
         <Link href="/1vs1" className="compact-game red-game"><span>01</span><div className="compact-art one-v-one-logo"><b>1</b><i>VS</i><b>1</b></div><h2>1VS1</h2></Link>
@@ -19,7 +24,7 @@ export default function Home() {
         <Link href="/draft" className="compact-game gold-game"><span>04</span><div className="compact-art draft-art"><b>5</b><i>TEAM</i></div><h2>DRAFT</h2></Link>
         <Link href="/tres-en-raya" className="compact-game tic-home-card"><span>05</span><div className="compact-art tic-art"><b>3</b><i>RAYA</i></div><h2>3 EN RAYA</h2></Link>
       </section>
-      <Link className="credits-link" href="/credits">CRÉDITOS DE IMÁGENES ↗</Link>
+      <Link className="credits-link" href="/credits">{t("creditsTitle")} ↗</Link>
     </main>
   );
 }

@@ -1,37 +1,42 @@
+"use client";
+
 import Link from "next/link";
+import { SiteBrand } from "@/components/SiteBrand";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function LeaguesPage() {
+  const { t } = useLanguage();
   return (
     <main className="home-shell leagues-shell">
       <nav className="site-nav home-nav">
-        <Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link>
-        <span className="nav-note">DAILY HOOPS</span>
+        <SiteBrand />
+        <span className="nav-note">{t("dailyHoops")}</span>
       </nav>
-      <header className="home-title"><span>DAILY BASKETBALL GAMES</span><h1>COURT INSIDE</h1></header>
+      <header className="home-title"><span>{t("dailyBasketballGames")}</span><h1>COURT INSIDE</h1></header>
 
       <nav className="play-type-switch leagues-switch" aria-label="Modo de juego">
-        <Link href="/" scroll={false}><span>01</span><div><b>INDIVIDUAL</b><i>JUEGOS DIARIOS</i></div></Link>
-        <Link className="active" href="/leagues" scroll={false} aria-current="page"><span>02</span><div><b>LIGAS</b><i>COMPITE CON AMIGOS</i></div></Link>
+        <Link href="/" scroll={false}><span>01</span><div><b>{t("individual")}</b><i>{t("dailyGames")}</i></div></Link>
+        <Link className="active" href="/leagues" scroll={false} aria-current="page"><span>02</span><div><b>{t("leagues")}</b><i>{t("competeFriends")}</i></div></Link>
       </nav>
 
       <header className="league-section-heading">
-        <div><span>COURT INSIDE LEAGUES</span><h2>Compite con tu grupo</h2></div>
-        <p>Tres retos diarios para todos. La clasificación dura hasta final de año.</p>
+        <div><span>{t("courtInsideLeagues")}</span><h2>{t("competeGroup")}</h2></div>
+        <p>{t("leagueIntro")}</p>
       </header>
 
       <section className="league-actions">
         <article className="league-action create-league">
-          <div><h2>CREAR<br />LIGA</h2></div>
-          <p>Elige un nombre y comparte el enlace con tu grupo.</p>
-          <button type="button">CREAR LIGA <b>→</b></button>
+          <div><h2>{t("createLeagueTitle").split("\n").map((line) => <span key={line}>{line}<br /></span>)}</h2></div>
+          <p>{t("createLeagueText")}</p>
+          <button type="button">{t("createLeague")} <b>→</b></button>
         </article>
 
         <article className="league-action join-league">
-          <div><h2>UNIRME A<br />UNA LIGA</h2></div>
-          <p>Pega el código de invitación para entrar en la clasificación.</p>
+          <div><h2>{t("joinLeagueTitle").split("\n").map((line) => <span key={line}>{line}<br /></span>)}</h2></div>
+          <p>{t("joinLeagueText")}</p>
           <form>
-            <label htmlFor="league-code">CÓDIGO DE LIGA</label>
-            <div><input id="league-code" name="league-code" placeholder="EJ. CI-23MJ" autoComplete="off" /><button type="button">ENTRAR →</button></div>
+            <label htmlFor="league-code">{t("leagueCode")}</label>
+            <div><input id="league-code" name="league-code" placeholder="EJ. CI-23MJ" autoComplete="off" /><button type="button">{t("enter")}</button></div>
           </form>
         </article>
       </section>

@@ -1,15 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import credits from "@/data/image-credits.json";
+import { SiteBrand } from "@/components/SiteBrand";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function CreditsPage() {
+  const { t } = useLanguage();
   const entries = Object.entries(credits).filter(([, credit]) => credit.imageUrl);
   return (
     <main className="credits-page">
-      <nav className="site-nav"><Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link><Link href="/" className="back-link">← HOME</Link></nav>
+      <nav className="site-nav"><SiteBrand /><Link href="/" className="back-link">← {t("home")}</Link></nav>
       <section className="credits-content">
-        <span>IMAGE ATTRIBUTION</span><h1>CRÉDITOS</h1>
-        <p>Fotografías enlazadas desde Wikimedia Commons o Wikipedia. Cada obra conserva su autoría y licencia original.</p>
-        <div className="credits-list">{entries.map(([name, credit]) => <article key={name}><strong>{name}</strong><span>{credit.author || "Autor indicado en la fuente"}</span><a href={credit.source} target="_blank" rel="noreferrer">{credit.license || "Ver licencia"} ↗</a></article>)}</div>
+        <span>{t("imageAttribution")}</span><h1>{t("creditsTitle")}</h1>
+        <p>{t("creditsText")}</p>
+        <div className="credits-list">{entries.map(([name, credit]) => <article key={name}><strong>{name}</strong><span>{credit.author || t("authorFallback")}</span><a href={credit.source} target="_blank" rel="noreferrer">{credit.license || t("licenseFallback")} ↗</a></article>)}</div>
       </section>
     </main>
   );

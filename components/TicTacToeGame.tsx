@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import careers from "@/data/nba-grid-careers.json";
+import { useLanguage } from "@/components/LanguageProvider";
+import { SiteBrand } from "@/components/SiteBrand";
 
 type Mode = "solo" | "versus";
 type Mark = "blue" | "red";
@@ -109,6 +111,7 @@ function winner(board: (Cell | null)[]) {
 }
 
 export default function TicTacToeGame() {
+  const { t } = useLanguage();
   const [mode, setMode] = useState<Mode | null>(null);
   const players = useMemo(() => playerTeams(), []);
   const soloGrid = useMemo(() => dailyGrid(players, "solo"), [players]);
@@ -167,13 +170,13 @@ export default function TicTacToeGame() {
     setQuery("");
     if (!player) {
       setPending(null);
-      setMessage("No está en el tablero.");
+      setMessage(t("notOnBoard"));
       return;
     }
     const cells = cellsFor(player);
     if (cells.length === 0) {
       setPending(null);
-      setMessage("No está en el tablero.");
+      setMessage(t("notOnBoard"));
       return;
     }
     if (cells.length === 1) {
@@ -209,18 +212,18 @@ export default function TicTacToeGame() {
     return (
       <main className="tic-shell mode-shell">
         <nav className="site-nav">
-          <Link className="wordmark" href="/"><span className="mark">CI</span><b>COURT INSIDE</b></Link>
-          <Link href="/" className="back-link">← GAMES</Link>
+          <SiteBrand />
+          <Link href="/" className="back-link">← {t("games")}</Link>
         </nav>
         <section className="mode-intro tic-mode-intro">
           <div className="mode-copy">
             <h1>3 EN RAYA</h1>
-            <p>Te damos equipos NBA y tú tienes que encontrar jugadores que hayan pasado por los dos equipos de cada casilla.</p>
+            <p>{t("ticIntro")}</p>
           </div>
         </section>
         <section className="mode-select mode-select-two">
-          <button className="mode-card tic-mode-solo" onClick={() => setMode("solo")}><h2>INDIVIDUAL</h2></button>
-          <button className="mode-card tic-mode-versus" onClick={() => setMode("versus")}><h2>COMPETITIVO</h2></button>
+          <button className="mode-card tic-mode-solo" onClick={() => setMode("solo")}><h2>{t("individual")}</h2></button>
+          <button className="mode-card tic-mode-versus" onClick={() => setMode("versus")}><h2>{t("competitive")}</h2></button>
         </section>
       </main>
     );
@@ -229,9 +232,9 @@ export default function TicTacToeGame() {
   return (
     <main className="tic-shell">
       <nav className="site-nav draft-top-nav">
-        <button type="button" className="back-button" onClick={() => { setMode(null); resetBoard(); }}>← MODES</button>
-        <div className="wordmark"><span className="mark">CI</span><b>COURT INSIDE</b></div>
-        <span className="live-reset">RESET {countdown}</span>
+        <button type="button" className="back-button" onClick={() => { setMode(null); resetBoard(); }}>← {t("modes")}</button>
+        <SiteBrand link={false} />
+        <span className="live-reset">{t("reset")} {countdown}</span>
       </nav>
       <section className="tic-game">
         <div className="tic-grid">
@@ -248,7 +251,7 @@ export default function TicTacToeGame() {
             })}
           </div>)}
         </div>
-        <div className="tic-search"><label>{result ? `${result.mark === "blue" ? "AZUL" : "ROJO"} GANA` : fullVersus ? "EMPATE" : pending ? "ELIGE UNA CASILLA MARCADA" : mode === "versus" ? `TURNO ${turn === "blue" ? "AZUL" : "ROJO"}` : "BUSCA UN JUGADOR"}</label><div><input value={query} disabled={surrendered || Boolean(result)} onChange={(event) => { setQuery(event.target.value); setPending(null); setMessage(""); }} placeholder="Escribe un jugador…" onKeyDown={(event) => { if (event.key === "Enter") submitPlayer(query || suggestions[0]?.name || ""); }} /><button disabled={(!query.trim() && !suggestions[0]) || surrendered || Boolean(result)} onClick={() => submitPlayer(query || suggestions[0]?.name || "")}>PROBAR</button><button type="button" className="tic-flag" aria-label="Rendirse" title="Rendirse" onClick={surrenderSolo}>⚑</button></div>{message && <p>{message}</p>}{suggestions.length > 0 && !surrendered && !result && <aside>{suggestions.map((player) => <button type="button" key={player.name} onClick={() => submitPlayer(player.name)}><span>{player.name}</span></button>)}</aside>}</div>
+        <div className="tic-search"><label>{result ? (result.mark === "blue" ? t("blueWins") : t("redWins")) : fullVersus ? t("draw") : pending ? t("chooseMarkedCell") : mode === "versus" ? (turn === "blue" ? t("blueTurn") : t("redTurn")) : t("searchPlayer")}</label><div><input value={query} disabled={surrendered || Boolean(result)} onChange={(event) => { setQuery(event.target.value); setPending(null); setMessage(""); }} placeholder={t("typePlayer")} onKeyDown={(event) => { if (event.key === "Enter") submitPlayer(query || suggestions[0]?.name || ""); }} /><button disabled={(!query.trim() && !suggestions[0]) || surrendered || Boolean(result)} onClick={() => submitPlayer(query || suggestions[0]?.name || "")}>{t("test")}</button><button type="button" className="tic-flag" aria-label={t("surrender")} title={t("surrender")} onClick={surrenderSolo}>⚑</button></div>{message && <p>{message}</p>}{suggestions.length > 0 && !surrendered && !result && <aside>{suggestions.map((player) => <button type="button" key={player.name} onClick={() => submitPlayer(player.name)}><span>{player.name}</span></button>)}</aside>}</div>
       </section>
     </main>
   );
