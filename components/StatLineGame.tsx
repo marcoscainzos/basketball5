@@ -21,10 +21,11 @@ export default function StatLineGame() {
   const suggestions = value ? names.filter((name) => clean(name).includes(value) && !guesses.includes(name)).slice(0, 8) : [];
   const finished = status !== "playing";
   const hints = [
-    `${lang === "es" ? "Equipo" : "Team"}: ${challenge.team}`,
-    `${lang === "es" ? "Posición" : "Position"}: ${challenge.position}`,
-    `${lang === "es" ? "Temporada" : "Season"}: ${challenge.season}`,
+    { label: lang === "es" ? "Equipo" : "Team", value: challenge.team },
+    { label: lang === "es" ? "Posición" : "Position", value: challenge.position },
+    { label: lang === "es" ? "Temporada" : "Season", value: challenge.season },
   ];
+  const revealedHints = Math.min(guesses.length, hints.length);
 
   function submit(name: string) {
     if (!name || finished) return;
@@ -50,15 +51,22 @@ export default function StatLineGame() {
       <nav className="site-nav"><SiteBrand /><Link href="/" className="back-link">← {t("games")}</Link></nav>
       <section className="mini-game">
         <header className="mini-head"><span>{dayKey()}</span><h1>STAT LINE</h1><p>{lang === "es" ? "Adivina el jugador viendo solo una línea estadística de una temporada." : "Guess the player from one season stat line."}</p></header>
-        <div className="stat-line-card">
-          <span>{challenge.season}</span>
-          <b>{challenge.pts.toFixed(1)} PTS</b>
-          <b>{challenge.reb.toFixed(1)} REB</b>
-          <b>{challenge.ast.toFixed(1)} AST</b>
-          <b>{challenge.stl.toFixed(1)} STL</b>
-          <b>{challenge.blk.toFixed(1)} BLK</b>
+        <div className="stat-line-stage">
+          <div className="stat-line-meta"><span>{lang === "es" ? "LÍNEA DE TEMPORADA" : "SEASON STAT LINE"}</span><b>{lang === "es" ? "Jugador oculto" : "Hidden player"}</b></div>
+          <div className="stat-line-card">
+            <article><b>{challenge.pts.toFixed(1)}</b><span>PTS</span></article>
+            <article><b>{challenge.reb.toFixed(1)}</b><span>REB</span></article>
+            <article><b>{challenge.ast.toFixed(1)}</b><span>AST</span></article>
+            <article><b>{challenge.stl.toFixed(1)}</b><span>STL</span></article>
+            <article><b>{challenge.blk.toFixed(1)}</b><span>BLK</span></article>
+          </div>
         </div>
-        <div className="mini-hints">{hints.slice(0, Math.min(guesses.length, hints.length)).map((hint) => <span key={hint}>{hint}</span>)}</div>
+        <div className="stat-hint-grid">
+          {hints.map((hint, index) => {
+            const visible = index < revealedHints || finished;
+            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? hint.value : "?"}</b><small>{visible ? (lang === "es" ? "PISTA" : "CLUE") : (lang === "es" ? `FALLO ${index + 1}` : `MISS ${index + 1}`)}</small></article>;
+          })}
+        </div>
         {finished && <div className="mini-answer">{challenge.imageUrl && <img src={challenge.imageUrl} alt="" />}<div><span>{status === "won" ? t("correct") : t("was")}</span><h2>{challenge.name}</h2><p>{challenge.season} · {challenge.team}</p></div></div>}
         {!finished && <div className="mini-search"><div><input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter") submit(query || suggestions[0]); }} placeholder={t("typeName")} /><button disabled={!query && !suggestions[0]} onClick={() => submit(query || suggestions[0])}>{t("test")}</button></div>{suggestions.length > 0 && <aside>{suggestions.map((name) => <button key={name} onClick={() => submit(name)}>{name}</button>)}</aside>}</div>}
         <p className="mini-message">{message || `${guesses.length}/5`}</p>
