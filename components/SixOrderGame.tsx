@@ -195,7 +195,7 @@ export default function SixOrderGame() {
     <main className="mini-shell">
       <nav className="site-nav daily-game-nav"><Link href="/" className="back-link">← {t("games")}</Link><SiteBrand link={false} /><span className="live-reset">{t("reset")} {countdown}</span></nav>
       <section className="mini-game six-order-game">
-        <header className="six-title-head">
+        <header className="mini-head six-title-head">
           <span>PYRAMID</span>
           <h1>{lang === "es" ? "Ordena la pirámide" : "Build the pyramid"}</h1>
           <p>{lang === "es" ? "Te damos un jugador cada vez. Colócalo donde quieras y reajusta la pirámide arrastrando las cartas." : "You get one player at a time. Place him anywhere and rearrange the pyramid by dragging cards."}</p>
