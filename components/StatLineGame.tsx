@@ -32,7 +32,6 @@ function timeLeft() {
 export default function StatLineGame() {
   const { lang, t } = useLanguage();
   const challenge = useMemo(() => pickDaily(pool, "stat-line"), []);
-  const [started, setStarted] = useState(false);
   const [countdown, setCountdown] = useState("--:--:--");
   const [query, setQuery] = useState("");
   const [guesses, setGuesses] = useState<string[]>([]);
@@ -76,18 +75,15 @@ export default function StatLineGame() {
   return (
     <main className="mini-shell">
       <nav className="site-nav"><SiteBrand /><Link href="/" className="back-link">← {t("games")}</Link></nav>
-      {!started ? <>
-        <section className="mode-intro daily-intro">
-          <div className="mode-copy"><h1>STAT LINE</h1><p>{lang === "es" ? "Te damos una línea estadística de una temporada. Tu trabajo: reconocer qué jugador la firmó antes de gastar los cinco intentos." : "You get one season stat line. Your job: name the player behind it before five guesses are gone."}</p></div>
-          <div className="reset-inline"><small>{t("reset")}</small><b>{countdown}</b></div>
-        </section>
-        <section className="mode-select mode-select-two daily-start">
-          <button className="mode-card mode-current" onClick={() => setStarted(true)}><h2>{lang === "es" ? "JUGAR" : "PLAY"}</h2></button>
-          <Link className="mode-card mode-historical" href="/"><h2>{lang === "es" ? "SALIR" : "EXIT"}</h2></Link>
-        </section>
-      </> : (
-      <section className="mini-game">
-        <header className="mini-head stat-play-head"><span>{dayKey()}</span><h1>STAT LINE</h1></header>
+      <section className="mini-game stat-line-game">
+        <header className="mini-head stat-play-head">
+          <div>
+            <span>{dayKey()}</span>
+            <h1>STAT LINE</h1>
+            <p>{lang === "es" ? "Te damos una línea estadística de una temporada. Adivina qué jugador la firmó antes de gastar los cinco intentos." : "You get one season stat line. Guess the player behind it before five tries are gone."}</p>
+          </div>
+          <aside><small>{t("reset")}</small><b>{countdown}</b></aside>
+        </header>
         <div className="stat-hint-grid stat-hint-top">
           {hints.slice(0, 3).map((hint, index) => {
             const visible = index < revealedHints || finished;
@@ -114,7 +110,7 @@ export default function StatLineGame() {
         {finished && <div className="mini-answer">{challenge.imageUrl && <img src={challenge.imageUrl} alt="" />}<div><span>{status === "won" ? t("correct") : t("was")}</span><h2>{challenge.name}</h2><p>{challenge.season} · {challenge.team}</p></div></div>}
         {!finished && <div className="mini-search"><div><input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter") submit(query || suggestions[0]); }} placeholder={t("typeName")} /><button disabled={!query && !suggestions[0]} onClick={() => submit(query || suggestions[0])}>{t("test")}</button></div>{suggestions.length > 0 && <aside>{suggestions.map((name) => <button key={name} onClick={() => submit(name)}>{name}</button>)}</aside>}</div>}
         <p className="mini-message">{message || `${guesses.length}/5`}</p>
-      </section>)}
+      </section>
     </main>
   );
 }
