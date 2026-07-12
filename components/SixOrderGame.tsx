@@ -10,6 +10,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 type Candidate = {
   key: string;
   name: string;
+  imageUrl?: string;
   value: number;
   displayValue: string;
 };
@@ -37,56 +38,65 @@ function bestPerPlayer(metric: keyof Pick<PlayerSeason, "pts" | "reb" | "ast" | 
   return [...best.values()].map((season) => ({
     key: `${season.name}-${metric}`,
     name: season.name,
+    imageUrl: season.imageUrl,
     value: season[metric],
     displayValue: formatOne(season[metric]),
   }));
 }
 
 function careerTotals(metric: "pts" | "reb" | "ast") {
-  const totals = new Map<string, { name: string; value: number; seasons: number }>();
+  const totals = new Map<string, { name: string; imageUrl?: string; value: number; seasons: number }>();
   for (const season of players) {
     if (!season.imageUrl || season.games < 20) continue;
-    const item = totals.get(season.name) ?? { name: season.name, value: 0, seasons: 0 };
+    const item = totals.get(season.name) ?? { name: season.name, imageUrl: season.imageUrl, value: 0, seasons: 0 };
     item.value += season[metric] * season.games;
     item.seasons += 1;
+    if (season.pool === "current") item.imageUrl = season.imageUrl;
     totals.set(season.name, item);
   }
   return [...totals.values()].filter((item) => item.seasons >= 4).map((item) => ({
     key: `${item.name}-career-${metric}`,
     name: item.name,
+    imageUrl: item.imageUrl,
     value: item.value,
     displayValue: formatWhole(item.value),
   }));
 }
 
 function teamTotals(team: string, metric: "pts" | "reb" | "ast") {
-  const totals = new Map<string, { name: string; value: number; seasons: number }>();
+  const totals = new Map<string, { name: string; imageUrl?: string; value: number; seasons: number }>();
   for (const season of players) {
     if (!season.imageUrl || season.team !== team || season.games < 20) continue;
-    const item = totals.get(season.name) ?? { name: season.name, value: 0, seasons: 0 };
+    const item = totals.get(season.name) ?? { name: season.name, imageUrl: season.imageUrl, value: 0, seasons: 0 };
     item.value += season[metric] * season.games;
     item.seasons += 1;
+    if (season.pool === "current") item.imageUrl = season.imageUrl;
     totals.set(season.name, item);
   }
   return [...totals.values()].map((item) => ({
     key: `${item.name}-${team}-${metric}`,
     name: item.name,
+    imageUrl: item.imageUrl,
     value: item.value,
     displayValue: formatWhole(item.value),
   }));
 }
 
 function seasonCounts(test: (season: PlayerSeason) => boolean, id: string) {
-  const totals = new Map<string, number>();
+  const totals = new Map<string, { imageUrl?: string; value: number }>();
   for (const season of players) {
     if (!season.imageUrl || season.games < 50 || !test(season)) continue;
-    totals.set(season.name, (totals.get(season.name) ?? 0) + 1);
+    const item = totals.get(season.name) ?? { imageUrl: season.imageUrl, value: 0 };
+    item.value += 1;
+    if (season.pool === "current") item.imageUrl = season.imageUrl;
+    totals.set(season.name, item);
   }
-  return [...totals.entries()].map(([name, value]) => ({
+  return [...totals.entries()].map(([name, item]) => ({
     key: `${name}-${id}`,
     name,
-    value,
-    displayValue: formatWhole(value),
+    imageUrl: item.imageUrl,
+    value: item.value,
+    displayValue: formatWhole(item.value),
   }));
 }
 
@@ -135,10 +145,10 @@ function dailyChallenge() {
 export default function SixOrderGame() {
   const { lang, t } = useLanguage();
   const challenge = useMemo(() => dailyChallenge(), []);
-  const correct = useMemo(() => shuffleDaily(challenge.build().sort((a, b) => b.value - a.value || a.name.localeCompare(b.name)).slice(0, 60), `six-order-${challenge.id}`).slice(0, 10).sort((a, b) => b.value - a.value || a.name.localeCompare(b.name)), [challenge]);
+  const correct = useMemo(() => shuffleDaily(challenge.build().sort((a, b) => b.value - a.value || a.name.localeCompare(b.name)).slice(0, 60), `six-order-${challenge.id}`).slice(0, 6).sort((a, b) => b.value - a.value || a.name.localeCompare(b.name)), [challenge]);
   const queue = useMemo(() => shuffleDaily(correct, `six-queue-${challenge.id}`), [correct, challenge.id]);
   const [countdown, setCountdown] = useState("--:--:--");
-  const [slots, setSlots] = useState<(Candidate | null)[]>(Array(10).fill(null));
+  const [slots, setSlots] = useState<(Candidate | null)[]>(Array(6).fill(null));
   const [movingIndex, setMovingIndex] = useState<number | null>(null);
   const [dragIndex, setDragIndex] = useState<number | null>(null);
   const [checked, setChecked] = useState(false);
@@ -175,7 +185,7 @@ export default function SixOrderGame() {
   }
 
   function reset() {
-    setSlots(Array(10).fill(null));
+    setSlots(Array(6).fill(null));
     setMovingIndex(null);
     setDragIndex(null);
     setChecked(false);
@@ -185,9 +195,11 @@ export default function SixOrderGame() {
     <main className="mini-shell">
       <nav className="site-nav daily-game-nav"><Link href="/" className="back-link">← {t("games")}</Link><SiteBrand link={false} /><span className="live-reset">{t("reset")} {countdown}</span></nav>
       <section className="mini-game six-order-game">
-        <header className="six-pyramid-head">
-          <b>{lang === "es" ? challenge.label : challenge.labelEn}</b>
-          <p>{lang === "es" ? challenge.hint : challenge.hintEn}</p>
+        <header className="six-title-head">
+          <span>PYRAMID</span>
+          <h1>{lang === "es" ? "Ordena la pirámide" : "Build the pyramid"}</h1>
+          <p>{lang === "es" ? "Te damos un jugador cada vez. Colócalo donde quieras y reajusta la pirámide arrastrando las cartas." : "You get one player at a time. Place him anywhere and rearrange the pyramid by dragging cards."}</p>
+          <div><b>{lang === "es" ? challenge.label : challenge.labelEn}</b><small>{lang === "es" ? challenge.hint : challenge.hintEn}</small></div>
         </header>
         <div className="six-hex">
           {slots.map((player, index) => {
@@ -205,7 +217,7 @@ export default function SixOrderGame() {
                 onDrop={() => { if (dragIndex !== null) swapSlots(dragIndex, index); setDragIndex(null); }}
               >
                 <strong>{index + 1}</strong>
-                {player ? <><b>{player.name}</b>{checked && <span>{player.displayValue}</span>}</> : <b />}
+                {player ? <>{player.imageUrl && <img src={player.imageUrl} alt="" />}<b>{player.name}</b>{checked && <span>{player.displayValue}</span>}</> : <b />}
               </button>
             );
           })}
@@ -216,10 +228,9 @@ export default function SixOrderGame() {
         </div>
         <div className="six-actions">
           {!checked && <button disabled={!complete} onClick={() => setChecked(true)}>{lang === "es" ? "COMPROBAR" : "CHECK"}</button>}
-          {!checked && <button className="secondary" onClick={reset}>{lang === "es" ? "LIMPIAR" : "CLEAR"}</button>}
           {checked && <button onClick={reset}>{lang === "es" ? "REINTENTAR" : "TRY AGAIN"}</button>}
         </div>
-        {checked && <div className="mini-answer compact"><div><span>{lang === "es" ? "RESULTADO" : "RESULT"}</span><h2>{score}/10</h2><p>{correct.map((player, index) => `${index + 1}. ${player.name} · ${player.displayValue}`).join(" / ")}</p></div></div>}
+        {checked && <div className="mini-answer compact"><div><span>{lang === "es" ? "RESULTADO" : "RESULT"}</span><h2>{score}/6</h2><p>{correct.map((player, index) => `${index + 1}. ${player.name} · ${player.displayValue}`).join(" / ")}</p></div></div>}
       </section>
     </main>
   );
