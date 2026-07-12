@@ -269,9 +269,10 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .game-picker::before { content:"SELECT GAME"; position:absolute; top:0; left:0; color:#9eb0cc; font:800 9px Arial; letter-spacing:.22em; }
 .compact-game { border:1px solid #ffffff2e; border-radius:14px; box-shadow:inset 0 1px 0 #ffffff2b,0 22px 50px #0005; }
 .compact-game:hover:not(.unavailable) { transform:translateY(-8px) scale(1.015); box-shadow:0 22px 45px #0008,0 0 0 2px white; }
-.red-game { background:linear-gradient(145deg,#ee1239,#a40020); }
-.blue-game { background:linear-gradient(145deg,#215aa9,#102c5c); }
-.dark-game { background:linear-gradient(145deg,#26344f,#111827); }
+.compact-game::before { content:""; position:absolute; left:18px; right:18px; top:15px; height:3px; border-radius:99px; background:linear-gradient(90deg,var(--broadcast-red),#ffffff38); opacity:.9; }
+.compact-game::after { content:""; position:absolute; inset:0; border-radius:14px; background:radial-gradient(circle at 72% 18%,#ffffff14,transparent 28%); pointer-events:none; }
+.red-game,.blue-game,.dark-game,.gold-game,.tic-home-card,.stat-line-home,.draft-pick-home,.timeline-home,.blind-home { background:linear-gradient(145deg,#0b1d3a99,#061124d9 58%,#030814e8); backdrop-filter:blur(12px); }
+.red-game .compact-art,.blue-game .compact-art,.dark-game .compact-art,.gold-game .compact-art,.tic-home-card .compact-art,.stat-line-home .compact-art,.draft-pick-home .compact-art,.timeline-home .compact-art,.blind-home .compact-art { color:white; }
 .one-v-one-logo { display:flex; align-items:center; justify-content:center; gap:9px; }
 .one-v-one-logo b { width:80px; height:108px; display:grid; place-items:center; border:2px solid #ffffffb5; border-radius:9px 2px 9px 2px; background:#07162f; color:white; font-family:Impact,"Arial Narrow",sans-serif; font-size:78px; line-height:1; box-shadow:8px 8px 0 #0005; }
 .one-v-one-logo b:last-child { background:white; color:var(--broadcast-red); }
@@ -336,8 +337,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .home-shell .home-title { display:flex; flex-direction:column; align-items:center; text-align:center!important; }
 .home-title h1 { font-family:"Arial Black",Arial,Helvetica,sans-serif; font-weight:900; letter-spacing:-.065em; }
 .compact-art.one-v-one-logo { width:100%; margin:0 auto; transform:rotate(-3deg); }
-.gold-game { background:linear-gradient(145deg,#725b2f,#292517); }
-.gold-game .compact-art { color:#d5bd82; }
+.gold-game .compact-art { color:white; }
 @media(max-width:760px){
   .game-picker{gap:14px}
   .compact-game{height:220px;padding:16px}
@@ -349,10 +349,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 }
 
 /* New daily games */
-.stat-line-home { background:linear-gradient(145deg,#0d254a,#07162f 68%,#111827); }
-.draft-pick-home { background:linear-gradient(145deg,#ece7dc,#b8a06a 52%,#07162f); color:#071326; }
-.timeline-home { background:linear-gradient(145deg,#172744,#071326 55%,#7c0019); }
-.blind-home { background:linear-gradient(145deg,#111827,#26344f 55%,#d20a2e); }
+.draft-pick-home { color:white; }
 .stat-line-art,.pick-art,.timeline-art,.blind-art { position:relative; transform:none; }
 .stat-line-art { width:100%; height:142px; display:grid; place-items:center; transform:rotate(-3deg); }
 .stat-line-art b { color:white; font:400 112px/.8 Impact,"Arial Narrow",sans-serif; letter-spacing:-.03em; text-shadow:8px 8px 0 #061226,12px 12px 0 #d20a2e; }
@@ -628,7 +625,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .who-answer h2 { margin:6px 0 5px; font:400 42px/.9 Impact,"Arial Narrow",sans-serif; }.who-answer p { margin:0; color:#91a3bd; font:800 9px Arial; }
 @media(max-width:680px){.who-game{padding-top:30px}.who-clues>div{min-width:125px;height:165px}.who-clues>div img{height:120px}.who-answer img{width:135px}.who-answer h2{font-size:30px}}
 
-.tic-home-card { background:radial-gradient(circle at 70% 18%,#ffffff24 0 18%,transparent 19%),linear-gradient(145deg,#102d59,#060d1c 56%,#bd0929); }
+.tic-home-card { background:linear-gradient(145deg,#0b1d3a99,#061124d9 58%,#030814e8); }
 .tic-art { position:relative; width:116px; height:112px; margin:0 auto; display:grid; place-items:center; transform:translateY(10px) rotate(-2deg); }
 .tic-art::before { content:""; position:absolute; left:50%; top:50%; width:92px; height:92px; border:4px solid #f3f6fb; border-radius:15px; background:
   linear-gradient(90deg,transparent 31%,#f3f6fb 31% 35%,transparent 35% 65%,#f3f6fb 65% 69%,transparent 69%),
