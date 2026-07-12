@@ -74,7 +74,7 @@ export default function StatLineGame() {
 
   return (
     <main className="mini-shell">
-      <nav className="site-nav"><SiteBrand /><Link href="/" className="back-link">← {t("games")}</Link></nav>
+      <nav className="site-nav daily-game-nav"><Link href="/" className="back-link">← {t("games")}</Link><SiteBrand link={false} /><span className="live-reset">{t("reset")} {countdown}</span></nav>
       <section className="mini-game stat-line-game">
         <header className="mini-head stat-play-head">
           <div>
@@ -82,7 +82,6 @@ export default function StatLineGame() {
             <h1>STAT LINE</h1>
             <p>{lang === "es" ? "Te damos una línea estadística de una temporada. Adivina qué jugador la firmó antes de gastar los cinco intentos." : "You get one season stat line. Guess the player behind it before five tries are gone."}</p>
           </div>
-          <aside><small>{t("reset")}</small><b>{countdown}</b></aside>
         </header>
         <div className="stat-hint-grid stat-hint-top">
           {hints.slice(0, 3).map((hint, index) => {
