@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { players } from "@/data/players";
-import { clean, dayKey, pickDaily } from "@/lib/daily";
+import { clean, pickDaily } from "@/lib/daily";
 import { SiteBrand } from "@/components/SiteBrand";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -78,7 +78,6 @@ export default function StatLineGame() {
       <section className="mini-game stat-line-game">
         <header className="mini-head stat-play-head">
           <div>
-            <span>{dayKey()}</span>
             <h1>STAT LINE</h1>
             <p>{lang === "es" ? "Te damos una línea estadística de una temporada. Adivina qué jugador la firmó antes de gastar los cinco intentos." : "You get one season stat line. Guess the player behind it before five tries are gone."}</p>
           </div>
@@ -86,7 +85,7 @@ export default function StatLineGame() {
         <div className="stat-hint-grid stat-hint-top">
           {hints.slice(0, 3).map((hint, index) => {
             const visible = index < revealedHints || finished;
-            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? (hint.kind === "team" && logoId ? <img src={`https://cdn.nba.com/logos/nba/${logoId}/primary/L/logo.svg`} alt={String(hint.value)} /> : hint.value) : "?"}</b><small>{visible ? (lang === "es" ? "PISTA" : "CLUE") : (lang === "es" ? `FALLO ${index + 1}` : `MISS ${index + 1}`)}</small></article>;
+            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? (hint.kind === "team" && logoId ? <img src={`https://cdn.nba.com/logos/nba/${logoId}/primary/L/logo.svg`} alt={String(hint.value)} /> : hint.value) : "?"}</b><small>{visible ? (lang === "es" ? "PISTA" : "CLUE") : ""}</small></article>;
           })}
         </div>
         <div className="stat-line-stage">
@@ -103,7 +102,7 @@ export default function StatLineGame() {
           {hints.slice(3).map((hint, offset) => {
             const index = offset + 3;
             const visible = index < revealedHints || finished;
-            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? hint.value : "?"}</b><small>{visible ? (lang === "es" ? "PISTA" : "CLUE") : (lang === "es" ? `FALLO ${index + 1}` : `MISS ${index + 1}`)}</small></article>;
+            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? hint.value : "?"}</b><small>{visible ? (lang === "es" ? "PISTA" : "CLUE") : ""}</small></article>;
           })}
         </div>
         {finished && <div className="mini-answer">{challenge.imageUrl && <img src={challenge.imageUrl} alt="" />}<div><span>{status === "won" ? t("correct") : t("was")}</span><h2>{challenge.name}</h2><p>{challenge.season} · {challenge.team}</p></div></div>}
