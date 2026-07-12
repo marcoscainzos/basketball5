@@ -64,7 +64,7 @@ export default function StatLineGame() {
       setMessage(lang === "es" ? "Correcto. Esa línea era suya." : "Correct. That stat line was his.");
       return;
     }
-    if (next.length >= 5) {
+    if (next.length >= hints.length) {
       setStatus("lost");
       setMessage(lang === "es" ? `Era ${challenge.name}.` : `It was ${challenge.name}.`);
       return;
@@ -85,7 +85,7 @@ export default function StatLineGame() {
         <header className="mini-head stat-play-head">
           <div>
             <h1>STAT LINE</h1>
-            <p>{lang === "es" ? "Te damos una línea estadística de una temporada. Adivina qué jugador la firmó antes de gastar los cinco intentos." : "You get one season stat line. Guess the player behind it before five tries are gone."}</p>
+            <p>{lang === "es" ? "Te damos una línea estadística de una temporada. Adivina qué jugador la firmó antes de gastar las seis pistas." : "You get one season stat line. Guess the player behind it before all six clues are gone."}</p>
           </div>
         </header>
         <div className="stat-hint-grid stat-hint-top">
@@ -113,7 +113,7 @@ export default function StatLineGame() {
         </div>
         {finished && <div className="mini-answer">{challenge.imageUrl && <img src={challenge.imageUrl} alt="" />}<div><span>{status === "won" ? t("correct") : t("was")}</span><h2>{challenge.name}</h2><p>{challenge.season} · {challenge.team}</p></div></div>}
         {!finished && <div className="mini-search stat-search"><div><input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter") submit(query || suggestions[0]); }} placeholder={t("typeName")} /><button disabled={!query && !suggestions[0]} onClick={() => submit(query || suggestions[0])}>{t("test")}</button><button type="button" className="stat-surrender" aria-label={t("surrender")} title={t("surrender")} onClick={surrender}>⚑</button></div>{suggestions.length > 0 && <aside>{suggestions.map((name) => <button key={name} onClick={() => submit(name)}>{name}</button>)}</aside>}</div>}
-        <p className="mini-message">{message || `${guesses.length}/5`}</p>
+        <p className="mini-message">{message || `${guesses.length}/${hints.length}`}</p>
       </section>
     </main>
   );
