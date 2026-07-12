@@ -72,6 +72,12 @@ export default function StatLineGame() {
     setMessage(lang === "es" ? "No era. Nueva pista desbloqueada." : "Not him. New clue unlocked.");
   }
 
+  function surrender() {
+    setStatus("lost");
+    setQuery("");
+    setMessage(lang === "es" ? `Era ${challenge.name}.` : `It was ${challenge.name}.`);
+  }
+
   return (
     <main className="mini-shell">
       <nav className="site-nav daily-game-nav"><Link href="/" className="back-link">← {t("games")}</Link><SiteBrand link={false} /><span className="live-reset">{t("reset")} {countdown}</span></nav>
@@ -85,7 +91,7 @@ export default function StatLineGame() {
         <div className="stat-hint-grid stat-hint-top">
           {hints.slice(0, 3).map((hint, index) => {
             const visible = index < revealedHints || finished;
-            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? (hint.kind === "team" && logoId ? <img src={`https://cdn.nba.com/logos/nba/${logoId}/primary/L/logo.svg`} alt={String(hint.value)} /> : hint.value) : "?"}</b><small>{visible ? (lang === "es" ? "PISTA" : "CLUE") : ""}</small></article>;
+            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? (hint.kind === "team" && logoId ? <img src={`https://cdn.nba.com/logos/nba/${logoId}/primary/L/logo.svg`} alt={String(hint.value)} /> : hint.value) : "?"}</b></article>;
           })}
         </div>
         <div className="stat-line-stage">
@@ -102,11 +108,11 @@ export default function StatLineGame() {
           {hints.slice(3).map((hint, offset) => {
             const index = offset + 3;
             const visible = index < revealedHints || finished;
-            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? hint.value : "?"}</b><small>{visible ? (lang === "es" ? "PISTA" : "CLUE") : ""}</small></article>;
+            return <article className={visible ? "revealed" : ""} key={hint.label}><span>{hint.label}</span><b>{visible ? hint.value : "?"}</b></article>;
           })}
         </div>
         {finished && <div className="mini-answer">{challenge.imageUrl && <img src={challenge.imageUrl} alt="" />}<div><span>{status === "won" ? t("correct") : t("was")}</span><h2>{challenge.name}</h2><p>{challenge.season} · {challenge.team}</p></div></div>}
-        {!finished && <div className="mini-search"><div><input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter") submit(query || suggestions[0]); }} placeholder={t("typeName")} /><button disabled={!query && !suggestions[0]} onClick={() => submit(query || suggestions[0])}>{t("test")}</button></div>{suggestions.length > 0 && <aside>{suggestions.map((name) => <button key={name} onClick={() => submit(name)}>{name}</button>)}</aside>}</div>}
+        {!finished && <div className="mini-search stat-search"><div><input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter") submit(query || suggestions[0]); }} placeholder={t("typeName")} /><button disabled={!query && !suggestions[0]} onClick={() => submit(query || suggestions[0])}>{t("test")}</button><button type="button" className="stat-surrender" aria-label={t("surrender")} title={t("surrender")} onClick={surrender}>⚑</button></div>{suggestions.length > 0 && <aside>{suggestions.map((name) => <button key={name} onClick={() => submit(name)}>{name}</button>)}</aside>}</div>}
         <p className="mini-message">{message || `${guesses.length}/5`}</p>
       </section>
     </main>
