@@ -24,7 +24,7 @@ export default function Home() {
         <Link href="/draft" className="compact-game gold-game"><span>04</span><div className="compact-art draft-art"><b>5</b><i>TEAM</i></div><h2>DRAFT</h2></Link>
         <Link href="/tres-en-raya" className="compact-game tic-home-card"><span>05</span><div className="compact-art tic-art"><b>3</b><i>RAYA</i></div><h2>3 EN RAYA</h2></Link>
         <Link href="/stat-line" className="compact-game stat-line-home"><span>06</span><div className="compact-art stat-line-art"><b>27</b><i>PTS</i><em>?</em></div><h2>STAT LINE</h2></Link>
-        <Link href="/six-order" className="compact-game six-order-home"><span>07</span><div className="compact-art six-order-art"><b>6</b><i>PYR</i></div><h2>PYRAMID</h2></Link>
+        <Link href="/six-order" className="compact-game six-order-home"><span>07</span><div className="compact-art six-order-art" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div><h2>PYRAMID</h2></Link>
         <Link href="/timeline" className="compact-game timeline-home"><span>08</span><div className="compact-art timeline-art"><b>↗</b><i>NBA</i></div><h2>TIMELINE</h2></Link>
         <Link href="/blind-ranking" className="compact-game blind-home"><span>09</span><div className="compact-art blind-art"><b>5</b><i>?</i></div><h2>BLIND RANK</h2></Link>
       </section>
