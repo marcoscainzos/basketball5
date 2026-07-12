@@ -357,9 +357,9 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .stat-line-art em { position:absolute; left:27%; top:25px; width:33px; height:33px; border:1px solid #ffffff70; border-radius:50%; display:grid; place-items:center; background:#d20a2e; color:white; font:400 25px/.8 Impact,"Arial Narrow",sans-serif; font-style:normal; box-shadow:4px 5px 0 #0007; }
 .timeline-art b,.blind-art b { font:900 72px/.9 "Arial Black",Arial,sans-serif; text-shadow:7px 7px 0 #0007; }
 .timeline-art i,.blind-art i { position:absolute; right:25%; bottom:24px; width:auto; height:auto; padding:7px 10px; border-radius:5px; background:#d20a2e; color:white; font:900 9px Arial; font-style:normal; letter-spacing:.12em; }
-.six-order-art { width:128px; height:112px; margin:10px auto 0; display:grid; grid-template-columns:repeat(6,1fr); grid-template-rows:repeat(3,1fr); grid-template-areas:". . a a . ." ". b b c c ." "d d e e f f"; gap:7px; transform:rotate(-3deg); }
-.six-order-art i { position:relative; inset:auto; width:auto; height:auto; padding:0; border:2px solid #ffffffc8; border-radius:9px; background:linear-gradient(145deg,#10305f,#071326); box-shadow:5px 6px 0 #0007; }
-.six-order-art i:nth-child(1){grid-area:a}.six-order-art i:nth-child(2){grid-area:b}.six-order-art i:nth-child(3){grid-area:c}.six-order-art i:nth-child(4){grid-area:d}.six-order-art i:nth-child(5){grid-area:e}.six-order-art i:nth-child(6){grid-area:f}
+.six-order-art { width:132px; height:116px; margin:10px auto 0; position:relative; transform:rotate(-3deg); }
+.six-order-art::before { content:""; position:absolute; inset:2px 8px 0; clip-path:polygon(50% 0,100% 100%,0 100%); background:linear-gradient(145deg,#f8fbff 0 2px,#12315f 2px 54%,#071326 55%); filter:drop-shadow(8px 9px 0 #0007); }
+.six-order-art::after { content:""; position:absolute; left:23px; right:23px; bottom:25px; height:50px; background:linear-gradient(90deg,transparent 48%,#ffffffc9 49% 51%,transparent 52%),linear-gradient(180deg,transparent 31%,#ffffffc9 32% 36%,transparent 37% 66%,#ffffffc9 67% 71%,transparent 72%); clip-path:polygon(50% 0,100% 100%,0 100%); opacity:.9; }
 .timeline-art i { background:#17408b; }.blind-art i { border-radius:50%; }
 
 .mini-shell { min-height:100vh; background:radial-gradient(circle at 75% 30%,#153973 0,#081b3d 32%,#050d1d 70%); color:white; overflow-x:hidden; }
