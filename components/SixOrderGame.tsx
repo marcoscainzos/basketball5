@@ -199,8 +199,8 @@ export default function SixOrderGame() {
           <span>PYRAMID</span>
           <h1>{lang === "es" ? "Ordena la pirámide" : "Build the pyramid"}</h1>
           <p>{lang === "es" ? "Te damos un jugador cada vez. Colócalo donde quieras y reajusta la pirámide arrastrando las cartas." : "You get one player at a time. Place him anywhere and rearrange the pyramid by dragging cards."}</p>
-          <div><b>{lang === "es" ? challenge.label : challenge.labelEn}</b><small>{lang === "es" ? challenge.hint : challenge.hintEn}</small></div>
         </header>
+        <div className="six-stat-pill"><b>{lang === "es" ? challenge.label : challenge.labelEn}</b></div>
         <div className="six-hex">
           {slots.map((player, index) => {
             const isRight = checked && player?.key === correct[index].key;
@@ -222,10 +222,7 @@ export default function SixOrderGame() {
             );
           })}
         </div>
-        <div className="six-next-player">
-          <span>{complete ? (lang === "es" ? "Pirámide completa" : "Pyramid complete") : (lang === "es" ? "Siguiente jugador:" : "Next player:")}</span>
-          <b>{complete ? (lang === "es" ? "comprueba tu orden" : "check your order") : current?.name}</b>
-        </div>
+        {!complete && <div className="six-next-player"><span>{lang === "es" ? "Siguiente jugador:" : "Next player:"}</span><b>{current?.name}</b></div>}
         <div className="six-actions">
           {!checked && <button disabled={!complete} onClick={() => setChecked(true)}>{lang === "es" ? "COMPROBAR" : "CHECK"}</button>}
           {checked && <button onClick={reset}>{lang === "es" ? "REINTENTAR" : "TRY AGAIN"}</button>}
