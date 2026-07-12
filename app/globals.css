@@ -160,7 +160,7 @@ body { background:var(--court); color:white; font-family:"Arial Narrow",Impact,H
 .wordmark b { font-style:normal; font-weight:900; }
 .mark { width:35px; height:42px; padding-top:12px; border:2px solid white; border-radius:3px; color:white; text-align:center; font-size:12px; font-weight:900; font-style:normal; transform:none; background:linear-gradient(90deg,var(--nba-blue) 0 50%,var(--nba-red) 50%); }
 .mark::after,.mark i { display:none; }
-.home-shell { min-height:100vh; background:radial-gradient(circle at 75% 30%,#1b4d93 0,#0d2c62 34%,#06152e 74%); }
+.home-shell { min-height:100vh; background:radial-gradient(circle at 75% 30%,#153973 0,#081b3d 32%,#050d1d 70%); }
 .home-nav { border-bottom-color:#ffffff2b; }
 .home-title { max-width:1180px; margin:auto; padding:62px 0 38px; }
 .home-title span { color:#65a8ff; font:700 11px Arial; letter-spacing:.25em; }
@@ -257,7 +257,7 @@ body { background:var(--court); color:white; font-family:"Arial Narrow",Impact,H
 :root { --broadcast-red:#d20a2e; --broadcast-blue:#143d7d; --night:#030a17; --steel:#9eb0cc; }
 body { font-family:Arial,Helvetica,sans-serif; }
 .home-shell,.mode-shell,.game-shell { position:relative; isolation:isolate; overflow:hidden; background-color:var(--night); }
-.home-shell::before,.mode-shell::before,.game-shell::before { content:""; position:fixed; z-index:-1; inset:0; pointer-events:none; background:linear-gradient(90deg,transparent 49.82%,#ffffff10 50%,transparent 50.18%),radial-gradient(circle at 50% 115%,transparent 0 28%,#ffffff12 28.2% 28.55%,transparent 28.8%),linear-gradient(125deg,#071936 0%,#0f3977 52%,#040b18 100%); }
+.home-shell::before,.mode-shell::before,.game-shell::before { content:""; position:fixed; z-index:-1; inset:0; pointer-events:none; background:linear-gradient(90deg,transparent 49.85%,#ffffff08 50%,transparent 50.15%),radial-gradient(circle at 50% 115%,transparent 0 28%,#ffffff09 28.2% 28.5%,transparent 28.7%),linear-gradient(125deg,#061124 0%,#0b2855 52%,#040a15 100%); }
 .site-nav { height:78px; backdrop-filter:blur(16px); background:#030a17de; border-bottom:1px solid #ffffff21; box-shadow:0 4px 0 var(--broadcast-red); }
 .wordmark b { font-family:Impact,"Arial Narrow",sans-serif; font-size:22px; letter-spacing:.045em; }
 .mark { border-radius:9px 2px 9px 2px; box-shadow:3px 3px 0 #ffffff22; }
@@ -267,19 +267,11 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .home-title h1 { color:white; -webkit-text-stroke:2px var(--broadcast-red); text-shadow:4px 4px 0 #7c0019,7px 7px 0 #020713; }
 .game-picker { position:relative; border-top:0; }
 .game-picker::before { content:"SELECT GAME"; position:absolute; top:0; left:0; color:#9eb0cc; font:800 9px Arial; letter-spacing:.22em; }
-.compact-game { --tile-accent:var(--broadcast-red); border:1px solid #ffffff32; border-radius:14px; background:linear-gradient(145deg,#0d2448e8,#07162fee 62%,#030814f4)!important; box-shadow:inset 0 1px 0 #ffffff26,0 22px 50px #00000052; }
-.compact-game:hover:not(.unavailable) { transform:translateY(-8px) scale(1.015); background:linear-gradient(145deg,#12305eea,#07162ff4 62%,#030814fb)!important; border-color:#ffffff82; box-shadow:0 24px 52px #0009,0 0 0 2px #ffffff; }
-.compact-game::before { content:""; position:absolute; left:18px; right:18px; top:15px; height:3px; border-radius:99px; background:linear-gradient(90deg,var(--tile-accent),#ffffff42); opacity:1; }
-.compact-game::after { content:""; position:absolute; inset:0; border-radius:14px; pointer-events:none; background:radial-gradient(circle at 78% 15%,#ffffff14,transparent 31%),linear-gradient(135deg,color-mix(in srgb,var(--tile-accent) 20%,transparent),transparent 34%); opacity:.95; }
-.red-game { --tile-accent:var(--broadcast-red); }
-.blue-game { --tile-accent:#4d8dff; }
-.dark-game { --tile-accent:#9eb0cc; }
-.gold-game { --tile-accent:#d5bd82; }
-.tic-home-card { --tile-accent:var(--broadcast-red); }
-.stat-line-home { --tile-accent:#4d8dff; }
-.draft-pick-home { --tile-accent:#d5bd82; }
-.timeline-home { --tile-accent:var(--broadcast-red); }
-.blind-home { --tile-accent:#9eb0cc; }
+.compact-game { border:1px solid #ffffff2e; border-radius:14px; box-shadow:inset 0 1px 0 #ffffff2b,0 22px 50px #0005; }
+.compact-game:hover:not(.unavailable) { transform:translateY(-8px) scale(1.015); box-shadow:0 22px 45px #0008,0 0 0 2px white; }
+.compact-game::before { content:""; position:absolute; left:18px; right:18px; top:15px; height:3px; border-radius:99px; background:linear-gradient(90deg,var(--broadcast-red),#ffffff38); opacity:.9; }
+.compact-game::after { content:""; position:absolute; inset:0; border-radius:14px; background:radial-gradient(circle at 72% 18%,#ffffff14,transparent 28%); pointer-events:none; }
+.red-game,.blue-game,.dark-game,.gold-game,.tic-home-card,.stat-line-home,.draft-pick-home,.timeline-home,.blind-home { background:linear-gradient(145deg,#0b1d3a99,#061124d9 58%,#030814e8); backdrop-filter:blur(12px); }
 .red-game .compact-art,.blue-game .compact-art,.dark-game .compact-art,.gold-game .compact-art,.tic-home-card .compact-art,.stat-line-home .compact-art,.draft-pick-home .compact-art,.timeline-home .compact-art,.blind-home .compact-art { color:white; }
 .one-v-one-logo { display:flex; align-items:center; justify-content:center; gap:9px; }
 .one-v-one-logo b { width:80px; height:108px; display:grid; place-items:center; border:2px solid #ffffffb5; border-radius:9px 2px 9px 2px; background:#07162f; color:white; font-family:Impact,"Arial Narrow",sans-serif; font-size:78px; line-height:1; box-shadow:8px 8px 0 #0005; }
@@ -633,7 +625,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .who-answer h2 { margin:6px 0 5px; font:400 42px/.9 Impact,"Arial Narrow",sans-serif; }.who-answer p { margin:0; color:#91a3bd; font:800 9px Arial; }
 @media(max-width:680px){.who-game{padding-top:30px}.who-clues>div{min-width:125px;height:165px}.who-clues>div img{height:120px}.who-answer img{width:135px}.who-answer h2{font-size:30px}}
 
-.tic-home-card { --tile-accent:var(--broadcast-red); }
+.tic-home-card { background:linear-gradient(145deg,#0b1d3a99,#061124d9 58%,#030814e8); }
 .tic-art { position:relative; width:116px; height:112px; margin:0 auto; display:grid; place-items:center; transform:translateY(10px) rotate(-2deg); }
 .tic-art::before { content:""; position:absolute; left:50%; top:50%; width:92px; height:92px; border:4px solid #f3f6fb; border-radius:15px; background:
   linear-gradient(90deg,transparent 31%,#f3f6fb 31% 35%,transparent 35% 65%,#f3f6fb 65% 69%,transparent 69%),
