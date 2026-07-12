@@ -129,12 +129,11 @@ export default function SixOrderGame() {
     <main className="mini-shell">
       <nav className="site-nav daily-game-nav"><Link href="/" className="back-link">← {t("games")}</Link><SiteBrand link={false} /><span className="live-reset">{t("reset")} {countdown}</span></nav>
       <section className="mini-game six-order-game">
-        <header className="mini-head six-order-head"><span>{lang === "es" ? "RETO DE ORDEN" : "ORDER CHALLENGE"}</span><h1>SIX ORDER</h1><p>{lang === "es" ? "Completa la figura colocando los seis jugadores de mayor a menor según el dato del día." : "Complete the shape by placing the six players from highest to lowest for today's stat."}</p></header>
-        <div className="six-order-rule">
-          <span>{lang === "es" ? "DATO DEL DÍA" : "TODAY'S STAT"}</span>
+        <header className="six-pyramid-head">
+          <span>PYRAMID</span>
           <b>{lang === "es" ? challenge.label : challenge.labelEn}</b>
           <p>{lang === "es" ? challenge.hint : challenge.hintEn}</p>
-        </div>
+        </header>
         <div className="six-order-layout">
           <div className="six-hex">
             {slots.map((player, index) => {
