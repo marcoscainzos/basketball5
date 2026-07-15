@@ -51,13 +51,25 @@ create policy "profiles_insert_own" on public.profiles for insert with check (au
 drop policy if exists "profiles_update_own" on public.profiles;
 create policy "profiles_update_own" on public.profiles for update using (auth.uid() = id) with check (auth.uid() = id);
 
+create or replace function public.is_league_member(target_league_id uuid)
+returns boolean
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select exists (
+    select 1
+    from public.league_members lm
+    where lm.league_id = target_league_id
+      and lm.user_id = auth.uid()
+  );
+$$;
+
 drop policy if exists "leagues_select_member" on public.leagues;
 create policy "leagues_select_member" on public.leagues for select using (
   owner_id = auth.uid()
-  or exists (
-    select 1 from public.league_members lm
-    where lm.league_id = leagues.id and lm.user_id = auth.uid()
-  )
+  or public.is_league_member(id)
 );
 
 drop policy if exists "leagues_insert_owner" on public.leagues;
@@ -65,10 +77,8 @@ create policy "leagues_insert_owner" on public.leagues for insert with check (ow
 
 drop policy if exists "league_members_select_same_league" on public.league_members;
 create policy "league_members_select_same_league" on public.league_members for select using (
-  exists (
-    select 1 from public.league_members mine
-    where mine.league_id = league_members.league_id and mine.user_id = auth.uid()
-  )
+  user_id = auth.uid()
+  or public.is_league_member(league_id)
 );
 
 drop policy if exists "league_members_insert_self" on public.league_members;
@@ -79,18 +89,12 @@ create policy "league_members_update_self" on public.league_members for update u
 
 drop policy if exists "daily_challenges_select_member" on public.league_daily_challenges;
 create policy "daily_challenges_select_member" on public.league_daily_challenges for select using (
-  exists (
-    select 1 from public.league_members lm
-    where lm.league_id = league_daily_challenges.league_id and lm.user_id = auth.uid()
-  )
+  public.is_league_member(league_id)
 );
 
 drop policy if exists "daily_challenges_insert_member" on public.league_daily_challenges;
 create policy "daily_challenges_insert_member" on public.league_daily_challenges for insert with check (
-  exists (
-    select 1 from public.league_members lm
-    where lm.league_id = league_daily_challenges.league_id and lm.user_id = auth.uid()
-  )
+  public.is_league_member(league_id)
 );
 
 create or replace function public.join_league_by_code(join_code text, member_name text)
