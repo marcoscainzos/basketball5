@@ -276,6 +276,7 @@ export function ProfileMenu() {
       }
       setOpen(false);
       setView("home");
+      window.dispatchEvent(new Event("court-inside-profile-updated"));
       refresh();
       return;
     }
@@ -315,6 +316,7 @@ export function ProfileMenu() {
       }
       setView("home");
       setOpen(false);
+      window.dispatchEvent(new Event("court-inside-profile-updated"));
       refresh();
       return;
     }

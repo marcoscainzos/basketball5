@@ -62,7 +62,19 @@ async function readRemoteProfile(): Promise<LocalProfile | null> {
   const { data: userData } = await supabase.auth.getUser();
   if (!userData.user) return null;
   const { data } = await supabase.from("profiles").select("*").eq("id", userData.user.id).maybeSingle();
-  if (!data) return null;
+  if (!data) {
+    const meta = userData.user.user_metadata || {};
+    return {
+      firstName: String(meta.first_name || userData.user.email?.split("@")[0] || "Player"),
+      lastName: String(meta.last_name || ""),
+      birthDate: String(meta.birth_date || ""),
+      email: String(userData.user.email || ""),
+      password: "",
+      city: String(meta.city || ""),
+      country: String(meta.country || ""),
+      createdAt: String(userData.user.created_at || new Date().toISOString()),
+    };
+  }
   return {
     firstName: String(data.first_name || ""),
     lastName: String(data.last_name || ""),
@@ -182,7 +194,7 @@ export default function LeaguesPage() {
     writeLeagues(next);
   };
 
-  const profileReady = Boolean(profile?.email && profile.firstName);
+  const profileReady = Boolean(profile?.email);
 
   const createLeague = async (event: FormEvent) => {
     event.preventDefault();
