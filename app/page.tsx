@@ -25,8 +25,6 @@ export default function Home() {
         <Link href="/tres-en-raya" className="compact-game tic-home-card"><span>05</span><div className="compact-art tic-art"><b>3</b><i>RAYA</i></div><h2>3 EN RAYA</h2></Link>
         <Link href="/stat-line" className="compact-game stat-line-home"><span>06</span><div className="compact-art stat-line-art"><b>27</b><i>PTS</i><em>?</em></div><h2>STAT LINE</h2></Link>
         <Link href="/six-order" className="compact-game six-order-home"><span>07</span><div className="compact-art six-order-art" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="60,4 79,35 41,35" /><polygon points="41,38 59,38 59,64 24,64" /><polygon points="61,38 79,38 96,64 61,64" /><polygon points="23,67 47,67 40,96 4,96" /><polygon points="49,67 71,67 78,96 42,96" /><polygon points="73,67 97,67 116,96 80,96" /></svg></div><h2>PYRAMID</h2></Link>
-        <Link href="/timeline" className="compact-game timeline-home"><span>08</span><div className="compact-art timeline-art"><b>↗</b><i>NBA</i></div><h2>TIMELINE</h2></Link>
-        <Link href="/blind-ranking" className="compact-game blind-home"><span>09</span><div className="compact-art blind-art"><b>5</b><i>?</i></div><h2>BLIND RANK</h2></Link>
       </section>
       <Link className="credits-link" href="/credits">{t("creditsTitle")} ↗</Link>
     </main>
