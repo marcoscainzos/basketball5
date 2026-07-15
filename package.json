@@ -7,20 +7,21 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "download:players": "tsx --env-file=.env.local scripts/downloadPlayers.ts"
-    ,"data:build": "tsx scripts/buildPlayerDatabase.ts"
-    ,"data:images": "tsx scripts/downloadPlayerImages.ts"
-    ,"data:current": "tsx scripts/buildCurrentSeason.ts"
-    ,"data:visual": "tsx scripts/pruneToPlayersWithImages.ts"
-    ,"data:top5": "node scripts/buildTopFiveData.mjs"
-    ,"data:top5:live": "node scripts/buildLiveTopFiveStats.mjs"
-    ,"data:who": "node scripts/buildWhoAmIData.mjs"
-    ,"data:grid": "node scripts/buildNbaGridCareers.mjs"
-    ,"data:current:nba": "python scripts/updateCurrentSeasonFromNbaApi.py"
-    ,"check:top5": "node scripts/checkTopFiveData.mjs"
+    "download:players": "tsx --env-file=.env.local scripts/downloadPlayers.ts",
+    "data:build": "tsx scripts/buildPlayerDatabase.ts",
+    "data:images": "tsx scripts/downloadPlayerImages.ts",
+    "data:current": "tsx scripts/buildCurrentSeason.ts",
+    "data:visual": "tsx scripts/pruneToPlayersWithImages.ts",
+    "data:top5": "node scripts/buildTopFiveData.mjs",
+    "data:top5:live": "node scripts/buildLiveTopFiveStats.mjs",
+    "data:who": "node scripts/buildWhoAmIData.mjs",
+    "data:grid": "node scripts/buildNbaGridCareers.mjs",
+    "data:current:nba": "python scripts/updateCurrentSeasonFromNbaApi.py",
+    "check:top5": "node scripts/checkTopFiveData.mjs"
   },
   "dependencies": {
     "@balldontlie/sdk": "^1.2.2",
+    "@supabase/supabase-js": "^2.110.5",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"
