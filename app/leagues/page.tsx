@@ -157,6 +157,7 @@ export default function LeaguesPage() {
   const [joinCode, setJoinCode] = useState("");
   const [leagues, setLeagues] = useState<League[]>([]);
   const [activeCode, setActiveCode] = useState("");
+  const [leagueView, setLeagueView] = useState<"home" | "games" | "standings" | "stats">("home");
   const [copied, setCopied] = useState(false);
   const [leagueMessage, setLeagueMessage] = useState("");
 
@@ -329,6 +330,7 @@ export default function LeaguesPage() {
     setCopied(true);
     setTimeout(() => setCopied(false), 1400);
   };
+  const myStanding = activeLeague?.standings.find((row) => profile?.email && row.email === profile.email) || activeLeague?.standings[0];
 
   return (
     <main className="home-shell leagues-shell">
@@ -372,9 +374,25 @@ export default function LeaguesPage() {
           </article>
         </div>
 
+        {leagues.length ? (
+          <section className="league-list">
+            <span>MIS LIGAS</span>
+            <div>
+              {leagues.map((league) => (
+                <button key={league.code} type="button" className={league.code === activeCode ? "active" : ""} onClick={() => { setActiveCode(league.code); setLeagueView("home"); }}>
+                  <b>{league.name}</b>
+                  <small>{league.code}</small>
+                  <i>{league.standings.length} jugadores</i>
+                </button>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         {activeLeague ? (
-          <section className="league-room">
+          <section className="league-app">
             <header>
+              <button type="button" onClick={() => setActiveCode("")}>← LIGAS</button>
               <div>
                 <span>LIGA ACTIVA</span>
                 <h2>{activeLeague.name}</h2>
@@ -382,23 +400,54 @@ export default function LeaguesPage() {
               </div>
               <button type="button" onClick={copyInvite}>{copied ? "COPIADO" : "COPIAR ENLACE"}</button>
             </header>
-            <div className="league-room-grid">
-              <article className="league-daily">
-                <span>HOY SE JUEGA</span>
-                {dailyGames.map((game) => <Link key={game.id} href={game.href}><b>{game.name}</b><small>{game.points} PTS MAX</small></Link>)}
+            <nav className="league-tabs">
+              <button className={leagueView === "home" ? "active" : ""} type="button" onClick={() => setLeagueView("home")}>RESUMEN</button>
+              <button className={leagueView === "games" ? "active" : ""} type="button" onClick={() => setLeagueView("games")}>JUEGOS DE HOY</button>
+              <button className={leagueView === "standings" ? "active" : ""} type="button" onClick={() => setLeagueView("standings")}>CLASIFICACIÓN</button>
+              <button className={leagueView === "stats" ? "active" : ""} type="button" onClick={() => setLeagueView("stats")}>TUS STATS</button>
+            </nav>
+
+            {leagueView === "home" ? (
+              <div className="league-overview">
+                <article><span>HOY</span><b>{dailyGames.length}</b><p>minijuegos activos</p></article>
+                <article><span>JUGADORES</span><b>{activeLeague.standings.length}</b><p>en la liga</p></article>
+                <article><span>TÚ</span><b>{myStanding?.points || 0}</b><p>puntos totales</p></article>
+              </div>
+            ) : null}
+
+            {leagueView === "games" ? (
+              <section className="league-games-grid">
+                {dailyGames.map((game) => (
+                  <Link key={game.id} href={game.href} className="league-game-card">
+                    <span>{game.points} PTS MAX</span>
+                    <b>{game.name}</b>
+                    <small>JUGAR →</small>
+                  </Link>
+                ))}
                 <button type="button" onClick={addDemoPoints}>SIMULAR PUNTOS DE HOY</button>
-              </article>
-              <article className="league-table">
+              </section>
+            ) : null}
+
+            {leagueView === "standings" ? (
+              <article className="league-table full">
                 <span>CLASIFICACIÓN</span>
                 {[...activeLeague.standings].sort((a, b) => b.points - a.points).map((row, index) => (
                   <div key={row.email}><b>{index + 1}</b><strong>{row.name}</strong><small>{row.today} hoy</small><span>{row.points}</span></div>
                 ))}
               </article>
-            </div>
+            ) : null}
+
+            {leagueView === "stats" ? (
+              <section className="league-stats-panel">
+                <article><span>PUNTOS</span><b>{myStanding?.points || 0}</b></article>
+                <article><span>HOY</span><b>{myStanding?.today || 0}</b></article>
+                <article><span>POSICIÓN</span><b>{Math.max(1, [...activeLeague.standings].sort((a, b) => b.points - a.points).findIndex((row) => row.email === myStanding?.email) + 1)}</b></article>
+              </section>
+            ) : null}
           </section>
-        ) : (
+        ) : !leagues.length ? (
           <p className="league-empty">Crea o únete a una liga para ver retos diarios y clasificación.</p>
-        )}
+        ) : null}
       </section>
       <SiteFooter />
     </main>
