@@ -158,6 +158,7 @@ export default function LeaguesPage() {
   const [leagues, setLeagues] = useState<League[]>([]);
   const [activeCode, setActiveCode] = useState("");
   const [copied, setCopied] = useState(false);
+  const [leagueMessage, setLeagueMessage] = useState("");
 
   useEffect(() => {
     const syncProfile = async () => {
@@ -195,25 +196,50 @@ export default function LeaguesPage() {
   };
 
   const profileReady = Boolean(profile?.email);
+  const getProfileForAction = async () => {
+    const remote = await readRemoteProfile();
+    const local = remote || profile || readProfile();
+    if (remote) {
+      setProfile(remote);
+      localStorage.setItem(PROFILE_KEY, JSON.stringify(remote));
+    }
+    return local;
+  };
 
   const createLeague = async (event: FormEvent) => {
     event.preventDefault();
-    if (!profileReady || !leagueName.trim() || !profile) return;
+    setLeagueMessage("");
+    if (!leagueName.trim()) {
+      setLeagueMessage("Pon un nombre para la liga.");
+      return;
+    }
+    const actionProfile = await getProfileForAction();
+    if (!actionProfile?.email) {
+      setLeagueMessage("Inicia sesión desde el icono de perfil para crear una liga.");
+      return;
+    }
     const code = makeCode(leagueName);
     if (isSupabaseConfigured && supabase) {
       const { data: userData } = await supabase.auth.getUser();
-      if (!userData.user) return;
+      if (!userData.user) {
+        setLeagueMessage("Tu sesión no está activa. Inicia sesión de nuevo desde el perfil.");
+        return;
+      }
       const { data: created, error } = await supabase
         .from("leagues")
         .insert({ code, name: leagueName.trim(), owner_id: userData.user.id })
         .select("*")
         .single();
-      if (error || !created) return;
-      await supabase.from("league_members").insert({
+      if (error || !created) {
+        setLeagueMessage(error?.message || "No se pudo crear la liga.");
+        return;
+      }
+      const { error: memberError } = await supabase.from("league_members").insert({
         league_id: created.id,
         user_id: userData.user.id,
-        display_name: profileName(profile),
+        display_name: profileName(actionProfile),
       });
+      if (memberError) setLeagueMessage(memberError.message);
       const remoteLeagues = await readRemoteLeagues();
       persist(remoteLeagues, code);
       setLeagueName("");
@@ -222,9 +248,9 @@ export default function LeaguesPage() {
     const league: League = {
       code,
       name: leagueName.trim(),
-      ownerEmail: profile.email.trim(),
+      ownerEmail: actionProfile.email.trim(),
       createdAt: new Date().toISOString(),
-      standings: [{ email: profile.email.trim(), name: profileName(profile), points: 0, today: 0 }],
+      standings: [{ email: actionProfile.email.trim(), name: profileName(actionProfile), points: 0, today: 0 }],
     };
     persist([league, ...leagues], code);
     setLeagueName("");
@@ -232,17 +258,28 @@ export default function LeaguesPage() {
 
   const joinLeague = async (event: FormEvent) => {
     event.preventDefault();
-    if (!profileReady || !joinCode.trim() || !profile) return;
+    setLeagueMessage("");
+    if (!joinCode.trim()) {
+      setLeagueMessage("Pega un código de liga.");
+      return;
+    }
+    const actionProfile = await getProfileForAction();
+    if (!actionProfile?.email) {
+      setLeagueMessage("Inicia sesión desde el icono de perfil para unirte a una liga.");
+      return;
+    }
     const code = joinCode.trim().toUpperCase();
     if (isSupabaseConfigured && supabase) {
       const { error } = await supabase.rpc("join_league_by_code", {
         join_code: code,
-        member_name: profileName(profile),
+        member_name: profileName(actionProfile),
       });
       if (!error) {
         const remoteLeagues = await readRemoteLeagues();
         persist(remoteLeagues, code);
         setJoinCode("");
+      } else {
+        setLeagueMessage(error.message);
       }
       return;
     }
@@ -254,9 +291,9 @@ export default function LeaguesPage() {
       createdAt: new Date().toISOString(),
       standings: [],
     };
-    const standings = nextLeague.standings.some((row) => row.email === profile.email.trim())
+    const standings = nextLeague.standings.some((row) => row.email === actionProfile.email.trim())
       ? nextLeague.standings
-      : [...nextLeague.standings, { email: profile.email.trim(), name: profileName(profile), points: 0, today: 0 }];
+      : [...nextLeague.standings, { email: actionProfile.email.trim(), name: profileName(actionProfile), points: 0, today: 0 }];
     const updated = { ...nextLeague, standings };
     const next = existing ? leagues.map((league) => league.code === code ? updated : league) : [updated, ...leagues];
     persist(next, code);
@@ -313,6 +350,7 @@ export default function LeaguesPage() {
 
       <section className="league-dashboard">
         {!profileReady ? <p className="league-login-note">Para crear o unirte a una liga, regístrate o inicia sesión desde el icono de perfil de arriba.</p> : null}
+        {leagueMessage ? <p className="league-login-note">{leagueMessage}</p> : null}
 
         <div className="league-actions">
           <article className="league-action create-league">
@@ -320,7 +358,7 @@ export default function LeaguesPage() {
             <p>Elige nombre y genera un enlace para invitar a tus amigos.</p>
             <form onSubmit={createLeague}>
               <label htmlFor="new-league">NOMBRE DE LIGA</label>
-              <div><input id="new-league" value={leagueName} onChange={(event) => setLeagueName(event.target.value)} placeholder="Ej. Peña NBA" /><button disabled={!profileReady || !leagueName.trim()} type="submit">CREAR →</button></div>
+              <div><input id="new-league" value={leagueName} onChange={(event) => setLeagueName(event.target.value)} placeholder="Ej. Peña NBA" /><button disabled={!leagueName.trim()} type="submit">CREAR →</button></div>
             </form>
           </article>
 
@@ -329,7 +367,7 @@ export default function LeaguesPage() {
             <p>Pega el código o abre un enlace de invitación.</p>
             <form onSubmit={joinLeague}>
               <label htmlFor="league-code">{t("leagueCode")}</label>
-              <div><input id="league-code" value={joinCode} onChange={(event) => setJoinCode(event.target.value.toUpperCase())} placeholder="EJ. CI-23MJ" autoComplete="off" /><button disabled={!profileReady || !joinCode.trim()} type="submit">{t("enter")}</button></div>
+              <div><input id="league-code" value={joinCode} onChange={(event) => setJoinCode(event.target.value.toUpperCase())} placeholder="EJ. CI-23MJ" autoComplete="off" /><button disabled={!joinCode.trim()} type="submit">{t("enter")}</button></div>
             </form>
           </article>
         </div>
