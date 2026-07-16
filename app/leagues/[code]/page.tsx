@@ -47,10 +47,7 @@ export default function LeagueDetailPage() {
 
   useEffect(() => {
     if (!checked || league) return;
-    const timer = window.setTimeout(() => {
-      window.location.replace(`/leagues?join=${encodeURIComponent(code)}`);
-    }, 650);
-    return () => window.clearTimeout(timer);
+    window.location.replace(`/leagues?join=${encodeURIComponent(code)}`);
   }, [checked, league, code]);
 
   const copyInvite = async () => {
@@ -94,13 +91,7 @@ export default function LeagueDetailPage() {
         <span className="live-reset">LIGA</span>
       </nav>
 
-      {!league ? (
-        <section className="league-detail-empty">
-          <span>COURT INSIDE LEAGUES</span>
-          <h1>ENTRANDO</h1>
-          <p>Estamos preparando tu invitación a la liga.</p>
-        </section>
-      ) : (
+      {!league ? null : (
         <section className="league-app league-app-page">
           <header>
             <div>
