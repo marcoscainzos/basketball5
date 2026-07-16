@@ -475,6 +475,9 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .league-action>p { max-width:380px; margin:0 0 20px; color:#98a8bf; font:400 12px/1.55 Arial; }
 .league-action>button { margin-top:auto; height:46px; padding:0 17px; border:0; border-radius:9px; display:flex; align-items:center; justify-content:space-between; background:#d20a2e; color:white; font:900 9px Arial; letter-spacing:.13em; cursor:pointer; }
 .join-league { background:linear-gradient(145deg,#12366e,#08172d); }
+.create-league,
+.join-league { min-height:276px; }
+.create-league form,
 .join-league form { margin-top:auto; }
 .join-league label { display:block; margin-bottom:8px; color:#8fa1ba; font:900 8px Arial; letter-spacing:.14em; }
 .join-league form>div { height:46px; display:grid; grid-template-columns:1fr auto; border-radius:9px; overflow:hidden; background:white; }
@@ -1406,6 +1409,11 @@ body { font-family:Arial,Helvetica,sans-serif; }
   font:800 13px Arial;
 }
 .league-action form { margin-top:auto; }
+.league-action form label {
+  display:block;
+  margin-bottom:8px;
+  line-height:1;
+}
 .league-action form>div {
   height:46px;
   display:grid;

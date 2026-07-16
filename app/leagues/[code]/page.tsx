@@ -95,7 +95,6 @@ export default function LeagueDetailPage() {
             <div>
               <span>LIGA</span>
               <h2>{league.name}</h2>
-              <p>{league.code}</p>
             </div>
             <button type="button" onClick={copyInvite}>{copied ? "COPIADO" : "COPIAR ENLACE"}</button>
           </header>

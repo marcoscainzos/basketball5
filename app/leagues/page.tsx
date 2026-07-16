@@ -160,7 +160,6 @@ export default function LeaguesPage() {
               {leagues.map((league) => (
                 <Link key={league.code} href={`/leagues/${league.code}`}>
                   <b>{league.name}</b>
-                  <small>{league.code}</small>
                   <i>{league.standings.length} jugadores · entrar →</i>
                 </Link>
               ))}
