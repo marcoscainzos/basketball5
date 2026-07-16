@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { SiteBrand } from "@/components/SiteBrand";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -11,7 +10,6 @@ import { League, LocalProfile, makeCode, profileName, readLeagues, readProfile, 
 
 export default function LeaguesPage() {
   const { t } = useLanguage();
-  const router = useRouter();
   const [profile, setProfile] = useState<LocalProfile | null>(null);
   const [leagueName, setLeagueName] = useState("");
   const [joinCode, setJoinCode] = useState("");
@@ -71,7 +69,7 @@ export default function LeaguesPage() {
         display_name: profileName(actionProfile),
       });
       if (memberError) return setLeagueMessage(memberError.message);
-      router.push(`/leagues/${code}`);
+      window.location.assign(`/leagues/${code}`);
       return;
     }
 
@@ -83,7 +81,7 @@ export default function LeaguesPage() {
       standings: [{ email: actionProfile.email, name: profileName(actionProfile), points: 0, today: 0 }],
     };
     writeLeagues([next, ...leagues]);
-    router.push(`/leagues/${code}`);
+    window.location.assign(`/leagues/${code}`);
   };
 
   const joinLeague = async (event: FormEvent) => {
@@ -100,7 +98,7 @@ export default function LeaguesPage() {
         member_name: profileName(actionProfile),
       });
       if (error) return setLeagueMessage(error.message);
-      router.push(`/leagues/${code}`);
+      window.location.assign(`/leagues/${code}`);
       return;
     }
 
@@ -110,7 +108,7 @@ export default function LeaguesPage() {
       ? nextLeague.standings
       : [...nextLeague.standings, { email: actionProfile.email, name: profileName(actionProfile), points: 0, today: 0 }];
     writeLeagues(existing ? leagues.map((league) => league.code === code ? { ...nextLeague, standings } : league) : [{ ...nextLeague, standings }, ...leagues]);
-    router.push(`/leagues/${code}`);
+    window.location.assign(`/leagues/${code}`);
   };
 
   return (
@@ -163,7 +161,7 @@ export default function LeaguesPage() {
                 <Link key={league.code} href={`/leagues/${league.code}`}>
                   <b>{league.name}</b>
                   <small>{league.code}</small>
-                  <i>{league.standings.length} jugadores</i>
+                  <i>{league.standings.length} jugadores · entrar →</i>
                 </Link>
               ))}
             </div>
