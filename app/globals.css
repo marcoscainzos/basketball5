@@ -1451,6 +1451,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:10px;
 }
+.league-list a,
 .league-list button {
   min-height:94px;
   padding:14px;
@@ -1464,11 +1465,66 @@ body { font-family:Arial,Helvetica,sans-serif; }
   background:linear-gradient(145deg,#102b55,#071326);
   cursor:pointer;
   transition:.18s ease;
+  text-decoration:none;
 }
-.league-list button:hover,.league-list button.active { transform:translateY(-4px); border-color:white; box-shadow:0 16px 34px #0008; }
+.league-list a:hover,
+.league-list button:hover,
+.league-list button.active { transform:translateY(-4px); border-color:white; box-shadow:0 16px 34px #0008; }
+.league-list a b,
 .league-list button b { overflow:hidden; font:900 21px/.95 Arial; letter-spacing:-.05em; text-overflow:ellipsis; white-space:nowrap; }
+.league-list a small,
 .league-list button small { color:#ff4364; font:900 9px Arial; letter-spacing:.13em; }
+.league-list a i,
 .league-list button i { color:#8fa1ba; font:800 8px Arial; font-style:normal; letter-spacing:.1em; text-transform:uppercase; }
+.league-detail-shell {
+  min-height:100vh;
+  padding-bottom:72px;
+}
+.league-app-page {
+  width:min(1080px,calc(100% - 44px));
+  margin:48px auto 0;
+}
+.league-detail-empty {
+  width:min(720px,calc(100% - 44px));
+  margin:68px auto 0;
+  padding:26px;
+  border:1px solid #ffffff2c;
+  border-radius:24px;
+  display:grid;
+  justify-items:start;
+  gap:12px;
+  background:linear-gradient(145deg,#081a35,#040b17);
+  box-shadow:0 24px 70px #0008,inset 0 1px 0 #ffffff18;
+}
+.league-detail-empty span {
+  color:#65a8ff;
+  font:900 8px Arial;
+  letter-spacing:.2em;
+}
+.league-detail-empty h1 {
+  margin:0;
+  color:white;
+  font:900 clamp(44px,10vw,84px)/.82 Arial;
+  letter-spacing:-.08em;
+}
+.league-detail-empty p {
+  margin:0;
+  color:#9cafc9;
+  font:800 13px/1.35 Arial;
+}
+.league-detail-empty a {
+  min-height:40px;
+  padding:0 16px;
+  border:1px solid #ffffff35;
+  border-radius:11px;
+  display:inline-grid;
+  place-items:center;
+  color:white;
+  background:#d20a2e;
+  font:900 9px Arial;
+  letter-spacing:.12em;
+  text-decoration:none;
+}
 .league-app {
   margin-top:18px;
   padding:18px;
@@ -1626,6 +1682,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
   .profile-modal{padding:20px}
   .profile-modal-grid{grid-template-columns:1fr}
   .league-profile,.league-list>div,.league-overview,.league-stats-panel,.league-games-grid{grid-template-columns:1fr}
+  .league-app-page{margin-top:32px}
   .league-app>header{display:grid;align-items:start}
   .league-tabs{grid-template-columns:1fr 1fr}
   .league-table div{grid-template-columns:25px 1fr 55px 45px}

@@ -1,200 +1,41 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { SiteBrand } from "@/components/SiteBrand";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useLanguage } from "@/components/LanguageProvider";
 import { isSupabaseConfigured, supabase } from "@/lib/supabaseClient";
-
-type League = {
-  id?: string;
-  code: string;
-  name: string;
-  ownerEmail: string;
-  createdAt: string;
-  standings: Array<{ email: string; name: string; points: number; today: number }>;
-};
-type LocalProfile = {
-  firstName: string;
-  lastName: string;
-  birthDate: string;
-  email: string;
-  password: string;
-  city: string;
-  country: string;
-  createdAt: string;
-};
-
-const STORAGE_KEY = "court-inside-leagues-v1";
-const PROFILE_KEY = "court-inside-profile-v1";
-const DAILY_GAMES = [
-  { id: "1vs1", name: "1VS1", href: "/1vs1", points: 120 },
-  { id: "top5", name: "TOP 5", href: "/top5", points: 150 },
-  { id: "who", name: "WHO AM I?", href: "/who-am-i", points: 130 },
-  { id: "tic", name: "3 EN RAYA", href: "/tres-en-raya", points: 110 },
-  { id: "stat", name: "STAT LINE", href: "/stat-line", points: 140 },
-  { id: "six", name: "PYRAMID", href: "/six-order", points: 125 },
-];
-
-function readLeagues(): League[] {
-  if (typeof window === "undefined") return [];
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]") as League[];
-  } catch {
-    return [];
-  }
-}
-
-function writeLeagues(leagues: League[]) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(leagues));
-}
-function readProfile(): LocalProfile | null {
-  if (typeof window === "undefined") return null;
-  try {
-    return JSON.parse(localStorage.getItem(PROFILE_KEY) || "null") as LocalProfile | null;
-  } catch {
-    return null;
-  }
-}
-async function readRemoteProfile(): Promise<LocalProfile | null> {
-  if (!isSupabaseConfigured || !supabase) return null;
-  const { data: userData } = await supabase.auth.getUser();
-  if (!userData.user) return null;
-  const { data } = await supabase.from("profiles").select("*").eq("id", userData.user.id).maybeSingle();
-  if (!data) {
-    const meta = userData.user.user_metadata || {};
-    return {
-      firstName: String(meta.first_name || userData.user.email?.split("@")[0] || "Player"),
-      lastName: String(meta.last_name || ""),
-      birthDate: String(meta.birth_date || ""),
-      email: String(userData.user.email || ""),
-      password: "",
-      city: String(meta.city || ""),
-      country: String(meta.country || ""),
-      createdAt: String(userData.user.created_at || new Date().toISOString()),
-    };
-  }
-  return {
-    firstName: String(data.first_name || ""),
-    lastName: String(data.last_name || ""),
-    birthDate: String(data.birth_date || ""),
-    email: String(data.email || userData.user.email || ""),
-    password: "",
-    city: String(data.city || ""),
-    country: String(data.country || ""),
-    createdAt: String(data.created_at || userData.user.created_at || new Date().toISOString()),
-  };
-}
-function profileName(profile: LocalProfile) {
-  return [profile.firstName, profile.lastName].filter(Boolean).join(" ").trim() || profile.email;
-}
-async function readRemoteLeagues(): Promise<League[]> {
-  if (!isSupabaseConfigured || !supabase) return [];
-  const { data: userData } = await supabase.auth.getUser();
-  if (!userData.user) return [];
-  const { data: memberships } = await supabase
-    .from("league_members")
-    .select("league_id, points, today_points, display_name, leagues(id, code, name, owner_id, created_at)")
-    .eq("user_id", userData.user.id);
-
-  const rows = (memberships || []) as unknown as Array<{
-    league_id: string;
-    leagues: { id: string; code: string; name: string; owner_id: string; created_at: string } | null;
-  }>;
-
-  const client = supabase;
-  if (!client) return [];
-  const leagues = await Promise.all(rows.filter((row) => row.leagues).map(async (row) => {
-    const league = row.leagues!;
-    const { data: standings } = await client
-      .from("league_members")
-      .select("display_name, points, today_points")
-      .eq("league_id", league.id)
-      .order("points", { ascending: false });
-    return {
-      id: league.id,
-      code: league.code,
-      name: league.name,
-      ownerEmail: league.owner_id,
-      createdAt: league.created_at,
-      standings: ((standings || []) as Array<{ display_name: string; points: number; today_points: number }>).map((member, index) => ({
-        email: `${league.id}-${index}`,
-        name: member.display_name,
-        points: member.points,
-        today: member.today_points,
-      })),
-    } satisfies League;
-  }));
-  return leagues;
-}
-
-function makeCode(name: string) {
-  const clean = name.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 3) || "CI";
-  return `${clean}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
-}
-
-function hash(input: string) {
-  let value = 0;
-  for (let i = 0; i < input.length; i += 1) value = (value * 31 + input.charCodeAt(i)) >>> 0;
-  return value;
-}
-
-function todayKey() {
-  return new Date().toISOString().slice(0, 10);
-}
-
-function dailyLeagueGames(code: string) {
-  const start = hash(`${todayKey()}-${code}`) % DAILY_GAMES.length;
-  const second = (start + 2 + (hash(code) % (DAILY_GAMES.length - 1))) % DAILY_GAMES.length;
-  return [DAILY_GAMES[start], DAILY_GAMES[second === start ? (second + 1) % DAILY_GAMES.length : second]];
-}
+import { League, LocalProfile, makeCode, profileName, readLeagues, readProfile, readRemoteLeagues, readRemoteProfile, writeLeagues } from "@/lib/leagues";
 
 export default function LeaguesPage() {
   const { t } = useLanguage();
+  const router = useRouter();
   const [profile, setProfile] = useState<LocalProfile | null>(null);
   const [leagueName, setLeagueName] = useState("");
   const [joinCode, setJoinCode] = useState("");
   const [leagues, setLeagues] = useState<League[]>([]);
-  const [activeCode, setActiveCode] = useState("");
-  const [leagueView, setLeagueView] = useState<"home" | "games" | "standings" | "stats">("home");
-  const [copied, setCopied] = useState(false);
   const [leagueMessage, setLeagueMessage] = useState("");
 
   useEffect(() => {
-    const syncProfile = async () => {
+    const sync = async () => {
       const remote = await readRemoteProfile();
       setProfile(remote || readProfile());
-      if (remote) localStorage.setItem(PROFILE_KEY, JSON.stringify(remote));
-    };
-    syncProfile();
-    window.addEventListener("court-inside-profile-updated", syncProfile);
-    window.addEventListener("focus", syncProfile);
-    const loadLeagues = async () => {
+      if (remote) localStorage.setItem("court-inside-profile-v1", JSON.stringify(remote));
       const remoteLeagues = await readRemoteLeagues();
-      const saved = remoteLeagues.length ? remoteLeagues : readLeagues();
-      setLeagues(saved);
-      setActiveCode(saved[0]?.code || "");
+      setLeagues(remoteLeagues.length ? remoteLeagues : readLeagues());
     };
-    loadLeagues();
-    const params = new URLSearchParams(window.location.search);
-    const invite = params.get("join");
+    sync();
+    window.addEventListener("court-inside-profile-updated", sync);
+    window.addEventListener("focus", sync);
+    const invite = new URLSearchParams(window.location.search).get("join");
     if (invite) setJoinCode(invite.toUpperCase());
     return () => {
-      window.removeEventListener("court-inside-profile-updated", syncProfile);
-      window.removeEventListener("focus", syncProfile);
+      window.removeEventListener("court-inside-profile-updated", sync);
+      window.removeEventListener("focus", sync);
     };
   }, []);
-
-  const activeLeague = leagues.find((league) => league.code === activeCode);
-  const inviteUrl = activeLeague && typeof window !== "undefined" ? `${window.location.origin}/leagues?join=${activeLeague.code}` : "";
-  const dailyGames = useMemo(() => activeLeague ? dailyLeagueGames(activeLeague.code) : [], [activeLeague]);
-
-  const persist = (next: League[], nextActive: string) => {
-    setLeagues(next);
-    setActiveCode(nextActive);
-    writeLeagues(next);
-  };
 
   const profileReady = Boolean(profile?.email);
   const getProfileForAction = async () => {
@@ -202,7 +43,7 @@ export default function LeaguesPage() {
     const local = remote || profile || readProfile();
     if (remote) {
       setProfile(remote);
-      localStorage.setItem(PROFILE_KEY, JSON.stringify(remote));
+      localStorage.setItem("court-inside-profile-v1", JSON.stringify(remote));
     }
     return local;
   };
@@ -210,127 +51,67 @@ export default function LeaguesPage() {
   const createLeague = async (event: FormEvent) => {
     event.preventDefault();
     setLeagueMessage("");
-    if (!leagueName.trim()) {
-      setLeagueMessage("Pon un nombre para la liga.");
-      return;
-    }
+    if (!leagueName.trim()) return setLeagueMessage("Pon un nombre para la liga.");
     const actionProfile = await getProfileForAction();
-    if (!actionProfile?.email) {
-      setLeagueMessage("Inicia sesión desde el icono de perfil para crear una liga.");
-      return;
-    }
+    if (!actionProfile?.email) return setLeagueMessage("Inicia sesión desde el icono de perfil para crear una liga.");
     const code = makeCode(leagueName);
+
     if (isSupabaseConfigured && supabase) {
       const { data: userData } = await supabase.auth.getUser();
-      if (!userData.user) {
-        setLeagueMessage("Tu sesión no está activa. Inicia sesión de nuevo desde el perfil.");
-        return;
-      }
+      if (!userData.user) return setLeagueMessage("Tu sesión no está activa. Inicia sesión de nuevo desde el perfil.");
       const { data: created, error } = await supabase
         .from("leagues")
         .insert({ code, name: leagueName.trim(), owner_id: userData.user.id })
         .select("*")
         .single();
-      if (error || !created) {
-        setLeagueMessage(error?.message || "No se pudo crear la liga.");
-        return;
-      }
+      if (error || !created) return setLeagueMessage(error?.message || "No se pudo crear la liga.");
       const { error: memberError } = await supabase.from("league_members").insert({
         league_id: created.id,
         user_id: userData.user.id,
         display_name: profileName(actionProfile),
       });
-      if (memberError) setLeagueMessage(memberError.message);
-      const remoteLeagues = await readRemoteLeagues();
-      persist(remoteLeagues, code);
-      setLeagueName("");
+      if (memberError) return setLeagueMessage(memberError.message);
+      router.push(`/leagues/${code}`);
       return;
     }
-    const league: League = {
+
+    const next: League = {
       code,
       name: leagueName.trim(),
-      ownerEmail: actionProfile.email.trim(),
+      ownerEmail: actionProfile.email,
       createdAt: new Date().toISOString(),
-      standings: [{ email: actionProfile.email.trim(), name: profileName(actionProfile), points: 0, today: 0 }],
+      standings: [{ email: actionProfile.email, name: profileName(actionProfile), points: 0, today: 0 }],
     };
-    persist([league, ...leagues], code);
-    setLeagueName("");
+    writeLeagues([next, ...leagues]);
+    router.push(`/leagues/${code}`);
   };
 
   const joinLeague = async (event: FormEvent) => {
     event.preventDefault();
     setLeagueMessage("");
-    if (!joinCode.trim()) {
-      setLeagueMessage("Pega un código de liga.");
-      return;
-    }
+    if (!joinCode.trim()) return setLeagueMessage("Pega un código de liga.");
     const actionProfile = await getProfileForAction();
-    if (!actionProfile?.email) {
-      setLeagueMessage("Inicia sesión desde el icono de perfil para unirte a una liga.");
-      return;
-    }
+    if (!actionProfile?.email) return setLeagueMessage("Inicia sesión desde el icono de perfil para unirte a una liga.");
     const code = joinCode.trim().toUpperCase();
+
     if (isSupabaseConfigured && supabase) {
       const { error } = await supabase.rpc("join_league_by_code", {
         join_code: code,
         member_name: profileName(actionProfile),
       });
-      if (!error) {
-        const remoteLeagues = await readRemoteLeagues();
-        persist(remoteLeagues, code);
-        setJoinCode("");
-      } else {
-        setLeagueMessage(error.message);
-      }
+      if (error) return setLeagueMessage(error.message);
+      router.push(`/leagues/${code}`);
       return;
     }
+
     const existing = leagues.find((league) => league.code === code);
-    const nextLeague = existing || {
-      code,
-      name: `Liga ${code}`,
-      ownerEmail: "",
-      createdAt: new Date().toISOString(),
-      standings: [],
-    };
-    const standings = nextLeague.standings.some((row) => row.email === actionProfile.email.trim())
+    const nextLeague = existing || { code, name: `Liga ${code}`, ownerEmail: "", createdAt: new Date().toISOString(), standings: [] };
+    const standings = nextLeague.standings.some((row) => row.email === actionProfile.email)
       ? nextLeague.standings
-      : [...nextLeague.standings, { email: actionProfile.email.trim(), name: profileName(actionProfile), points: 0, today: 0 }];
-    const updated = { ...nextLeague, standings };
-    const next = existing ? leagues.map((league) => league.code === code ? updated : league) : [updated, ...leagues];
-    persist(next, code);
-    setJoinCode("");
+      : [...nextLeague.standings, { email: actionProfile.email, name: profileName(actionProfile), points: 0, today: 0 }];
+    writeLeagues(existing ? leagues.map((league) => league.code === code ? { ...nextLeague, standings } : league) : [{ ...nextLeague, standings }, ...leagues]);
+    router.push(`/leagues/${code}`);
   };
-
-  const addDemoPoints = async () => {
-    if (!activeLeague || !profileReady || !profile) return;
-    const earned = dailyGames.reduce((sum, game) => sum + Math.round(game.points / 2), 0);
-    if (isSupabaseConfigured && supabase && activeLeague.id) {
-      const { data: userData } = await supabase.auth.getUser();
-      if (!userData.user) return;
-      await supabase
-        .from("league_members")
-        .update({ points: earned, today_points: earned })
-        .eq("league_id", activeLeague.id)
-        .eq("user_id", userData.user.id);
-      const remoteLeagues = await readRemoteLeagues();
-      persist(remoteLeagues, activeLeague.code);
-      return;
-    }
-    const next = leagues.map((league) => {
-      if (league.code !== activeLeague.code) return league;
-      const standings = league.standings.map((row) => row.email === profile.email.trim() ? { ...row, points: row.points + earned, today: earned } : row);
-      return { ...league, standings };
-    });
-    persist(next, activeLeague.code);
-  };
-
-  const copyInvite = async () => {
-    if (!inviteUrl) return;
-    await navigator.clipboard?.writeText(inviteUrl);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1400);
-  };
-  const myStanding = activeLeague?.standings.find((row) => profile?.email && row.email === profile.email) || activeLeague?.standings[0];
 
   return (
     <main className="home-shell leagues-shell">
@@ -347,7 +128,7 @@ export default function LeaguesPage() {
 
       <header className="league-section-heading">
         <div><span>{t("courtInsideLeagues")}</span><h2>{t("competeGroup")}</h2></div>
-        <p>Crea una liga, comparte el enlace y compite con 2 minijuegos aleatorios cada día.</p>
+        <p>Crea una liga, comparte el enlace y entra en su propia pantalla.</p>
       </header>
 
       <section className="league-dashboard">
@@ -379,75 +160,15 @@ export default function LeaguesPage() {
             <span>MIS LIGAS</span>
             <div>
               {leagues.map((league) => (
-                <button key={league.code} type="button" className={league.code === activeCode ? "active" : ""} onClick={() => { setActiveCode(league.code); setLeagueView("home"); }}>
+                <Link key={league.code} href={`/leagues/${league.code}`}>
                   <b>{league.name}</b>
                   <small>{league.code}</small>
                   <i>{league.standings.length} jugadores</i>
-                </button>
+                </Link>
               ))}
             </div>
           </section>
-        ) : null}
-
-        {activeLeague ? (
-          <section className="league-app">
-            <header>
-              <button type="button" onClick={() => setActiveCode("")}>← LIGAS</button>
-              <div>
-                <span>LIGA ACTIVA</span>
-                <h2>{activeLeague.name}</h2>
-                <p>{activeLeague.code}</p>
-              </div>
-              <button type="button" onClick={copyInvite}>{copied ? "COPIADO" : "COPIAR ENLACE"}</button>
-            </header>
-            <nav className="league-tabs">
-              <button className={leagueView === "home" ? "active" : ""} type="button" onClick={() => setLeagueView("home")}>RESUMEN</button>
-              <button className={leagueView === "games" ? "active" : ""} type="button" onClick={() => setLeagueView("games")}>JUEGOS DE HOY</button>
-              <button className={leagueView === "standings" ? "active" : ""} type="button" onClick={() => setLeagueView("standings")}>CLASIFICACIÓN</button>
-              <button className={leagueView === "stats" ? "active" : ""} type="button" onClick={() => setLeagueView("stats")}>TUS STATS</button>
-            </nav>
-
-            {leagueView === "home" ? (
-              <div className="league-overview">
-                <article><span>HOY</span><b>{dailyGames.length}</b><p>minijuegos activos</p></article>
-                <article><span>JUGADORES</span><b>{activeLeague.standings.length}</b><p>en la liga</p></article>
-                <article><span>TÚ</span><b>{myStanding?.points || 0}</b><p>puntos totales</p></article>
-              </div>
-            ) : null}
-
-            {leagueView === "games" ? (
-              <section className="league-games-grid">
-                {dailyGames.map((game) => (
-                  <Link key={game.id} href={game.href} className="league-game-card">
-                    <span>{game.points} PTS MAX</span>
-                    <b>{game.name}</b>
-                    <small>JUGAR →</small>
-                  </Link>
-                ))}
-                <button type="button" onClick={addDemoPoints}>SIMULAR PUNTOS DE HOY</button>
-              </section>
-            ) : null}
-
-            {leagueView === "standings" ? (
-              <article className="league-table full">
-                <span>CLASIFICACIÓN</span>
-                {[...activeLeague.standings].sort((a, b) => b.points - a.points).map((row, index) => (
-                  <div key={row.email}><b>{index + 1}</b><strong>{row.name}</strong><small>{row.today} hoy</small><span>{row.points}</span></div>
-                ))}
-              </article>
-            ) : null}
-
-            {leagueView === "stats" ? (
-              <section className="league-stats-panel">
-                <article><span>PUNTOS</span><b>{myStanding?.points || 0}</b></article>
-                <article><span>HOY</span><b>{myStanding?.today || 0}</b></article>
-                <article><span>POSICIÓN</span><b>{Math.max(1, [...activeLeague.standings].sort((a, b) => b.points - a.points).findIndex((row) => row.email === myStanding?.email) + 1)}</b></article>
-              </section>
-            ) : null}
-          </section>
-        ) : !leagues.length ? (
-          <p className="league-empty">Crea o únete a una liga para ver retos diarios y clasificación.</p>
-        ) : null}
+        ) : <p className="league-empty">Crea o únete a una liga para verla aquí.</p>}
       </section>
       <SiteFooter />
     </main>
