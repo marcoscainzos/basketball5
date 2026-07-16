@@ -7,7 +7,6 @@ export default function AboutPage() {
         kicker: "COURT INSIDE",
         title: "Sobre el proyecto",
         intro: "Court Inside es una web independiente de minijuegos diarios de baloncesto: retos rápidos, visuales y pensados para medir memoria NBA sin perder el flow.",
-        badge: "Un gimnasio diario para enfermos sanos del basket.",
         layout: "accordion",
         sections: [
           {
@@ -28,7 +27,6 @@ export default function AboutPage() {
         kicker: "COURT INSIDE",
         title: "About the project",
         intro: "Court Inside is an independent daily basketball games site: quick, visual challenges built for NBA memory without killing the flow.",
-        badge: "A daily gym for beautifully obsessed basketball fans.",
         layout: "accordion",
         sections: [
           {
