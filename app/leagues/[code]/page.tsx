@@ -17,12 +17,14 @@ export default function LeagueDetailPage() {
   const [view, setView] = useState<"home" | "games" | "standings" | "stats">("home");
   const [copied, setCopied] = useState(false);
   const [message, setMessage] = useState("");
+  const [checked, setChecked] = useState(false);
 
   const dailyGames = useMemo(() => league ? dailyLeagueGames(league.code) : [], [league]);
   const inviteUrl = typeof window !== "undefined" ? `${window.location.origin}/leagues?join=${code}` : "";
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`Únete a mi liga de Court Inside: ${inviteUrl}`)}`;
 
   const load = async () => {
+    setChecked(false);
     const remoteProfile = await readRemoteProfile();
     const nextProfile = remoteProfile || readProfile();
     setProfile(nextProfile);
@@ -30,6 +32,7 @@ export default function LeagueDetailPage() {
     const all = remoteLeagues.length ? remoteLeagues : readLeagues();
     const found = findLeagueByCode(all, code);
     setLeague(found || null);
+    setChecked(true);
   };
 
   useEffect(() => {
@@ -41,6 +44,14 @@ export default function LeagueDetailPage() {
       window.removeEventListener("court-inside-profile-updated", load);
     };
   }, [code]);
+
+  useEffect(() => {
+    if (!checked || league) return;
+    const timer = window.setTimeout(() => {
+      window.location.replace(`/leagues?join=${encodeURIComponent(code)}`);
+    }, 650);
+    return () => window.clearTimeout(timer);
+  }, [checked, league, code]);
 
   const copyInvite = async () => {
     await navigator.clipboard?.writeText(inviteUrl);
@@ -86,9 +97,8 @@ export default function LeagueDetailPage() {
       {!league ? (
         <section className="league-detail-empty">
           <span>COURT INSIDE LEAGUES</span>
-          <h1>{code}</h1>
-          <p>No estás dentro de esta liga todavía o no existe.</p>
-          <Link href={`/leagues?join=${code}`}>UNIRME A ESTA LIGA →</Link>
+          <h1>ENTRANDO</h1>
+          <p>Estamos preparando tu invitación a la liga.</p>
         </section>
       ) : (
         <section className="league-app league-app-page">
