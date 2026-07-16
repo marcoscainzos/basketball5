@@ -1412,15 +1412,26 @@ body { font-family:Arial,Helvetica,sans-serif; }
 .league-action form label {
   display:block;
   margin-bottom:8px;
+  min-height:10px;
   line-height:1;
 }
 .league-action form>div {
   height:46px;
+  min-height:46px;
   display:grid;
   grid-template-columns:1fr auto;
   border-radius:9px;
   overflow:hidden;
   background:white;
+}
+.league-action.create-league form,
+.league-action.join-league form {
+  width:100%;
+}
+.league-action.create-league form>div,
+.league-action.join-league form>div {
+  height:46px;
+  min-height:46px;
 }
 .league-action form input {
   min-width:0;

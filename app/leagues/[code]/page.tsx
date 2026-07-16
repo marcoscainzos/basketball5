@@ -79,7 +79,7 @@ export default function LeagueDetailPage() {
       <nav className="site-nav daily-game-nav">
         <Link href="/leagues" className="back-link">← LIGAS</Link>
         <SiteBrand />
-        <span className="live-reset">{code}</span>
+        <span className="live-reset">LIGA</span>
       </nav>
 
       {!league ? (
