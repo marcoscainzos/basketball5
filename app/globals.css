@@ -1693,6 +1693,27 @@ body { font-family:Arial,Helvetica,sans-serif; }
   text-align:center;
   text-transform:uppercase;
 }
+.league-invite-auth {
+  margin:-4px 0 16px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+.league-invite-auth button {
+  min-height:42px;
+  padding:0 18px;
+  border:1px solid #ffffff35;
+  border-radius:11px;
+  background:#ffffff0c;
+  color:white;
+  font:900 9px Arial;
+  letter-spacing:.12em;
+  cursor:pointer;
+}
+.league-invite-auth button:first-child {
+  border-color:#d20a2e;
+  background:#d20a2e;
+}
 @media(max-width:760px){
   .cookie-consent{right:12px;bottom:12px;width:calc(100vw - 24px)}
   .cookie-actions{grid-template-columns:1fr}
@@ -1705,4 +1726,5 @@ body { font-family:Arial,Helvetica,sans-serif; }
   .league-app>header{display:grid;align-items:start}
   .league-tabs{grid-template-columns:1fr 1fr}
   .league-table div{grid-template-columns:25px 1fr 55px 45px}
+  .league-invite-auth{display:grid}
 }

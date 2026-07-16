@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { SiteBrand } from "@/components/SiteBrand";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -13,8 +13,10 @@ export default function LeaguesPage() {
   const [profile, setProfile] = useState<LocalProfile | null>(null);
   const [leagueName, setLeagueName] = useState("");
   const [joinCode, setJoinCode] = useState("");
+  const [inviteCode, setInviteCode] = useState("");
   const [leagues, setLeagues] = useState<League[]>([]);
   const [leagueMessage, setLeagueMessage] = useState("");
+  const autoJoinTried = useRef(false);
 
   useEffect(() => {
     const sync = async () => {
@@ -28,7 +30,12 @@ export default function LeaguesPage() {
     window.addEventListener("court-inside-profile-updated", sync);
     window.addEventListener("focus", sync);
     const invite = new URLSearchParams(window.location.search).get("join");
-    if (invite) setJoinCode(invite.toUpperCase());
+    if (invite) {
+      const cleanInvite = invite.toUpperCase();
+      setInviteCode(cleanInvite);
+      setJoinCode(cleanInvite);
+      setLeagueMessage("Has recibido una invitación. Regístrate o inicia sesión y te uniremos a la liga.");
+    }
     return () => {
       window.removeEventListener("court-inside-profile-updated", sync);
       window.removeEventListener("focus", sync);
@@ -45,6 +52,42 @@ export default function LeaguesPage() {
     }
     return local;
   };
+
+  const joinLeagueWithCode = async (code: string, actionProfile: LocalProfile) => {
+    if (isSupabaseConfigured && supabase) {
+      const { error } = await supabase.rpc("join_league_by_code", {
+        join_code: code,
+        member_name: profileName(actionProfile),
+      });
+      if (error) {
+        setLeagueMessage(error.message);
+        return false;
+      }
+      window.location.assign(`/leagues/${code}`);
+      return true;
+    }
+
+    const existing = leagues.find((league) => league.code === code);
+    const nextLeague = existing || { code, name: `Liga ${code}`, ownerEmail: "", createdAt: new Date().toISOString(), standings: [] };
+    const standings = nextLeague.standings.some((row) => row.email === actionProfile.email)
+      ? nextLeague.standings
+      : [...nextLeague.standings, { email: actionProfile.email, name: profileName(actionProfile), points: 0, today: 0 }];
+    writeLeagues(existing ? leagues.map((league) => league.code === code ? { ...nextLeague, standings } : league) : [{ ...nextLeague, standings }, ...leagues]);
+    window.location.assign(`/leagues/${code}`);
+    return true;
+  };
+
+  useEffect(() => {
+    if (!inviteCode || !profileReady || autoJoinTried.current) return;
+    autoJoinTried.current = true;
+    const run = async () => {
+      const actionProfile = await getProfileForAction();
+      if (!actionProfile?.email) return;
+      setLeagueMessage("Uniéndote a la liga...");
+      await joinLeagueWithCode(inviteCode, actionProfile);
+    };
+    run();
+  }, [inviteCode, profileReady]);
 
   const createLeague = async (event: FormEvent) => {
     event.preventDefault();
@@ -91,24 +134,11 @@ export default function LeaguesPage() {
     const actionProfile = await getProfileForAction();
     if (!actionProfile?.email) return setLeagueMessage("Inicia sesión desde el icono de perfil para unirte a una liga.");
     const code = joinCode.trim().toUpperCase();
+    await joinLeagueWithCode(code, actionProfile);
+  };
 
-    if (isSupabaseConfigured && supabase) {
-      const { error } = await supabase.rpc("join_league_by_code", {
-        join_code: code,
-        member_name: profileName(actionProfile),
-      });
-      if (error) return setLeagueMessage(error.message);
-      window.location.assign(`/leagues/${code}`);
-      return;
-    }
-
-    const existing = leagues.find((league) => league.code === code);
-    const nextLeague = existing || { code, name: `Liga ${code}`, ownerEmail: "", createdAt: new Date().toISOString(), standings: [] };
-    const standings = nextLeague.standings.some((row) => row.email === actionProfile.email)
-      ? nextLeague.standings
-      : [...nextLeague.standings, { email: actionProfile.email, name: profileName(actionProfile), points: 0, today: 0 }];
-    writeLeagues(existing ? leagues.map((league) => league.code === code ? { ...nextLeague, standings } : league) : [{ ...nextLeague, standings }, ...leagues]);
-    window.location.assign(`/leagues/${code}`);
+  const openAuth = (mode: "register" | "login") => {
+    window.dispatchEvent(new CustomEvent("court-inside-open-auth", { detail: mode }));
   };
 
   return (
@@ -132,6 +162,12 @@ export default function LeaguesPage() {
       <section className="league-dashboard">
         {!profileReady ? <p className="league-login-note">Para crear o unirte a una liga, regístrate o inicia sesión desde el icono de perfil de arriba.</p> : null}
         {leagueMessage ? <p className="league-login-note">{leagueMessage}</p> : null}
+        {!profileReady && inviteCode ? (
+          <div className="league-invite-auth">
+            <button type="button" onClick={() => openAuth("register")}>REGISTRARME</button>
+            <button type="button" onClick={() => openAuth("login")}>INICIAR SESIÓN</button>
+          </div>
+        ) : null}
 
         <div className="league-actions">
           <article className="league-action create-league">

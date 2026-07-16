@@ -356,6 +356,15 @@ export function ProfileMenu() {
     setView(nextView);
     setOpen(false);
   };
+  useEffect(() => {
+    const openRequestedForm = (event: Event) => {
+      const detail = (event as CustomEvent<"register" | "login">).detail;
+      openForm(detail === "login" ? "login" : "register");
+    };
+    window.addEventListener("court-inside-open-auth", openRequestedForm);
+    return () => window.removeEventListener("court-inside-open-auth", openRequestedForm);
+  }, [profile]);
+
   const closeForm = () => {
     setView("home");
     refresh();
