@@ -1669,11 +1669,52 @@ body { font-family:Arial,Helvetica,sans-serif; }
   transition:.18s ease;
 }
 .league-game-card:nth-child(2) { background:linear-gradient(145deg,#d20a2e,#071326); }
-.league-game-card:hover { transform:translateY(-6px); border-color:white; box-shadow:0 18px 40px #0008; }
+.league-game-card:hover { border-color:white; box-shadow:0 18px 40px #0008; }
 .league-game-card span { color:#d9e6fb; font:900 8px Arial; letter-spacing:.14em; }
 .league-game-card b { margin-top:10px; font:900 42px/.86 Arial; letter-spacing:-.06em; }
-.league-game-card small { margin-top:12px; color:#fff; font:900 9px Arial; letter-spacing:.13em; }
-.league-games-grid>button { grid-column:1/-1; width:100%; background:#d20a2e; border-color:#d20a2e; }
+.league-mode-list {
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+.league-mode-option {
+  min-height:38px;
+  padding:0 10px;
+  border:1px solid #ffffff38;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  color:white;
+  background:#ffffff10;
+  font:900 8px Arial;
+  letter-spacing:.09em;
+  text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
+  transition:.18s ease;
+}
+.league-mode-option:hover {
+  border-color:white;
+  background:#ffffff22;
+}
+.league-mode-option.selected {
+  border-color:#65a8ff;
+  background:#65a8ff;
+  color:#061326;
+}
+.league-mode-option.locked {
+  opacity:.38;
+  cursor:not-allowed;
+  filter:grayscale(.8);
+}
+.league-mode-option.single {
+  width:max-content;
+  min-width:112px;
+  margin-top:16px;
+  background:#ffffff;
+  color:#071326;
+}
 .league-table {
   margin-top:15px;
   padding:16px;

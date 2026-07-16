@@ -4,12 +4,9 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { SiteBrand } from "@/components/SiteBrand";
-import { useLanguage } from "@/components/LanguageProvider";
-import { isSupabaseConfigured, supabase } from "@/lib/supabaseClient";
-import { dailyLeagueGames, findLeagueByCode, League, LocalProfile, profileName, readLeagues, readProfile, readRemoteLeagues, readRemoteProfile, writeLeagues } from "@/lib/leagues";
+import { dailyLeagueGames, findLeagueByCode, League, leagueTodayKey, LocalProfile, profileName, readLeagues, readProfile, readRemoteLeagues, readRemoteProfile } from "@/lib/leagues";
 
 export default function LeagueDetailPage() {
-  const { t } = useLanguage();
   const params = useParams<{ code: string }>();
   const code = String(params.code || "").toUpperCase();
   const [profile, setProfile] = useState<LocalProfile | null>(null);
@@ -18,10 +15,13 @@ export default function LeagueDetailPage() {
   const [copied, setCopied] = useState(false);
   const [message, setMessage] = useState("");
   const [checked, setChecked] = useState(false);
+  const [modeChoices, setModeChoices] = useState<Record<string, string>>({});
 
   const dailyGames = useMemo(() => league ? dailyLeagueGames(league.code) : [], [league]);
   const inviteUrl = typeof window !== "undefined" ? `${window.location.origin}/leagues?join=${code}` : "";
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`Únete a mi liga de Court Inside: ${inviteUrl}`)}`;
+  const modeChoiceKey = (gameId: string) => `court-inside-league-mode-${leagueTodayKey()}-${code}-${gameId}`;
+  const leagueHref = (href: string, gameId: string, modeId?: string) => `${href}?league=${encodeURIComponent(code)}&leagueGame=${encodeURIComponent(gameId)}${modeId ? `&leagueMode=${encodeURIComponent(modeId)}` : ""}`;
 
   const load = async () => {
     setChecked(false);
@@ -46,6 +46,15 @@ export default function LeagueDetailPage() {
   }, [code]);
 
   useEffect(() => {
+    const nextChoices: Record<string, string> = {};
+    dailyGames.forEach((game) => {
+      const selected = localStorage.getItem(modeChoiceKey(game.id));
+      if (selected) nextChoices[game.id] = selected;
+    });
+    setModeChoices(nextChoices);
+  }, [dailyGames, code]);
+
+  useEffect(() => {
     if (!checked || league) return;
     window.location.replace(`/leagues?join=${encodeURIComponent(code)}`);
   }, [checked, league, code]);
@@ -56,29 +65,10 @@ export default function LeagueDetailPage() {
     setTimeout(() => setCopied(false), 1400);
   };
 
-  const addDemoPoints = async () => {
-    if (!league || !profile) return;
-    const earned = dailyGames.reduce((sum, game) => sum + Math.round(game.points / 2), 0);
-    if (isSupabaseConfigured && supabase && league.id) {
-      const { data: userData } = await supabase.auth.getUser();
-      if (!userData.user) return setMessage("Inicia sesión para sumar puntos.");
-      const current = league.standings.find((row) => row.email === userData.user.id);
-      const { error } = await supabase
-        .from("league_members")
-        .update({ points: (current?.points || 0) + earned, today_points: earned })
-        .eq("league_id", league.id)
-        .eq("user_id", userData.user.id);
-      if (error) return setMessage(error.message);
-      await load();
-      return;
-    }
-    const leagues = readLeagues();
-    const next = leagues.map((item) => item.code === league.code ? {
-      ...item,
-      standings: item.standings.map((row) => row.email === profile.email ? { ...row, points: row.points + earned, today: earned } : row),
-    } : item);
-    writeLeagues(next);
-    setLeague(findLeagueByCode(next, league.code) || league);
+  const chooseLeagueMode = (gameId: string, modeId: string) => {
+    if (modeChoices[gameId] && modeChoices[gameId] !== modeId) return;
+    localStorage.setItem(modeChoiceKey(gameId), modeId);
+    setModeChoices((current) => ({ ...current, [gameId]: modeId }));
   };
 
   const myStanding = league?.standings.find((row) => profile?.email && (row.email === profile.email || row.name === profileName(profile))) || league?.standings[0];
@@ -121,14 +111,38 @@ export default function LeagueDetailPage() {
 
           {view === "games" ? (
             <section className="league-games-grid">
-              {dailyGames.map((game) => (
-                <Link key={game.id} href={game.href} className="league-game-card">
-                  <span>{game.points} PTS MAX</span>
-                  <b>{game.name}</b>
-                  <small>JUGAR →</small>
-                </Link>
-              ))}
-              <button type="button" onClick={addDemoPoints}>SIMULAR PUNTOS DE HOY</button>
+              {dailyGames.map((game) => {
+                const selectedMode = modeChoices[game.id];
+                const hasModes = Boolean(game.modes?.length);
+                return (
+                  <article key={game.id} className="league-game-card">
+                    <span>{game.points} PTS MAX · 1 INTENTO</span>
+                    <b>{game.name}</b>
+                    {hasModes ? (
+                      <div className="league-mode-list">
+                        {game.modes!.map((mode) => {
+                          const locked = Boolean(selectedMode && selectedMode !== mode.id);
+                          const selected = selectedMode === mode.id;
+                          return locked ? (
+                            <button key={mode.id} className="league-mode-option locked" type="button" disabled>{mode.label}</button>
+                          ) : (
+                            <Link
+                              key={mode.id}
+                              className={`league-mode-option ${selected ? "selected" : ""}`}
+                              href={leagueHref(mode.href || game.href, game.id, mode.id)}
+                              onClick={() => chooseLeagueMode(game.id, mode.id)}
+                            >
+                              {selected ? `${mode.label} · elegido` : mode.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <Link className="league-mode-option single" href={leagueHref(game.href, game.id)} onClick={() => chooseLeagueMode(game.id, "single")}>JUGAR →</Link>
+                    )}
+                  </article>
+                );
+              })}
             </section>
           ) : null}
 

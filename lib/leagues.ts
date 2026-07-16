@@ -24,11 +24,47 @@ export type LocalProfile = {
 
 export const STORAGE_KEY = "court-inside-leagues-v1";
 export const PROFILE_KEY = "court-inside-profile-v1";
-export const DAILY_GAMES = [
-  { id: "1vs1", name: "1VS1", href: "/1vs1", points: 120 },
+export type LeagueDailyGame = {
+  id: string;
+  name: string;
+  href: string;
+  points: number;
+  modes?: Array<{ id: string; label: string; href?: string }>;
+};
+export const DAILY_GAMES: LeagueDailyGame[] = [
+  {
+    id: "1vs1",
+    name: "1VS1",
+    href: "/1vs1",
+    points: 120,
+    modes: [
+      { id: "historical", label: "Histórico" },
+      { id: "current_easy", label: "Actual fácil" },
+      { id: "current_medium", label: "Actual medio" },
+      { id: "current_hard", label: "Actual difícil" },
+    ],
+  },
   { id: "top5", name: "TOP 5", href: "/top5", points: 150 },
-  { id: "who", name: "WHO AM I?", href: "/who-am-i", points: 130 },
-  { id: "tic", name: "3 EN RAYA", href: "/tres-en-raya", points: 110 },
+  {
+    id: "who",
+    name: "WHO AM I?",
+    href: "/who-am-i",
+    points: 130,
+    modes: [
+      { id: "teammates", label: "Compañeros" },
+      { id: "journey", label: "Trayectoria" },
+    ],
+  },
+  {
+    id: "tic",
+    name: "3 EN RAYA",
+    href: "/tres-en-raya",
+    points: 110,
+    modes: [
+      { id: "solo", label: "Individual" },
+      { id: "versus", label: "Competitivo" },
+    ],
+  },
   { id: "stat", name: "STAT LINE", href: "/stat-line", points: 140 },
   { id: "six", name: "PYRAMID", href: "/six-order", points: 125 },
 ];
@@ -139,12 +175,12 @@ function hash(input: string) {
   return value;
 }
 
-function todayKey() {
+export function leagueTodayKey() {
   return new Date().toISOString().slice(0, 10);
 }
 
 export function dailyLeagueGames(code: string) {
-  const start = hash(`${todayKey()}-${code}`) % DAILY_GAMES.length;
+  const start = hash(`${leagueTodayKey()}-${code}`) % DAILY_GAMES.length;
   const second = (start + 2 + (hash(code) % (DAILY_GAMES.length - 1))) % DAILY_GAMES.length;
   return [DAILY_GAMES[start], DAILY_GAMES[second === start ? (second + 1) % DAILY_GAMES.length : second]];
 }
