@@ -20,6 +20,7 @@ export default function LeagueDetailPage() {
 
   const dailyGames = useMemo(() => league ? dailyLeagueGames(league.code) : [], [league]);
   const inviteUrl = typeof window !== "undefined" ? `${window.location.origin}/leagues?join=${code}` : "";
+  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`Únete a mi liga de Court Inside: ${inviteUrl}`)}`;
 
   const load = async () => {
     const remoteProfile = await readRemoteProfile();
@@ -96,7 +97,10 @@ export default function LeagueDetailPage() {
               <span>LIGA</span>
               <h2>{league.name}</h2>
             </div>
-            <button type="button" onClick={copyInvite}>{copied ? "COPIADO" : "COPIAR ENLACE"}</button>
+            <div className="league-invite-actions">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">WHATSAPP</a>
+              <button type="button" onClick={copyInvite}>{copied ? "COPIADO" : "COPIAR ENLACE"}</button>
+            </div>
           </header>
           {message ? <p className="league-login-note">{message}</p> : null}
           <nav className="league-tabs">

@@ -24,6 +24,7 @@ type ProfileStats = {
 
 const PROFILE_KEY = "court-inside-profile-v1";
 const PROFILE_CREATED_KEY = "court-inside-profile-created";
+const PENDING_INVITE_KEY = "court-inside-pending-league-invite";
 
 function getTodayKey() {
   return new Date().toISOString().slice(0, 10);
@@ -83,6 +84,13 @@ function readStats(): ProfileStats {
     totalSolved,
     since: new Date(created).toLocaleDateString("es-ES", { day: "2-digit", month: "short", year: "numeric" }),
   };
+}
+
+function redirectToPendingInvite() {
+  const pendingInvite = localStorage.getItem(PENDING_INVITE_KEY);
+  if (!pendingInvite) return false;
+  window.location.assign(`/leagues?join=${encodeURIComponent(pendingInvite)}`);
+  return true;
 }
 
 export function ProfileMenu() {
@@ -277,6 +285,7 @@ export function ProfileMenu() {
       setOpen(false);
       setView("home");
       window.dispatchEvent(new Event("court-inside-profile-updated"));
+      if (redirectToPendingInvite()) return;
       refresh();
       return;
     }
@@ -287,6 +296,7 @@ export function ProfileMenu() {
     setProfile(next);
     setOpen(false);
     setView("home");
+    if (redirectToPendingInvite()) return;
     refresh();
   };
 
@@ -317,6 +327,7 @@ export function ProfileMenu() {
       setView("home");
       setOpen(false);
       window.dispatchEvent(new Event("court-inside-profile-updated"));
+      if (redirectToPendingInvite()) return;
       refresh();
       return;
     }
@@ -328,6 +339,7 @@ export function ProfileMenu() {
     setProfile(saved);
     setView("home");
     setOpen(false);
+    if (redirectToPendingInvite()) return;
     refresh();
   };
   const forgotPassword = async () => {

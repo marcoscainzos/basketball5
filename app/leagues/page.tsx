@@ -8,6 +8,8 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { isSupabaseConfigured, supabase } from "@/lib/supabaseClient";
 import { League, LocalProfile, makeCode, profileName, readLeagues, readProfile, readRemoteLeagues, readRemoteProfile, writeLeagues } from "@/lib/leagues";
 
+const PENDING_INVITE_KEY = "court-inside-pending-league-invite";
+
 export default function LeaguesPage() {
   const { t } = useLanguage();
   const [profile, setProfile] = useState<LocalProfile | null>(null);
@@ -30,8 +32,10 @@ export default function LeaguesPage() {
     window.addEventListener("court-inside-profile-updated", sync);
     window.addEventListener("focus", sync);
     const invite = new URLSearchParams(window.location.search).get("join");
-    if (invite) {
-      const cleanInvite = invite.toUpperCase();
+    const pendingInvite = invite || localStorage.getItem(PENDING_INVITE_KEY);
+    if (pendingInvite) {
+      const cleanInvite = pendingInvite.toUpperCase();
+      localStorage.setItem(PENDING_INVITE_KEY, cleanInvite);
       setInviteCode(cleanInvite);
       setJoinCode(cleanInvite);
       setLeagueMessage("Has recibido una invitación. Regístrate o inicia sesión y te uniremos a la liga.");
@@ -63,6 +67,7 @@ export default function LeaguesPage() {
         setLeagueMessage(error.message);
         return false;
       }
+      localStorage.removeItem(PENDING_INVITE_KEY);
       window.location.assign(`/leagues/${code}`);
       return true;
     }
@@ -73,6 +78,7 @@ export default function LeaguesPage() {
       ? nextLeague.standings
       : [...nextLeague.standings, { email: actionProfile.email, name: profileName(actionProfile), points: 0, today: 0 }];
     writeLeagues(existing ? leagues.map((league) => league.code === code ? { ...nextLeague, standings } : league) : [{ ...nextLeague, standings }, ...leagues]);
+    localStorage.removeItem(PENDING_INVITE_KEY);
     window.location.assign(`/leagues/${code}`);
     return true;
   };
