@@ -3,9 +3,9 @@ import { PlayerSeason, StatKey, players } from "@/data/players";
 export type GameMode = "historical" | "current";
 export type Difficulty = "easy" | "medium" | "hard";
 export const DIFFICULTIES = {
-  easy: { label: "Fácil", min: 6, max: 10 },
-  medium: { label: "Medio", min: 3, max: 5 },
-  hard: { label: "Difícil", min: 0.5, max: 2 },
+  easy: { label: "Fácil", min: 4, max: 7 },
+  medium: { label: "Medio", min: 2, max: 4 },
+  hard: { label: "Difícil", min: 0.2, max: 1.5 },
 } satisfies Record<Difficulty, { label: string; min: number; max: number }>;
 export const GAME_MODES = {
   historical: { label: "Histórico", description: "1974-75 → 2024-25", detail: "Top 20 de cada estadística" },

@@ -37,6 +37,7 @@ export default function StatLineGame() {
   const [query, setQuery] = useState("");
   const [guesses, setGuesses] = useState<string[]>([]);
   const [status, setStatus] = useState<"playing" | "won" | "lost">("playing");
+  const [surrendered, setSurrendered] = useState(false);
   const [message, setMessage] = useState("");
   const [leagueResult, setLeagueResult] = useState<LeagueResult | null>(null);
   useEffect(() => { const update = () => setCountdown(timeLeft()); update(); const timer = setInterval(update, 1000); return () => clearInterval(timer); }, []);
@@ -57,9 +58,9 @@ export default function StatLineGame() {
   useEffect(() => {
     const context = getLeagueContext();
     if (!context || !finished || leagueResult) return;
-    const rawScore = status === "won" ? Math.max(1, hints.length - guesses.length + 1) : 0;
-    recordLeagueResult(context, { rawScore, maxRawScore: hints.length, outcome: status === "won" ? "won" : "lost" }).then(setLeagueResult);
-  }, [finished, status, guesses.length, hints.length, leagueResult]);
+    const rawScore = status === "won" ? Math.max(1, hints.length - guesses.length + 1) : surrendered ? Math.max(0, hints.length - guesses.length - 1) : 0;
+    recordLeagueResult(context, { rawScore, maxRawScore: hints.length, outcome: status === "won" ? "won" : surrendered ? "surrendered" : "lost" }).then(setLeagueResult);
+  }, [finished, status, guesses.length, hints.length, leagueResult, surrendered]);
 
   function submit(name: string) {
     if (!name || finished) return;
@@ -81,6 +82,7 @@ export default function StatLineGame() {
   }
 
   function surrender() {
+    setSurrendered(true);
     setStatus("lost");
     setQuery("");
     setMessage(lang === "es" ? `Era ${challenge.name}.` : `It was ${challenge.name}.`);

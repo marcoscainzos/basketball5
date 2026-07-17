@@ -36,7 +36,7 @@ export const DAILY_GAMES: LeagueDailyGame[] = [
     id: "1vs1",
     name: "1VS1",
     href: "/1vs1",
-    points: 120,
+    points: 10,
     modes: [
       { id: "historical", label: "Histórico" },
       { id: "current_easy", label: "Actual fácil" },
@@ -44,12 +44,12 @@ export const DAILY_GAMES: LeagueDailyGame[] = [
       { id: "current_hard", label: "Actual difícil" },
     ],
   },
-  { id: "top5", name: "TOP 5", href: "/top5", points: 150 },
+  { id: "top5", name: "TOP 5", href: "/top5", points: 5 },
   {
     id: "who",
     name: "WHO AM I?",
     href: "/who-am-i",
-    points: 130,
+    points: 5,
     modes: [
       { id: "teammates", label: "Compañeros" },
       { id: "journey", label: "Trayectoria" },
@@ -59,14 +59,24 @@ export const DAILY_GAMES: LeagueDailyGame[] = [
     id: "tic",
     name: "3 EN RAYA",
     href: "/tres-en-raya",
-    points: 110,
+    points: 9,
     modes: [
       { id: "solo", label: "Individual" },
       { id: "versus", label: "Competitivo" },
     ],
   },
-  { id: "stat", name: "STAT LINE", href: "/stat-line", points: 140 },
-  { id: "six", name: "PYRAMID", href: "/six-order", points: 125 },
+  { id: "stat", name: "STAT LINE", href: "/stat-line", points: 6 },
+  { id: "six", name: "PYRAMID", href: "/six-order", points: 6 },
+  {
+    id: "draft",
+    name: "DRAFT",
+    href: "/draft",
+    points: 5,
+    modes: [
+      { id: "career", label: "Carrera" },
+      { id: "season", label: "Temporadas" },
+    ],
+  },
 ];
 
 export function readLeagues(): League[] {

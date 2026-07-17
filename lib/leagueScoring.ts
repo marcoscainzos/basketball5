@@ -42,15 +42,14 @@ export function readLeagueResult(context: LeagueContext): LeagueResult | null {
   }
 }
 
-function maxPointsFor(gameId: string) {
-  return DAILY_GAMES.find((game) => game.id === gameId)?.points || 100;
+function maxPointsFor(gameId: string, fallback: number) {
+  return DAILY_GAMES.find((game) => game.id === gameId)?.points || fallback;
 }
 
 function calculatePoints(gameId: string, rawScore: number, maxRawScore: number, outcome: LeagueResult["outcome"]) {
-  if (outcome === "lost" || outcome === "surrendered") return 0;
-  const maxPoints = maxPointsFor(gameId);
-  const ratio = maxRawScore > 0 ? Math.max(0, Math.min(1, rawScore / maxRawScore)) : 0;
-  return Math.round(maxPoints * ratio);
+  if (outcome === "lost") return 0;
+  const maxPoints = maxPointsFor(gameId, maxRawScore);
+  return Math.max(0, Math.min(maxPoints, Math.round(rawScore)));
 }
 
 async function addPointsRemote(leagueCode: string, points: number) {
@@ -99,11 +98,12 @@ export async function recordLeagueResult(
   const existing = readLeagueResult(context);
   if (existing) return existing;
   const points = calculatePoints(context.gameId, result.rawScore, result.maxRawScore, result.outcome);
+  const maxPoints = maxPointsFor(context.gameId, result.maxRawScore);
   const record: LeagueResult = {
     ...context,
     dateKey: leagueTodayKey(),
     points,
-    maxPoints: maxPointsFor(context.gameId),
+    maxPoints,
     rawScore: result.rawScore,
     maxRawScore: result.maxRawScore,
     outcome: result.outcome,

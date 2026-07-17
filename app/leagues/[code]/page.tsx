@@ -140,7 +140,7 @@ export default function LeagueDetailPage() {
                 const hasModes = Boolean(game.modes?.length);
                 return (
                   <article key={game.id} className={`league-game-card ${result ? "completed" : ""}`}>
-                    <span>{result ? "COMPLETADO" : `${game.points} PTS MAX · 1 INTENTO`}</span>
+                    <span>{result ? "COMPLETADO" : game.id === "1vs1" ? "1 PT POR ACIERTO · 1 INTENTO" : `${game.points} PTS MAX · 1 INTENTO`}</span>
                     <b>{game.name}</b>
                     {result ? <strong className="league-game-result">+{result.points} PTS</strong> : null}
                     {hasModes ? (

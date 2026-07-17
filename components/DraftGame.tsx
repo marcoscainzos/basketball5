@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { DraftMode, DraftOption, RESTRICTIONS, canAdd, dailyRestriction, estimateWins, optionsFor } from "@/lib/draft";
 import { Lang, useLanguage } from "@/components/LanguageProvider";
 import { SiteBrand } from "@/components/SiteBrand";
+import { getLeagueContext, LeagueResult, recordLeagueResult } from "@/lib/leagueScoring";
 
 function clean(value: string) { return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim(); }
 const COURT_POSITIONS = ["PG", "SG", "SF", "PF", "C"] as const;
@@ -26,6 +27,13 @@ function translateDraftError(error: string | null, lang: Lang) {
   if (error.includes("No cumple")) return "Doesn't meet today's restriction.";
   return error;
 }
+function draftPoints(wins: number) {
+  if (wins >= 75) return 5;
+  if (wins >= 66) return 4;
+  if (wins >= 56) return 3;
+  if (wins >= 46) return 2;
+  return 1;
+}
 
 export default function DraftGame() {
   const { lang, t } = useLanguage();
@@ -36,6 +44,7 @@ export default function DraftGame() {
   const [message, setMessage] = useState("");
   const [ready, setReady] = useState(false);
   const [countdown, setCountdown] = useState("--:--:--");
+  const [leagueResult, setLeagueResult] = useState<LeagueResult | null>(null);
   const rule = useMemo(() => dailyRestriction(), []);
   const options = useMemo(() => mode ? optionsFor(mode) : [], [mode]);
   const suggestions = useMemo(() => {
@@ -52,12 +61,22 @@ export default function DraftGame() {
       const saved = JSON.parse(localStorage.getItem(storageKey) ?? "null") as { mode: DraftMode; lineup: DraftOption[] } | null;
       if (saved?.mode) { setSavedMode(saved.mode); setLineup(saved.lineup ?? []); }
     } catch {}
+    const context = getLeagueContext();
+    if (context?.modeId === "career" || context?.modeId === "season") {
+      setSavedMode(context.modeId);
+      setMode(context.modeId);
+    }
     setReady(true);
   }, [storageKey]);
   useEffect(() => { const update = () => setCountdown(timeLeft()); update(); const timer = setInterval(update, 1000); return () => clearInterval(timer); }, []);
   useEffect(() => {
     if (ready && mode) localStorage.setItem(storageKey, JSON.stringify({ mode, lineup }));
   }, [ready, mode, lineup, storageKey]);
+  useEffect(() => {
+    const context = getLeagueContext();
+    if (!context || wins === null || leagueResult) return;
+    recordLeagueResult(context, { rawScore: draftPoints(wins), maxRawScore: 5, outcome: "completed" }).then(setLeagueResult);
+  }, [wins, leagueResult]);
 
   function choose(player: DraftOption) {
     const error = canAdd(player, lineup, rule);
@@ -87,6 +106,7 @@ export default function DraftGame() {
         </article>; })}
       </div>
       <div className={`draft-panel ${wins !== null ? "draft-completed" : ""}`}>
+        {leagueResult && <div className="league-result-pill"><span>LIGA</span><b>+{leagueResult.points}</b><small>{leagueResult.points}/{leagueResult.maxPoints} PTS</small></div>}
         {wins === null ? <div className="draft-control-row"><div className="draft-search-side"><label htmlFor="draft-search">{t("addYourPlayer")} {lineup.length + 1}{t("playerOrdinalSuffix")}</label><div className="draft-search"><input id="draft-search" value={query} disabled={lineup.length === 5} onChange={(event) => { setQuery(event.target.value); setMessage(""); }} placeholder={mode === "season" ? t("playerOrSeason") : t("typePlayer")}/><span>{lineup.length}/5</span></div>
         {suggestions.length > 0 && <div className="draft-suggestions">{suggestions.map((player) => <button type="button" key={`${player.id}-${player.label}`} onClick={() => choose(player)}><div className="suggestion-photo">{player.imageUrl && <img src={player.imageUrl} alt="" />}</div><span><b>{player.name}</b><small>{mode === "season" ? `${player.season} · ${player.team}` : `${player.position} · ${player.team}`}</small></span><i>＋</i></button>)}</div>}<p className="draft-message">{message}</p></div><aside className="draft-rule-inline"><small>{t("todayRestriction")}</small><b>{restriction.title}</b><p>{restriction.description}</p></aside></div> : <div className="wins-result"><span>{t("estimatedWins")}</span><b>{wins}</b><i>/ 82</i><p>{t("estimatedRecord")} {wins}-{82 - wins}. {t("attemptClosed")}</p><strong>{t("comeTomorrow")}</strong></div>}
       </div>
