@@ -6,6 +6,8 @@ import { PlayerSeason, players } from "@/data/players";
 import { dayKey, hash, shuffleDaily } from "@/lib/daily";
 import { SiteBrand } from "@/components/SiteBrand";
 import { useLanguage } from "@/components/LanguageProvider";
+import { useLeagueGameFrame } from "@/components/LeagueGameFrame";
+import { recordLeagueResult } from "@/lib/leagueScoring";
 
 type Candidate = {
   key: string;
@@ -187,6 +189,10 @@ function dailyChallenge() {
 
 export default function SixOrderGame() {
   const { lang, t } = useLanguage();
+  const leagueFrame = useLeagueGameFrame("PYRAMID");
+  const leagueContext = leagueFrame.context;
+  const leagueResult = leagueFrame.result;
+  const setLeagueResult = leagueFrame.setResult;
   const challenge = useMemo(() => dailyChallenge(), []);
   const correct = useMemo(() => shuffleDaily(challenge.build().sort((a, b) => b.value - a.value || a.name.localeCompare(b.name)).slice(0, 60), `six-order-${challenge.id}`).slice(0, 6).sort((a, b) => b.value - a.value || a.name.localeCompare(b.name)), [challenge]);
   const queue = useMemo(() => shuffleDaily(correct, `six-queue-${challenge.id}`), [correct, challenge.id]);
@@ -202,6 +208,15 @@ export default function SixOrderGame() {
   const complete = slots.every(Boolean);
   const placed = slots.filter(Boolean).length;
   const current = queue[placed];
+
+  useEffect(() => {
+    if (!leagueContext || leagueResult || !checked) return;
+    recordLeagueResult(leagueContext, {
+      rawScore: score,
+      maxRawScore: 6,
+      outcome: "completed",
+    }).then(setLeagueResult);
+  }, [checked, leagueContext, leagueResult, score, setLeagueResult]);
 
   function swapSlots(from: number, to: number) {
     if (from === to) return;
@@ -234,9 +249,18 @@ export default function SixOrderGame() {
     setChecked(false);
   }
 
+  if (leagueFrame.completedPanel) {
+    return (
+      <main className="mini-shell">
+        {leagueFrame.completedPanel}
+      </main>
+    );
+  }
+
   return (
     <main className="mini-shell">
       <nav className="site-nav daily-game-nav"><Link href="/" className="back-link">← {t("games")}</Link><SiteBrand link={false} /><span className="live-reset">{t("reset")} {countdown}</span></nav>
+      {leagueFrame.banner}
       <section className="mini-game six-order-game">
         <header className="mini-head six-title-head">
           <span>PYRAMID</span>
@@ -268,7 +292,7 @@ export default function SixOrderGame() {
         {!complete && <div className="six-next-player"><span>{lang === "es" ? "Siguiente jugador:" : "Next player:"}</span><b>{current?.name}</b></div>}
         <div className="six-actions">
           {!checked && <button disabled={!complete} onClick={() => setChecked(true)}>{lang === "es" ? "COMPROBAR" : "CHECK"}</button>}
-          {checked && <button onClick={reset}>{lang === "es" ? "REINTENTAR" : "TRY AGAIN"}</button>}
+          {checked && !leagueFrame.context && <button onClick={reset}>{lang === "es" ? "REINTENTAR" : "TRY AGAIN"}</button>}
         </div>
         {checked && <div className="mini-answer compact"><div><span>{lang === "es" ? "RESULTADO" : "RESULT"}</span><h2>{score}/6</h2><p>{correct.map((player, index) => `${index + 1}. ${player.name} · ${player.displayValue}`).join(" / ")}</p></div></div>}
       </section>

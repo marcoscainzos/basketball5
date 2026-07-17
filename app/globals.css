@@ -1759,6 +1759,104 @@ body { font-family:Arial,Helvetica,sans-serif; }
   font:900 8px Arial;
   letter-spacing:.12em;
 }
+.league-game-banner {
+  width:min(760px,calc(100% - 32px));
+  margin:12px auto 18px;
+  padding:11px 16px;
+  border:1px solid #ffffff26;
+  border-radius:999px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:14px;
+  color:#ffffffe0;
+  background:#081427b0;
+  box-shadow:0 18px 42px #0003;
+}
+.league-game-banner span,
+.league-game-banner em {
+  color:#ffffff94;
+  font:900 10px Arial;
+  font-style:normal;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.league-game-banner b {
+  color:white;
+  font:900 13px Arial;
+  letter-spacing:.12em;
+  text-align:center;
+}
+.league-game-banner em { justify-self:end; }
+.league-completed-panel {
+  width:min(560px,calc(100% - 28px));
+  margin:min(14vh,110px) auto 48px;
+  padding:clamp(24px,4vw,38px);
+  border:1px solid #ffffff26;
+  border-radius:34px;
+  color:white;
+  text-align:center;
+  background:linear-gradient(145deg,#d20a2e24,#17408b28),#081427dc;
+  box-shadow:0 28px 70px #0007;
+}
+.league-completed-panel>span {
+  display:inline-flex;
+  margin-bottom:14px;
+  color:#ffffff94;
+  font:900 10px Arial;
+  letter-spacing:.18em;
+}
+.league-completed-panel h1 {
+  margin:0;
+  font:900 clamp(2rem,7vw,4rem)/.86 Arial;
+  letter-spacing:-.06em;
+}
+.league-completed-score {
+  width:118px;
+  height:118px;
+  margin:22px auto 18px;
+  border:1px solid #ffffff2e;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#ffffff12;
+}
+.league-completed-score small {
+  align-self:end;
+  color:#ffffff8a;
+  font:900 8px Arial;
+  letter-spacing:.16em;
+}
+.league-completed-score b {
+  align-self:start;
+  color:#ff4262;
+  font:900 38px/.95 Arial;
+}
+.league-completed-panel p {
+  max-width:34rem;
+  margin:0 auto 24px;
+  color:#ffffffad;
+  font:700 13px/1.55 Arial;
+}
+.league-completed-actions {
+  display:flex;
+  justify-content:center;
+}
+.league-completed-actions a {
+  min-width:210px;
+  padding:13px 18px;
+  border-radius:999px;
+  color:#071326;
+  background:white;
+  font:900 10px Arial;
+  letter-spacing:.1em;
+  text-decoration:none;
+  transition:transform .16s ease,background .16s ease;
+}
+.league-completed-actions a:hover {
+  transform:translateY(-2px);
+  background:#f4f7fb;
+}
 .league-table {
   margin-top:15px;
   padding:16px;

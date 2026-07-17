@@ -5,6 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 import careers from "@/data/nba-grid-careers.json";
 import { useLanguage } from "@/components/LanguageProvider";
 import { SiteBrand } from "@/components/SiteBrand";
+import { useLeagueGameFrame } from "@/components/LeagueGameFrame";
+import { recordLeagueResult } from "@/lib/leagueScoring";
 
 type Mode = "solo" | "versus";
 type Mark = "blue" | "red";
@@ -112,6 +114,10 @@ function winner(board: (Cell | null)[]) {
 
 export default function TicTacToeGame() {
   const { t } = useLanguage();
+  const leagueFrame = useLeagueGameFrame("3 EN RAYA");
+  const leagueContext = leagueFrame.context;
+  const leagueResult = leagueFrame.result;
+  const setLeagueResult = leagueFrame.setResult;
   const [mode, setMode] = useState<Mode | null>(null);
   const players = useMemo(() => playerTeams(), []);
   const soloGrid = useMemo(() => dailyGrid(players, "solo"), [players]);
@@ -139,6 +145,25 @@ export default function TicTacToeGame() {
     const timer = setInterval(update, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    if ((leagueContext?.modeId === "solo" || leagueContext?.modeId === "versus") && !mode) {
+      setMode(leagueContext.modeId);
+    }
+  }, [leagueContext, mode]);
+
+  const correctPlacements = board.filter((cell) => cell && !cell.surrendered).length;
+  const leagueFinished = Boolean(mode) && (surrendered || (mode === "solo" && board.every(Boolean)) || fullVersus || Boolean(result));
+
+  useEffect(() => {
+    if (!leagueContext || leagueResult || !leagueFinished) return;
+    const rawScore = surrendered ? Math.max(0, correctPlacements - 1) : correctPlacements;
+    recordLeagueResult(leagueContext, {
+      rawScore,
+      maxRawScore: 9,
+      outcome: surrendered ? "surrendered" : "completed",
+    }).then(setLeagueResult);
+  }, [correctPlacements, leagueContext, leagueFinished, leagueResult, setLeagueResult, surrendered]);
 
   function cellsFor(player: PlayerCareer) {
     return grid.rows.flatMap((row, rowIndex) => grid.columns.map((column, columnIndex) => ({ row, column, index: rowIndex * 3 + columnIndex })))
@@ -188,7 +213,9 @@ export default function TicTacToeGame() {
   }
 
   function surrenderSolo() {
-    setBoard(grid.rows.flatMap((row) => grid.columns.map((column) => {
+    setBoard(grid.rows.flatMap((row, rowIndex) => grid.columns.map((column, columnIndex) => {
+      const index = rowIndex * 3 + columnIndex;
+      if (board[index]) return board[index];
       const answer = answersForPair(players, row, column)[0];
       return answer ? { name: answer.name, surrendered: true } : null;
     })));
@@ -208,6 +235,14 @@ export default function TicTacToeGame() {
     setSurrendered(false);
   }
 
+  if (leagueFrame.completedPanel) {
+    return (
+      <main className="tic-shell">
+        {leagueFrame.completedPanel}
+      </main>
+    );
+  }
+
   if (!mode) {
     return (
       <main className="tic-shell mode-shell">
@@ -215,6 +250,7 @@ export default function TicTacToeGame() {
           <SiteBrand />
           <Link href="/" className="back-link">← {t("games")}</Link>
         </nav>
+        {leagueFrame.banner}
         <section className="mode-intro tic-mode-intro">
           <div className="mode-copy">
             <h1>3 EN RAYA</h1>
@@ -236,6 +272,7 @@ export default function TicTacToeGame() {
         <SiteBrand link={false} />
         <span className="live-reset">{t("reset")} {countdown}</span>
       </nav>
+      {leagueFrame.banner}
       <section className="tic-game">
         <div className="tic-grid">
           <div className="tic-corner" />
