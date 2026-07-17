@@ -235,6 +235,11 @@ export default function TicTacToeGame() {
     setSurrendered(false);
   }
 
+  function backToLeagueOrModes() {
+    if (leagueContext) window.location.href = `/leagues/${leagueContext.leagueCode}`;
+    else { setMode(null); resetBoard(); }
+  }
+
   if (leagueFrame.completedPanel) {
     return (
       <main className="tic-shell">
@@ -268,7 +273,7 @@ export default function TicTacToeGame() {
   return (
     <main className="tic-shell">
       <nav className="site-nav draft-top-nav">
-        <button type="button" className="back-button" onClick={() => { setMode(null); resetBoard(); }}>← {t("modes")}</button>
+        <button type="button" className="back-button" onClick={backToLeagueOrModes}>← {leagueContext ? "LIGA" : t("modes")}</button>
         <SiteBrand link={false} />
         <span className="live-reset">{t("reset")} {countdown}</span>
       </nav>

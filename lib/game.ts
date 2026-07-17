@@ -24,11 +24,41 @@ export function getDateKey(date = new Date()) { return [date.getFullYear(), date
 function hash(value: string) { let result = 2166136261; for (let index = 0; index < value.length; index += 1) { result ^= value.charCodeAt(index); result = Math.imul(result, 16777619); } return result >>> 0; }
 function seededIndex(seed: string, length: number) { return hash(seed) % length; }
 function poolFor(mode: GameMode) { return players.filter((player) => player.pool === mode); }
+function rangeFor(stat: StatKey, difficulty: Difficulty) {
+  const ranges = {
+    pts: {
+      easy: { min: 6, max: 10 },
+      medium: { min: 3, max: 5 },
+      hard: { min: 0.5, max: 2 },
+    },
+    reb: {
+      easy: { min: 3, max: 5 },
+      medium: { min: 1.4, max: 3 },
+      hard: { min: 0.2, max: 1.2 },
+    },
+    ast: {
+      easy: { min: 3, max: 5 },
+      medium: { min: 1.4, max: 3 },
+      hard: { min: 0.2, max: 1.2 },
+    },
+    stl: {
+      easy: { min: 0.7, max: 1.3 },
+      medium: { min: 0.35, max: 0.75 },
+      hard: { min: 0.05, max: 0.3 },
+    },
+    blk: {
+      easy: { min: 0.8, max: 1.6 },
+      medium: { min: 0.35, max: 0.85 },
+      hard: { min: 0.05, max: 0.35 },
+    },
+  } satisfies Record<StatKey, Record<Difficulty, { min: number; max: number }>>;
+  return ranges[stat][difficulty];
+}
 function candidatesFor(player: PlayerSeason, stat: StatKey, mode: GameMode, excluded: number[], difficulty?: Difficulty) {
   return poolFor(mode).filter((candidate) => {
     if (candidate.id === player.id || excluded.includes(candidate.id) || candidate[stat] === player[stat]) return false;
     if (!difficulty) return true;
-    const difference = Math.abs(candidate[stat] - player[stat]); const range = DIFFICULTIES[difficulty];
+    const difference = Math.abs(candidate[stat] - player[stat]); const range = rangeFor(stat, difficulty);
     return difference >= range.min && difference <= range.max;
   });
 }

@@ -1552,13 +1552,44 @@ body { font-family:Arial,Helvetica,sans-serif; }
   background:linear-gradient(145deg,#081a35,#040b17);
   box-shadow:0 25px 70px #0008,inset 0 1px 0 #ffffff1b;
 }
+.league-app-page {
+  padding:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+}
 .league-app>header {
   display:flex;
   justify-content:space-between;
   gap:20px;
   align-items:end;
-  padding-bottom:15px;
-  border-bottom:1px solid #ffffff20;
+  padding:18px;
+  border:1px solid #ffffff30;
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 12% 0%,#d20a2e44,transparent 34%),
+    linear-gradient(145deg,#081a35,#040b17);
+  box-shadow:0 25px 70px #0008,inset 0 1px 0 #ffffff1b;
+}
+.league-identity {
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.league-logo-mark {
+  width:74px;
+  height:74px;
+  flex:0 0 auto;
+  border:1px solid #ffffff32;
+  border-radius:22px;
+  display:grid;
+  place-items:center;
+  color:white;
+  background:linear-gradient(145deg,#d20a2e,#17408b);
+  font:900 26px/.9 Arial;
+  letter-spacing:-.08em;
+  box-shadow:inset 0 1px 0 #ffffff35,0 16px 34px #0005;
 }
 .league-app>header>button:first-child {
   align-self:start;
@@ -1576,7 +1607,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
   font:900 8px Arial;
   letter-spacing:.2em;
 }
-.league-app h2 { margin:5px 0 1px; font:900 34px/.9 Arial; letter-spacing:-.05em; }
+.league-app h2 { margin:5px 0 4px; font:900 clamp(34px,6vw,68px)/.82 Arial; letter-spacing:-.07em; }
 .league-app p { margin:0; color:#ff4364; font:900 10px Arial; letter-spacing:.14em; }
 .league-app>header>button:last-child,
 .league-games-grid>button {
@@ -1595,6 +1626,7 @@ body { font-family:Arial,Helvetica,sans-serif; }
   align-items:center;
   justify-content:flex-end;
   gap:9px;
+  flex-wrap:wrap;
 }
 .league-invite-actions a,
 .league-invite-actions button {
@@ -1616,6 +1648,56 @@ body { font-family:Arial,Helvetica,sans-serif; }
   background:#25d366;
   color:#061326;
 }
+.league-menu {
+  position:relative;
+}
+.league-menu summary {
+  width:42px;
+  min-height:38px;
+  border:1px solid #ffffff35;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  gap:4px;
+  background:#ffffff0c;
+  cursor:pointer;
+  list-style:none;
+}
+.league-menu summary::-webkit-details-marker { display:none; }
+.league-menu summary span {
+  width:15px;
+  height:2px;
+  border-radius:9px;
+  background:white;
+}
+.league-menu>div {
+  position:absolute;
+  z-index:20;
+  right:0;
+  top:calc(100% + 8px);
+  width:210px;
+  padding:8px;
+  border:1px solid #ffffff24;
+  border-radius:14px;
+  display:grid;
+  gap:6px;
+  background:#071326f5;
+  box-shadow:0 22px 55px #0009;
+}
+.league-menu button {
+  min-height:36px;
+  padding:0 12px;
+  border:0;
+  border-radius:9px;
+  color:white;
+  background:transparent;
+  font:900 9px Arial;
+  letter-spacing:.1em;
+  text-align:left;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.league-menu button:hover { background:#ffffff14; }
 .league-tabs {
   margin-top:14px;
   display:grid;
@@ -1676,6 +1758,13 @@ body { font-family:Arial,Helvetica,sans-serif; }
 }
 .league-game-card span { color:#d9e6fb; font:900 8px Arial; letter-spacing:.14em; }
 .league-game-card b { margin-top:10px; font:900 42px/.86 Arial; letter-spacing:-.06em; }
+.league-game-mode-label {
+  margin-top:9px;
+  color:#65a8ff;
+  font:900 9px Arial;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
 .league-game-result {
   width:max-content;
   margin-top:12px;

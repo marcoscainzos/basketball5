@@ -195,6 +195,11 @@ export function dailyLeagueGames(code: string) {
   return [DAILY_GAMES[start], DAILY_GAMES[second === start ? (second + 1) % DAILY_GAMES.length : second]];
 }
 
+export function dailyLeagueMode(code: string, game: LeagueDailyGame) {
+  if (!game.modes?.length) return undefined;
+  return game.modes[hash(`${leagueTodayKey()}-${code}-${game.id}-mode`) % game.modes.length];
+}
+
 export function findLeagueByCode(leagues: League[], code: string) {
   return leagues.find((league) => league.code.toUpperCase() === code.toUpperCase());
 }

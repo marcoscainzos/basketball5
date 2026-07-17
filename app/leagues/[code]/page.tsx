@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { SiteBrand } from "@/components/SiteBrand";
-import { dailyLeagueGames, findLeagueByCode, League, leagueTodayKey, LocalProfile, profileName, readLeagues, readProfile, readRemoteLeagues, readRemoteProfile } from "@/lib/leagues";
+import { dailyLeagueGames, dailyLeagueMode, findLeagueByCode, League, LocalProfile, profileName, readLeagues, readProfile, readRemoteLeagues, readRemoteProfile } from "@/lib/leagues";
 import { LeagueResult, readLeagueResult } from "@/lib/leagueScoring";
 
 export default function LeagueDetailPage() {
@@ -16,13 +16,11 @@ export default function LeagueDetailPage() {
   const [copied, setCopied] = useState(false);
   const [message, setMessage] = useState("");
   const [checked, setChecked] = useState(false);
-  const [modeChoices, setModeChoices] = useState<Record<string, string>>({});
   const [results, setResults] = useState<Record<string, LeagueResult>>({});
 
   const dailyGames = useMemo(() => league ? dailyLeagueGames(league.code) : [], [league]);
   const inviteUrl = typeof window !== "undefined" ? `${window.location.origin}/leagues?join=${code}` : "";
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`Únete a mi liga de Court Inside: ${inviteUrl}`)}`;
-  const modeChoiceKey = (gameId: string) => `court-inside-league-mode-${leagueTodayKey()}-${code}-${gameId}`;
   const leagueHref = (href: string, gameId: string, modeId?: string) => `${href}?league=${encodeURIComponent(code)}&leagueGame=${encodeURIComponent(gameId)}${modeId ? `&leagueMode=${encodeURIComponent(modeId)}` : ""}`;
 
   const load = async () => {
@@ -48,15 +46,11 @@ export default function LeagueDetailPage() {
   }, [code]);
 
   useEffect(() => {
-    const nextChoices: Record<string, string> = {};
     const nextResults: Record<string, LeagueResult> = {};
     dailyGames.forEach((game) => {
-      const selected = localStorage.getItem(modeChoiceKey(game.id));
-      if (selected) nextChoices[game.id] = selected;
       const result = readLeagueResult({ leagueCode: code, gameId: game.id });
       if (result) nextResults[game.id] = result;
     });
-    setModeChoices(nextChoices);
     setResults(nextResults);
   }, [dailyGames, code]);
 
@@ -88,12 +82,6 @@ export default function LeagueDetailPage() {
     setTimeout(() => setCopied(false), 1400);
   };
 
-  const chooseLeagueMode = (gameId: string, modeId: string) => {
-    if (modeChoices[gameId] && modeChoices[gameId] !== modeId) return;
-    localStorage.setItem(modeChoiceKey(gameId), modeId);
-    setModeChoices((current) => ({ ...current, [gameId]: modeId }));
-  };
-
   const myStanding = league?.standings.find((row) => profile?.email && (row.email === profile.email || row.name === profileName(profile))) || league?.standings[0];
 
   return (
@@ -106,14 +94,27 @@ export default function LeagueDetailPage() {
 
       {!league ? null : (
         <section className="league-app league-app-page">
-          <header>
-            <div>
-              <span>LIGA</span>
-              <h2>{league.name}</h2>
+          <header className="league-hero-header">
+            <div className="league-identity">
+              <div className="league-logo-mark">{league.name.trim().slice(0, 2).toUpperCase()}</div>
+              <div>
+                <span>LIGA</span>
+                <h2>{league.name}</h2>
+                <p>{league.standings.length} jugadores · {dailyGames.length} retos diarios</p>
+              </div>
             </div>
             <div className="league-invite-actions">
               <a href={whatsappUrl} target="_blank" rel="noreferrer">WHATSAPP</a>
               <button type="button" onClick={copyInvite}>{copied ? "COPIADO" : "COPIAR ENLACE"}</button>
+              <details className="league-menu">
+                <summary aria-label="Abrir menú"><span></span><span></span><span></span></summary>
+                <div>
+                  <button type="button" onClick={() => setView("home")}>Resumen</button>
+                  <button type="button" onClick={() => setView("games")}>Juegos de hoy</button>
+                  <button type="button" onClick={() => setView("standings")}>Clasificación</button>
+                  <button type="button" onClick={() => setView("stats")}>Tus stats</button>
+                </div>
+              </details>
             </div>
           </header>
           {message ? <p className="league-login-note">{message}</p> : null}
@@ -135,36 +136,15 @@ export default function LeagueDetailPage() {
           {view === "games" ? (
             <section className="league-games-grid">
               {dailyGames.map((game) => {
-                const selectedMode = modeChoices[game.id];
                 const result = results[game.id];
-                const hasModes = Boolean(game.modes?.length);
+                const selectedMode = dailyLeagueMode(code, game);
                 return (
                   <article key={game.id} className={`league-game-card ${result ? "completed" : ""}`}>
                     <span>{result ? "COMPLETADO" : game.id === "1vs1" ? "1 PT POR ACIERTO · 1 INTENTO" : `${game.points} PTS MAX · 1 INTENTO`}</span>
                     <b>{game.name}</b>
+                    {selectedMode ? <small className="league-game-mode-label">{selectedMode.label}</small> : null}
                     {result ? <strong className="league-game-result">+{result.points} PTS</strong> : null}
-                    {hasModes ? (
-                      <div className="league-mode-list">
-                        {game.modes!.map((mode) => {
-                          const locked = Boolean(selectedMode && selectedMode !== mode.id);
-                          const selected = selectedMode === mode.id;
-                          return locked || result ? (
-                            <button key={mode.id} className="league-mode-option locked" type="button" disabled>{mode.label}</button>
-                          ) : (
-                            <Link
-                              key={mode.id}
-                              className={`league-mode-option ${selected ? "selected" : ""}`}
-                              href={leagueHref(mode.href || game.href, game.id, mode.id)}
-                              onClick={() => chooseLeagueMode(game.id, mode.id)}
-                            >
-                              {selected ? `${mode.label} · elegido` : mode.label}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    ) : (
-                      result ? <button className="league-mode-option locked single" type="button" disabled>CERRADO</button> : <Link className="league-mode-option single" href={leagueHref(game.href, game.id)} onClick={() => chooseLeagueMode(game.id, "single")}>JUGAR →</Link>
-                    )}
+                    {result ? <button className="league-mode-option locked single" type="button" disabled>CERRADO</button> : <Link className="league-mode-option single" href={leagueHref(selectedMode?.href || game.href, game.id, selectedMode?.id)}>JUGAR →</Link>}
                   </article>
                 );
               })}

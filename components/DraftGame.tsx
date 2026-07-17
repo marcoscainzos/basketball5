@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { DraftMode, DraftOption, RESTRICTIONS, canAdd, dailyRestriction, estimateWins, optionsFor } from "@/lib/draft";
 import { Lang, useLanguage } from "@/components/LanguageProvider";
 import { SiteBrand } from "@/components/SiteBrand";
-import { getLeagueContext, LeagueResult, recordLeagueResult } from "@/lib/leagueScoring";
+import { getLeagueContext, LeagueContext, LeagueResult, recordLeagueResult } from "@/lib/leagueScoring";
 
 function clean(value: string) { return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim(); }
 const COURT_POSITIONS = ["PG", "SG", "SF", "PF", "C"] as const;
@@ -44,6 +44,7 @@ export default function DraftGame() {
   const [message, setMessage] = useState("");
   const [ready, setReady] = useState(false);
   const [countdown, setCountdown] = useState("--:--:--");
+  const [leagueContext, setLeagueContext] = useState<LeagueContext | null>(null);
   const [leagueResult, setLeagueResult] = useState<LeagueResult | null>(null);
   const rule = useMemo(() => dailyRestriction(), []);
   const options = useMemo(() => mode ? optionsFor(mode) : [], [mode]);
@@ -62,6 +63,7 @@ export default function DraftGame() {
       if (saved?.mode) { setSavedMode(saved.mode); setLineup(saved.lineup ?? []); }
     } catch {}
     const context = getLeagueContext();
+    setLeagueContext(context);
     if (context?.modeId === "career" || context?.modeId === "season") {
       setSavedMode(context.modeId);
       setMode(context.modeId);
@@ -73,10 +75,9 @@ export default function DraftGame() {
     if (ready && mode) localStorage.setItem(storageKey, JSON.stringify({ mode, lineup }));
   }, [ready, mode, lineup, storageKey]);
   useEffect(() => {
-    const context = getLeagueContext();
-    if (!context || wins === null || leagueResult) return;
-    recordLeagueResult(context, { rawScore: draftPoints(wins), maxRawScore: 5, outcome: "completed" }).then(setLeagueResult);
-  }, [wins, leagueResult]);
+    if (!leagueContext || wins === null || leagueResult) return;
+    recordLeagueResult(leagueContext, { rawScore: draftPoints(wins), maxRawScore: 5, outcome: "completed" }).then(setLeagueResult);
+  }, [wins, leagueContext, leagueResult]);
 
   function choose(player: DraftOption) {
     const error = canAdd(player, lineup, rule);
@@ -86,6 +87,10 @@ export default function DraftGame() {
   function openMode(nextMode: DraftMode) {
     const chosenMode = savedMode && lineup.length > 0 ? savedMode : nextMode;
     setSavedMode(chosenMode); setMode(chosenMode);
+  }
+  function backToLeagueOrModes() {
+    if (leagueContext) window.location.href = `/leagues/${leagueContext.leagueCode}`;
+    else setMode(null);
   }
 
   const restriction = translatedRestriction(rule, lang);
@@ -97,7 +102,7 @@ export default function DraftGame() {
     </div>
   </section></main>;
 
-  return <main className="draft-shell"><nav className="site-nav draft-top-nav"><button type="button" className="back-button" onClick={() => setMode(null)}>← {t("modes")}</button><SiteBrand link={false} /><span className="live-reset">{t("reset")} {countdown}</span></nav><section className="draft-game">
+  return <main className="draft-shell"><nav className="site-nav draft-top-nav"><button type="button" className="back-button" onClick={backToLeagueOrModes}>← {leagueContext ? "LIGA" : t("modes")}</button><SiteBrand link={false} /><span className="live-reset">{t("reset")} {countdown}</span></nav><section className="draft-game">
     <div className="draft-court">
       <div className="draft-lineup">
         <div className="three-point-arc" aria-hidden="true" />
