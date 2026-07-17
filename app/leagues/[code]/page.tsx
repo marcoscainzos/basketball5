@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { SiteBrand } from "@/components/SiteBrand";
 import { dailyLeagueGames, findLeagueByCode, League, leagueTodayKey, LocalProfile, profileName, readLeagues, readProfile, readRemoteLeagues, readRemoteProfile } from "@/lib/leagues";
+import { LeagueResult, readLeagueResult } from "@/lib/leagueScoring";
 
 export default function LeagueDetailPage() {
   const params = useParams<{ code: string }>();
@@ -16,6 +17,7 @@ export default function LeagueDetailPage() {
   const [message, setMessage] = useState("");
   const [checked, setChecked] = useState(false);
   const [modeChoices, setModeChoices] = useState<Record<string, string>>({});
+  const [results, setResults] = useState<Record<string, LeagueResult>>({});
 
   const dailyGames = useMemo(() => league ? dailyLeagueGames(league.code) : [], [league]);
   const inviteUrl = typeof window !== "undefined" ? `${window.location.origin}/leagues?join=${code}` : "";
@@ -47,11 +49,32 @@ export default function LeagueDetailPage() {
 
   useEffect(() => {
     const nextChoices: Record<string, string> = {};
+    const nextResults: Record<string, LeagueResult> = {};
     dailyGames.forEach((game) => {
       const selected = localStorage.getItem(modeChoiceKey(game.id));
       if (selected) nextChoices[game.id] = selected;
+      const result = readLeagueResult({ leagueCode: code, gameId: game.id });
+      if (result) nextResults[game.id] = result;
     });
     setModeChoices(nextChoices);
+    setResults(nextResults);
+  }, [dailyGames, code]);
+
+  useEffect(() => {
+    const refreshResults = () => {
+      const nextResults: Record<string, LeagueResult> = {};
+      dailyGames.forEach((game) => {
+        const result = readLeagueResult({ leagueCode: code, gameId: game.id });
+        if (result) nextResults[game.id] = result;
+      });
+      setResults(nextResults);
+    };
+    window.addEventListener("focus", refreshResults);
+    window.addEventListener("court-inside-league-score-updated", refreshResults);
+    return () => {
+      window.removeEventListener("focus", refreshResults);
+      window.removeEventListener("court-inside-league-score-updated", refreshResults);
+    };
   }, [dailyGames, code]);
 
   useEffect(() => {
@@ -113,17 +136,19 @@ export default function LeagueDetailPage() {
             <section className="league-games-grid">
               {dailyGames.map((game) => {
                 const selectedMode = modeChoices[game.id];
+                const result = results[game.id];
                 const hasModes = Boolean(game.modes?.length);
                 return (
-                  <article key={game.id} className="league-game-card">
-                    <span>{game.points} PTS MAX · 1 INTENTO</span>
+                  <article key={game.id} className={`league-game-card ${result ? "completed" : ""}`}>
+                    <span>{result ? "COMPLETADO" : `${game.points} PTS MAX · 1 INTENTO`}</span>
                     <b>{game.name}</b>
+                    {result ? <strong className="league-game-result">+{result.points} PTS</strong> : null}
                     {hasModes ? (
                       <div className="league-mode-list">
                         {game.modes!.map((mode) => {
                           const locked = Boolean(selectedMode && selectedMode !== mode.id);
                           const selected = selectedMode === mode.id;
-                          return locked ? (
+                          return locked || result ? (
                             <button key={mode.id} className="league-mode-option locked" type="button" disabled>{mode.label}</button>
                           ) : (
                             <Link
@@ -138,7 +163,7 @@ export default function LeagueDetailPage() {
                         })}
                       </div>
                     ) : (
-                      <Link className="league-mode-option single" href={leagueHref(game.href, game.id)} onClick={() => chooseLeagueMode(game.id, "single")}>JUGAR →</Link>
+                      result ? <button className="league-mode-option locked single" type="button" disabled>CERRADO</button> : <Link className="league-mode-option single" href={leagueHref(game.href, game.id)} onClick={() => chooseLeagueMode(game.id, "single")}>JUGAR →</Link>
                     )}
                   </article>
                 );

@@ -6,6 +6,7 @@ import { players } from "@/data/players";
 import { clean, pickDaily } from "@/lib/daily";
 import { SiteBrand } from "@/components/SiteBrand";
 import { useLanguage } from "@/components/LanguageProvider";
+import { getLeagueContext, LeagueResult, recordLeagueResult } from "@/lib/leagueScoring";
 
 const pool = players.filter((player) => player.games >= 45 && player.pts >= 12 && player.imageUrl);
 const names = [...new Set(players.map((player) => player.name))].sort();
@@ -37,6 +38,7 @@ export default function StatLineGame() {
   const [guesses, setGuesses] = useState<string[]>([]);
   const [status, setStatus] = useState<"playing" | "won" | "lost">("playing");
   const [message, setMessage] = useState("");
+  const [leagueResult, setLeagueResult] = useState<LeagueResult | null>(null);
   useEffect(() => { const update = () => setCountdown(timeLeft()); update(); const timer = setInterval(update, 1000); return () => clearInterval(timer); }, []);
   const value = clean(query);
   const suggestions = value ? names.filter((name) => clean(name).includes(value) && !guesses.includes(name)).slice(0, 8) : [];
@@ -52,6 +54,12 @@ export default function StatLineGame() {
     { label: lang === "es" ? "Era" : "Era", value: challenge.pool === "current" ? "2025-26" : lang === "es" ? "HISTÓRICO" : "HISTORIC" },
   ];
   const revealedHints = Math.min(guesses.length, hints.length);
+  useEffect(() => {
+    const context = getLeagueContext();
+    if (!context || !finished || leagueResult) return;
+    const rawScore = status === "won" ? Math.max(1, hints.length - guesses.length + 1) : 0;
+    recordLeagueResult(context, { rawScore, maxRawScore: hints.length, outcome: status === "won" ? "won" : "lost" }).then(setLeagueResult);
+  }, [finished, status, guesses.length, hints.length, leagueResult]);
 
   function submit(name: string) {
     if (!name || finished) return;
@@ -88,6 +96,7 @@ export default function StatLineGame() {
             <p>{lang === "es" ? "Te damos una línea estadística de una temporada. Adivina qué jugador la firmó antes de gastar las seis pistas." : "You get one season stat line. Guess the player behind it before all six clues are gone."}</p>
           </div>
         </header>
+        {leagueResult && <div className="league-result-pill"><span>LIGA</span><b>+{leagueResult.points}</b><small>{leagueResult.points}/{leagueResult.maxPoints} PTS</small></div>}
         <div className="stat-hint-grid stat-hint-top">
           {hints.slice(0, 3).map((hint, index) => {
             const visible = index < revealedHints || finished;

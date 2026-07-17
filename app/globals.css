@@ -1670,8 +1670,22 @@ body { font-family:Arial,Helvetica,sans-serif; }
 }
 .league-game-card:nth-child(2) { background:linear-gradient(145deg,#d20a2e,#071326); }
 .league-game-card:hover { border-color:white; box-shadow:0 18px 40px #0008; }
+.league-game-card.completed {
+  border-color:#65a8ff99;
+  background:linear-gradient(145deg,#123564,#061326);
+}
 .league-game-card span { color:#d9e6fb; font:900 8px Arial; letter-spacing:.14em; }
 .league-game-card b { margin-top:10px; font:900 42px/.86 Arial; letter-spacing:-.06em; }
+.league-game-result {
+  width:max-content;
+  margin-top:12px;
+  padding:7px 10px;
+  border-radius:999px;
+  color:#061326;
+  background:#65a8ff;
+  font:900 11px Arial;
+  letter-spacing:.12em;
+}
 .league-mode-list {
   margin-top:16px;
   display:grid;
@@ -1714,6 +1728,36 @@ body { font-family:Arial,Helvetica,sans-serif; }
   margin-top:16px;
   background:#ffffff;
   color:#071326;
+}
+.league-result-pill {
+  margin:0 auto 18px;
+  width:min(520px,100%);
+  min-height:52px;
+  padding:10px 14px;
+  border:1px solid #65a8ff70;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  color:white;
+  background:#071326d9;
+  box-shadow:0 16px 38px #0006,inset 0 1px 0 #ffffff14;
+}
+.league-result-pill span {
+  color:#65a8ff;
+  font:900 8px Arial;
+  letter-spacing:.18em;
+}
+.league-result-pill b {
+  color:white;
+  font:900 24px/.9 Arial;
+  letter-spacing:-.04em;
+}
+.league-result-pill small {
+  color:#9fb2ce;
+  font:900 8px Arial;
+  letter-spacing:.12em;
 }
 .league-table {
   margin-top:15px;
