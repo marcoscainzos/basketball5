@@ -20,6 +20,7 @@ export type LocalProfile = {
   city: string;
   country: string;
   createdAt: string;
+  avatarUrl?: string;
 };
 
 export const STORAGE_KEY = "court-inside-leagues-v1";

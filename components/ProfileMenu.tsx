@@ -14,6 +14,7 @@ export type LocalProfile = {
   city: string;
   country: string;
   createdAt: string;
+  avatarUrl?: string;
 };
 
 type ProfileStats = {
@@ -40,6 +41,15 @@ function safeJson<T>(value: string | null, fallback: T): T {
 
 function emptyProfile(): LocalProfile {
   return { firstName: "", lastName: "", birthDate: "", email: "", password: "", city: "", country: "", createdAt: new Date().toISOString() };
+}
+
+function fileToDataUrl(file: File) {
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result || ""));
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
 }
 
 function readProfile() {
@@ -181,10 +191,12 @@ export function ProfileMenu() {
           city: String(profileRow.city || ""),
           country: String(profileRow.country || ""),
           createdAt: String(profileRow.created_at || data.user.created_at || new Date().toISOString()),
+          avatarUrl: readProfile()?.avatarUrl,
         } : {
           ...emptyProfile(),
           email: data.user.email || "",
           createdAt: data.user.created_at || new Date().toISOString(),
+          avatarUrl: readProfile()?.avatarUrl,
         };
         localStorage.setItem(PROFILE_KEY, JSON.stringify(nextProfile));
         setProfile(nextProfile);
@@ -198,6 +210,12 @@ export function ProfileMenu() {
     setProfile(nextProfile);
     setDraft(nextProfile || emptyProfile());
     setStats(readStats());
+  };
+
+  const chooseAvatar = async (file?: File) => {
+    if (!file) return;
+    const avatarUrl = await fileToDataUrl(file);
+    setDraft((current) => ({ ...current, avatarUrl }));
   };
 
   useEffect(() => {
@@ -223,7 +241,7 @@ export function ProfileMenu() {
       setFormError(lang === "es" ? "Las contraseñas no coinciden." : "Passwords do not match.");
       return;
     }
-    if ((view === "register" || view === "settings") && draft.password.length < 4) {
+    if (view === "register" && draft.password.length < 4) {
       setFormError(lang === "es" ? "La contraseña debe tener al menos 4 caracteres." : "Password must be at least 4 characters.");
       return;
     }
@@ -282,6 +300,7 @@ export function ProfileMenu() {
           return;
         }
       }
+      if (draft.avatarUrl) localStorage.setItem(PROFILE_KEY, JSON.stringify({ ...draft, password: "", avatarUrl: draft.avatarUrl, createdAt: draft.createdAt || new Date().toISOString() }));
       setOpen(false);
       setView("home");
       window.dispatchEvent(new Event("court-inside-profile-updated"));
@@ -385,12 +404,12 @@ export function ProfileMenu() {
   return (
     <div className="profile-menu" ref={menuRef}>
       <button type="button" className="profile-trigger" onClick={() => { setOpen((value) => !value); setView("home"); }} aria-expanded={open} aria-label={copy.profile}>
-        <span aria-hidden="true" />
+        {profile?.avatarUrl ? <img src={profile.avatarUrl} alt="" /> : <span aria-hidden="true" />}
       </button>
       {open ? (
         <aside className="profile-panel">
           <header>
-            <div className="profile-avatar"><span /></div>
+            <div className="profile-avatar">{profile?.avatarUrl ? <img src={profile.avatarUrl} alt="" /> : <span />}</div>
             <div>
               <b>{name || copy.profile}</b>
               <p>{profile?.email || copy.guest}</p>
@@ -451,6 +470,7 @@ export function ProfileMenu() {
               </div>
             ) : (
               <div className="profile-modal-grid">
+                <label className="profile-photo-picker">{draft.avatarUrl ? <img src={draft.avatarUrl} alt="" /> : <span />}{lang === "es" ? "Foto de perfil" : "Profile photo"}<input type="file" accept="image/*" onChange={(event) => chooseAvatar(event.target.files?.[0])} /></label>
                 <label>{copy.firstName}<input value={draft.firstName} onChange={(event) => setDraft({ ...draft, firstName: event.target.value })} placeholder="Marcos" /></label>
                 <label>{copy.lastName}<input value={draft.lastName} onChange={(event) => setDraft({ ...draft, lastName: event.target.value })} placeholder="Cainzos" /></label>
                 <label>{copy.birthDate}<input type="date" value={draft.birthDate} onChange={(event) => setDraft({ ...draft, birthDate: event.target.value })} /></label>

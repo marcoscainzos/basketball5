@@ -17,6 +17,7 @@ export default function LeagueDetailPage() {
   const [message, setMessage] = useState("");
   const [checked, setChecked] = useState(false);
   const [results, setResults] = useState<Record<string, LeagueResult>>({});
+  const [leaguePhoto, setLeaguePhoto] = useState("");
 
   const dailyGames = useMemo(() => league ? dailyLeagueGames(league.code) : [], [league]);
   const inviteUrl = typeof window !== "undefined" ? `${window.location.origin}/leagues?join=${code}` : "";
@@ -43,6 +44,10 @@ export default function LeagueDetailPage() {
       window.removeEventListener("focus", load);
       window.removeEventListener("court-inside-profile-updated", load);
     };
+  }, [code]);
+
+  useEffect(() => {
+    setLeaguePhoto(localStorage.getItem(`court-inside-league-photo-${code}`) || "");
   }, [code]);
 
   useEffect(() => {
@@ -82,6 +87,17 @@ export default function LeagueDetailPage() {
     setTimeout(() => setCopied(false), 1400);
   };
 
+  const chooseLeaguePhoto = (file?: File) => {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const value = String(reader.result || "");
+      localStorage.setItem(`court-inside-league-photo-${code}`, value);
+      setLeaguePhoto(value);
+    };
+    reader.readAsDataURL(file);
+  };
+
   const myStanding = league?.standings.find((row) => profile?.email && (row.email === profile.email || row.name === profileName(profile))) || league?.standings[0];
 
   return (
@@ -94,27 +110,20 @@ export default function LeagueDetailPage() {
 
       {!league ? null : (
         <section className="league-app league-app-page">
-          <header className="league-hero-header">
-            <div className="league-identity">
-              <div className="league-logo-mark">{league.name.trim().slice(0, 2).toUpperCase()}</div>
+          <header className="league-hero-clean">
+            <div className="league-title-lockup">
+              <label className="league-logo-mark">
+                {leaguePhoto ? <img src={leaguePhoto} alt="" /> : <b>{league.name.trim().slice(0, 2).toUpperCase()}</b>}
+                <input type="file" accept="image/*" onChange={(event) => chooseLeaguePhoto(event.target.files?.[0])} />
+              </label>
               <div>
-                <span>LIGA</span>
-                <h2>{league.name}</h2>
-                <p>{league.standings.length} jugadores · {dailyGames.length} retos diarios</p>
+                <h1>{league.name}</h1>
+                <p>{league.standings.length} jugadores · {dailyGames.length} retos diarios · código {league.code}</p>
               </div>
             </div>
             <div className="league-invite-actions">
               <a href={whatsappUrl} target="_blank" rel="noreferrer">WHATSAPP</a>
               <button type="button" onClick={copyInvite}>{copied ? "COPIADO" : "COPIAR ENLACE"}</button>
-              <details className="league-menu">
-                <summary aria-label="Abrir menú"><span></span><span></span><span></span></summary>
-                <div>
-                  <button type="button" onClick={() => setView("home")}>Resumen</button>
-                  <button type="button" onClick={() => setView("games")}>Juegos de hoy</button>
-                  <button type="button" onClick={() => setView("standings")}>Clasificación</button>
-                  <button type="button" onClick={() => setView("stats")}>Tus stats</button>
-                </div>
-              </details>
             </div>
           </header>
           {message ? <p className="league-login-note">{message}</p> : null}
