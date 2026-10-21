@@ -36,6 +36,7 @@
     "Adam Morrison",
     "Adama Bal",
     "Adama Sanogo",
+    "Aday Mara",
     "Ade Murkey",
     "Adem Bona",
     "Admiral Schofield",
@@ -343,6 +344,7 @@
     "Ben Wallace",
     "Ben Warley",
     "Bennedict Mathurin",
+    "Bennett Stirtz",
     "Bennie Swain",
     "Beno Udrih",
     "Benoit Benjamin",
@@ -789,6 +791,7 @@
     "Chris Bosh",
     "Chris Boucher",
     "Chris Carr",
+    "Chris Cenac Jr.",
     "Chris Childs",
     "Chris Chiozza",
     "Chris Clemons",
@@ -1320,6 +1323,7 @@
     "Dillard Crocker",
     "Dillon Brooks",
     "Dillon Jones",
+    "Dillon Mitchell",
     "Dino Radja",
     "Dion Glover",
     "Dion Waiters",
@@ -1465,6 +1469,7 @@
     "Earl Williams",
     "Earnie Killum",
     "Easy Parham",
+    "Ebuka Okorie",
     "Ed Bartels",
     "Ed Beach",
     "Ed Biedenbach",
@@ -2022,6 +2027,7 @@
     "J.R. Smith",
     "Ja Morant",
     "Ja'Kobe Walter",
+    "Ja'Kobi Gillespie",
     "Jabari Bird",
     "Jabari Brown",
     "Jabari Parker",
@@ -2069,6 +2075,7 @@
     "Jacob Toppin",
     "Jacob Wiley",
     "Jacque Vaughn",
+    "Jaden Akins",
     "Jaden Hardy",
     "Jaden Ivey",
     "Jaden McDaniels",
@@ -2243,6 +2250,7 @@
     "Jay Taylor",
     "Jay Vincent",
     "Jay Williams",
+    "Jayden Quaintance",
     "Jaylen Adams",
     "Jaylen Brown",
     "Jaylen Clark",
@@ -2656,6 +2664,7 @@
     "Josh Childress",
     "Josh Christopher",
     "Josh Davis",
+    "Josh Dix",
     "Josh Giddey",
     "Josh Grant",
     "Josh Gray",
@@ -2948,6 +2957,7 @@
     "Kyrylo Fesenko",
     "Kyshawn George",
     "KZ Okpala",
+    "Labaron Philon",
     "LaBradford Smith",
     "Lachlan Olbrich",
     "Lamar Green",
@@ -3171,6 +3181,7 @@
     "Malik Rose",
     "Malik Sealy",
     "Malik Williams",
+    "Maliq Brown",
     "Mamadi Diakite",
     "Mamadou N'Diaye",
     "Mangok Mathiang",
@@ -3664,6 +3675,7 @@
     "Oscar Tshiebwe",
     "Oshae Brissett",
     "Oso Ighodaro",
+    "Otega Oweh",
     "Othell Wilson",
     "Othella Harrington",
     "Othello Hunter",
@@ -4401,6 +4413,7 @@
     "Tarik Black",
     "Tariq Abdul-Wahad",
     "Tariq Owens",
+    "Tarris Reed Jr.",
     "Tate Armstrong",
     "Tate George",
     "Taurean Green",
@@ -4665,6 +4678,7 @@
     "Tyler Johnson",
     "Tyler Kolek",
     "Tyler Lydon",
+    "Tyler Nickel",
     "Tyler Smith",
     "Tyler Ulis",
     "Tyler Zeller",
@@ -4690,6 +4704,7 @@
     "Tyus Jones",
     "Udoka Azubuike",
     "Udonis Haslem",
+    "Ugonna Onyenso",
     "Ulrich Chomche",
     "Uroš Slokar",
     "Usman Garuba",
@@ -55925,35 +55940,6 @@
       ]
     },
     {
-      "id": "live-minutes-MEM-2024-25",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "MEM · 2024-25 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Desmond Bane",
-          "value": 2192
-        },
-        {
-          "name": "Jaren Jackson Jr.",
-          "value": 2192
-        },
-        {
-          "name": "Jaylen Wells",
-          "value": 2028
-        },
-        {
-          "name": "Scotty Pippen Jr.",
-          "value": 1668
-        },
-        {
-          "name": "Santi Aldama",
-          "value": 1647
-        }
-      ]
-    },
-    {
       "id": "live-minutes-DAL-2024-25",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -55979,6 +55965,35 @@
         {
           "name": "Kyrie Irving",
           "value": 1793
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-MEM-2024-25",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "MEM · 2024-25 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Desmond Bane",
+          "value": 2192
+        },
+        {
+          "name": "Jaren Jackson Jr.",
+          "value": 2192
+        },
+        {
+          "name": "Jaylen Wells",
+          "value": 2028
+        },
+        {
+          "name": "Scotty Pippen Jr.",
+          "value": 1668
+        },
+        {
+          "name": "Santi Aldama",
+          "value": 1647
         }
       ]
     },
@@ -56215,35 +56230,6 @@
       ]
     },
     {
-      "id": "live-minutes-LAL-2024-25",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "LAL · 2024-25 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Austin Reaves",
-          "value": 2472
-        },
-        {
-          "name": "LeBron James",
-          "value": 2394
-        },
-        {
-          "name": "Rui Hachimura",
-          "value": 1819
-        },
-        {
-          "name": "Gabe Vincent",
-          "value": 1465
-        },
-        {
-          "name": "Dalton Knecht",
-          "value": 1446
-        }
-      ]
-    },
-    {
       "id": "live-minutes-POR-2024-25",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -56269,6 +56255,35 @@
         {
           "name": "Scoot Henderson",
           "value": 1746
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-LAL-2024-25",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "LAL · 2024-25 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Austin Reaves",
+          "value": 2472
+        },
+        {
+          "name": "LeBron James",
+          "value": 2394
+        },
+        {
+          "name": "Rui Hachimura",
+          "value": 1819
+        },
+        {
+          "name": "Gabe Vincent",
+          "value": 1465
+        },
+        {
+          "name": "Dalton Knecht",
+          "value": 1446
         }
       ]
     },
@@ -56795,35 +56810,6 @@
       ]
     },
     {
-      "id": "live-minutes-DAL-2025-26",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "DAL · 2025-26 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Cooper Flagg",
-          "value": 2328
-        },
-        {
-          "name": "Max Christie",
-          "value": 2229
-        },
-        {
-          "name": "Naji Marshall",
-          "value": 2170
-        },
-        {
-          "name": "P.J. Washington",
-          "value": 1725
-        },
-        {
-          "name": "Klay Thompson",
-          "value": 1485
-        }
-      ]
-    },
-    {
       "id": "live-minutes-CHI-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -56849,6 +56835,35 @@
         {
           "name": "Nikola Vucevic",
           "value": 1472
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-DAL-2025-26",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "DAL · 2025-26 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Cooper Flagg",
+          "value": 2328
+        },
+        {
+          "name": "Max Christie",
+          "value": 2229
+        },
+        {
+          "name": "Naji Marshall",
+          "value": 2170
+        },
+        {
+          "name": "P.J. Washington",
+          "value": 1725
+        },
+        {
+          "name": "Klay Thompson",
+          "value": 1485
         }
       ]
     },
@@ -57143,35 +57158,6 @@
       ]
     },
     {
-      "id": "live-minutes-GSW-2025-26",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "GSW · 2025-26 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Brandin Podziemski",
-          "value": 2315
-        },
-        {
-          "name": "Draymond Green",
-          "value": 1855
-        },
-        {
-          "name": "Moses Moody",
-          "value": 1529
-        },
-        {
-          "name": "Gui Santos",
-          "value": 1381
-        },
-        {
-          "name": "Will Richard",
-          "value": 1364
-        }
-      ]
-    },
-    {
       "id": "live-minutes-LAC-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -57197,6 +57183,35 @@
         {
           "name": "James Harden",
           "value": 1549
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-GSW-2025-26",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "GSW · 2025-26 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Brandin Podziemski",
+          "value": 2315
+        },
+        {
+          "name": "Draymond Green",
+          "value": 1855
+        },
+        {
+          "name": "Moses Moody",
+          "value": 1529
+        },
+        {
+          "name": "Gui Santos",
+          "value": 1381
+        },
+        {
+          "name": "Will Richard",
+          "value": 1364
         }
       ]
     },
@@ -57433,35 +57448,6 @@
       ]
     },
     {
-      "id": "live-minutes-ATL-2025-26",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "ATL · 2025-26 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Nickeil Alexander-Walker",
-          "value": 2589
-        },
-        {
-          "name": "Jalen Johnson",
-          "value": 2517
-        },
-        {
-          "name": "Dyson Daniels",
-          "value": 2505
-        },
-        {
-          "name": "Onyeka Okongwu",
-          "value": 2281
-        },
-        {
-          "name": "Zaccharie Risacher",
-          "value": 1491
-        }
-      ]
-    },
-    {
       "id": "live-minutes-MIA-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -57487,6 +57473,35 @@
         {
           "name": "Pelle Larsson",
           "value": 1834
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-ATL-2025-26",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "ATL · 2025-26 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Nickeil Alexander-Walker",
+          "value": 2589
+        },
+        {
+          "name": "Jalen Johnson",
+          "value": 2517
+        },
+        {
+          "name": "Dyson Daniels",
+          "value": 2505
+        },
+        {
+          "name": "Onyeka Okongwu",
+          "value": 2281
+        },
+        {
+          "name": "Zaccharie Risacher",
+          "value": 1491
         }
       ]
     },
@@ -57607,6 +57622,35 @@
       ]
     },
     {
+      "id": "live-minutes-BRK-2025-26",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "BRK · 2025-26 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Nic Claxton",
+          "value": 1907
+        },
+        {
+          "name": "Noah Clowney",
+          "value": 1766
+        },
+        {
+          "name": "Michael Porter Jr.",
+          "value": 1678
+        },
+        {
+          "name": "Terance Mann",
+          "value": 1517
+        },
+        {
+          "name": "Drake Powell",
+          "value": 1307
+        }
+      ]
+    },
+    {
       "id": "live-minutes-TOR-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -57636,31 +57680,176 @@
       ]
     },
     {
-      "id": "live-minutes-BRK-2025-26",
+      "id": "live-minutes-OKC-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
-      "detail": "BRK · 2025-26 · actualizado",
+      "detail": "OKC · 2026-27 · actualizado",
       "unit": "MIN",
       "answers": [
         {
-          "name": "Nic Claxton",
-          "value": 1907
+          "name": "Shai Gilgeous-Alexander",
+          "value": 36
         },
         {
-          "name": "Noah Clowney",
-          "value": 1766
+          "name": "Chet Holmgren",
+          "value": 31
         },
         {
-          "name": "Michael Porter Jr.",
-          "value": 1678
+          "name": "Jalen Williams",
+          "value": 30
         },
         {
-          "name": "Terance Mann",
-          "value": 1517
+          "name": "Alex Caruso",
+          "value": 25
         },
         {
-          "name": "Drake Powell",
-          "value": 1307
+          "name": "Ajay Mitchell",
+          "value": 23
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-SAS-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "SAS · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Victor Wembanyama",
+          "value": 34
+        },
+        {
+          "name": "Dylan Harper",
+          "value": 32
+        },
+        {
+          "name": "De'Aaron Fox",
+          "value": 32
+        },
+        {
+          "name": "Devin Vassell",
+          "value": 31
+        },
+        {
+          "name": "Julian Champagnie",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-PHI-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "PHI · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Tyrese Maxey",
+          "value": 40
+        },
+        {
+          "name": "Jaylen Brown",
+          "value": 35
+        },
+        {
+          "name": "VJ Edgecombe",
+          "value": 35
+        },
+        {
+          "name": "LeBron James",
+          "value": 34
+        },
+        {
+          "name": "Joel Embiid",
+          "value": 33
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-NYK-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "NYK · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Jalen Brunson",
+          "value": 34
+        },
+        {
+          "name": "Mikal Bridges",
+          "value": 33
+        },
+        {
+          "name": "OG Anunoby",
+          "value": 32
+        },
+        {
+          "name": "Josh Hart",
+          "value": 30
+        },
+        {
+          "name": "Landry Shamet",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-BOS-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "BOS · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Jayson Tatum",
+          "value": 38
+        },
+        {
+          "name": "Derrick White",
+          "value": 36
+        },
+        {
+          "name": "Paul George",
+          "value": 31
+        },
+        {
+          "name": "Payton Pritchard",
+          "value": 28
+        },
+        {
+          "name": "Neemias Queta",
+          "value": 22
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-DET-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "DET · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Cade Cunningham",
+          "value": 35
+        },
+        {
+          "name": "Ausar Thompson",
+          "value": 33
+        },
+        {
+          "name": "Jalen Duren",
+          "value": 28
+        },
+        {
+          "name": "Duncan Robinson",
+          "value": 28
+        },
+        {
+          "name": "John Collins",
+          "value": 26
         }
       ]
     },
@@ -58506,10 +58695,39 @@
       ]
     },
     {
+      "id": "career-minutes-live-2027",
+      "type": "career-minutes",
+      "prompt": "Top 5 con más minutos jugados",
+      "detail": "Historia NBA · hasta 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "LeBron James",
+          "value": 61004
+        },
+        {
+          "name": "Kareem Abdul-Jabbar",
+          "value": 57449
+        },
+        {
+          "name": "Karl Malone",
+          "value": 54854
+        },
+        {
+          "name": "Dirk Nowitzki",
+          "value": 51373
+        },
+        {
+          "name": "Kevin Garnett",
+          "value": 50425
+        }
+      ]
+    },
+    {
       "id": "team-points-ATL",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Atlanta Hawks · hasta 2025-26",
+      "detail": "Atlanta Hawks · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58538,7 +58756,7 @@
       "id": "team-points-BOS",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Boston Celtics · hasta 2025-26",
+      "detail": "Boston Celtics · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58567,7 +58785,7 @@
       "id": "team-points-BRK",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Brooklyn Nets · hasta 2025-26",
+      "detail": "Brooklyn Nets · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58596,7 +58814,7 @@
       "id": "team-points-CHO",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Charlotte Hornets · hasta 2025-26",
+      "detail": "Charlotte Hornets · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58625,7 +58843,7 @@
       "id": "team-points-CHI",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Chicago Bulls · hasta 2025-26",
+      "detail": "Chicago Bulls · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58654,7 +58872,7 @@
       "id": "team-points-CLE",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Cleveland Cavaliers · hasta 2025-26",
+      "detail": "Cleveland Cavaliers · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58683,7 +58901,7 @@
       "id": "team-points-DAL",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Dallas Mavericks · hasta 2025-26",
+      "detail": "Dallas Mavericks · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58712,7 +58930,7 @@
       "id": "team-points-DEN",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Denver Nuggets · hasta 2025-26",
+      "detail": "Denver Nuggets · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58741,7 +58959,7 @@
       "id": "team-points-DET",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Detroit Pistons · hasta 2025-26",
+      "detail": "Detroit Pistons · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58770,7 +58988,7 @@
       "id": "team-points-GSW",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Golden State Warriors · hasta 2025-26",
+      "detail": "Golden State Warriors · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58799,7 +59017,7 @@
       "id": "team-points-HOU",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Houston Rockets · hasta 2025-26",
+      "detail": "Houston Rockets · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58828,7 +59046,7 @@
       "id": "team-points-IND",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Indiana Pacers · hasta 2025-26",
+      "detail": "Indiana Pacers · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58857,7 +59075,7 @@
       "id": "team-points-LAC",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "LA Clippers · hasta 2025-26",
+      "detail": "LA Clippers · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58886,7 +59104,7 @@
       "id": "team-points-LAL",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Los Angeles Lakers · hasta 2025-26",
+      "detail": "Los Angeles Lakers · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58915,7 +59133,7 @@
       "id": "team-points-MEM",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Memphis Grizzlies · hasta 2025-26",
+      "detail": "Memphis Grizzlies · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58944,7 +59162,7 @@
       "id": "team-points-MIA",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Miami Heat · hasta 2025-26",
+      "detail": "Miami Heat · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -58973,7 +59191,7 @@
       "id": "team-points-MIL",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Milwaukee Bucks · hasta 2025-26",
+      "detail": "Milwaukee Bucks · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59002,7 +59220,7 @@
       "id": "team-points-MIN",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Minnesota Timberwolves · hasta 2025-26",
+      "detail": "Minnesota Timberwolves · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59031,7 +59249,7 @@
       "id": "team-points-NOP",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "New Orleans Pelicans · hasta 2025-26",
+      "detail": "New Orleans Pelicans · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59060,7 +59278,7 @@
       "id": "team-points-NYK",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "New York Knicks · hasta 2025-26",
+      "detail": "New York Knicks · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59089,7 +59307,7 @@
       "id": "team-points-OKC",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Oklahoma City Thunder · hasta 2025-26",
+      "detail": "Oklahoma City Thunder · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59110,7 +59328,7 @@
         },
         {
           "name": "Shai Gilgeous-Alexander",
-          "value": 12546
+          "value": 12578
         }
       ]
     },
@@ -59118,7 +59336,7 @@
       "id": "team-points-ORL",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Orlando Magic · hasta 2025-26",
+      "detail": "Orlando Magic · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59147,7 +59365,7 @@
       "id": "team-points-PHI",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Philadelphia 76ers · hasta 2025-26",
+      "detail": "Philadelphia 76ers · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59176,7 +59394,7 @@
       "id": "team-points-PHO",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Phoenix Suns · hasta 2025-26",
+      "detail": "Phoenix Suns · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59205,7 +59423,7 @@
       "id": "team-points-POR",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Portland Trail Blazers · hasta 2025-26",
+      "detail": "Portland Trail Blazers · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59234,7 +59452,7 @@
       "id": "team-points-SAC",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Sacramento Kings · hasta 2025-26",
+      "detail": "Sacramento Kings · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59263,7 +59481,7 @@
       "id": "team-points-SAS",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "San Antonio Spurs · hasta 2025-26",
+      "detail": "San Antonio Spurs · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59292,7 +59510,7 @@
       "id": "team-points-TOR",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Toronto Raptors · hasta 2025-26",
+      "detail": "Toronto Raptors · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59321,7 +59539,7 @@
       "id": "team-points-UTA",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Utah Jazz · hasta 2025-26",
+      "detail": "Utah Jazz · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
@@ -59350,7 +59568,7 @@
       "id": "team-points-WAS",
       "type": "team-points",
       "prompt": "Top 5 anotadores históricos",
-      "detail": "Washington Wizards · hasta 2025-26",
+      "detail": "Washington Wizards · hasta 2026-27",
       "unit": "PTS",
       "answers": [
         {
