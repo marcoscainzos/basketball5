@@ -144,6 +144,7 @@
     "Alonzo Mourning",
     "Alperen Sengun",
     "Alperen Şengün",
+    "Alpha Diallo",
     "Alphonso Ford",
     "Alton Ford",
     "Alton Lister",
@@ -628,6 +629,7 @@
     "Bryce Cotton",
     "Bryce Dejean-Jones",
     "Bryce Drew",
+    "Bryce Hopkins",
     "Bryce McGowens",
     "Bryn Forbes",
     "Bryon Russell",
@@ -1605,6 +1607,7 @@
     "Erik Murphy",
     "Erik Stevenson",
     "Ernest Brown",
+    "Ernest Udeh, Jr.",
     "Ernie Barrett",
     "Ernie Beck",
     "Ernie DiGregorio",
@@ -2926,6 +2929,7 @@
     "Keyonte George",
     "Khalid El-Amin",
     "Khalid Reeves",
+    "Khalifa Diop",
     "Khaman Maluach",
     "Khem Birch",
     "Khris Middleton",
@@ -2992,7 +2996,7 @@
     "Kyrylo Fesenko",
     "Kyshawn George",
     "KZ Okpala",
-    "Labaron Philon",
+    "Labaron Philon Jr.",
     "LaBradford Smith",
     "Lachlan Olbrich",
     "Lamar Green",
@@ -3391,6 +3395,7 @@
     "Mel Nowell",
     "Mel Payton",
     "Mel Peterson",
+    "Meleek Thomas",
     "Melvin Booker",
     "Melvin Ely",
     "Melvin Frazier",
@@ -4679,6 +4684,7 @@
     "Trentyn Flowers",
     "Trevelin Queen",
     "Treveon Graham",
+    "Trevon Brazile",
     "Trevon Duval",
     "Trevon Scott",
     "Trevor Ariza",
@@ -55993,35 +55999,6 @@
       ]
     },
     {
-      "id": "live-minutes-DAL-2024-25",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "DAL · 2024-25 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Spencer Dinwiddie",
-          "value": 2120
-        },
-        {
-          "name": "Klay Thompson",
-          "value": 1948
-        },
-        {
-          "name": "Naji Marshall",
-          "value": 1907
-        },
-        {
-          "name": "P.J. Washington",
-          "value": 1824
-        },
-        {
-          "name": "Kyrie Irving",
-          "value": 1793
-        }
-      ]
-    },
-    {
       "id": "live-minutes-MEM-2024-25",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -56047,6 +56024,35 @@
         {
           "name": "Santi Aldama",
           "value": 1647
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-DAL-2024-25",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "DAL · 2024-25 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Spencer Dinwiddie",
+          "value": 2120
+        },
+        {
+          "name": "Klay Thompson",
+          "value": 1948
+        },
+        {
+          "name": "Naji Marshall",
+          "value": 1907
+        },
+        {
+          "name": "P.J. Washington",
+          "value": 1824
+        },
+        {
+          "name": "Kyrie Irving",
+          "value": 1793
         }
       ]
     },
@@ -56225,35 +56231,6 @@
       ]
     },
     {
-      "id": "live-minutes-LAC-2024-25",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "LAC · 2024-25 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "James Harden",
-          "value": 2741
-        },
-        {
-          "name": "Ivica Zubac",
-          "value": 2580
-        },
-        {
-          "name": "Norman Powell",
-          "value": 1924
-        },
-        {
-          "name": "Derrick Jones Jr.",
-          "value": 1831
-        },
-        {
-          "name": "Kris Dunn",
-          "value": 1769
-        }
-      ]
-    },
-    {
       "id": "live-minutes-GSW-2024-25",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -56279,6 +56256,35 @@
         {
           "name": "Moses Moody",
           "value": 1633
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-LAC-2024-25",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "LAC · 2024-25 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "James Harden",
+          "value": 2741
+        },
+        {
+          "name": "Ivica Zubac",
+          "value": 2580
+        },
+        {
+          "name": "Norman Powell",
+          "value": 1924
+        },
+        {
+          "name": "Derrick Jones Jr.",
+          "value": 1831
+        },
+        {
+          "name": "Kris Dunn",
+          "value": 1769
         }
       ]
     },
@@ -56341,35 +56347,6 @@
       ]
     },
     {
-      "id": "live-minutes-PHO-2024-25",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "PHO · 2024-25 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Devin Booker",
-          "value": 2780
-        },
-        {
-          "name": "Kevin Durant",
-          "value": 2251
-        },
-        {
-          "name": "Tyus Jones",
-          "value": 2158
-        },
-        {
-          "name": "Royce O'Neale",
-          "value": 1821
-        },
-        {
-          "name": "Bradley Beal",
-          "value": 1693
-        }
-      ]
-    },
-    {
       "id": "live-minutes-SAC-2024-25",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -56395,6 +56372,35 @@
         {
           "name": "Keon Ellis",
           "value": 1933
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-PHO-2024-25",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "PHO · 2024-25 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Devin Booker",
+          "value": 2780
+        },
+        {
+          "name": "Kevin Durant",
+          "value": 2251
+        },
+        {
+          "name": "Tyus Jones",
+          "value": 2158
+        },
+        {
+          "name": "Royce O'Neale",
+          "value": 1821
+        },
+        {
+          "name": "Bradley Beal",
+          "value": 1693
         }
       ]
     },
@@ -56457,35 +56463,6 @@
       ]
     },
     {
-      "id": "live-minutes-CHO-2024-25",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "CHO · 2024-25 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Miles Bridges",
-          "value": 1958
-        },
-        {
-          "name": "Josh Green",
-          "value": 1814
-        },
-        {
-          "name": "LaMelo Ball",
-          "value": 1431
-        },
-        {
-          "name": "Nick Smith Jr.",
-          "value": 1309
-        },
-        {
-          "name": "Tidjane Salaun",
-          "value": 1216
-        }
-      ]
-    },
-    {
       "id": "live-minutes-BOS-2024-25",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -56511,6 +56488,35 @@
         {
           "name": "Jrue Holiday",
           "value": 1883
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-CHO-2024-25",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "CHO · 2024-25 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Miles Bridges",
+          "value": 1958
+        },
+        {
+          "name": "Josh Green",
+          "value": 1814
+        },
+        {
+          "name": "LaMelo Ball",
+          "value": 1431
+        },
+        {
+          "name": "Nick Smith Jr.",
+          "value": 1309
+        },
+        {
+          "name": "Tidjane Salaun",
+          "value": 1216
         }
       ]
     },
@@ -56573,35 +56579,6 @@
       ]
     },
     {
-      "id": "live-minutes-CLE-2024-25",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "CLE · 2024-25 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Darius Garland",
-          "value": 2286
-        },
-        {
-          "name": "Jarrett Allen",
-          "value": 2280
-        },
-        {
-          "name": "Donovan Mitchell",
-          "value": 2220
-        },
-        {
-          "name": "Evan Mobley",
-          "value": 2152
-        },
-        {
-          "name": "Sam Merrill",
-          "value": 1386
-        }
-      ]
-    },
-    {
       "id": "live-minutes-IND-2024-25",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -56627,6 +56604,35 @@
         {
           "name": "Andrew Nembhard",
           "value": 1869
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-CLE-2024-25",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "CLE · 2024-25 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Darius Garland",
+          "value": 2286
+        },
+        {
+          "name": "Jarrett Allen",
+          "value": 2280
+        },
+        {
+          "name": "Donovan Mitchell",
+          "value": 2220
+        },
+        {
+          "name": "Evan Mobley",
+          "value": 2152
+        },
+        {
+          "name": "Sam Merrill",
+          "value": 1386
         }
       ]
     },
@@ -56863,35 +56869,6 @@
       ]
     },
     {
-      "id": "live-minutes-CHI-2025-26",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "CHI · 2025-26 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Matas Buzelis",
-          "value": 2232
-        },
-        {
-          "name": "Tre Jones",
-          "value": 1740
-        },
-        {
-          "name": "Josh Giddey",
-          "value": 1720
-        },
-        {
-          "name": "Isaac Okoro",
-          "value": 1681
-        },
-        {
-          "name": "Nikola Vucevic",
-          "value": 1472
-        }
-      ]
-    },
-    {
       "id": "live-minutes-DAL-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -56921,31 +56898,31 @@
       ]
     },
     {
-      "id": "live-minutes-MEM-2025-26",
+      "id": "live-minutes-CHI-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
-      "detail": "MEM · 2025-26 · actualizado",
+      "detail": "CHI · 2025-26 · actualizado",
       "unit": "MIN",
       "answers": [
         {
-          "name": "Jaylen Wells",
-          "value": 1808
+          "name": "Matas Buzelis",
+          "value": 2232
         },
         {
-          "name": "Cam Spencer",
-          "value": 1700
+          "name": "Tre Jones",
+          "value": 1740
         },
         {
-          "name": "Cedric Coward",
-          "value": 1584
+          "name": "Josh Giddey",
+          "value": 1720
         },
         {
-          "name": "Jaren Jackson Jr.",
-          "value": 1374
+          "name": "Isaac Okoro",
+          "value": 1681
         },
         {
-          "name": "Santi Aldama",
-          "value": 1190
+          "name": "Nikola Vucevic",
+          "value": 1472
         }
       ]
     },
@@ -56979,31 +56956,31 @@
       ]
     },
     {
-      "id": "live-minutes-MIN-2025-26",
+      "id": "live-minutes-MEM-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
-      "detail": "MIN · 2025-26 · actualizado",
+      "detail": "MEM · 2025-26 · actualizado",
       "unit": "MIN",
       "answers": [
         {
-          "name": "Julius Randle",
-          "value": 2595
+          "name": "Jaylen Wells",
+          "value": 1808
         },
         {
-          "name": "Donte DiVincenzo",
-          "value": 2479
+          "name": "Cam Spencer",
+          "value": 1700
         },
         {
-          "name": "Rudy Gobert",
-          "value": 2366
+          "name": "Cedric Coward",
+          "value": 1584
         },
         {
-          "name": "Jaden McDaniels",
-          "value": 2302
+          "name": "Jaren Jackson Jr.",
+          "value": 1374
         },
         {
-          "name": "Anthony Edwards",
-          "value": 2127
+          "name": "Santi Aldama",
+          "value": 1190
         }
       ]
     },
@@ -57033,6 +57010,35 @@
         {
           "name": "Zion Williamson",
           "value": 1829
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-MIN-2025-26",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "MIN · 2025-26 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Julius Randle",
+          "value": 2595
+        },
+        {
+          "name": "Donte DiVincenzo",
+          "value": 2479
+        },
+        {
+          "name": "Rudy Gobert",
+          "value": 2366
+        },
+        {
+          "name": "Jaden McDaniels",
+          "value": 2302
+        },
+        {
+          "name": "Anthony Edwards",
+          "value": 2127
         }
       ]
     },
@@ -57095,35 +57101,6 @@
       ]
     },
     {
-      "id": "live-minutes-DEN-2025-26",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "DEN · 2025-26 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Jamal Murray",
-          "value": 2637
-        },
-        {
-          "name": "Nikola Jokic",
-          "value": 2253
-        },
-        {
-          "name": "Tim Hardaway Jr.",
-          "value": 2111
-        },
-        {
-          "name": "Bruce Brown",
-          "value": 1983
-        },
-        {
-          "name": "Cameron Johnson",
-          "value": 1636
-        }
-      ]
-    },
-    {
       "id": "live-minutes-SAS-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -57149,6 +57126,35 @@
         {
           "name": "Harrison Barnes",
           "value": 1970
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-DEN-2025-26",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "DEN · 2025-26 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Jamal Murray",
+          "value": 2637
+        },
+        {
+          "name": "Nikola Jokic",
+          "value": 2253
+        },
+        {
+          "name": "Tim Hardaway Jr.",
+          "value": 2111
+        },
+        {
+          "name": "Bruce Brown",
+          "value": 1983
+        },
+        {
+          "name": "Cameron Johnson",
+          "value": 1636
         }
       ]
     },
@@ -57501,35 +57507,6 @@
       ]
     },
     {
-      "id": "live-minutes-ATL-2025-26",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "ATL · 2025-26 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Nickeil Alexander-Walker",
-          "value": 2589
-        },
-        {
-          "name": "Jalen Johnson",
-          "value": 2517
-        },
-        {
-          "name": "Dyson Daniels",
-          "value": 2505
-        },
-        {
-          "name": "Onyeka Okongwu",
-          "value": 2281
-        },
-        {
-          "name": "Zaccharie Risacher",
-          "value": 1491
-        }
-      ]
-    },
-    {
       "id": "live-minutes-MIA-2025-26",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -57555,6 +57532,35 @@
         {
           "name": "Pelle Larsson",
           "value": 1834
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-ATL-2025-26",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "ATL · 2025-26 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Nickeil Alexander-Walker",
+          "value": 2589
+        },
+        {
+          "name": "Jalen Johnson",
+          "value": 2517
+        },
+        {
+          "name": "Dyson Daniels",
+          "value": 2505
+        },
+        {
+          "name": "Onyeka Okongwu",
+          "value": 2281
+        },
+        {
+          "name": "Zaccharie Risacher",
+          "value": 1491
         }
       ]
     },
@@ -57733,6 +57739,151 @@
       ]
     },
     {
+      "id": "live-minutes-DEN-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "DEN · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Jamal Murray",
+          "value": 37
+        },
+        {
+          "name": "Nikola Jokic",
+          "value": 35
+        },
+        {
+          "name": "Christian Braun",
+          "value": 33
+        },
+        {
+          "name": "Aaron Gordon",
+          "value": 30
+        },
+        {
+          "name": "DeMar DeRozan",
+          "value": 28
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-OKC-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "OKC · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "value": 71
+        },
+        {
+          "name": "Jalen Williams",
+          "value": 63
+        },
+        {
+          "name": "Chet Holmgren",
+          "value": 58
+        },
+        {
+          "name": "Ajay Mitchell",
+          "value": 46
+        },
+        {
+          "name": "Alex Caruso",
+          "value": 44
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-CLE-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "CLE · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Donovan Mitchell",
+          "value": 35
+        },
+        {
+          "name": "Evan Mobley",
+          "value": 34
+        },
+        {
+          "name": "James Harden",
+          "value": 33
+        },
+        {
+          "name": "Peyton Watson",
+          "value": 30
+        },
+        {
+          "name": "Jarrett Allen",
+          "value": 28
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-PHI-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "PHI · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Tyrese Maxey",
+          "value": 81
+        },
+        {
+          "name": "Jaylen Brown",
+          "value": 73
+        },
+        {
+          "name": "Joel Embiid",
+          "value": 68
+        },
+        {
+          "name": "VJ Edgecombe",
+          "value": 68
+        },
+        {
+          "name": "LeBron James",
+          "value": 67
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-LAC-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "LAC · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Darius Garland",
+          "value": 32
+        },
+        {
+          "name": "Rui Hachimura",
+          "value": 32
+        },
+        {
+          "name": "Keaton Wagler",
+          "value": 29
+        },
+        {
+          "name": "Brook Lopez",
+          "value": 27
+        },
+        {
+          "name": "Kris Dunn",
+          "value": 27
+        }
+      ]
+    },
+    {
       "id": "live-minutes-SAC-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -57758,64 +57909,6 @@
         {
           "name": "Keegan Murray",
           "value": 28
-        }
-      ]
-    },
-    {
-      "id": "live-minutes-LAC-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "LAC · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Rui Hachimura",
-          "value": 32
-        },
-        {
-          "name": "Darius Garland",
-          "value": 32
-        },
-        {
-          "name": "Keaton Wagler",
-          "value": 29
-        },
-        {
-          "name": "Brook Lopez",
-          "value": 27
-        },
-        {
-          "name": "Kris Dunn",
-          "value": 27
-        }
-      ]
-    },
-    {
-      "id": "live-minutes-GSW-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "GSW · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Yaxel Lendeborg",
-          "value": 29
-        },
-        {
-          "name": "Gui Santos",
-          "value": 25
-        },
-        {
-          "name": "Draymond Green",
-          "value": 21
-        },
-        {
-          "name": "Stephen Curry",
-          "value": 21
-        },
-        {
-          "name": "De'Anthony Melton",
-          "value": 21
         }
       ]
     },
@@ -57849,6 +57942,35 @@
       ]
     },
     {
+      "id": "live-minutes-GSW-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "GSW · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Yaxel Lendeborg",
+          "value": 29
+        },
+        {
+          "name": "Gui Santos",
+          "value": 25
+        },
+        {
+          "name": "De'Anthony Melton",
+          "value": 21
+        },
+        {
+          "name": "Draymond Green",
+          "value": 21
+        },
+        {
+          "name": "Stephen Curry",
+          "value": 21
+        }
+      ]
+    },
+    {
       "id": "live-minutes-POR-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -57864,15 +57986,15 @@
           "value": 24
         },
         {
-          "name": "Ja Morant",
-          "value": 23
-        },
-        {
           "name": "Deni Avdija",
           "value": 23
         },
         {
           "name": "Toumani Camara",
+          "value": 23
+        },
+        {
+          "name": "Ja Morant",
           "value": 23
         }
       ]
@@ -57885,11 +58007,11 @@
       "unit": "MIN",
       "answers": [
         {
-          "name": "Miles Bridges",
+          "name": "Devin Booker",
           "value": 29
         },
         {
-          "name": "Devin Booker",
+          "name": "Miles Bridges",
           "value": 29
         },
         {
@@ -58023,6 +58145,35 @@
       ]
     },
     {
+      "id": "live-minutes-NOP-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "NOP · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Dejounte Murray",
+          "value": 34
+        },
+        {
+          "name": "Trey Murphy III",
+          "value": 32
+        },
+        {
+          "name": "Zion Williamson",
+          "value": 32
+        },
+        {
+          "name": "Yves Missi",
+          "value": 30
+        },
+        {
+          "name": "Saddiq Bey",
+          "value": 24
+        }
+      ]
+    },
+    {
       "id": "live-minutes-IND-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -58052,35 +58203,6 @@
       ]
     },
     {
-      "id": "live-minutes-NOP-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "NOP · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Dejounte Murray",
-          "value": 34
-        },
-        {
-          "name": "Zion Williamson",
-          "value": 32
-        },
-        {
-          "name": "Trey Murphy III",
-          "value": 32
-        },
-        {
-          "name": "Yves Missi",
-          "value": 30
-        },
-        {
-          "name": "Saddiq Bey",
-          "value": 24
-        }
-      ]
-    },
-    {
       "id": "live-minutes-MIN-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -58100,11 +58222,11 @@
           "value": 30
         },
         {
-          "name": "LaMelo Ball",
+          "name": "Ayo Dosunmu",
           "value": 29
         },
         {
-          "name": "Ayo Dosunmu",
+          "name": "LaMelo Ball",
           "value": 29
         }
       ]
@@ -58139,35 +58261,6 @@
       ]
     },
     {
-      "id": "live-minutes-BRK-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "BRK · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Julius Randle",
-          "value": 38
-        },
-        {
-          "name": "Keon Ellis",
-          "value": 34
-        },
-        {
-          "name": "Michael Porter Jr.",
-          "value": 34
-        },
-        {
-          "name": "Day'Ron Sharpe",
-          "value": 30
-        },
-        {
-          "name": "Egor Demin",
-          "value": 27
-        }
-      ]
-    },
-    {
       "id": "live-minutes-CHO-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -58197,60 +58290,31 @@
       ]
     },
     {
-      "id": "live-minutes-TOR-2026-27",
+      "id": "live-minutes-BRK-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
-      "detail": "TOR · 2026-27 · actualizado",
+      "detail": "BRK · 2026-27 · actualizado",
       "unit": "MIN",
       "answers": [
         {
-          "name": "Immanuel Quickley",
-          "value": 28
+          "name": "Julius Randle",
+          "value": 38
         },
         {
-          "name": "RJ Barrett",
-          "value": 26
+          "name": "Keon Ellis",
+          "value": 34
         },
         {
-          "name": "Scottie Barnes",
-          "value": 26
+          "name": "Michael Porter Jr.",
+          "value": 34
         },
         {
-          "name": "Kawhi Leonard",
-          "value": 24
+          "name": "Day'Ron Sharpe",
+          "value": 30
         },
         {
-          "name": "Ja'Kobe Walter",
-          "value": 23
-        }
-      ]
-    },
-    {
-      "id": "live-minutes-CHI-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "CHI · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Caleb Wilson",
-          "value": 33
-        },
-        {
-          "name": "Leonard Miller",
-          "value": 26
-        },
-        {
-          "name": "Matas Buzelis",
-          "value": 25
-        },
-        {
-          "name": "Josh Giddey",
-          "value": 24
-        },
-        {
-          "name": "Norman Powell",
-          "value": 22
+          "name": "Egor Demin",
+          "value": 27
         }
       ]
     },
@@ -58278,7 +58342,7 @@
           "value": 29
         },
         {
-          "name": "Jalen Johnson",
+          "name": "Luguentz Dort",
           "value": 28
         }
       ]
@@ -58313,35 +58377,6 @@
       ]
     },
     {
-      "id": "live-minutes-WAS-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "WAS · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Trae Young",
-          "value": 38
-        },
-        {
-          "name": "Anthony Davis",
-          "value": 34
-        },
-        {
-          "name": "Kyshawn George",
-          "value": 29
-        },
-        {
-          "name": "Bilal Coulibaly",
-          "value": 29
-        },
-        {
-          "name": "Alex Sarr",
-          "value": 24
-        }
-      ]
-    },
-    {
       "id": "live-minutes-MIL-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -58371,6 +58406,35 @@
       ]
     },
     {
+      "id": "live-minutes-WAS-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "WAS · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Trae Young",
+          "value": 38
+        },
+        {
+          "name": "Anthony Davis",
+          "value": 34
+        },
+        {
+          "name": "Bilal Coulibaly",
+          "value": 29
+        },
+        {
+          "name": "Kyshawn George",
+          "value": 29
+        },
+        {
+          "name": "Alex Sarr",
+          "value": 24
+        }
+      ]
+    },
+    {
       "id": "live-minutes-SAS-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -58382,11 +58446,11 @@
           "value": 34
         },
         {
-          "name": "De'Aaron Fox",
+          "name": "Dylan Harper",
           "value": 32
         },
         {
-          "name": "Dylan Harper",
+          "name": "De'Aaron Fox",
           "value": 32
         },
         {
@@ -58396,64 +58460,6 @@
         {
           "name": "Julian Champagnie",
           "value": 30
-        }
-      ]
-    },
-    {
-      "id": "live-minutes-OKC-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "OKC · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Shai Gilgeous-Alexander",
-          "value": 36
-        },
-        {
-          "name": "Chet Holmgren",
-          "value": 31
-        },
-        {
-          "name": "Jalen Williams",
-          "value": 30
-        },
-        {
-          "name": "Alex Caruso",
-          "value": 25
-        },
-        {
-          "name": "Ajay Mitchell",
-          "value": 23
-        }
-      ]
-    },
-    {
-      "id": "live-minutes-PHI-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "PHI · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Tyrese Maxey",
-          "value": 40
-        },
-        {
-          "name": "VJ Edgecombe",
-          "value": 35
-        },
-        {
-          "name": "Jaylen Brown",
-          "value": 35
-        },
-        {
-          "name": "LeBron James",
-          "value": 34
-        },
-        {
-          "name": "Joel Embiid",
-          "value": 33
         }
       ]
     },
@@ -58487,35 +58493,6 @@
       ]
     },
     {
-      "id": "live-minutes-DET-2026-27",
-      "type": "team-season-minutes",
-      "prompt": "Top 5 en minutos jugados",
-      "detail": "DET · 2026-27 · actualizado",
-      "unit": "MIN",
-      "answers": [
-        {
-          "name": "Cade Cunningham",
-          "value": 35
-        },
-        {
-          "name": "Ausar Thompson",
-          "value": 33
-        },
-        {
-          "name": "Jalen Duren",
-          "value": 28
-        },
-        {
-          "name": "Duncan Robinson",
-          "value": 28
-        },
-        {
-          "name": "John Collins",
-          "value": 26
-        }
-      ]
-    },
-    {
       "id": "live-minutes-BOS-2026-27",
       "type": "team-season-minutes",
       "prompt": "Top 5 en minutos jugados",
@@ -58541,6 +58518,35 @@
         {
           "name": "Neemias Queta",
           "value": 22
+        }
+      ]
+    },
+    {
+      "id": "live-minutes-DET-2026-27",
+      "type": "team-season-minutes",
+      "prompt": "Top 5 en minutos jugados",
+      "detail": "DET · 2026-27 · actualizado",
+      "unit": "MIN",
+      "answers": [
+        {
+          "name": "Cade Cunningham",
+          "value": 35
+        },
+        {
+          "name": "Ausar Thompson",
+          "value": 33
+        },
+        {
+          "name": "Jalen Duren",
+          "value": 28
+        },
+        {
+          "name": "Duncan Robinson",
+          "value": 28
+        },
+        {
+          "name": "John Collins",
+          "value": 26
         }
       ]
     },
@@ -59394,7 +59400,7 @@
       "answers": [
         {
           "name": "LeBron James",
-          "value": 61004
+          "value": 61038
         },
         {
           "name": "Kareem Abdul-Jabbar",
@@ -59642,7 +59648,7 @@
         },
         {
           "name": "Jamal Murray",
-          "value": 11530
+          "value": 11536
         }
       ]
     },
@@ -60019,7 +60025,7 @@
         },
         {
           "name": "Shai Gilgeous-Alexander",
-          "value": 12578
+          "value": 12595
         }
       ]
     },
